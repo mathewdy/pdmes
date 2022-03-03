@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 03, 2022 at 05:22 AM
+-- Generation Time: Mar 03, 2022 at 07:25 PM
 -- Server version: 10.4.21-MariaDB
--- PHP Version: 8.0.10
+-- PHP Version: 8.0.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -87,7 +87,9 @@ CREATE TABLE `eligibility_for_elementary_school_enrollment` (
 --
 
 INSERT INTO `eligibility_for_elementary_school_enrollment` (`id`, `credential_presented`, `name_of_school`, `school_id`, `address_of_school`, `others`, `lrn`, `date_time_created`, `date_time_updated`, `remarks`) VALUES
-(1, 'Kinder progress report', '1123123', 'asdasd', 'asdad', 'asd', 111231234, '2022-03-03 05:05:00', '0000-00-00 00:00:00', '');
+(4, 'Kindergarden Certifiasdfsdfadsfcate of Completion', 'UMsdaf', '3334444', 'Sampaloc, Manila', 'sadasadfa', 2123, '2022-03-03 04:55:00', '2022-03-03 10:53:00', 'none'),
+(5, 'Kindergarden Certificate of Completion', 'asd', 'asd', 'asd', 'asd', 231, '2022-03-03 04:57:00', '2022-03-03 04:57:00', 'none'),
+(10, 'Kindergarden Certificate of Completion', 'SAMPLE SCHOOL', '3333', 'PARAISO', 'sdada', 2939, '2022-03-03 11:48:00', '2022-03-03 11:48:00', 'none');
 
 -- --------------------------------------------------------
 
@@ -114,35 +116,9 @@ CREATE TABLE `learners_personal_infos` (
 --
 
 INSERT INTO `learners_personal_infos` (`id`, `last_name`, `first_name`, `middle_name`, `suffix`, `lrn`, `birth_date`, `sex`, `date_time_created`, `date_time_updated`, `remarks`) VALUES
-(1, 'Gamit', 'Jancecar', '', '', 0, '0000-00-00', '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', ''),
-(2, 'Gamit', 'Jancecar', 'Angeles', '', 0, '0000-00-00', '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', ''),
-(3, 'Gamit', 'Jancecar', 'Angeles', 'none', 123, '2022-03-10', 'Male', '0000-00-00 00:00:00', '0000-00-00 00:00:00', ''),
-(4, 'dasda', 'ddasd', 'dasdas', '', 123, '0000-00-00', '', '2003-03-22 03:02:00', '0000-00-00 00:00:00', ''),
-(5, 'Gamit', 'Thaddeus ', 'daasd', 'dasd', 23123, '0000-00-00', '', '2022-03-03 00:00:00', '0000-00-00 00:00:00', ''),
-(6, 'Gamit', 'Thaddeus ', 'Angeles', 'none', 131, '0000-00-00', 'Male', '2022-03-03 03:04:00', '0000-00-00 00:00:00', ''),
-(7, 'Gamit', 'Thaddeus ', 'Angeles', 'none', 131, '0000-00-00', 'Male', '2022-03-03 03:12:00', '0000-00-00 00:00:00', ''),
-(8, 'Gamit', 'Thaddeus ', 'Angeles', 'none', 131, '0000-00-00', 'Male', '2022-03-03 03:13:00', '0000-00-00 00:00:00', ''),
-(9, 'Gamit', 'Thaddeus ', 'Angeles', 'none', 131, '0000-00-00', 'Male', '2022-03-03 03:15:00', '0000-00-00 00:00:00', ''),
-(10, 'Gamit', 'Thaddeus ', 'Angeles', 'none', 131, '0000-00-00', 'Male', '2022-03-03 03:16:00', '0000-00-00 00:00:00', ''),
-(11, 'Gamit', 'Thaddeus ', 'Angeles', 'none', 131, '0000-00-00', 'Male', '2022-03-03 03:17:00', '0000-00-00 00:00:00', ''),
-(12, 'sd', 'adsa', 'Angeles', 'none', 121231, '2022-03-29', 'Male', '2022-03-03 03:17:00', '0000-00-00 00:00:00', ''),
-(13, 'LAJARA', 'Jasmine Nicole', 'fadfadfds', 'jr', 123123, '2022-03-29', 'Female', '2022-03-03 03:18:00', '0000-00-00 00:00:00', ''),
-(14, 'LAJARA', 'Jasmine Nicole', 'fadfadfds', 'jr', 123123, '2022-03-29', 'Female', '2022-03-03 04:33:00', '0000-00-00 00:00:00', ''),
-(15, 'LAJARA', 'Jasmine Nicole', 'fadfadfds', 'jr', 123123, '2022-03-29', 'Female', '2022-03-03 04:35:00', '0000-00-00 00:00:00', ''),
-(16, 'LAJARA', 'Jasmine Nicole', 'fadfadfds', 'jr', 123123, '2022-03-29', 'Female', '2022-03-03 04:35:00', '0000-00-00 00:00:00', ''),
-(17, 'LAJARA', 'Jasmine Nicole', 'fadfadfds', 'jr', 123123, '2022-03-29', 'Female', '2022-03-03 04:36:00', '0000-00-00 00:00:00', ''),
-(18, 'LAJARA', 'Jasmine Nicole', 'fadfadfds', 'jr', 123123, '2022-03-29', 'Female', '0000-00-00 00:00:00', '0000-00-00 00:00:00', ''),
-(19, 'LAJARA', 'Jasmine Nicole', 'fadfadfds', 'jr', 123123, '2022-03-29', 'Female', '2022-03-03 04:39:00', '0000-00-00 00:00:00', ''),
-(20, 'LAJARA', 'Jasmine Nicole', 'fadfadfds', 'jr', 123123, '2022-03-29', 'Female', '2022-03-03 04:40:00', '0000-00-00 00:00:00', ''),
-(21, 'LAJARA', 'Jasmine Nicole', 'fadfadfds', 'jr', 123123, '2022-03-29', 'Female', '2022-03-03 04:41:00', '0000-00-00 00:00:00', ''),
-(22, 'LAJARA', 'Jasmine Nicole', 'fadfadfds', 'jr', 123123, '2022-03-29', 'Female', '2022-03-03 04:47:00', '0000-00-00 00:00:00', ''),
-(23, 'LAJARA', 'Jasmine Nicole', 'fadfadfds', 'jr', 123123, '2022-03-29', 'Female', '2022-03-03 04:56:00', '0000-00-00 00:00:00', ''),
-(24, 'saad', 'sad12', 'Angeles', 'none', 111231234, '2022-03-03', 'Female', '2022-03-03 04:58:00', '0000-00-00 00:00:00', ''),
-(25, 'saad', 'sad12', 'Angeles', 'none', 111231234, '2022-03-03', 'Female', '2022-03-03 05:01:00', '0000-00-00 00:00:00', ''),
-(26, 'saad', 'sad12', 'Angeles', 'none', 111231234, '2022-03-03', 'Female', '2022-03-03 05:03:00', '0000-00-00 00:00:00', ''),
-(27, 'saad', 'sad12', 'Angeles', 'none', 111231234, '2022-03-03', 'Female', '2022-03-03 05:03:00', '0000-00-00 00:00:00', ''),
-(28, 'saad', 'sad12', 'Angeles', 'none', 111231234, '2022-03-03', 'Female', '2022-03-03 05:04:00', '0000-00-00 00:00:00', ''),
-(29, 'saad', 'sad12', 'Angeles', 'none', 111231234, '2022-03-03', 'Female', '2022-03-03 05:05:00', '0000-00-00 00:00:00', '');
+(32, 'Dyasd', 'Mathewedited444', 'Franasd', 'Dyasd', 2123, '2020-02-04', 'Female', '2022-03-03 04:55:00', '2022-03-03 10:53:00', 'none'),
+(33, 'sample', 'sample', 'sample', 'sample', 231, '2020-02-20', 'Male', '2022-03-03 04:57:00', '2022-03-03 04:57:00', 'none'),
+(38, 'Sample3', 'Sample3', 'Burat', '', 2939, '2022-03-16', 'Female', '2022-03-03 11:48:00', '2022-03-03 11:48:00', 'none');
 
 -- --------------------------------------------------------
 
@@ -169,8 +145,8 @@ CREATE TABLE `remedial_classes` (
 CREATE TABLE `scholastic_records` (
   `id` int(11) NOT NULL,
   `lrn` int(50) NOT NULL,
-  `school` varchar(50) NOT NULL,
-  `school_id` int(50) NOT NULL,
+  `school_2` varchar(50) NOT NULL,
+  `school_id_2` int(50) NOT NULL,
   `district` text NOT NULL,
   `division` varchar(50) NOT NULL,
   `region` varchar(50) NOT NULL,
@@ -182,6 +158,13 @@ CREATE TABLE `scholastic_records` (
   `date_time_created` datetime NOT NULL,
   `date_time_updated` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `scholastic_records`
+--
+
+INSERT INTO `scholastic_records` (`id`, `lrn`, `school_2`, `school_id_2`, `district`, `division`, `region`, `classified_as_grade`, `section`, `school_year`, `name_of_adviser`, `remarks`, `date_time_created`, `date_time_updated`) VALUES
+(1, 2939, 'Sample ulit', 444, 'Calamba', 'laguna', '4a', '2', 'Sana alls', '2020-2021', 'hahaha', 'none', '2022-03-03 11:48:00', '2022-03-03 11:48:00');
 
 -- --------------------------------------------------------
 
@@ -314,13 +297,13 @@ ALTER TABLE `certifications`
 -- AUTO_INCREMENT for table `eligibility_for_elementary_school_enrollment`
 --
 ALTER TABLE `eligibility_for_elementary_school_enrollment`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `learners_personal_infos`
 --
 ALTER TABLE `learners_personal_infos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
 
 --
 -- AUTO_INCREMENT for table `remedial_classes`
@@ -332,7 +315,7 @@ ALTER TABLE `remedial_classes`
 -- AUTO_INCREMENT for table `scholastic_records`
 --
 ALTER TABLE `scholastic_records`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `students_grades`
