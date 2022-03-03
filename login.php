@@ -56,7 +56,7 @@ if(isset($_POST['submit'])){
             if (password_verify($password, $row['password'])){ 
                
                 $_SESSION['username'] = $username;
-                header("location: welcome.php");
+                header("location: index.php");
             } 
             else{
                 echo '<script>alert("Incorrect credentials")</script>' ; 
