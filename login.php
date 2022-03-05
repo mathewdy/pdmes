@@ -57,6 +57,7 @@ if(isset($_POST['submit'])){
                
                 $_SESSION['username'] = $username;
                 header("location: index.php");
+                die();
             } 
             else{
                 echo '<script>alert("Incorrect credentials")</script>' ; 

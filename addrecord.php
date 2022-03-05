@@ -19,15 +19,17 @@ if(empty($_SESSION['username'])){
 </head>
 <body>
 
-<h3> learners Presonal Information </h3>
 <a href="index.php">Back</a>
+
+
+<h3> Learner's Presonal Information </h3>
 <form action="addrecord.php" method="POST">
   <label for=""> Last Name : </label>
-    <input list="text" name="last_name" required> 
+    <input list="text" name="last_name"  required> 
   <br>
     
   <label for="">First Name : </label>
-    <input type="text" name="first_name"required>
+    <input type="text" name="first_name" required>
   <br>
     
 
@@ -35,14 +37,13 @@ if(empty($_SESSION['username'])){
   <label for="">Suffix Name : </label>
     <input type="text" name="suffix_name">
   <br>
-
   
   <label for=""> Middle Name : </label>
-    <input type="text" name="middle_name"  required>
+    <input type="text" name="middle_name">
   <br>
 
   <label for=""> LRN : </label>
-    <input type="number" name="lrn" required>
+    <input type="text" name="lrn" required>
   <br>
 
 
@@ -50,7 +51,7 @@ if(empty($_SESSION['username'])){
     <input type="date" name="birthday" required>
   <br>
   <label for="">Sex :</label>
-    <select name="sex" id=""> 
+    <select name="sex" id="" required> 
       <option value="">-Gender-</option>
       <option value="Male">Male</option>
       <option value="Female">Female</option>
@@ -63,91 +64,50 @@ if(empty($_SESSION['username'])){
           
 
     <label for=""> Kinder progress report :  </label>
-      <input type="checkbox" name = "credential" value="Kinder progress report">
+      <input type="checkbox" name="credential[]" value="Kinder progress report" >
     <br>
     <label for=""> ECCD Checklist: </label>
-      <input type="checkbox" name = "credential" value="ECCD Checklis">
+      <input type="checkbox" name="credential[]" value="ECCD Checklist" >
     <br>
     
     <label for="">Kindergarden Certificate of Completion : </label>
-      <input type="checkbox" name = "credential" value="Kindergarden Certificate of Completion">
+      <input type="checkbox" name="credential[]" value="Kindergarden Certificate of Completion" >
     <br>
             
     <label for="">Name of School : </label>
-      <input list="text" name="name_school"  required  >
+      <input list="text" name="name_of_school" >
     <br>
 
     <label for="">School Id : </label>
-      <input list="text" name="school_id"  required  >
+      <input list="text" name="school_id" >
     <br>
 
     <label for="">Address of School : </label>
-      <input list="text" name="address_school"  required  >
+      <input list="text" name="address_school">
     <br>
     <label for="">Others : </label>
-      <input list="text" name="others" required>
+      <input list="text" name="others" >
     <br>
 
-    <h3>Scholastic Record</h3>
 
-    <!---scholastic record--->
-    <label for="">School : </label>
-      <input type="text" name="school_2" required>
-    <br>
-
-    <label for="">School ID : </label>
-      <input type="text" name="school_id_2" required>
-
-    <br>
-
-    <label for="">District : </label>
-    <input type="text" name="district" required>
-    <br>
-
-    <label for="">Division</label>
-    <input type="text" name="division" required>
-    <br>
-
-    <label for="">Region:</label>
-    <input type="text" name="region">
-
-    <br>
-    <label for="">Classified as Grade : </label>
-    <input type="text" name="classified_as_grade" required>
-
-    <br>
-    <label for="">Section : </label>
-    <input type="text" name="section">
-
-    <br>
-    <label for="">School Year : </label>
-    <input type="text" name="school_year" required>
-
-    <br>
-
-    <label for="">Name of Adviser: </label>
-    <input type="text" name="name_of_adviser">
-
-    <br>
-
-    <input type="submit" name="submit" value="submit">
+    <input type="submit" name="next" value="Next">
   
 </form>
 
 
 <?php 
 
-if(isset($_POST['submit'])){
+if(isset($_POST['next'])){
+
 
   $last_name = ucfirst($_POST['last_name']);
   $first_name = ucfirst($_POST['first_name']);
   $middle_name = ucfirst($_POST['middle_name']); 
   $suffix = ucfirst($_POST['suffix_name']);
   $lrn = $_POST['lrn'];
-  $birtdate = $_POST['birthday'];
+  $birthdate = $_POST['birthday'];
   $sex = $_POST['sex'];
-  $credential = $_POST['credential'];
-  $name_school = strtoupper($_POST['name_school']);
+  $name_of_school = ucfirst($_POST['name_of_school']);
   $school_id = $_POST['school_id'];
   $address_school = strtoupper($_POST['address_school']);
   $others = $_POST['others'];
@@ -155,63 +115,47 @@ if(isset($_POST['submit'])){
   $dateUpdated = date("y-m-d h:i:a");
   $remarks = 'none';
 
+  $credential = $_POST['credential'];
+  $new_credential = implode(", " ,$credential);
 
-  //scholastic_record
+  $validate_lrn = "SELECT * FROM learners_personal_infos WHERE last_name = '$last_name' AND first_name= '$first_name' AND
+  middle_name= '$middle_name' AND lrn= '$lrn' AND birth_date ='$birthdate'";
+  $run_validate = mysqli_query($conn,$validate_lrn);
 
-  $school_2 = ucfirst($_POST['school_2']);
-  $school_id_2 = $_POST['school_id_2'];
-  $division = $_POST['division'];
-  $district = ucfirst($_POST['district']);
-  $region = ucfirst($_POST['region']);
-  $classified_as_grade = $_POST['classified_as_grade'];
-  $section = ucfirst($_POST['section']);
-  $school_year = $_POST['school_year'];
-  $name_of_adviser = $_POST['name_of_adviser'];
-
-
-
- 
-
-  $validate = "SELECT * FROM learners_personal_infos WHERE last_name = '$last_name' AND first_name ='$first_name' AND middle_name = '$middle_name' AND lrn = '$lrn' AND birth_date = '$birtdate' ";
-  $run_validate = mysqli_query($conn,$validate);
-
-  if(mysqli_num_rows($run_validate )> 0){
-    echo "<script>alert('already register') </script>";
+  if(mysqli_num_rows($run_validate) > 0){
+    echo "already added" . '<br>';
   }else{
-    $insert_LPI ="INSERT INTO learners_personal_infos (last_name,first_name,middle_name,suffix,lrn ,birth_date,sex,date_time_created,date_time_updated,remarks) VALUES('$last_name', '$first_name', '$middle_name', '$suffix',
-    '$lrn', '$birtdate', '$sex','$dateCreated', '$dateUpdated', '$remarks')";
-    $run_LPI = mysqli_query($conn,$insert_LPI);
+    //
+    $insert_learners_personal_infos = "INSERT INTO learners_personal_infos (last_name,first_name,middle_name,suffix,lrn,birth_date,sex,date_time_created,date_time_updated,remarks)
+    VALUES ('$last_name', '$first_name', '$middle_name', '$suffix' , '$lrn', '$birthdate', '$sex', '$dateCreated', '$dateUpdated', '$remarks')";
 
-    if($run_LPI){
-      echo "added";
-      $insert_eligibility = "INSERT INTO eligibility_for_elementary_school_enrollment (credential_presented,name_of_school,school_id,address_of_school,others,lrn ,date_time_created,date_time_updated,remarks)
-      VALUES ('$credential', '$name_school', '$school_id', '$address_school' , '$others' , '$lrn', '$dateCreated','$dateUpdated', '$remarks')";
-      $run_eligibility = mysqli_query($conn,$insert_eligibility);
+    $run_insert_learners_personal_infos = mysqli_query($conn,$insert_learners_personal_infos);
 
 
-      if($run_eligibility){
-        echo "added 2";
+    if($run_insert_learners_personal_infos){
+      echo "Added learners_personal_infos" . '<br>';
+      
 
-        $insert_scholastic = "INSERT INTO scholastic_records (lrn,school_2,school_id_2,district,division,region,
-        classified_as_grade,section,school_year,name_of_adviser,remarks,date_time_created,date_time_updated)
-        VALUES ('$lrn', '$school_2','$school_id_2','$district', '$division', '$region', '$classified_as_grade', '$section', '$school_year', '$name_of_adviser', '$remarks', '$dateCreated', '$dateUpdated')";
-        $run_scholastic = mysqli_query($conn,$insert_scholastic);
+      $insert_eligibility_for_elem = "INSERT INTO eligibility_for_elementary_school_enrollment (lrn,credential_presented,name_of_school,school_id,address_of_school,others ,date_time_created,date_time_updated,remarks) VALUES ('$lrn','$new_credential', '$name_of_school' , '$school_id', '$address_school','$others', '$dateCreated', '$dateUpdated', '$remarks')";
 
-        if($run_scholastic){
-          echo "added 3";
-        }else{
-          echo "error 3" . $conn->error;;
-        }
+      $run_insert_eligibility_for_elem = mysqli_query($conn,$insert_eligibility_for_elem);
+
+      if($run_insert_eligibility_for_elem){
+        echo "Added insert_eligibility_for_elem";
+        $_SESSION['lrn'] = $lrn;
+        header('Location: phase1.php');
+        exit();
       }else{
-        echo "error1" . $conn->error;
+        echo "error insert_eligibility_for_elem" . $conn->error . '<br>';
       }
+
+
     }else{
-      echo "error2" . $conn->error;
+      echo "error learners_personal_infos" . $conn->error  . '<br>';
     }
   }
+ 
 }
-
 ?>
-
 </body>
 </html>
