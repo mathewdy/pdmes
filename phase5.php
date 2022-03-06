@@ -7,14 +7,9 @@ if(empty($_SESSION['username'])){
 }
 
 
-error_reporting(E_ERROR & E_WARNING);
 $lrn123 = $_SESSION['lrn'] . '<br>';
-if(empty($_SESSION['lrn'])){
-  echo "<script>window.location.href='addrecords.php'</script>";
-}
 $query_lrn = "SELECT * FROM learners_personal_infos WHERE lrn = '$lrn123' ";
 $run_query_lrn = mysqli_query($conn,$query_lrn);
-
 
 
 
@@ -34,10 +29,10 @@ $run_query_lrn = mysqli_query($conn,$query_lrn);
 
 <a href="index.php">Back</a>
 
-<!---scholastic record  phase 2--->
+<!---scholastic record  phase 5--->
 <h3>Scholastic records</h3>
-<h4>Phase 2</h4>
-<form action="phase2.php" method="POST">
+<h4>Phase 5</h4>
+<form action="phase5.php" method="POST">
 
 <label for="">School : </label>
       <input type="text" name="school_2" id="school_2">
@@ -498,7 +493,7 @@ $run_query_lrn = mysqli_query($conn,$query_lrn);
 
     <!--remedial classes-->
     <h3>Remedial Classes</h3>
-    <!------phase 2--->
+    <!------phase 5--->
     <label for="">Date Conducted From : </label>
     <input type="date" name="date_from">
 
@@ -574,6 +569,8 @@ $run_query_lrn = mysqli_query($conn,$query_lrn);
       <option value="Pass">Pass</option>
       <option value="Failed">Failed</option>
     </select> 
+    <br>
+    <input type="submit" name="next" value="Next"> 
 
     </form>
     
@@ -735,7 +732,7 @@ if(isset($_POST['next'])){
   $remarks = 'none';
   $dateCreated = date("y-m-d h:i:a");
   $dateUpdated = date("y-m-d h:i:a");
-  $phase =2;
+  $phase =5;
 
 
   //scholastic records, remedial_classes, students_grades lang ang may phase 
@@ -819,7 +816,7 @@ if(isset($_POST['next'])){
       if($run_remedial_class2){
         echo "added 5 REMEDIAL CLASSES 2" .'<br>';
 
-        header('Location: phase3.php');  
+        header('Location: phase6.php');  
         exit();
       }else{
         echo "error 5" .$conn->error ;

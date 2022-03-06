@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 05, 2022 at 06:45 PM
+-- Generation Time: Mar 06, 2022 at 03:09 PM
 -- Server version: 10.4.21-MariaDB
--- PHP Version: 8.0.12
+-- PHP Version: 8.0.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -87,7 +87,9 @@ CREATE TABLE `eligibility_for_elementary_school_enrollment` (
 --
 
 INSERT INTO `eligibility_for_elementary_school_enrollment` (`id`, `lrn`, `credential_presented`, `name_of_school`, `school_id`, `address_of_school`, `others`, `date_time_created`, `date_time_updated`, `remarks`) VALUES
-(56, '109857060083', 'Kinder progress report, Kindergarden Certificate o', 'TSNHS', '80008', 'HAHAHA', '', '2022-03-06 01:43:00', '2022-03-06 01:43:00', 'none');
+(56, '109857060083', 'Kinder progress report, Kindergarden Certificate o', 'TSNHS', '80008', 'HAHAHA', '', '2022-03-06 01:43:00', '2022-03-06 01:43:00', 'none'),
+(57, '123456789012', 'Kinder progress report, Kindergarden Certificate o', 'Asda', 'asd', 'ASD', 'asd', '2022-03-06 08:38:00', '2022-03-06 09:52:00', 'none'),
+(58, '12312161784', 'Kinder progress report', 'Asda', 'asdasd', 'ASDAD', 'asd', '2022-03-06 10:07:00', '2022-03-06 10:07:00', 'none');
 
 -- --------------------------------------------------------
 
@@ -114,7 +116,9 @@ CREATE TABLE `learners_personal_infos` (
 --
 
 INSERT INTO `learners_personal_infos` (`id`, `lrn`, `last_name`, `first_name`, `middle_name`, `suffix`, `birth_date`, `sex`, `date_time_created`, `date_time_updated`, `remarks`) VALUES
-(93, '109857060083', 'Dalisay', 'Mathew', 'Francisco', '', '2022-03-08', 'Male', '2022-03-06 01:43:00', '2022-03-06 01:43:00', 'none');
+(93, '109857060083', 'Dalisay', 'Mathew', 'Francisco', '', '2022-03-08', 'Male', '2022-03-06 01:43:00', '2022-03-06 01:43:00', 'none'),
+(94, '123456789012', 'Gamit', 'Thaddeus ', 'Angeles', 'Gamit', '2001-11-26', 'Male', '2022-03-06 08:38:00', '2022-03-06 09:52:00', 'none'),
+(95, '12312161784', 'LAJARA', 'Jasmine Nicole', 'Bautista', '', '2022-03-15', 'Female', '2022-03-06 10:07:00', '2022-03-06 10:07:00', 'none');
 
 -- --------------------------------------------------------
 
@@ -143,7 +147,11 @@ CREATE TABLE `remedial_classes` (
 
 INSERT INTO `remedial_classes` (`id`, `lrn`, `date_from`, `date_to`, `learning_areas`, `final_rating`, `remedial_class_mark`, `recomputed_final_grade`, `phase`, `remarks`, `date_time_created`, `date_time_updated`) VALUES
 (19, '109857060083', '0000-00-00', '0000-00-00', '', '', 0, 0, 1, '', '2022-03-06 01:44:00', '2022-03-06 01:44:00'),
-(20, '109857060083', '0000-00-00', '0000-00-00', '', '', 0, 0, 1, '', '2022-03-06 01:44:00', '2022-03-06 01:44:00');
+(20, '109857060083', '0000-00-00', '0000-00-00', '', '', 0, 0, 1, '', '2022-03-06 01:44:00', '2022-03-06 01:44:00'),
+(21, '123456789012', '2022-03-23', '2022-03-24', 'dasd', '80', 80, 80, 1, 'pass', '2022-03-06 08:41:00', '2022-03-06 08:41:00'),
+(22, '123456789012', '2022-03-23', '2022-03-24', 'dasd', '80', 80, 80, 1, 'pass', '2022-03-06 08:41:00', '2022-03-06 08:41:00'),
+(23, '123456789012', '2022-03-17', '2022-03-31', 'adasd', '80', 80, 80, 2, 'pass', '2022-03-06 08:43:00', '2022-03-06 08:43:00'),
+(24, '123456789012', '2022-03-17', '2022-03-31', 'dasd', '80', 80, 80, 2, 'pass', '2022-03-06 08:43:00', '2022-03-06 08:43:00');
 
 -- --------------------------------------------------------
 
@@ -186,7 +194,9 @@ CREATE TABLE `scholastic_records` (
 --
 
 INSERT INTO `scholastic_records` (`id`, `lrn`, `school_2`, `school_id_2`, `district`, `division`, `region`, `classified_as_grade`, `section`, `school_year`, `name_of_adviser`, `phase`, `remarks`, `date_time_created`, `date_time_updated`) VALUES
-(34, '109857060083', 'Sample school', '222', 'Ls', 'ls', 'Ncr', '2', 'A', '2020', 'bobo', 1, 'none', '2022-03-06 01:44:00', '2022-03-06 01:44:00');
+(34, '109857060083', 'Sample school', '222', 'Ls', 'ls', 'Ncr', '2', 'A', '2020', 'bobo', 1, 'none', '2022-03-06 01:44:00', '2022-03-06 01:44:00'),
+(40, '123456789012', 'Adfa', 'asd', 'Asdf', 'asdfas', 'Adfa', 'fas', 'A', 'fasdf', 'tj', 1, 'none', '2022-03-06 08:41:00', '2022-03-06 08:41:00'),
+(41, '123456789012', 'Adfa', 'asd', 'Asdf', 'asdfas', 'Adfa', 'fas', 'A', 'fasdf', 'tj', 2, 'none', '2022-03-06 08:43:00', '2022-03-06 08:43:00');
 
 -- --------------------------------------------------------
 
@@ -228,7 +238,12 @@ INSERT INTO `students_grades` (`id`, `lrn`, `mother_tounge`, `filipino`, `englis
 (32, '109857060083', 90, 90, 90, 90, 90, 90, 90, 90, 90, 90, 90, 90, 90, 90, 90, '2', '', 1, '2022-03-06 01:44:00', '2022-03-06 01:44:00'),
 (33, '109857060083', 88, 88, 88, 88, 88, 88, 88, 88, 88, 88, 88, 88, 88, 88, 88, '3', '', 1, '2022-03-06 01:44:00', '2022-03-06 01:44:00'),
 (34, '109857060083', 75, 75, 75, 75, 75, 75, 75, 75, 75, 75, 75, 75, 75, 75, 75, '4', '', 1, '2022-03-06 01:44:00', '2022-03-06 01:44:00'),
-(35, '109857060083', 76, 76, 76, 76, 76, 76, 76, 76, 76, 76, 76, 76, 76, 76, 76, '5', '', 1, '2022-03-06 01:44:00', '2022-03-06 01:44:00');
+(35, '109857060083', 76, 76, 76, 76, 76, 76, 76, 76, 76, 76, 76, 76, 76, 76, 76, '5', '', 1, '2022-03-06 01:44:00', '2022-03-06 01:44:00'),
+(36, '123456789012', 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, '1', '', 1, '2022-03-06 08:41:00', '2022-03-06 08:41:00'),
+(37, '123456789012', 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, '2', '', 1, '2022-03-06 08:41:00', '2022-03-06 08:41:00'),
+(38, '123456789012', 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, '3', '', 1, '2022-03-06 08:41:00', '2022-03-06 08:41:00'),
+(39, '123456789012', 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, '4', '', 1, '2022-03-06 08:41:00', '2022-03-06 08:41:00'),
+(40, '123456789012', 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, '5', '', 1, '2022-03-06 08:41:00', '2022-03-06 08:41:00');
 
 --
 -- Indexes for dumped tables
@@ -308,19 +323,19 @@ ALTER TABLE `certifications`
 -- AUTO_INCREMENT for table `eligibility_for_elementary_school_enrollment`
 --
 ALTER TABLE `eligibility_for_elementary_school_enrollment`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=57;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=59;
 
 --
 -- AUTO_INCREMENT for table `learners_personal_infos`
 --
 ALTER TABLE `learners_personal_infos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=94;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=96;
 
 --
 -- AUTO_INCREMENT for table `remedial_classes`
 --
 ALTER TABLE `remedial_classes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- AUTO_INCREMENT for table `sample`
@@ -332,13 +347,13 @@ ALTER TABLE `sample`
 -- AUTO_INCREMENT for table `scholastic_records`
 --
 ALTER TABLE `scholastic_records`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
 
 --
 -- AUTO_INCREMENT for table `students_grades`
 --
 ALTER TABLE `students_grades`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
 
 --
 -- Constraints for dumped tables

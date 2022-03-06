@@ -7,7 +7,12 @@ if(empty($_SESSION['username'])){
 }
 
 
+
+error_reporting(E_ERROR & E_WARNING);
 $lrn123 = $_SESSION['lrn'] . '<br>';
+if(empty($_SESSION['lrn'])){
+  echo "<script>window.location.href='addrecord.php'</script>";
+}
 $query_lrn = "SELECT * FROM learners_personal_infos WHERE lrn = '$lrn123' ";
 $run_query_lrn = mysqli_query($conn,$query_lrn);
 
@@ -151,8 +156,12 @@ $run_query_lrn = mysqli_query($conn,$query_lrn);
 
     <br>
 
-    <label for="">Remarks</label>
-    <input type="text" name="remarks1" required>
+    <label for="">Remarks :</label>
+    <select name="remarks1" id="" required> 
+      <option value="">-Remakrs-</option>
+      <option value="Pass">Pass</option>
+      <option value="Failed">Failed</option>
+    </select> 
    
     <h4>2nd Quarter</h4>
     <!------- 2nd quarter--->
@@ -230,8 +239,12 @@ $run_query_lrn = mysqli_query($conn,$query_lrn);
 
     <br>
 
-    <label for="">Remarks</label>
-    <input type="text" name="remarks2" required>
+    <label for="">Remarks :</label>
+    <select name="remarks2" id="" required> 
+      <option value="">-Remarks-</option>
+      <option value="Pass">Pass</option>
+      <option value="Failed">Failed</option>
+    </select> 
 
     <h4>3rd Quarter</h4>
     <!------- 3rd quarter--->
@@ -309,8 +322,12 @@ $run_query_lrn = mysqli_query($conn,$query_lrn);
 
     <br>
 
-    <label for="">Remarks</label>
-    <input type="text" name="remarks3" required>
+    <label for="">Remarks :</label>
+    <select name="remarks3" id="" required> 
+      <option value="">-Remarks-</option>
+      <option value="Pass">Pass</option>
+      <option value="Failed">Failed</option>
+    </select> 
 
     <h4>4th Quarter</h4>
     <!------- 4th quarter--->
@@ -386,8 +403,12 @@ $run_query_lrn = mysqli_query($conn,$query_lrn);
     <input type="text" name="general_average4" pattern="[0-9]{2}" title="Please input 2 Numbers only">
 
     <br>
-    <label for="">Remarks</label>
-    <input type="text" name="remarks4" required>
+    <label for="">Remarks :</label>
+    <select name="remarks4" id="" required> 
+      <option value="">-Remarks-</option>
+      <option value="Pass">Pass</option>
+      <option value="Failed">Failed</option>
+    </select> >
     <br>
 
     <h4>FINALS Quarter</h4>
@@ -466,8 +487,12 @@ $run_query_lrn = mysqli_query($conn,$query_lrn);
 
     <br>
 
-    <label for="">Remarks</label>
-    <input type="text" name="remarks5" required>
+    <label for="">Remarks :</label>
+    <select name="remarks5" id="" required> 
+      <option value="">-Remarks-</option>
+      <option value="Pass">Pass</option>
+      <option value="Failed">Failed</option>
+    </select> 
    
     
 
@@ -495,8 +520,12 @@ $run_query_lrn = mysqli_query($conn,$query_lrn);
 
     <br>
 
-    <label for="">Remedial Class Mark : </label>
-    <input type="text" name="remedial_class_mark1">
+    <label for="">Remarks :</label>
+    <select name="remedial_remarks1" id="" required> 
+      <option value="">-Remakrs-</option>
+      <option value="Pass">Pass</option>
+      <option value="Failed">Failed</option>
+    </select> 
 
     <br>
 
@@ -504,8 +533,12 @@ $run_query_lrn = mysqli_query($conn,$query_lrn);
     <input type="text" name="recomputed_final_grade1" pattern="[0-9]{2}" title="Please input 2 Numbers only">
     <br>
           
-    <label for="">Remarks : </label>
-    <input type="text" name="remedial_remarks1" >
+    <label for="">Remarks :</label>
+    <select name="remedial_remarks1" id="" required> 
+      <option value="">-Remakrs-</option>
+      <option value="Pass">Pass</option>
+      <option value="Failed">Failed</option>
+    </select> 
     <br>
 
 
@@ -522,8 +555,12 @@ $run_query_lrn = mysqli_query($conn,$query_lrn);
 
     <br>
 
-    <label for="">Remedial Class Mark : </label>
-    <input type="text" name="remedial_class_mark2">
+    <label for="">Remarks :</label>
+    <select name="remedial_remarks2" id="" required> 
+      <option value="">-Remakrs-</option>
+      <option value="Pass">Pass</option>
+      <option value="Failed">Failed</option>
+    </select> 
 
     <br>
 
@@ -531,8 +568,12 @@ $run_query_lrn = mysqli_query($conn,$query_lrn);
     <input type="text" name="recomputed_final_grade2" pattern="[0-9]{2}" title="Please input 2 Numbers only">
     <br>
           
-    <label for="">Remarks : </label>
-    <input type="text" name="remedial_remarks2">
+    <label for="">Remarks :</label>
+    <select name="remedial_remarks2" id="" required> 
+      <option value="">-Remarks-</option>
+      <option value="Pass">Pass</option>
+      <option value="Failed">Failed</option>
+    </select> 
     <br>
     <input type="submit" name="next" value="Next"> 
 
@@ -542,7 +583,6 @@ $run_query_lrn = mysqli_query($conn,$query_lrn);
 
 </html>
 <?php
-
 if(isset($_POST['next'])){
   date_default_timezone_set('Asia/Manila');
   //scholastic_record

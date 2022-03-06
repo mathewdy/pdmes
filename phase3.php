@@ -10,11 +10,10 @@ if(empty($_SESSION['username'])){
 error_reporting(E_ERROR & E_WARNING);
 $lrn123 = $_SESSION['lrn'] . '<br>';
 if(empty($_SESSION['lrn'])){
-  echo "<script>window.location.href='addrecords.php'</script>";
+  echo "<script>window.location.href='addrecord.php'</script>";
 }
 $query_lrn = "SELECT * FROM learners_personal_infos WHERE lrn = '$lrn123' ";
 $run_query_lrn = mysqli_query($conn,$query_lrn);
-
 
 
 
@@ -34,10 +33,10 @@ $run_query_lrn = mysqli_query($conn,$query_lrn);
 
 <a href="index.php">Back</a>
 
-<!---scholastic record  phase 2--->
+<!---scholastic record  phase 3--->
 <h3>Scholastic records</h3>
-<h4>Phase 2</h4>
-<form action="phase2.php" method="POST">
+<h4>Phase 3</h4>
+<form action="phase3.php" method="POST">
 
 <label for="">School : </label>
       <input type="text" name="school_2" id="school_2">
@@ -162,7 +161,6 @@ $run_query_lrn = mysqli_query($conn,$query_lrn);
       <option value="Pass">Pass</option>
       <option value="Failed">Failed</option>
     </select> 
-   
     <h4>2nd Quarter</h4>
     <!------- 2nd quarter--->
 
@@ -245,7 +243,6 @@ $run_query_lrn = mysqli_query($conn,$query_lrn);
       <option value="Pass">Pass</option>
       <option value="Failed">Failed</option>
     </select> 
-
     <h4>3rd Quarter</h4>
     <!------- 3rd quarter--->
 
@@ -328,7 +325,6 @@ $run_query_lrn = mysqli_query($conn,$query_lrn);
       <option value="Pass">Pass</option>
       <option value="Failed">Failed</option>
     </select> 
-
     <h4>4th Quarter</h4>
     <!------- 4th quarter--->
 
@@ -404,7 +400,7 @@ $run_query_lrn = mysqli_query($conn,$query_lrn);
 
     <br>
     <label for="">Remarks :</label>
-    <select name="remarks4" id="" required> 
+    <select name="remarks1" id="" required> 
       <option value="">-Remarks-</option>
       <option value="Pass">Pass</option>
       <option value="Failed">Failed</option>
@@ -498,7 +494,7 @@ $run_query_lrn = mysqli_query($conn,$query_lrn);
 
     <!--remedial classes-->
     <h3>Remedial Classes</h3>
-    <!------phase 2--->
+    <!------phase 3--->
     <label for="">Date Conducted From : </label>
     <input type="date" name="date_from">
 
@@ -526,7 +522,6 @@ $run_query_lrn = mysqli_query($conn,$query_lrn);
       <option value="Pass">Pass</option>
       <option value="Failed">Failed</option>
     </select> 
-
     <br>
 
     <label for="">Recomputed Final Grade : </label>
@@ -561,7 +556,6 @@ $run_query_lrn = mysqli_query($conn,$query_lrn);
       <option value="Pass">Pass</option>
       <option value="Failed">Failed</option>
     </select> 
-
     <br>
 
     <label for="">Recomputed Final Grade : </label>
@@ -574,6 +568,8 @@ $run_query_lrn = mysqli_query($conn,$query_lrn);
       <option value="Pass">Pass</option>
       <option value="Failed">Failed</option>
     </select> 
+    <br>
+    <input type="submit" name="next" value="Next"> 
 
     </form>
     
@@ -735,7 +731,7 @@ if(isset($_POST['next'])){
   $remarks = 'none';
   $dateCreated = date("y-m-d h:i:a");
   $dateUpdated = date("y-m-d h:i:a");
-  $phase =2;
+  $phase =3;
 
 
   //scholastic records, remedial_classes, students_grades lang ang may phase 
@@ -819,7 +815,7 @@ if(isset($_POST['next'])){
       if($run_remedial_class2){
         echo "added 5 REMEDIAL CLASSES 2" .'<br>';
 
-        header('Location: phase3.php');  
+        header('Location: phase4.php');  
         exit();
       }else{
         echo "error 5" .$conn->error ;

@@ -60,7 +60,7 @@ if(empty($_SESSION['username'])){
 
   <h3> Eligibity for elementary school enrolment </h3>
     <p>Credential Presented for Grade1</p>
-    <p> - -Please check below below --</p> 
+    <p> - -Please check below --</p> 
           
 
     <label for=""> Kinder progress report :  </label>
