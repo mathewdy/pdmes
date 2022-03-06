@@ -1,11 +1,9 @@
-
 <?php
+include('connection.php');
 session_start();
 if(empty($_SESSION['username'])){
    echo "<script>window.location.href='login.php' </script>";
 }
-
-include('connection.php');
 
 if(isset($_GET['page'])){
     $page = $_GET['page'];
@@ -42,7 +40,7 @@ $start_from = ($page-1)*05;
             <th>Last Name</th>
             <th>First Name</th>
             <th>Middle Name</th>
-            <th>Options</th>
+            <th>Option</th>
         </tr>
     </thead>
     <tbody>
@@ -68,8 +66,9 @@ $start_from = ($page-1)*05;
                             <td><?php echo $row ['first_name']?></td>
                             <td><?php echo $row ['middle_name']?></td>
                             <td>
-                                <a href="edit-students.php?lrn=<?php echo $row ['lrn'] ?>">Edit</a>
-                                <a href="delete-students.php?lrn=<?php echo $row ['lrn']?>">Delete</a>
+                                <a href="view-student.php?lrn=<?php echo $row ['lrn']?>">View</a>
+                                <a href="edit-student.php?lrn=<?php echo $row ['lrn'] ?>">Edit</a>
+                                <a href="delete-student.php?lrn=<?php echo $row ['lrn']?>">Delete</a>
                             </td>                
                         </tr>
 

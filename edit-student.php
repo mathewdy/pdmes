@@ -5,6 +5,26 @@ if(empty($_SESSION['username'])){
     echo "<script>window.location.href='login.php' </script>";
 }
 
+
+if(isset($_GET['lrn'])){
+    $lrn =  $_GET['lrn'];
+    if(empty($lrn)){    //lrn verification starts here
+        echo "<script>alert('LRN not found');
+        window.location = 'index.php';</script>";
+        exit();
+    }
+    $verify_lrn = "SELECT learners_personal_infos.lrn FROM `learners_personal_infos` WHERE lrn = '$lrn'";
+    $query_request = mysqli_query($conn, $verify_lrn) or die (mysqli_error($conn));
+    if(mysqli_num_rows($query_request) == 0){
+            echo '
+            <script type = "text/javascript">
+                alert("LRN does not exist");
+                window.location = "index.php";
+            </script>
+        ';
+            exit();
+    }   //lrn verification ends here
+    
 ?>
 
 <!DOCTYPE html>
@@ -20,10 +40,6 @@ if(empty($_SESSION['username'])){
 <a href="index.php">Back</a>
 <br>
 <?php
-
-
-if(isset($_GET['lrn'])){
-    $lrn =  $_GET['lrn'];
 
     $sql = "SELECT * FROM learners_personal_infos 
     LEFT JOIN eligibility_for_elementary_school_enrollment ON learners_personal_infos.lrn = eligibility_for_elementary_school_enrollment.lrn
@@ -54,7 +70,7 @@ if(isset($_GET['lrn'])){
 
                     <br>
                     <label for="">Suffix:</label>
-                    <input type="text" name="suffix" value="<?php echo $row ['last_name']?>" >
+                    <input type="text" name="suffix" value="<?php if(empty($row ['suffix'])){ echo 'N/A'; }else{ echo $row ['suffix']; }?>" >
 
                     <br>
                     <label for="">Birthday:</label>
