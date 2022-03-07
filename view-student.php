@@ -6,23 +6,29 @@ if(empty($_SESSION['username'])){
 }
 if(isset($_GET['lrn'])){
     $lrn =  $_GET['lrn'];
-    if(empty($lrn)){    //lrn verification starts here
-        echo "<script>alert('LRN not found');
-        window.location = 'index.php';</script>";
+
+    if(empty($lrn)){
+        echo "<script>window.location.href='index.php' </script>";
+      }
+
+
+
+    $validate = "SELECT lrn FROM learners_personal_infos WHERE learners_personal_infos.lrn = '$lrn'";
+    $vali = mysqli_query($conn, $validate);
+    if(mysqli_num_rows($vali ) == 0){
+    
+        echo "<script>alert('LRN does not exist');
+        window.location.href='index.php';</script>";
         exit();
+ 
     }
-    $verify_lrn = "SELECT learners_personal_infos.lrn FROM `learners_personal_infos` WHERE lrn = '$lrn'";
-    $query_request = mysqli_query($conn, $verify_lrn) or die (mysqli_error($conn));
-    if(mysqli_num_rows($query_request) == 0){
-            echo '
-            <script type = "text/javascript">
-                alert("LRN does not exist");
-                window.location = "index.php";
-            </script>
-        ';
-            exit();
-    }   //lrn verification ends here
+
 }
+
+       
+
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -41,6 +47,8 @@ if(isset($_GET['lrn'])){
     $run = mysqli_query($conn, $sql);
     if(mysqli_num_rows($run) > 0){
         $rows = mysqli_fetch_array($run);
+
+        
     ?>
     <a href="index.php">Back</a>
     <h2>Learner's Personal Information</h2>
@@ -62,5 +70,29 @@ if(isset($_GET['lrn'])){
     <?php
     }
     ?>
+    <h2> Scholastic Records </h2>
+<?php
+
+$query = "SELECT * FROM `scholastic_records` WHERE '$lrn' ";
+$run = mysqli_query($conn, $query);
+if(mysqli_num_rows($run) > 0){
+    $rows = mysqli_fetch_array($run);
+
+?>
+<p> <span> School: <?php echo $rows ['school_2'];?> </span> <p>
+<p><span>School Id: <?php echo$rows ['school_id_2'];?></p> </span>
+<p> <span> District: <?php echo $rows ['district'];?> </p> </span>
+<p> <span> Division: <?php echo $rows ['division'];?> </p> </span>
+<p> <span> Region: <?php echo $rows ['region'];?> </p> </span>
+<p> <span> Classified as Grade: <?php echo $rows ['classified_as_grade'];?> </p> </span>
+<p> <span> Section: <?php echo $rows ['section'];?> </p> </span>
+<p> <span> School Year: <?php echo $rows ['school_year'];?> </p> </span>
+<p> <span> Name of Adviser: <?php echo $rows ['name_of_adviser'];?> </p> </span>
+
+  
+
+<?php
+}
+?>
 </body>
 </html>
