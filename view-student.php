@@ -94,5 +94,1210 @@ if(mysqli_num_rows($run) > 0){
 <?php
 }
 ?>
+<h2> Phase 1 </h2>
+<?php
+$phase1_query = "SELECT * FROM `learners_personal_infos` LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn WHERE learners_personal_infos.lrn = '$lrn' AND students_grades.phase = '1' AND students_grades.term = '1';";
+$run = mysqli_query($conn, $phase1_query);
+if(mysqli_num_rows($run) > 0){
+    $rows = mysqli_fetch_array($run);
+
+?>
+
+<h2> 1 </h2> 
+
+
+<p><span> Mother tounge: <?php echo$rows ['mother_tounge'];?></p> </span>
+<p> <span> Filipino: <?php echo $rows ['filipino'];?> </p> </span>
+<p> <span> English: <?php echo $rows ['english'];?> </p> </span>
+<p> <span> Mathematics: <?php echo $rows ['math'];?> </p> </span>
+<p> <span> Science: <?php echo $rows ['science'];?> </p> </span>
+<p> <span> Araling Panlipunan <?php echo $rows ['araling_panlipunan'];?> </p> </span>
+<p> <span> EPP/TLE: <?php echo $rows ['epp_tle'];?> </p> </span>
+<p> <span> Mapeh:</p> </span>
+<p><span> Music: <?php echo $rows ['music'];?> <?php ?> </span></p>
+<p><span> Arts: <?php echo $rows ['arts'];?> <?php ?> </span></p>
+<p><span> Physical Education: <?php echo $rows ['p_e'];?> <?php ?> </span></p>
+<p><span> Health: <?php echo $rows ['health'];?> <?php ?> </span></p>
+<p><span> Eduk. sa Pagpapakatao: <?php echo $rows ['edukasyon_sa_pagpapakatao'];?> <?php ?> </span></p> 
+<p><span> Arabic Language: <?php echo $rows ['arabic_language'];?> <?php ?> </span></p>
+<p><span> Islamic Values Education: <?php echo $rows ['islamic_values'];?> <?php ?> </span></p>
+<p><span>General Average: <?php echo $rows ['general_average'];?></span></p>
+<?php
+}
+?>
+
+<h2> 2 </h2>
+<?php
+$phase1_query = "SELECT * FROM `learners_personal_infos` LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn WHERE learners_personal_infos.lrn = '$lrn' AND students_grades.phase = '1' AND students_grades.term = '2';";
+$run = mysqli_query($conn, $phase1_query);
+if(mysqli_num_rows($run) > 0){
+    $rows = mysqli_fetch_array($run);
+
+?>
+
+
+<p><span> Mother tounge: <?php echo$rows ['mother_tounge'];?></p> </span>
+<p> <span> Filipino: <?php echo $rows ['filipino'];?> </p> </span>
+<p> <span> English: <?php echo $rows ['english'];?> </p> </span>
+<p> <span> Mathematics: <?php echo $rows ['math'];?> </p> </span>
+<p> <span> Science: <?php echo $rows ['science'];?> </p> </span>
+<p> <span> Araling Panlipunan <?php echo $rows ['araling_panlipunan'];?> </p> </span>
+<p> <span> EPP/TLE: <?php echo $rows ['epp_tle'];?> </p> </span>
+<p> <span> Mapeh:</p> </span>
+<p><span> Music: <?php echo $rows ['music'];?> <?php ?> </span></p>
+<p><span> Arts: <?php echo $rows ['arts'];?> <?php ?> </span></p>
+<p><span> Physical Education: <?php echo $rows ['p_e'];?> <?php ?> </span></p>
+<p><span> Health: <?php echo $rows ['health'];?> <?php ?> </span></p>
+<p><span> Eduk. sa Pagpapakatao: <?php echo $rows ['edukasyon_sa_pagpapakatao'];?> <?php ?> </span></p> 
+<p><span> Arabic Language: <?php echo $rows ['arabic_language'];?> <?php ?> </span></p>
+<p><span> Islamic Values Education: <?php echo $rows ['islamic_values'];?> <?php ?> </span></p>
+<p><span>General Average: <?php echo $rows ['general_average'];?></span></p>
+<?php
+}
+?>
+
+<h2> 3 </h2>
+<?php
+$phase1_query = "SELECT * FROM `learners_personal_infos` LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn WHERE learners_personal_infos.lrn = '$lrn' AND students_grades.phase = '1' AND students_grades.term = '3';";
+$run = mysqli_query($conn, $phase1_query);
+if(mysqli_num_rows($run) > 0){
+    $rows = mysqli_fetch_array($run);
+
+?>
+
+
+<p><span> Mother tounge: <?php echo$rows ['mother_tounge'];?></p> </span>
+<p> <span> Filipino: <?php echo $rows ['filipino'];?> </p> </span>
+<p> <span> English: <?php echo $rows ['english'];?> </p> </span>
+<p> <span> Mathematics: <?php echo $rows ['math'];?> </p> </span>
+<p> <span> Science: <?php echo $rows ['science'];?> </p> </span>
+<p> <span> Araling Panlipunan <?php echo $rows ['araling_panlipunan'];?> </p> </span>
+<p> <span> EPP/TLE: <?php echo $rows ['epp_tle'];?> </p> </span>
+<p> <span> Mapeh:</p> </span>
+<p><span> Music: <?php echo $rows ['music'];?> <?php ?> </span></p>
+<p><span> Arts: <?php echo $rows ['arts'];?> <?php ?> </span></p>
+<p><span> Physical Education: <?php echo $rows ['p_e'];?> <?php ?> </span></p>
+<p><span> Health: <?php echo $rows ['health'];?> <?php ?> </span></p>
+<p><span> Eduk. sa Pagpapakatao: <?php echo $rows ['edukasyon_sa_pagpapakatao'];?> <?php ?> </span></p> 
+<p><span> Arabic Language: <?php echo $rows ['arabic_language'];?> <?php ?> </span></p>
+<p><span> Islamic Values Education: <?php echo $rows ['islamic_values'];?> <?php ?> </span></p>
+<p><span>General Average: <?php echo $rows ['general_average'];?></span></p>
+<?php
+}
+?>
+
+<h2> 4 </h2>
+<?php
+$phase1_query = "SELECT * FROM `learners_personal_infos` LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn WHERE learners_personal_infos.lrn = '$lrn' AND students_grades.phase = '1' AND students_grades.term = '4';";
+$run = mysqli_query($conn, $phase1_query);
+if(mysqli_num_rows($run) > 0){
+    $rows = mysqli_fetch_array($run);
+
+?>
+
+
+<p><span> Mother tounge: <?php echo$rows ['mother_tounge'];?></p> </span>
+<p> <span> Filipino: <?php echo $rows ['filipino'];?> </p> </span>
+<p> <span> English: <?php echo $rows ['english'];?> </p> </span>
+<p> <span> Mathematics: <?php echo $rows ['math'];?> </p> </span>
+<p> <span> Science: <?php echo $rows ['science'];?> </p> </span>
+<p> <span> Araling Panlipunan <?php echo $rows ['araling_panlipunan'];?> </p> </span>
+<p> <span> EPP/TLE: <?php echo $rows ['epp_tle'];?> </p> </span>
+<p> <span> Mapeh:</p> </span>
+<p><span> Music: <?php echo $rows ['music'];?> <?php ?> </span></p>
+<p><span> Arts: <?php echo $rows ['arts'];?> <?php ?> </span></p>
+<p><span> Physical Education: <?php echo $rows ['p_e'];?> <?php ?> </span></p>
+<p><span> Health: <?php echo $rows ['health'];?> <?php ?> </span></p>
+<p><span> Eduk. sa Pagpapakatao: <?php echo $rows ['edukasyon_sa_pagpapakatao'];?> <?php ?> </span></p> 
+<p><span> Arabic Language: <?php echo $rows ['arabic_language'];?> <?php ?> </span></p>
+<p><span> Islamic Values Education: <?php echo $rows ['islamic_values'];?> <?php ?> </span></p>
+<p><span>General Average: <?php echo $rows ['general_average'];?></span></p>
+<?php
+}
+?>
 </body>
+<h2> final rating </h2>
+<?php
+$phase1_query = "SELECT * FROM `learners_personal_infos` LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn WHERE learners_personal_infos.lrn = '$lrn' AND students_grades.phase = '1' AND students_grades.term = '5';";
+$run = mysqli_query($conn, $phase1_query);
+if(mysqli_num_rows($run) > 0){
+    $rows = mysqli_fetch_array($run);
+
+?>
+
+<p><span> Mother tounge: <?php echo$rows ['mother_tounge'];?></p> </span>
+<p> <span> Filipino: <?php echo $rows ['filipino'];?> </p> </span>
+<p> <span> English: <?php echo $rows ['english'];?> </p> </span>
+<p> <span> Mathematics: <?php echo $rows ['math'];?> </p> </span>
+<p> <span> Science: <?php echo $rows ['science'];?> </p> </span>
+<p> <span> Araling Panlipunan <?php echo $rows ['araling_panlipunan'];?> </p> </span>
+<p> <span> EPP/TLE: <?php echo $rows ['epp_tle'];?> </p> </span>
+<p> <span> Mapeh:</p> </span>
+<p><span> Music: <?php echo $rows ['music'];?> <?php ?> </span></p>
+<p><span> Arts: <?php echo $rows ['arts'];?> <?php ?> </span></p>
+<p><span> Physical Education: <?php echo $rows ['p_e'];?> <?php ?> </span></p>
+<p><span> Health: <?php echo $rows ['health'];?> <?php ?> </span></p>
+<p><span> Eduk. sa Pagpapakatao: <?php echo $rows ['edukasyon_sa_pagpapakatao'];?> <?php ?> </span></p> 
+<p><span> Arabic Language: <?php echo $rows ['arabic_language'];?> <?php ?> </span></p>
+<p><span> Islamic Values Education: <?php echo $rows ['islamic_values'];?> <?php ?> </span></p>
+<p><span>General Average: <?php echo $rows ['general_average'];?></span></p>
+<?php
+}
+?>
+<h2> Phase 2 </h2>
+
+<?php
+$phase1_query = "SELECT * FROM `learners_personal_infos` LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn WHERE learners_personal_infos.lrn = '$lrn' AND students_grades.phase = '2' AND students_grades.term = '1';";
+$run = mysqli_query($conn, $phase1_query);
+if(mysqli_num_rows($run) > 0){
+    $rows = mysqli_fetch_array($run);
+
+?>
+
+<h2> 1 </h2> 
+
+
+<p><span> Mother tounge: <?php echo$rows ['mother_tounge'];?></p> </span>
+<p> <span> Filipino: <?php echo $rows ['filipino'];?> </p> </span>
+<p> <span> English: <?php echo $rows ['english'];?> </p> </span>
+<p> <span> Mathematics: <?php echo $rows ['math'];?> </p> </span>
+<p> <span> Science: <?php echo $rows ['science'];?> </p> </span>
+<p> <span> Araling Panlipunan <?php echo $rows ['araling_panlipunan'];?> </p> </span>
+<p> <span> EPP/TLE: <?php echo $rows ['epp_tle'];?> </p> </span>
+<p> <span> Mapeh:</p> </span>
+<p><span> Music: <?php echo $rows ['music'];?> <?php ?> </span></p>
+<p><span> Arts: <?php echo $rows ['arts'];?> <?php ?> </span></p>
+<p><span> Physical Education: <?php echo $rows ['p_e'];?> <?php ?> </span></p>
+<p><span> Health: <?php echo $rows ['health'];?> <?php ?> </span></p>
+<p><span> Eduk. sa Pagpapakatao: <?php echo $rows ['edukasyon_sa_pagpapakatao'];?> <?php ?> </span></p> 
+<p><span> Arabic Language: <?php echo $rows ['arabic_language'];?> <?php ?> </span></p>
+<p><span> Islamic Values Education: <?php echo $rows ['islamic_values'];?> <?php ?> </span></p>
+<p><span>General Average: <?php echo $rows ['general_average'];?></span></p>
+<?php
+}
+?>
+
+<h2> 2 </h2>
+<?php
+$phase1_query = "SELECT * FROM `learners_personal_infos` LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn WHERE learners_personal_infos.lrn = '$lrn' AND students_grades.phase = '2' AND students_grades.term = '2';";
+$run = mysqli_query($conn, $phase1_query);
+if(mysqli_num_rows($run) > 0){
+    $rows = mysqli_fetch_array($run);
+
+?>
+
+
+<p><span> Mother tounge: <?php echo$rows ['mother_tounge'];?></p> </span>
+<p> <span> Filipino: <?php echo $rows ['filipino'];?> </p> </span>
+<p> <span> English: <?php echo $rows ['english'];?> </p> </span>
+<p> <span> Mathematics: <?php echo $rows ['math'];?> </p> </span>
+<p> <span> Science: <?php echo $rows ['science'];?> </p> </span>
+<p> <span> Araling Panlipunan <?php echo $rows ['araling_panlipunan'];?> </p> </span>
+<p> <span> EPP/TLE: <?php echo $rows ['epp_tle'];?> </p> </span>
+<p> <span> Mapeh:</p> </span>
+<p><span> Music: <?php echo $rows ['music'];?> <?php ?> </span></p>
+<p><span> Arts: <?php echo $rows ['arts'];?> <?php ?> </span></p>
+<p><span> Physical Education: <?php echo $rows ['p_e'];?> <?php ?> </span></p>
+<p><span> Health: <?php echo $rows ['health'];?> <?php ?> </span></p>
+<p><span> Eduk. sa Pagpapakatao: <?php echo $rows ['edukasyon_sa_pagpapakatao'];?> <?php ?> </span></p> 
+<p><span> Arabic Language: <?php echo $rows ['arabic_language'];?> <?php ?> </span></p>
+<p><span> Islamic Values Education: <?php echo $rows ['islamic_values'];?> <?php ?> </span></p>
+<p><span>General Average: <?php echo $rows ['general_average'];?></span></p>
+<?php
+}
+?>
+
+<h2> 3 </h2>
+<?php
+$phase1_query = "SELECT * FROM `learners_personal_infos` LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn WHERE learners_personal_infos.lrn = '$lrn' AND students_grades.phase = '2' AND students_grades.term = '3';";
+$run = mysqli_query($conn, $phase1_query);
+if(mysqli_num_rows($run) > 0){
+    $rows = mysqli_fetch_array($run);
+
+?>
+
+
+<p><span> Mother tounge: <?php echo$rows ['mother_tounge'];?></p> </span>
+<p> <span> Filipino: <?php echo $rows ['filipino'];?> </p> </span>
+<p> <span> English: <?php echo $rows ['english'];?> </p> </span>
+<p> <span> Mathematics: <?php echo $rows ['math'];?> </p> </span>
+<p> <span> Science: <?php echo $rows ['science'];?> </p> </span>
+<p> <span> Araling Panlipunan <?php echo $rows ['araling_panlipunan'];?> </p> </span>
+<p> <span> EPP/TLE: <?php echo $rows ['epp_tle'];?> </p> </span>
+<p> <span> Mapeh:</p> </span>
+<p><span> Music: <?php echo $rows ['music'];?> <?php ?> </span></p>
+<p><span> Arts: <?php echo $rows ['arts'];?> <?php ?> </span></p>
+<p><span> Physical Education: <?php echo $rows ['p_e'];?> <?php ?> </span></p>
+<p><span> Health: <?php echo $rows ['health'];?> <?php ?> </span></p>
+<p><span> Eduk. sa Pagpapakatao: <?php echo $rows ['edukasyon_sa_pagpapakatao'];?> <?php ?> </span></p> 
+<p><span> Arabic Language: <?php echo $rows ['arabic_language'];?> <?php ?> </span></p>
+<p><span> Islamic Values Education: <?php echo $rows ['islamic_values'];?> <?php ?> </span></p>
+<p><span>General Average: <?php echo $rows ['general_average'];?></span></p>
+<?php
+}
+?>
+
+<h2> 4 </h2>
+<?php
+$phase1_query = "SELECT * FROM `learners_personal_infos` LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn WHERE learners_personal_infos.lrn = '$lrn' AND students_grades.phase = '2' AND students_grades.term = '4';";
+$run = mysqli_query($conn, $phase1_query);
+if(mysqli_num_rows($run) > 0){
+    $rows = mysqli_fetch_array($run);
+
+?>
+
+
+<p><span> Mother tounge: <?php echo$rows ['mother_tounge'];?></p> </span>
+<p> <span> Filipino: <?php echo $rows ['filipino'];?> </p> </span>
+<p> <span> English: <?php echo $rows ['english'];?> </p> </span>
+<p> <span> Mathematics: <?php echo $rows ['math'];?> </p> </span>
+<p> <span> Science: <?php echo $rows ['science'];?> </p> </span>
+<p> <span> Araling Panlipunan <?php echo $rows ['araling_panlipunan'];?> </p> </span>
+<p> <span> EPP/TLE: <?php echo $rows ['epp_tle'];?> </p> </span>
+<p> <span> Mapeh:</p> </span>
+<p><span> Music: <?php echo $rows ['music'];?> <?php ?> </span></p>
+<p><span> Arts: <?php echo $rows ['arts'];?> <?php ?> </span></p>
+<p><span> Physical Education: <?php echo $rows ['p_e'];?> <?php ?> </span></p>
+<p><span> Health: <?php echo $rows ['health'];?> <?php ?> </span></p>
+<p><span> Eduk. sa Pagpapakatao: <?php echo $rows ['edukasyon_sa_pagpapakatao'];?> <?php ?> </span></p> 
+<p><span> Arabic Language: <?php echo $rows ['arabic_language'];?> <?php ?> </span></p>
+<p><span> Islamic Values Education: <?php echo $rows ['islamic_values'];?> <?php ?> </span></p>
+<p><span>General Average: <?php echo $rows ['general_average'];?></span></p>
+<?php
+}
+?>
+</body>
+<h2> final rating </h2>
+<?php
+$phase1_query = "SELECT * FROM `learners_personal_infos` LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn WHERE learners_personal_infos.lrn = '$lrn' AND students_grades.phase = '2' AND students_grades.term = '5';";
+$run = mysqli_query($conn, $phase1_query);
+if(mysqli_num_rows($run) > 0){
+    $rows = mysqli_fetch_array($run);
+
+?>
+
+<p><span> Mother tounge: <?php echo$rows ['mother_tounge'];?></p> </span>
+<p> <span> Filipino: <?php echo $rows ['filipino'];?> </p> </span>
+<p> <span> English: <?php echo $rows ['english'];?> </p> </span>
+<p> <span> Mathematics: <?php echo $rows ['math'];?> </p> </span>
+<p> <span> Science: <?php echo $rows ['science'];?> </p> </span>
+<p> <span> Araling Panlipunan <?php echo $rows ['araling_panlipunan'];?> </p> </span>
+<p> <span> EPP/TLE: <?php echo $rows ['epp_tle'];?> </p> </span>
+<p> <span> Mapeh:</p> </span>
+<p><span> Music: <?php echo $rows ['music'];?> <?php ?> </span></p>
+<p><span> Arts: <?php echo $rows ['arts'];?> <?php ?> </span></p>
+<p><span> Physical Education: <?php echo $rows ['p_e'];?> <?php ?> </span></p>
+<p><span> Health: <?php echo $rows ['health'];?> <?php ?> </span></p>
+<p><span> Eduk. sa Pagpapakatao: <?php echo $rows ['edukasyon_sa_pagpapakatao'];?> <?php ?> </span></p> 
+<p><span> Arabic Language: <?php echo $rows ['arabic_language'];?> <?php ?> </span></p>
+<p><span> Islamic Values Education: <?php echo $rows ['islamic_values'];?> <?php ?> </span></p>
+<p><span>General Average: <?php echo $rows ['general_average'];?></span></p>
+<?php
+}
+?>
+
+<h2> Phase 3 </h2>
+<?php
+$phase1_query = "SELECT * FROM `learners_personal_infos` LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn WHERE learners_personal_infos.lrn = '$lrn' AND students_grades.phase = '2' AND students_grades.term = '1';";
+$run = mysqli_query($conn, $phase1_query);
+if(mysqli_num_rows($run) > 0){
+    $rows = mysqli_fetch_array($run);
+
+?>
+
+<h2> 1 </h2> 
+
+
+<p><span> Mother tounge: <?php echo$rows ['mother_tounge'];?></p> </span>
+<p> <span> Filipino: <?php echo $rows ['filipino'];?> </p> </span>
+<p> <span> English: <?php echo $rows ['english'];?> </p> </span>
+<p> <span> Mathematics: <?php echo $rows ['math'];?> </p> </span>
+<p> <span> Science: <?php echo $rows ['science'];?> </p> </span>
+<p> <span> Araling Panlipunan <?php echo $rows ['araling_panlipunan'];?> </p> </span>
+<p> <span> EPP/TLE: <?php echo $rows ['epp_tle'];?> </p> </span>
+<p> <span> Mapeh:</p> </span>
+<p><span> Music: <?php echo $rows ['music'];?> <?php ?> </span></p>
+<p><span> Arts: <?php echo $rows ['arts'];?> <?php ?> </span></p>
+<p><span> Physical Education: <?php echo $rows ['p_e'];?> <?php ?> </span></p>
+<p><span> Health: <?php echo $rows ['health'];?> <?php ?> </span></p>
+<p><span> Eduk. sa Pagpapakatao: <?php echo $rows ['edukasyon_sa_pagpapakatao'];?> <?php ?> </span></p> 
+<p><span> Arabic Language: <?php echo $rows ['arabic_language'];?> <?php ?> </span></p>
+<p><span> Islamic Values Education: <?php echo $rows ['islamic_values'];?> <?php ?> </span></p>
+<p><span>General Average: <?php echo $rows ['general_average'];?></span></p>
+<?php
+}
+?>
+
+<h2> 2 </h2>
+<?php
+$phase1_query = "SELECT * FROM `learners_personal_infos` LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn WHERE learners_personal_infos.lrn = '$lrn' AND students_grades.phase = '2' AND students_grades.term = '2';";
+$run = mysqli_query($conn, $phase1_query);
+if(mysqli_num_rows($run) > 0){
+    $rows = mysqli_fetch_array($run);
+
+?>
+
+
+<p><span> Mother tounge: <?php echo$rows ['mother_tounge'];?></p> </span>
+<p> <span> Filipino: <?php echo $rows ['filipino'];?> </p> </span>
+<p> <span> English: <?php echo $rows ['english'];?> </p> </span>
+<p> <span> Mathematics: <?php echo $rows ['math'];?> </p> </span>
+<p> <span> Science: <?php echo $rows ['science'];?> </p> </span>
+<p> <span> Araling Panlipunan <?php echo $rows ['araling_panlipunan'];?> </p> </span>
+<p> <span> EPP/TLE: <?php echo $rows ['epp_tle'];?> </p> </span>
+<p> <span> Mapeh:</p> </span>
+<p><span> Music: <?php echo $rows ['music'];?> <?php ?> </span></p>
+<p><span> Arts: <?php echo $rows ['arts'];?> <?php ?> </span></p>
+<p><span> Physical Education: <?php echo $rows ['p_e'];?> <?php ?> </span></p>
+<p><span> Health: <?php echo $rows ['health'];?> <?php ?> </span></p>
+<p><span> Eduk. sa Pagpapakatao: <?php echo $rows ['edukasyon_sa_pagpapakatao'];?> <?php ?> </span></p> 
+<p><span> Arabic Language: <?php echo $rows ['arabic_language'];?> <?php ?> </span></p>
+<p><span> Islamic Values Education: <?php echo $rows ['islamic_values'];?> <?php ?> </span></p>
+<p><span>General Average: <?php echo $rows ['general_average'];?></span></p>
+<?php
+}
+?>
+
+<h2> 3 </h2>
+<?php
+$phase1_query = "SELECT * FROM `learners_personal_infos` LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn WHERE learners_personal_infos.lrn = '$lrn' AND students_grades.phase = '2' AND students_grades.term = '3';";
+$run = mysqli_query($conn, $phase1_query);
+if(mysqli_num_rows($run) > 0){
+    $rows = mysqli_fetch_array($run);
+
+?>
+
+
+<p><span> Mother tounge: <?php echo$rows ['mother_tounge'];?></p> </span>
+<p> <span> Filipino: <?php echo $rows ['filipino'];?> </p> </span>
+<p> <span> English: <?php echo $rows ['english'];?> </p> </span>
+<p> <span> Mathematics: <?php echo $rows ['math'];?> </p> </span>
+<p> <span> Science: <?php echo $rows ['science'];?> </p> </span>
+<p> <span> Araling Panlipunan <?php echo $rows ['araling_panlipunan'];?> </p> </span>
+<p> <span> EPP/TLE: <?php echo $rows ['epp_tle'];?> </p> </span>
+<p> <span> Mapeh:</p> </span>
+<p><span> Music: <?php echo $rows ['music'];?> <?php ?> </span></p>
+<p><span> Arts: <?php echo $rows ['arts'];?> <?php ?> </span></p>
+<p><span> Physical Education: <?php echo $rows ['p_e'];?> <?php ?> </span></p>
+<p><span> Health: <?php echo $rows ['health'];?> <?php ?> </span></p>
+<p><span> Eduk. sa Pagpapakatao: <?php echo $rows ['edukasyon_sa_pagpapakatao'];?> <?php ?> </span></p> 
+<p><span> Arabic Language: <?php echo $rows ['arabic_language'];?> <?php ?> </span></p>
+<p><span> Islamic Values Education: <?php echo $rows ['islamic_values'];?> <?php ?> </span></p>
+<p><span>General Average: <?php echo $rows ['general_average'];?></span></p>
+<?php
+}
+?>
+
+<h2> 4 </h2>
+<?php
+$phase1_query = "SELECT * FROM `learners_personal_infos` LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn WHERE learners_personal_infos.lrn = '$lrn' AND students_grades.phase = '2' AND students_grades.term = '4';";
+$run = mysqli_query($conn, $phase1_query);
+if(mysqli_num_rows($run) > 0){
+    $rows = mysqli_fetch_array($run);
+
+?>
+
+
+<p><span> Mother tounge: <?php echo$rows ['mother_tounge'];?></p> </span>
+<p> <span> Filipino: <?php echo $rows ['filipino'];?> </p> </span>
+<p> <span> English: <?php echo $rows ['english'];?> </p> </span>
+<p> <span> Mathematics: <?php echo $rows ['math'];?> </p> </span>
+<p> <span> Science: <?php echo $rows ['science'];?> </p> </span>
+<p> <span> Araling Panlipunan <?php echo $rows ['araling_panlipunan'];?> </p> </span>
+<p> <span> EPP/TLE: <?php echo $rows ['epp_tle'];?> </p> </span>
+<p> <span> Mapeh:</p> </span>
+<p><span> Music: <?php echo $rows ['music'];?> <?php ?> </span></p>
+<p><span> Arts: <?php echo $rows ['arts'];?> <?php ?> </span></p>
+<p><span> Physical Education: <?php echo $rows ['p_e'];?> <?php ?> </span></p>
+<p><span> Health: <?php echo $rows ['health'];?> <?php ?> </span></p>
+<p><span> Eduk. sa Pagpapakatao: <?php echo $rows ['edukasyon_sa_pagpapakatao'];?> <?php ?> </span></p> 
+<p><span> Arabic Language: <?php echo $rows ['arabic_language'];?> <?php ?> </span></p>
+<p><span> Islamic Values Education: <?php echo $rows ['islamic_values'];?> <?php ?> </span></p>
+<p><span>General Average: <?php echo $rows ['general_average'];?></span></p>
+<?php
+}
+?>
+</body>
+<h2> final rating </h2>
+<?php
+$phase1_query = "SELECT * FROM `learners_personal_infos` LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn WHERE learners_personal_infos.lrn = '$lrn' AND students_grades.phase = '2' AND students_grades.term = '5';";
+$run = mysqli_query($conn, $phase1_query);
+if(mysqli_num_rows($run) > 0){
+    $rows = mysqli_fetch_array($run);
+
+?>
+
+<p><span> Mother tounge: <?php echo$rows ['mother_tounge'];?></p> </span>
+<p> <span> Filipino: <?php echo $rows ['filipino'];?> </p> </span>
+<p> <span> English: <?php echo $rows ['english'];?> </p> </span>
+<p> <span> Mathematics: <?php echo $rows ['math'];?> </p> </span>
+<p> <span> Science: <?php echo $rows ['science'];?> </p> </span>
+<p> <span> Araling Panlipunan <?php echo $rows ['araling_panlipunan'];?> </p> </span>
+<p> <span> EPP/TLE: <?php echo $rows ['epp_tle'];?> </p> </span>
+<p> <span> Mapeh:</p> </span>
+<p><span> Music: <?php echo $rows ['music'];?> <?php ?> </span></p>
+<p><span> Arts: <?php echo $rows ['arts'];?> <?php ?> </span></p>
+<p><span> Physical Education: <?php echo $rows ['p_e'];?> <?php ?> </span></p>
+<p><span> Health: <?php echo $rows ['health'];?> <?php ?> </span></p>
+<p><span> Eduk. sa Pagpapakatao: <?php echo $rows ['edukasyon_sa_pagpapakatao'];?> <?php ?> </span></p> 
+<p><span> Arabic Language: <?php echo $rows ['arabic_language'];?> <?php ?> </span></p>
+<p><span> Islamic Values Education: <?php echo $rows ['islamic_values'];?> <?php ?> </span></p>
+<p><span>General Average: <?php echo $rows ['general_average'];?></span></p>
+<?php
+}
+?>
+<h2> Phase 4 </h2>
+<?php
+$phase1_query = "SELECT * FROM `learners_personal_infos` LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn WHERE learners_personal_infos.lrn = '$lrn' AND students_grades.phase = '4' AND students_grades.term = '1';";
+$run = mysqli_query($conn, $phase1_query);
+if(mysqli_num_rows($run) > 0){
+    $rows = mysqli_fetch_array($run);
+
+?>
+
+<h2> 1 </h2> 
+
+
+<p><span> Mother tounge: <?php echo$rows ['mother_tounge'];?></p> </span>
+<p> <span> Filipino: <?php echo $rows ['filipino'];?> </p> </span>
+<p> <span> English: <?php echo $rows ['english'];?> </p> </span>
+<p> <span> Mathematics: <?php echo $rows ['math'];?> </p> </span>
+<p> <span> Science: <?php echo $rows ['science'];?> </p> </span>
+<p> <span> Araling Panlipunan <?php echo $rows ['araling_panlipunan'];?> </p> </span>
+<p> <span> EPP/TLE: <?php echo $rows ['epp_tle'];?> </p> </span>
+<p> <span> Mapeh:</p> </span>
+<p><span> Music: <?php echo $rows ['music'];?> <?php ?> </span></p>
+<p><span> Arts: <?php echo $rows ['arts'];?> <?php ?> </span></p>
+<p><span> Physical Education: <?php echo $rows ['p_e'];?> <?php ?> </span></p>
+<p><span> Health: <?php echo $rows ['health'];?> <?php ?> </span></p>
+<p><span> Eduk. sa Pagpapakatao: <?php echo $rows ['edukasyon_sa_pagpapakatao'];?> <?php ?> </span></p> 
+<p><span> Arabic Language: <?php echo $rows ['arabic_language'];?> <?php ?> </span></p>
+<p><span> Islamic Values Education: <?php echo $rows ['islamic_values'];?> <?php ?> </span></p>
+<p><span>General Average: <?php echo $rows ['general_average'];?></span></p>
+<?php
+}
+?>
+
+<h2> 2 </h2>
+<?php
+$phase1_query = "SELECT * FROM `learners_personal_infos` LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn WHERE learners_personal_infos.lrn = '$lrn' AND students_grades.phase = '4' AND students_grades.term = '2';";
+$run = mysqli_query($conn, $phase1_query);
+if(mysqli_num_rows($run) > 0){
+    $rows = mysqli_fetch_array($run);
+
+?>
+
+
+<p><span> Mother tounge: <?php echo$rows ['mother_tounge'];?></p> </span>
+<p> <span> Filipino: <?php echo $rows ['filipino'];?> </p> </span>
+<p> <span> English: <?php echo $rows ['english'];?> </p> </span>
+<p> <span> Mathematics: <?php echo $rows ['math'];?> </p> </span>
+<p> <span> Science: <?php echo $rows ['science'];?> </p> </span>
+<p> <span> Araling Panlipunan <?php echo $rows ['araling_panlipunan'];?> </p> </span>
+<p> <span> EPP/TLE: <?php echo $rows ['epp_tle'];?> </p> </span>
+<p> <span> Mapeh:</p> </span>
+<p><span> Music: <?php echo $rows ['music'];?> <?php ?> </span></p>
+<p><span> Arts: <?php echo $rows ['arts'];?> <?php ?> </span></p>
+<p><span> Physical Education: <?php echo $rows ['p_e'];?> <?php ?> </span></p>
+<p><span> Health: <?php echo $rows ['health'];?> <?php ?> </span></p>
+<p><span> Eduk. sa Pagpapakatao: <?php echo $rows ['edukasyon_sa_pagpapakatao'];?> <?php ?> </span></p> 
+<p><span> Arabic Language: <?php echo $rows ['arabic_language'];?> <?php ?> </span></p>
+<p><span> Islamic Values Education: <?php echo $rows ['islamic_values'];?> <?php ?> </span></p>
+<p><span>General Average: <?php echo $rows ['general_average'];?></span></p>
+<?php
+}
+?>
+
+<h2> 3 </h2>
+<?php
+$phase1_query = "SELECT * FROM `learners_personal_infos` LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn WHERE learners_personal_infos.lrn = '109857060083' AND students_grades.phase = '4' AND students_grades.term = '3';";
+$run = mysqli_query($conn, $phase1_query);
+if(mysqli_num_rows($run) > 0){
+    $rows = mysqli_fetch_array($run);
+
+?>
+
+
+<p><span> Mother tounge: <?php echo$rows ['mother_tounge'];?></p> </span>
+<p> <span> Filipino: <?php echo $rows ['filipino'];?> </p> </span>
+<p> <span> English: <?php echo $rows ['english'];?> </p> </span>
+<p> <span> Mathematics: <?php echo $rows ['math'];?> </p> </span>
+<p> <span> Science: <?php echo $rows ['science'];?> </p> </span>
+<p> <span> Araling Panlipunan <?php echo $rows ['araling_panlipunan'];?> </p> </span>
+<p> <span> EPP/TLE: <?php echo $rows ['epp_tle'];?> </p> </span>
+<p> <span> Mapeh:</p> </span>
+<p><span> Music: <?php echo $rows ['music'];?> <?php ?> </span></p>
+<p><span> Arts: <?php echo $rows ['arts'];?> <?php ?> </span></p>
+<p><span> Physical Education: <?php echo $rows ['p_e'];?> <?php ?> </span></p>
+<p><span> Health: <?php echo $rows ['health'];?> <?php ?> </span></p>
+<p><span> Eduk. sa Pagpapakatao: <?php echo $rows ['edukasyon_sa_pagpapakatao'];?> <?php ?> </span></p> 
+<p><span> Arabic Language: <?php echo $rows ['arabic_language'];?> <?php ?> </span></p>
+<p><span> Islamic Values Education: <?php echo $rows ['islamic_values'];?> <?php ?> </span></p>
+<p><span>General Average: <?php echo $rows ['general_average'];?></span></p>
+<?php
+}
+?>
+
+<h2> 4 </h2>
+<?php
+$phase1_query = "SELECT * FROM `learners_personal_infos` LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn WHERE learners_personal_infos.lrn = '$lrn' AND students_grades.phase = '4' AND students_grades.term = '4';";
+$run = mysqli_query($conn, $phase1_query);
+if(mysqli_num_rows($run) > 0){
+    $rows = mysqli_fetch_array($run);
+
+?>
+
+
+<p><span> Mother tounge: <?php echo$rows ['mother_tounge'];?></p> </span>
+<p> <span> Filipino: <?php echo $rows ['filipino'];?> </p> </span>
+<p> <span> English: <?php echo $rows ['english'];?> </p> </span>
+<p> <span> Mathematics: <?php echo $rows ['math'];?> </p> </span>
+<p> <span> Science: <?php echo $rows ['science'];?> </p> </span>
+<p> <span> Araling Panlipunan <?php echo $rows ['araling_panlipunan'];?> </p> </span>
+<p> <span> EPP/TLE: <?php echo $rows ['epp_tle'];?> </p> </span>
+<p> <span> Mapeh:</p> </span>
+<p><span> Music: <?php echo $rows ['music'];?> <?php ?> </span></p>
+<p><span> Arts: <?php echo $rows ['arts'];?> <?php ?> </span></p>
+<p><span> Physical Education: <?php echo $rows ['p_e'];?> <?php ?> </span></p>
+<p><span> Health: <?php echo $rows ['health'];?> <?php ?> </span></p>
+<p><span> Eduk. sa Pagpapakatao: <?php echo $rows ['edukasyon_sa_pagpapakatao'];?> <?php ?> </span></p> 
+<p><span> Arabic Language: <?php echo $rows ['arabic_language'];?> <?php ?> </span></p>
+<p><span> Islamic Values Education: <?php echo $rows ['islamic_values'];?> <?php ?> </span></p>
+<p><span>General Average: <?php echo $rows ['general_average'];?></span></p>
+<?php
+}
+?>
+</body>
+<h2> final rating </h2>
+<?php
+$phase1_query = "SELECT * FROM `learners_personal_infos` LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn WHERE learners_personal_infos.lrn = '$lrn' AND students_grades.phase = '4' AND students_grades.term = '5';";
+$run = mysqli_query($conn, $phase1_query);
+if(mysqli_num_rows($run) > 0){
+    $rows = mysqli_fetch_array($run);
+
+?>
+
+<p><span> Mother tounge: <?php echo$rows ['mother_tounge'];?></p> </span>
+<p> <span> Filipino: <?php echo $rows ['filipino'];?> </p> </span>
+<p> <span> English: <?php echo $rows ['english'];?> </p> </span>
+<p> <span> Mathematics: <?php echo $rows ['math'];?> </p> </span>
+<p> <span> Science: <?php echo $rows ['science'];?> </p> </span>
+<p> <span> Araling Panlipunan <?php echo $rows ['araling_panlipunan'];?> </p> </span>
+<p> <span> EPP/TLE: <?php echo $rows ['epp_tle'];?> </p> </span>
+<p> <span> Mapeh:</p> </span>
+<p><span> Music: <?php echo $rows ['music'];?> <?php ?> </span></p>
+<p><span> Arts: <?php echo $rows ['arts'];?> <?php ?> </span></p>
+<p><span> Physical Education: <?php echo $rows ['p_e'];?> <?php ?> </span></p>
+<p><span> Health: <?php echo $rows ['health'];?> <?php ?> </span></p>
+<p><span> Eduk. sa Pagpapakatao: <?php echo $rows ['edukasyon_sa_pagpapakatao'];?> <?php ?> </span></p> 
+<p><span> Arabic Language: <?php echo $rows ['arabic_language'];?> <?php ?> </span></p>
+<p><span> Islamic Values Education: <?php echo $rows ['islamic_values'];?> <?php ?> </span></p>
+<p><span>General Average: <?php echo $rows ['general_average'];?></span></p>
+<?php
+}
+?>
+<h2> Phase 5 </h2>
+<?php
+$phase1_query = "SELECT * FROM `learners_personal_infos` LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn WHERE learners_personal_infos.lrn = '$lrn' AND students_grades.phase = '5' AND students_grades.term = '1';";
+$run = mysqli_query($conn, $phase1_query);
+if(mysqli_num_rows($run) > 0){
+    $rows = mysqli_fetch_array($run);
+
+?>
+
+<h2> 1 </h2> 
+
+
+<p><span> Mother tounge: <?php echo$rows ['mother_tounge'];?></p> </span>
+<p> <span> Filipino: <?php echo $rows ['filipino'];?> </p> </span>
+<p> <span> English: <?php echo $rows ['english'];?> </p> </span>
+<p> <span> Mathematics: <?php echo $rows ['math'];?> </p> </span>
+<p> <span> Science: <?php echo $rows ['science'];?> </p> </span>
+<p> <span> Araling Panlipunan <?php echo $rows ['araling_panlipunan'];?> </p> </span>
+<p> <span> EPP/TLE: <?php echo $rows ['epp_tle'];?> </p> </span>
+<p> <span> Mapeh:</p> </span>
+<p><span> Music: <?php echo $rows ['music'];?> <?php ?> </span></p>
+<p><span> Arts: <?php echo $rows ['arts'];?> <?php ?> </span></p>
+<p><span> Physical Education: <?php echo $rows ['p_e'];?> <?php ?> </span></p>
+<p><span> Health: <?php echo $rows ['health'];?> <?php ?> </span></p>
+<p><span> Eduk. sa Pagpapakatao: <?php echo $rows ['edukasyon_sa_pagpapakatao'];?> <?php ?> </span></p> 
+<p><span> Arabic Language: <?php echo $rows ['arabic_language'];?> <?php ?> </span></p>
+<p><span> Islamic Values Education: <?php echo $rows ['islamic_values'];?> <?php ?> </span></p>
+<p><span>General Average: <?php echo $rows ['general_average'];?></span></p>
+<?php
+}
+?>
+
+<h2> 2 </h2>
+<?php
+$phase1_query = "SELECT * FROM `learners_personal_infos` LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn WHERE learners_personal_infos.lrn = '$lrn' AND students_grades.phase = '5' AND students_grades.term = '2';";
+$run = mysqli_query($conn, $phase1_query);
+if(mysqli_num_rows($run) > 0){
+    $rows = mysqli_fetch_array($run);
+
+?>
+
+
+<p><span> Mother tounge: <?php echo$rows ['mother_tounge'];?></p> </span>
+<p> <span> Filipino: <?php echo $rows ['filipino'];?> </p> </span>
+<p> <span> English: <?php echo $rows ['english'];?> </p> </span>
+<p> <span> Mathematics: <?php echo $rows ['math'];?> </p> </span>
+<p> <span> Science: <?php echo $rows ['science'];?> </p> </span>
+<p> <span> Araling Panlipunan <?php echo $rows ['araling_panlipunan'];?> </p> </span>
+<p> <span> EPP/TLE: <?php echo $rows ['epp_tle'];?> </p> </span>
+<p> <span> Mapeh:</p> </span>
+<p><span> Music: <?php echo $rows ['music'];?> <?php ?> </span></p>
+<p><span> Arts: <?php echo $rows ['arts'];?> <?php ?> </span></p>
+<p><span> Physical Education: <?php echo $rows ['p_e'];?> <?php ?> </span></p>
+<p><span> Health: <?php echo $rows ['health'];?> <?php ?> </span></p>
+<p><span> Eduk. sa Pagpapakatao: <?php echo $rows ['edukasyon_sa_pagpapakatao'];?> <?php ?> </span></p> 
+<p><span> Arabic Language: <?php echo $rows ['arabic_language'];?> <?php ?> </span></p>
+<p><span> Islamic Values Education: <?php echo $rows ['islamic_values'];?> <?php ?> </span></p>
+<p><span>General Average: <?php echo $rows ['general_average'];?></span></p>
+<?php
+}
+?>
+
+<h2> 3 </h2>
+<?php
+$phase1_query = "SELECT * FROM `learners_personal_infos` LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn WHERE learners_personal_infos.lrn = '$lrn' AND students_grades.phase = '5' AND students_grades.term = '3';";
+$run = mysqli_query($conn, $phase1_query);
+if(mysqli_num_rows($run) > 0){
+    $rows = mysqli_fetch_array($run);
+
+?>
+
+
+<p><span> Mother tounge: <?php echo$rows ['mother_tounge'];?></p> </span>
+<p> <span> Filipino: <?php echo $rows ['filipino'];?> </p> </span>
+<p> <span> English: <?php echo $rows ['english'];?> </p> </span>
+<p> <span> Mathematics: <?php echo $rows ['math'];?> </p> </span>
+<p> <span> Science: <?php echo $rows ['science'];?> </p> </span>
+<p> <span> Araling Panlipunan <?php echo $rows ['araling_panlipunan'];?> </p> </span>
+<p> <span> EPP/TLE: <?php echo $rows ['epp_tle'];?> </p> </span>
+<p> <span> Mapeh:</p> </span>
+<p><span> Music: <?php echo $rows ['music'];?> <?php ?> </span></p>
+<p><span> Arts: <?php echo $rows ['arts'];?> <?php ?> </span></p>
+<p><span> Physical Education: <?php echo $rows ['p_e'];?> <?php ?> </span></p>
+<p><span> Health: <?php echo $rows ['health'];?> <?php ?> </span></p>
+<p><span> Eduk. sa Pagpapakatao: <?php echo $rows ['edukasyon_sa_pagpapakatao'];?> <?php ?> </span></p> 
+<p><span> Arabic Language: <?php echo $rows ['arabic_language'];?> <?php ?> </span></p>
+<p><span> Islamic Values Education: <?php echo $rows ['islamic_values'];?> <?php ?> </span></p>
+<p><span>General Average: <?php echo $rows ['general_average'];?></span></p>
+<?php
+}
+?>
+
+<h2> 4 </h2>
+<?php
+$phase1_query = "SELECT * FROM `learners_personal_infos` LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn WHERE learners_personal_infos.lrn = '$lrn' AND students_grades.phase = '5' AND students_grades.term = '4';";
+$run = mysqli_query($conn, $phase1_query);
+if(mysqli_num_rows($run) > 0){
+    $rows = mysqli_fetch_array($run);
+
+?>
+
+
+<p><span> Mother tounge: <?php echo$rows ['mother_tounge'];?></p> </span>
+<p> <span> Filipino: <?php echo $rows ['filipino'];?> </p> </span>
+<p> <span> English: <?php echo $rows ['english'];?> </p> </span>
+<p> <span> Mathematics: <?php echo $rows ['math'];?> </p> </span>
+<p> <span> Science: <?php echo $rows ['science'];?> </p> </span>
+<p> <span> Araling Panlipunan <?php echo $rows ['araling_panlipunan'];?> </p> </span>
+<p> <span> EPP/TLE: <?php echo $rows ['epp_tle'];?> </p> </span>
+<p> <span> Mapeh:</p> </span>
+<p><span> Music: <?php echo $rows ['music'];?> <?php ?> </span></p>
+<p><span> Arts: <?php echo $rows ['arts'];?> <?php ?> </span></p>
+<p><span> Physical Education: <?php echo $rows ['p_e'];?> <?php ?> </span></p>
+<p><span> Health: <?php echo $rows ['health'];?> <?php ?> </span></p>
+<p><span> Eduk. sa Pagpapakatao: <?php echo $rows ['edukasyon_sa_pagpapakatao'];?> <?php ?> </span></p> 
+<p><span> Arabic Language: <?php echo $rows ['arabic_language'];?> <?php ?> </span></p>
+<p><span> Islamic Values Education: <?php echo $rows ['islamic_values'];?> <?php ?> </span></p>
+<p><span>General Average: <?php echo $rows ['general_average'];?></span></p>
+<?php
+}
+?>
+</body>
+<h2> final rating </h2>
+<?php
+$phase1_query = "SELECT * FROM `learners_personal_infos` LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn WHERE learners_personal_infos.lrn = '$lrn' AND students_grades.phase = '5' AND students_grades.term = '5';";
+$run = mysqli_query($conn, $phase1_query);
+if(mysqli_num_rows($run) > 0){
+    $rows = mysqli_fetch_array($run);
+
+?>
+
+<p><span> Mother tounge: <?php echo$rows ['mother_tounge'];?></p> </span>
+<p> <span> Filipino: <?php echo $rows ['filipino'];?> </p> </span>
+<p> <span> English: <?php echo $rows ['english'];?> </p> </span>
+<p> <span> Mathematics: <?php echo $rows ['math'];?> </p> </span>
+<p> <span> Science: <?php echo $rows ['science'];?> </p> </span>
+<p> <span> Araling Panlipunan <?php echo $rows ['araling_panlipunan'];?> </p> </span>
+<p> <span> EPP/TLE: <?php echo $rows ['epp_tle'];?> </p> </span>
+<p> <span> Mapeh:</p> </span>
+<p><span> Music: <?php echo $rows ['music'];?> <?php ?> </span></p>
+<p><span> Arts: <?php echo $rows ['arts'];?> <?php ?> </span></p>
+<p><span> Physical Education: <?php echo $rows ['p_e'];?> <?php ?> </span></p>
+<p><span> Health: <?php echo $rows ['health'];?> <?php ?> </span></p>
+<p><span> Eduk. sa Pagpapakatao: <?php echo $rows ['edukasyon_sa_pagpapakatao'];?> <?php ?> </span></p> 
+<p><span> Arabic Language: <?php echo $rows ['arabic_language'];?> <?php ?> </span></p>
+<p><span> Islamic Values Education: <?php echo $rows ['islamic_values'];?> <?php ?> </span></p>
+<p><span>General Average: <?php echo $rows ['general_average'];?></span></p>
+<?php
+}
+?>
+
+<h2> Phase 6 </h2>
+<?php
+$phase1_query = "SELECT * FROM `learners_personal_infos` LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn WHERE learners_personal_infos.lrn = '$lrn' AND students_grades.phase = '6' AND students_grades.term = '1';";
+$run = mysqli_query($conn, $phase1_query);
+if(mysqli_num_rows($run) > 0){
+    $rows = mysqli_fetch_array($run);
+
+?>
+
+<h2> 1 </h2> 
+
+
+<p><span> Mother tounge: <?php echo$rows ['mother_tounge'];?></p> </span>
+<p> <span> Filipino: <?php echo $rows ['filipino'];?> </p> </span>
+<p> <span> English: <?php echo $rows ['english'];?> </p> </span>
+<p> <span> Mathematics: <?php echo $rows ['math'];?> </p> </span>
+<p> <span> Science: <?php echo $rows ['science'];?> </p> </span>
+<p> <span> Araling Panlipunan <?php echo $rows ['araling_panlipunan'];?> </p> </span>
+<p> <span> EPP/TLE: <?php echo $rows ['epp_tle'];?> </p> </span>
+<p> <span> Mapeh:</p> </span>
+<p><span> Music: <?php echo $rows ['music'];?> <?php ?> </span></p>
+<p><span> Arts: <?php echo $rows ['arts'];?> <?php ?> </span></p>
+<p><span> Physical Education: <?php echo $rows ['p_e'];?> <?php ?> </span></p>
+<p><span> Health: <?php echo $rows ['health'];?> <?php ?> </span></p>
+<p><span> Eduk. sa Pagpapakatao: <?php echo $rows ['edukasyon_sa_pagpapakatao'];?> <?php ?> </span></p> 
+<p><span> Arabic Language: <?php echo $rows ['arabic_language'];?> <?php ?> </span></p>
+<p><span> Islamic Values Education: <?php echo $rows ['islamic_values'];?> <?php ?> </span></p>
+<p><span>General Average: <?php echo $rows ['general_average'];?></span></p>
+<?php
+}
+?>
+
+<h2> 2 </h2>
+<?php
+$phase1_query = "SELECT * FROM `learners_personal_infos` LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn WHERE learners_personal_infos.lrn = '$lrn' AND students_grades.phase = '6' AND students_grades.term = '2';";
+$run = mysqli_query($conn, $phase1_query);
+if(mysqli_num_rows($run) > 0){
+    $rows = mysqli_fetch_array($run);
+
+?>
+
+
+<p><span> Mother tounge: <?php echo$rows ['mother_tounge'];?></p> </span>
+<p> <span> Filipino: <?php echo $rows ['filipino'];?> </p> </span>
+<p> <span> English: <?php echo $rows ['english'];?> </p> </span>
+<p> <span> Mathematics: <?php echo $rows ['math'];?> </p> </span>
+<p> <span> Science: <?php echo $rows ['science'];?> </p> </span>
+<p> <span> Araling Panlipunan <?php echo $rows ['araling_panlipunan'];?> </p> </span>
+<p> <span> EPP/TLE: <?php echo $rows ['epp_tle'];?> </p> </span>
+<p> <span> Mapeh:</p> </span>
+<p><span> Music: <?php echo $rows ['music'];?> <?php ?> </span></p>
+<p><span> Arts: <?php echo $rows ['arts'];?> <?php ?> </span></p>
+<p><span> Physical Education: <?php echo $rows ['p_e'];?> <?php ?> </span></p>
+<p><span> Health: <?php echo $rows ['health'];?> <?php ?> </span></p>
+<p><span> Eduk. sa Pagpapakatao: <?php echo $rows ['edukasyon_sa_pagpapakatao'];?> <?php ?> </span></p> 
+<p><span> Arabic Language: <?php echo $rows ['arabic_language'];?> <?php ?> </span></p>
+<p><span> Islamic Values Education: <?php echo $rows ['islamic_values'];?> <?php ?> </span></p>
+<p><span>General Average: <?php echo $rows ['general_average'];?></span></p>
+<?php
+}
+?>
+
+<h2> 3 </h2>
+<?php
+$phase1_query = "SELECT * FROM `learners_personal_infos` LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn WHERE learners_personal_infos.lrn = '$lrn' AND students_grades.phase = '6' AND students_grades.term = '3';";
+$run = mysqli_query($conn, $phase1_query);
+if(mysqli_num_rows($run) > 0){
+    $rows = mysqli_fetch_array($run);
+
+?>
+
+
+<p><span> Mother tounge: <?php echo$rows ['mother_tounge'];?></p> </span>
+<p> <span> Filipino: <?php echo $rows ['filipino'];?> </p> </span>
+<p> <span> English: <?php echo $rows ['english'];?> </p> </span>
+<p> <span> Mathematics: <?php echo $rows ['math'];?> </p> </span>
+<p> <span> Science: <?php echo $rows ['science'];?> </p> </span>
+<p> <span> Araling Panlipunan <?php echo $rows ['araling_panlipunan'];?> </p> </span>
+<p> <span> EPP/TLE: <?php echo $rows ['epp_tle'];?> </p> </span>
+<p> <span> Mapeh:</p> </span>
+<p><span> Music: <?php echo $rows ['music'];?> <?php ?> </span></p>
+<p><span> Arts: <?php echo $rows ['arts'];?> <?php ?> </span></p>
+<p><span> Physical Education: <?php echo $rows ['p_e'];?> <?php ?> </span></p>
+<p><span> Health: <?php echo $rows ['health'];?> <?php ?> </span></p>
+<p><span> Eduk. sa Pagpapakatao: <?php echo $rows ['edukasyon_sa_pagpapakatao'];?> <?php ?> </span></p> 
+<p><span> Arabic Language: <?php echo $rows ['arabic_language'];?> <?php ?> </span></p>
+<p><span> Islamic Values Education: <?php echo $rows ['islamic_values'];?> <?php ?> </span></p>
+<p><span>General Average: <?php echo $rows ['general_average'];?></span></p>
+<?php
+}
+?>
+
+<h2> 4 </h2>
+<?php
+$phase1_query = "SELECT * FROM `learners_personal_infos` LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn WHERE learners_personal_infos.lrn = '$lrn' AND students_grades.phase = '6' AND students_grades.term = '4';";
+$run = mysqli_query($conn, $phase1_query);
+if(mysqli_num_rows($run) > 0){
+    $rows = mysqli_fetch_array($run);
+
+?>
+
+
+<p><span> Mother tounge: <?php echo$rows ['mother_tounge'];?></p> </span>
+<p> <span> Filipino: <?php echo $rows ['filipino'];?> </p> </span>
+<p> <span> English: <?php echo $rows ['english'];?> </p> </span>
+<p> <span> Mathematics: <?php echo $rows ['math'];?> </p> </span>
+<p> <span> Science: <?php echo $rows ['science'];?> </p> </span>
+<p> <span> Araling Panlipunan <?php echo $rows ['araling_panlipunan'];?> </p> </span>
+<p> <span> EPP/TLE: <?php echo $rows ['epp_tle'];?> </p> </span>
+<p> <span> Mapeh:</p> </span>
+<p><span> Music: <?php echo $rows ['music'];?> <?php ?> </span></p>
+<p><span> Arts: <?php echo $rows ['arts'];?> <?php ?> </span></p>
+<p><span> Physical Education: <?php echo $rows ['p_e'];?> <?php ?> </span></p>
+<p><span> Health: <?php echo $rows ['health'];?> <?php ?> </span></p>
+<p><span> Eduk. sa Pagpapakatao: <?php echo $rows ['edukasyon_sa_pagpapakatao'];?> <?php ?> </span></p> 
+<p><span> Arabic Language: <?php echo $rows ['arabic_language'];?> <?php ?> </span></p>
+<p><span> Islamic Values Education: <?php echo $rows ['islamic_values'];?> <?php ?> </span></p>
+<p><span>General Average: <?php echo $rows ['general_average'];?></span></p>
+<?php
+}
+?>
+</body>
+<h2> final rating </h2>
+<?php
+$phase1_query = "SELECT * FROM `learners_personal_infos` LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn WHERE learners_personal_infos.lrn = '$lrn' AND students_grades.phase = '6' AND students_grades.term = '5';";
+$run = mysqli_query($conn, $phase1_query);
+if(mysqli_num_rows($run) > 0){
+    $rows = mysqli_fetch_array($run);
+
+?>
+
+<p><span> Mother tounge: <?php echo$rows ['mother_tounge'];?></p> </span>
+<p> <span> Filipino: <?php echo $rows ['filipino'];?> </p> </span>
+<p> <span> English: <?php echo $rows ['english'];?> </p> </span>
+<p> <span> Mathematics: <?php echo $rows ['math'];?> </p> </span>
+<p> <span> Science: <?php echo $rows ['science'];?> </p> </span>
+<p> <span> Araling Panlipunan <?php echo $rows ['araling_panlipunan'];?> </p> </span>
+<p> <span> EPP/TLE: <?php echo $rows ['epp_tle'];?> </p> </span>
+<p> <span> Mapeh:</p> </span>
+<p><span> Music: <?php echo $rows ['music'];?> <?php ?> </span></p>
+<p><span> Arts: <?php echo $rows ['arts'];?> <?php ?> </span></p>
+<p><span> Physical Education: <?php echo $rows ['p_e'];?> <?php ?> </span></p>
+<p><span> Health: <?php echo $rows ['health'];?> <?php ?> </span></p>
+<p><span> Eduk. sa Pagpapakatao: <?php echo $rows ['edukasyon_sa_pagpapakatao'];?> <?php ?> </span></p> 
+<p><span> Arabic Language: <?php echo $rows ['arabic_language'];?> <?php ?> </span></p>
+<p><span> Islamic Values Education: <?php echo $rows ['islamic_values'];?> <?php ?> </span></p>
+<p><span>General Average: <?php echo $rows ['general_average'];?></span></p>
+<?php
+}
+?>
+
+<h2> Phase 7 </h2>
+<?php
+$phase1_query = "SELECT * FROM `learners_personal_infos` LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn WHERE learners_personal_infos.lrn = '$lrn' AND students_grades.phase = '7' AND students_grades.term = '1';";
+$run = mysqli_query($conn, $phase1_query);
+if(mysqli_num_rows($run) > 0){
+    $rows = mysqli_fetch_array($run);
+
+?>
+
+<h2> 1 </h2> 
+
+
+<p><span> Mother tounge: <?php echo$rows ['mother_tounge'];?></p> </span>
+<p> <span> Filipino: <?php echo $rows ['filipino'];?> </p> </span>
+<p> <span> English: <?php echo $rows ['english'];?> </p> </span>
+<p> <span> Mathematics: <?php echo $rows ['math'];?> </p> </span>
+<p> <span> Science: <?php echo $rows ['science'];?> </p> </span>
+<p> <span> Araling Panlipunan <?php echo $rows ['araling_panlipunan'];?> </p> </span>
+<p> <span> EPP/TLE: <?php echo $rows ['epp_tle'];?> </p> </span>
+<p> <span> Mapeh:</p> </span>
+<p><span> Music: <?php echo $rows ['music'];?> <?php ?> </span></p>
+<p><span> Arts: <?php echo $rows ['arts'];?> <?php ?> </span></p>
+<p><span> Physical Education: <?php echo $rows ['p_e'];?> <?php ?> </span></p>
+<p><span> Health: <?php echo $rows ['health'];?> <?php ?> </span></p>
+<p><span> Eduk. sa Pagpapakatao: <?php echo $rows ['edukasyon_sa_pagpapakatao'];?> <?php ?> </span></p> 
+<p><span> Arabic Language: <?php echo $rows ['arabic_language'];?> <?php ?> </span></p>
+<p><span> Islamic Values Education: <?php echo $rows ['islamic_values'];?> <?php ?> </span></p>
+<p><span>General Average: <?php echo $rows ['general_average'];?></span></p>
+<?php
+}
+?>
+
+<h2> 2 </h2>
+<?php
+$phase1_query = "SELECT * FROM `learners_personal_infos` LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn WHERE learners_personal_infos.lrn = '$lrn' AND students_grades.phase = '7' AND students_grades.term = '2';";
+$run = mysqli_query($conn, $phase1_query);
+if(mysqli_num_rows($run) > 0){
+    $rows = mysqli_fetch_array($run);
+
+?>
+
+
+<p><span> Mother tounge: <?php echo$rows ['mother_tounge'];?></p> </span>
+<p> <span> Filipino: <?php echo $rows ['filipino'];?> </p> </span>
+<p> <span> English: <?php echo $rows ['english'];?> </p> </span>
+<p> <span> Mathematics: <?php echo $rows ['math'];?> </p> </span>
+<p> <span> Science: <?php echo $rows ['science'];?> </p> </span>
+<p> <span> Araling Panlipunan <?php echo $rows ['araling_panlipunan'];?> </p> </span>
+<p> <span> EPP/TLE: <?php echo $rows ['epp_tle'];?> </p> </span>
+<p> <span> Mapeh:</p> </span>
+<p><span> Music: <?php echo $rows ['music'];?> <?php ?> </span></p>
+<p><span> Arts: <?php echo $rows ['arts'];?> <?php ?> </span></p>
+<p><span> Physical Education: <?php echo $rows ['p_e'];?> <?php ?> </span></p>
+<p><span> Health: <?php echo $rows ['health'];?> <?php ?> </span></p>
+<p><span> Eduk. sa Pagpapakatao: <?php echo $rows ['edukasyon_sa_pagpapakatao'];?> <?php ?> </span></p> 
+<p><span> Arabic Language: <?php echo $rows ['arabic_language'];?> <?php ?> </span></p>
+<p><span> Islamic Values Education: <?php echo $rows ['islamic_values'];?> <?php ?> </span></p>
+<p><span>General Average: <?php echo $rows ['general_average'];?></span></p>
+<?php
+}
+?>
+
+<h2> 3 </h2>
+<?php
+$phase1_query = "SELECT * FROM `learners_personal_infos` LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn WHERE learners_personal_infos.lrn = '$lrn' AND students_grades.phase = '7' AND students_grades.term = '3';";
+$run = mysqli_query($conn, $phase1_query);
+if(mysqli_num_rows($run) > 0){
+    $rows = mysqli_fetch_array($run);
+
+?>
+
+
+<p><span> Mother tounge: <?php echo$rows ['mother_tounge'];?></p> </span>
+<p> <span> Filipino: <?php echo $rows ['filipino'];?> </p> </span>
+<p> <span> English: <?php echo $rows ['english'];?> </p> </span>
+<p> <span> Mathematics: <?php echo $rows ['math'];?> </p> </span>
+<p> <span> Science: <?php echo $rows ['science'];?> </p> </span>
+<p> <span> Araling Panlipunan <?php echo $rows ['araling_panlipunan'];?> </p> </span>
+<p> <span> EPP/TLE: <?php echo $rows ['epp_tle'];?> </p> </span>
+<p> <span> Mapeh:</p> </span>
+<p><span> Music: <?php echo $rows ['music'];?> <?php ?> </span></p>
+<p><span> Arts: <?php echo $rows ['arts'];?> <?php ?> </span></p>
+<p><span> Physical Education: <?php echo $rows ['p_e'];?> <?php ?> </span></p>
+<p><span> Health: <?php echo $rows ['health'];?> <?php ?> </span></p>
+<p><span> Eduk. sa Pagpapakatao: <?php echo $rows ['edukasyon_sa_pagpapakatao'];?> <?php ?> </span></p> 
+<p><span> Arabic Language: <?php echo $rows ['arabic_language'];?> <?php ?> </span></p>
+<p><span> Islamic Values Education: <?php echo $rows ['islamic_values'];?> <?php ?> </span></p>
+<p><span>General Average: <?php echo $rows ['general_average'];?></span></p>
+<?php
+}
+?>
+
+<h2> 4 </h2>
+<?php
+$phase1_query = "SELECT * FROM `learners_personal_infos` LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn WHERE learners_personal_infos.lrn = '$lrn' AND students_grades.phase = '7' AND students_grades.term = '4';";
+$run = mysqli_query($conn, $phase1_query);
+if(mysqli_num_rows($run) > 0){
+    $rows = mysqli_fetch_array($run);
+
+?>
+
+
+<p><span> Mother tounge: <?php echo$rows ['mother_tounge'];?></p> </span>
+<p> <span> Filipino: <?php echo $rows ['filipino'];?> </p> </span>
+<p> <span> English: <?php echo $rows ['english'];?> </p> </span>
+<p> <span> Mathematics: <?php echo $rows ['math'];?> </p> </span>
+<p> <span> Science: <?php echo $rows ['science'];?> </p> </span>
+<p> <span> Araling Panlipunan <?php echo $rows ['araling_panlipunan'];?> </p> </span>
+<p> <span> EPP/TLE: <?php echo $rows ['epp_tle'];?> </p> </span>
+<p> <span> Mapeh:</p> </span>
+<p><span> Music: <?php echo $rows ['music'];?> <?php ?> </span></p>
+<p><span> Arts: <?php echo $rows ['arts'];?> <?php ?> </span></p>
+<p><span> Physical Education: <?php echo $rows ['p_e'];?> <?php ?> </span></p>
+<p><span> Health: <?php echo $rows ['health'];?> <?php ?> </span></p>
+<p><span> Eduk. sa Pagpapakatao: <?php echo $rows ['edukasyon_sa_pagpapakatao'];?> <?php ?> </span></p> 
+<p><span> Arabic Language: <?php echo $rows ['arabic_language'];?> <?php ?> </span></p>
+<p><span> Islamic Values Education: <?php echo $rows ['islamic_values'];?> <?php ?> </span></p>
+<p><span>General Average: <?php echo $rows ['general_average'];?></span></p>
+<?php
+}
+?>
+</body>
+<h2> final rating </h2>
+<?php
+$phase1_query = "SELECT * FROM `learners_personal_infos` LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn WHERE learners_personal_infos.lrn = '$lrn' AND students_grades.phase = '7' AND students_grades.term = '5';";
+$run = mysqli_query($conn, $phase1_query);
+if(mysqli_num_rows($run) > 0){
+    $rows = mysqli_fetch_array($run);
+
+?>
+
+<p><span> Mother tounge: <?php echo$rows ['mother_tounge'];?></p> </span>
+<p> <span> Filipino: <?php echo $rows ['filipino'];?> </p> </span>
+<p> <span> English: <?php echo $rows ['english'];?> </p> </span>
+<p> <span> Mathematics: <?php echo $rows ['math'];?> </p> </span>
+<p> <span> Science: <?php echo $rows ['science'];?> </p> </span>
+<p> <span> Araling Panlipunan <?php echo $rows ['araling_panlipunan'];?> </p> </span>
+<p> <span> EPP/TLE: <?php echo $rows ['epp_tle'];?> </p> </span>
+<p> <span> Mapeh:</p> </span>
+<p><span> Music: <?php echo $rows ['music'];?> <?php ?> </span></p>
+<p><span> Arts: <?php echo $rows ['arts'];?> <?php ?> </span></p>
+<p><span> Physical Education: <?php echo $rows ['p_e'];?> <?php ?> </span></p>
+<p><span> Health: <?php echo $rows ['health'];?> <?php ?> </span></p>
+<p><span> Eduk. sa Pagpapakatao: <?php echo $rows ['edukasyon_sa_pagpapakatao'];?> <?php ?> </span></p> 
+<p><span> Arabic Language: <?php echo $rows ['arabic_language'];?> <?php ?> </span></p>
+<p><span> Islamic Values Education: <?php echo $rows ['islamic_values'];?> <?php ?> </span></p>
+<p><span>General Average: <?php echo $rows ['general_average'];?></span></p>
+<?php
+}
+?>
+
+<h2> Phase 8 </h2>
+<?php
+$phase1_query = "SELECT * FROM `learners_personal_infos` LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn WHERE learners_personal_infos.lrn = '$lrn' AND students_grades.phase = '8' AND students_grades.term = '1';";
+$run = mysqli_query($conn, $phase1_query);
+if(mysqli_num_rows($run) > 0){
+    $rows = mysqli_fetch_array($run);
+
+?>
+
+<h2> 1 </h2> 
+
+
+<p><span> Mother tounge: <?php echo$rows ['mother_tounge'];?></p> </span>
+<p> <span> Filipino: <?php echo $rows ['filipino'];?> </p> </span>
+<p> <span> English: <?php echo $rows ['english'];?> </p> </span>
+<p> <span> Mathematics: <?php echo $rows ['math'];?> </p> </span>
+<p> <span> Science: <?php echo $rows ['science'];?> </p> </span>
+<p> <span> Araling Panlipunan <?php echo $rows ['araling_panlipunan'];?> </p> </span>
+<p> <span> EPP/TLE: <?php echo $rows ['epp_tle'];?> </p> </span>
+<p> <span> Mapeh:</p> </span>
+<p><span> Music: <?php echo $rows ['music'];?> <?php ?> </span></p>
+<p><span> Arts: <?php echo $rows ['arts'];?> <?php ?> </span></p>
+<p><span> Physical Education: <?php echo $rows ['p_e'];?> <?php ?> </span></p>
+<p><span> Health: <?php echo $rows ['health'];?> <?php ?> </span></p>
+<p><span> Eduk. sa Pagpapakatao: <?php echo $rows ['edukasyon_sa_pagpapakatao'];?> <?php ?> </span></p> 
+<p><span> Arabic Language: <?php echo $rows ['arabic_language'];?> <?php ?> </span></p>
+<p><span> Islamic Values Education: <?php echo $rows ['islamic_values'];?> <?php ?> </span></p>
+<p><span>General Average: <?php echo $rows ['general_average'];?></span></p>
+<?php
+}
+?>
+
+<h2> 2 </h2>
+<?php
+$phase1_query = "SELECT * FROM `learners_personal_infos` LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn WHERE learners_personal_infos.lrn = '$lrn' AND students_grades.phase = '8' AND students_grades.term = '2';";
+$run = mysqli_query($conn, $phase1_query);
+if(mysqli_num_rows($run) > 0){
+    $rows = mysqli_fetch_array($run);
+
+?>
+
+
+<p><span> Mother tounge: <?php echo$rows ['mother_tounge'];?></p> </span>
+<p> <span> Filipino: <?php echo $rows ['filipino'];?> </p> </span>
+<p> <span> English: <?php echo $rows ['english'];?> </p> </span>
+<p> <span> Mathematics: <?php echo $rows ['math'];?> </p> </span>
+<p> <span> Science: <?php echo $rows ['science'];?> </p> </span>
+<p> <span> Araling Panlipunan <?php echo $rows ['araling_panlipunan'];?> </p> </span>
+<p> <span> EPP/TLE: <?php echo $rows ['epp_tle'];?> </p> </span>
+<p> <span> Mapeh:</p> </span>
+<p><span> Music: <?php echo $rows ['music'];?> <?php ?> </span></p>
+<p><span> Arts: <?php echo $rows ['arts'];?> <?php ?> </span></p>
+<p><span> Physical Education: <?php echo $rows ['p_e'];?> <?php ?> </span></p>
+<p><span> Health: <?php echo $rows ['health'];?> <?php ?> </span></p>
+<p><span> Eduk. sa Pagpapakatao: <?php echo $rows ['edukasyon_sa_pagpapakatao'];?> <?php ?> </span></p> 
+<p><span> Arabic Language: <?php echo $rows ['arabic_language'];?> <?php ?> </span></p>
+<p><span> Islamic Values Education: <?php echo $rows ['islamic_values'];?> <?php ?> </span></p>
+<p><span>General Average: <?php echo $rows ['general_average'];?></span></p>
+<?php
+}
+?>
+
+<h2> 3 </h2>
+<?php
+$phase1_query = "SELECT * FROM `learners_personal_infos` LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn WHERE learners_personal_infos.lrn = '$lrn' AND students_grades.phase = '8' AND students_grades.term = '3';";
+$run = mysqli_query($conn, $phase1_query);
+if(mysqli_num_rows($run) > 0){
+    $rows = mysqli_fetch_array($run);
+
+?>
+
+
+<p><span> Mother tounge: <?php echo$rows ['mother_tounge'];?></p> </span>
+<p> <span> Filipino: <?php echo $rows ['filipino'];?> </p> </span>
+<p> <span> English: <?php echo $rows ['english'];?> </p> </span>
+<p> <span> Mathematics: <?php echo $rows ['math'];?> </p> </span>
+<p> <span> Science: <?php echo $rows ['science'];?> </p> </span>
+<p> <span> Araling Panlipunan <?php echo $rows ['araling_panlipunan'];?> </p> </span>
+<p> <span> EPP/TLE: <?php echo $rows ['epp_tle'];?> </p> </span>
+<p> <span> Mapeh:</p> </span>
+<p><span> Music: <?php echo $rows ['music'];?> <?php ?> </span></p>
+<p><span> Arts: <?php echo $rows ['arts'];?> <?php ?> </span></p>
+<p><span> Physical Education: <?php echo $rows ['p_e'];?> <?php ?> </span></p>
+<p><span> Health: <?php echo $rows ['health'];?> <?php ?> </span></p>
+<p><span> Eduk. sa Pagpapakatao: <?php echo $rows ['edukasyon_sa_pagpapakatao'];?> <?php ?> </span></p> 
+<p><span> Arabic Language: <?php echo $rows ['arabic_language'];?> <?php ?> </span></p>
+<p><span> Islamic Values Education: <?php echo $rows ['islamic_values'];?> <?php ?> </span></p>
+<p><span>General Average: <?php echo $rows ['general_average'];?></span></p>
+<?php
+}
+?>
+
+<h2> 4 </h2>
+<?php
+$phase1_query = "SELECT * FROM `learners_personal_infos` LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn WHERE learners_personal_infos.lrn = '$lrn' AND students_grades.phase = '8' AND students_grades.term = '4';";
+$run = mysqli_query($conn, $phase1_query);
+if(mysqli_num_rows($run) > 0){
+    $rows = mysqli_fetch_array($run);
+
+?>
+
+
+<p><span> Mother tounge: <?php echo$rows ['mother_tounge'];?></p> </span>
+<p> <span> Filipino: <?php echo $rows ['filipino'];?> </p> </span>
+<p> <span> English: <?php echo $rows ['english'];?> </p> </span>
+<p> <span> Mathematics: <?php echo $rows ['math'];?> </p> </span>
+<p> <span> Science: <?php echo $rows ['science'];?> </p> </span>
+<p> <span> Araling Panlipunan <?php echo $rows ['araling_panlipunan'];?> </p> </span>
+<p> <span> EPP/TLE: <?php echo $rows ['epp_tle'];?> </p> </span>
+<p> <span> Mapeh:</p> </span>
+<p><span> Music: <?php echo $rows ['music'];?> <?php ?> </span></p>
+<p><span> Arts: <?php echo $rows ['arts'];?> <?php ?> </span></p>
+<p><span> Physical Education: <?php echo $rows ['p_e'];?> <?php ?> </span></p>
+<p><span> Health: <?php echo $rows ['health'];?> <?php ?> </span></p>
+<p><span> Eduk. sa Pagpapakatao: <?php echo $rows ['edukasyon_sa_pagpapakatao'];?> <?php ?> </span></p> 
+<p><span> Arabic Language: <?php echo $rows ['arabic_language'];?> <?php ?> </span></p>
+<p><span> Islamic Values Education: <?php echo $rows ['islamic_values'];?> <?php ?> </span></p>
+<p><span>General Average: <?php echo $rows ['general_average'];?></span></p>
+<?php
+}
+?>
+</body>
+<h2> final rating </h2>
+<?php
+$phase1_query = "SELECT * FROM `learners_personal_infos` LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn WHERE learners_personal_infos.lrn = '$lrn' AND students_grades.phase = '8' AND students_grades.term = '5';";
+$run = mysqli_query($conn, $phase1_query);
+if(mysqli_num_rows($run) > 0){
+    $rows = mysqli_fetch_array($run);
+
+?>
+
+<p><span> Mother tounge: <?php echo$rows ['mother_tounge'];?></p> </span>
+<p> <span> Filipino: <?php echo $rows ['filipino'];?> </p> </span>
+<p> <span> English: <?php echo $rows ['english'];?> </p> </span>
+<p> <span> Mathematics: <?php echo $rows ['math'];?> </p> </span>
+<p> <span> Science: <?php echo $rows ['science'];?> </p> </span>
+<p> <span> Araling Panlipunan <?php echo $rows ['araling_panlipunan'];?> </p> </span>
+<p> <span> EPP/TLE: <?php echo $rows ['epp_tle'];?> </p> </span>
+<p> <span> Mapeh:</p> </span>
+<p><span> Music: <?php echo $rows ['music'];?> <?php ?> </span></p>
+<p><span> Arts: <?php echo $rows ['arts'];?> <?php ?> </span></p>
+<p><span> Physical Education: <?php echo $rows ['p_e'];?> <?php ?> </span></p>
+<p><span> Health: <?php echo $rows ['health'];?> <?php ?> </span></p>
+<p><span> Eduk. sa Pagpapakatao: <?php echo $rows ['edukasyon_sa_pagpapakatao'];?> <?php ?> </span></p> 
+<p><span> Arabic Language: <?php echo $rows ['arabic_language'];?> <?php ?> </span></p>
+<p><span> Islamic Values Education: <?php echo $rows ['islamic_values'];?> <?php ?> </span></p>
+<p><span>General Average: <?php echo $rows ['general_average'];?></span></p>
+<?php
+}
+?>
+
 </html>
