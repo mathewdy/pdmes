@@ -61,11 +61,7 @@ if(isset($_GET['lrn'])){
     <p><span>Birthday: <?php echo $rows['birth_date'];?></span></p>
     <p><span>Sex: <?php echo $rows['sex'];?></span></p>
     <br>
-    <h2>Eligibility For Elementary School Enrollment</h2>
-    <p><span>Credential Presented: <?php echo $rows['credential_presented'];?></span></p>
-    <p><span>Name of School: <?php echo $rows['name_of_school'];?></span></p>
-    <p><span>School ID: <?php echo $rows['school_id'];?></span></p>
-    <p><span>School Address: <?php echo $rows['address_of_school'];?></span></p>
+    <h2>Eligibility For Elementary School Enrollment</h2>wspan></p>
     <p><span>Others: <?php echo $rows['others'];?></span></p>
     <?php
     }
@@ -79,8 +75,8 @@ if(mysqli_num_rows($run) > 0){
     $rows = mysqli_fetch_array($run);
 
 ?>
-<p> <span> School: <?php echo $rows ['school_2'];?> </span> <p>
-<p><span>School Id: <?php echo$rows ['school_id_2'];?></p> </span>
+<p> <span> School: <?php echo $rows ['school'];?> </span> <p>
+<p><span>School Id: <?php echo$rows ['school_id'];?></p> </span>
 <p> <span> District: <?php echo $rows ['district'];?> </p> </span>
 <p> <span> Division: <?php echo $rows ['division'];?> </p> </span>
 <p> <span> Region: <?php echo $rows ['region'];?> </p> </span>
@@ -96,7 +92,7 @@ if(mysqli_num_rows($run) > 0){
 ?>
 <h2> Phase 1 </h2>
 <?php
-$phase1_query = "SELECT * FROM `learners_personal_infos` LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn WHERE learners_personal_infos.lrn = '$lrn' AND students_grades.phase = '1' AND students_grades.term = '1';";
+$phase1_query = "SELECT * FROM `learners_personal_infos` LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn LEFT JOIN remedial_classes ON learners_personal_infos.lrn= remedial_classes.lrn WHERE learners_personal_infos.lrn = '$lrn' AND students_grades.phase = '1' AND students_grades.term = '1' AND remedial_classes.phase = '1'";
 $run = mysqli_query($conn, $phase1_query);
 if(mysqli_num_rows($run) > 0){
     $rows = mysqli_fetch_array($run);
@@ -125,6 +121,21 @@ if(mysqli_num_rows($run) > 0){
 <?php
 }
 ?>
+
+<h2>Remedial Classes</h2>
+<p><span>Date from: <?php if ($rows['date_from'] = '000-00-00'){ echo 'N/A'?> 
+        <?php }else{ echo $rows['date_from']; }?></span></p>
+<p><span> To:<?php if ($rows['date_to'] = '000-00-00'){ echo 'N/A'?> 
+        <?php }else{ echo $rows['date_to']; }?></span></p>
+<h3>Learning areas</h3>
+<p><span> <?php echo $rows ['learning_areas']  ?></span></p>
+<p><span> Final Rating <?php echo $rows ['final_rating']  ?></span></p>
+<p><span> Remedial class mark <?php echo $rows ['remedial_class_mark']  ?></span></p>
+<p><span> Recomputed final grade <?php echo $rows ['recomputed_final_grade']  ?></span></p>
+<p><span> Remarks <?php echo $rows ['remarks']  ?></span></p>
+
+<p><span> </span></p>
+
 
 <h2> 2 </h2>
 <?php
