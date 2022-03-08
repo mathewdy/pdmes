@@ -15,84 +15,163 @@ if(empty($_SESSION['username'])){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../pdmes/bootstrap-5.1.1-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="styles.css">
     <title>PDMES</title>
 </head>
-<body>
+<nav class="navbar navbar-expand">
+    <h2>Logo</h2>
+    <div class="header ">
+        <ul class="navbar-nav ">
 
-<a href="index.php">Back</a>
+        <li class="navbar-nav">
+              <a class="nav-link   btn btn-outline-success" href="index.php">Back</a>
+         </li>
+            <li class="nav-item">
+                <a class="nav-link" href="logout.php">Logout</a>
+            </li>
+            
+        </ul>
+    </div>
+</nav>
+<body class="bg-light">
+<div class="container py-5">
+<form action="addrecord.php"  class="" method="POST">
+  <div class="container ">
+  <h3 class="text-center bg-light"> Learner's Presonal Information </h3>
+    <div class="row g-3 d-flex ">
+      <div class="col-md-3">
+        <label for="" class="form-label"> Last Name : </label>
+        <input list="text" name="last_name " class="form-control"  required> 
+      </div>
+      <div class="col-md-3">      
+      <label for="" class="form-label">First Name : </label>
+      <input type="text" name="first_name" class="form-control" required>
+      </div>
 
+      <div class="col-md-3">      
+      <label for="" class="form-label">Suffix Name : </label>
+      <input type="text" name="suffix_name" class="form-control" required>
+      </div>
 
-<h3> Learner's Presonal Information </h3>
-<form action="addrecord.php" method="POST">
-  <label for=""> Last Name : </label>
-    <input list="text" name="last_name"  required> 
-  <br>
-    
-  <label for="">First Name : </label>
-    <input type="text" name="first_name" required>
-  <br>
-    
-
-
-  <label for="">Suffix Name : </label>
-    <input type="text" name="suffix_name">
-  <br>
+      <div class="col-md-3">      
+      <label for="" class="form-label">Middle Name : </label>
+      <input type="text" name="middle_name" class="form-control" required>
+      </div>
   
-  <label for=""> Middle Name : </label>
-    <input type="text" name="middle_name">
-  <br>
+    </div>
 
-  <label for=""> LRN : </label>
-    <input type="text" name="lrn" required>
-  <br>
+    <div class="row g-3">
+      <div class="col-md-4">
+        <label for="" class="form-label"> LRN : </label>
+        <input type="text" name="lrn" class="form-control" required>
+      </div>
+      <div class="col-md-4">
+        <label for="" class="form-label"> Birthdate : </label>
+        <input type="date" name="birthday" class="form-control" required>
+      </div>
 
-
-  <label for="">Birthdate : </label>
-    <input type="date" name="birthday" required>
-  <br>
-  <label for="">Sex :</label>
-    <select name="sex" id="" required> 
+      
+    <div class="col-md-4">
+      <label for="" class="form-label">Sex :</label>
+      <select  class="form-select form-select-md mb-3" name="sex" id="" required> 
       <option value="">-Gender-</option>
       <option value="Male">Male</option>
       <option value="Female">Female</option>
     </select> 
+    </div>
+    </div>
+
+  </div>
+
+  
+    
   <br>
 
-  <h3> Eligibity for elementary school enrolment </h3>
-    <p>Credential Presented for Grade1</p>
-    <p> - -Please check below --</p> 
-          
+  <div class="container">
+  <h3  class="text-center bg-light mt-3"> Eligibity for elementary school enrolment </h3>
+    <p class="text-center">Credential Presented for Grade1</p>
+    <p class="text-center"> - -Please check below --</p> 
 
-    <label for=""> Kinder progress report :  </label>
+    <div class="row g-3">
+      <div class="col-md-4">
+      <label  class="form-label" for=""> Kinder progress report :  </label>
       <input type="checkbox" name="credential[]" value="Kinder progress report" >
-    <br>
-    <label for=""> ECCD Checklist: </label>
+      </div>
+
+      <div class="col-md-4">
+      <label class="form-label" for=""> ECCD Checklist: </label>
       <input type="checkbox" name="credential[]" value="ECCD Checklist" >
-    <br>
-    
-    <label for="">Kindergarden Certificate of Completion : </label>
+      </div>
+
+      
+      <div class="col-md-4">
+      <label class="form-label" for="" >Kindergarden Certificate of Completion : </label>
       <input type="checkbox" name="credential[]" value="Kindergarden Certificate of Completion" >
-    <br>
-            
-    <label for="">Name of School : </label>
-      <input list="text" name="name_of_school" >
-    <br>
+      </div>
+    </div>
 
-    <label for="">School Id : </label>
-      <input list="text" name="school_id" >
-    <br>
+    <div class="row g-3">
+      <div class="col-md-3">
+      <label class="form-label" for="">Name of School : </label>
+      <input list="text" class="form-control" name="name_of_school" >
+      </div>
 
-    <label for="">Address of School : </label>
-      <input list="text" name="address_school">
-    <br>
-    <label for="">Others : </label>
-      <input list="text" name="others" >
-    <br>
+      <div class="col-md-3">
+      <label class="form-label" for="">School Id : </label>
+      <input list="text" class="form-control" name="school_id" >
+      </div>
 
+      <div class="col-md-3">
+      <label class="form-label" for="">Address of School :</label>
+      <input list="text" class="form-control" name="address_school">
+      </div>
 
-    <input type="submit" name="next" value="Next">
-  
+      <div class="col-md-3">
+      <label class="form-label" for="">Others :</label>
+      <input list="text" class="form-control" name="others">
+      </div>
+    </div>
+    <div class="col-5-lg mt-4 text-center">
+      <input type="submit" name="next" class="btn btn-lg btn-success " value="Next">
+    </div>
+
+   
 </form>
+  </div>
+
+</div> 
+
+<footer>
+  <div class=" bg-success p-2">
+    <h1 class="text-center"></h1>
+  </div>
+
+</footer>
+
+  <script>
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+(function () {
+  'use strict'
+
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  var forms = document.querySelectorAll('.needs-validation')
+
+  // Loop over them and prevent submission
+  Array.prototype.slice.call(forms)
+    .forEach(function (form) {
+      form.addEventListener('submit', function (event) {
+        if (!form.checkValidity()) {
+          event.preventDefault()
+          event.stopPropagation()
+        }
+
+        form.classList.add('was-validated')
+      }, false)
+    })
+})()
+  </script>
+  
 
 
 <?php 
