@@ -1,0 +1,23 @@
+.header{
+    display:flex;
+    justify-content: end;
+    width:100%;
+}
+.nav-link{
+    text-decoration: none;
+    color:black;
+    width:150px;
+}
+a{
+    text-decoration: none;
+    color:black;
+}
+
+.navbar-nav a { 
+    margin:0 2rem;
+}
+
+.history-log{
+    padding:1rem 2rem;
+    margin: 8rem auto;
+}
