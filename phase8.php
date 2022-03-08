@@ -39,11 +39,11 @@ $run_query_lrn = mysqli_query($conn,$query_lrn);
 <form action="phase8.php" method="POST">
 
 <label for="">School : </label>
-      <input type="text" name="school_2" id="school_2">
+      <input type="text" name="school" id="school_2">
     <br>
 
     <label for="">School ID : </label>
-      <input type="text" name="school_id_2" id="school_id_2">
+      <input type="text" name="school_id" id="school_id_2">
 
     <br>
 
@@ -588,8 +588,8 @@ if(isset($_POST['next'])){
   //scholastic_record
   $lrn = $_SESSION['lrn'];
 
-  $school_2 = ucfirst($_POST['school_2']);
-  $school_id_2 = $_POST['school_id_2'];
+  $school_2 = ucfirst($_POST['school']);
+  $school_id_2 = $_POST['school_id'];
   $division = $_POST['division'];
   $district = ucfirst($_POST['district']);
   $region = ucfirst($_POST['region']);

@@ -40,11 +40,11 @@ $run_query_lrn = mysqli_query($conn,$query_lrn);
 <form action="phase2.php" method="POST">
 
 <label for="">School : </label>
-      <input type="text" name="school_2" id="school_2">
+      <input type="text" name="school" id="school_2">
     <br>
 
     <label for="">School ID : </label>
-      <input type="text" name="school_id_2" id="school_id_2">
+      <input type="text" name="school_id" id="school_id_2">
 
     <br>
 
@@ -587,8 +587,8 @@ if(isset($_POST['next'])){
   //scholastic_record
   $lrn = $_SESSION['lrn'];
 
-  $school_2 = ucfirst($_POST['school_2']);
-  $school_id_2 = $_POST['school_id_2'];
+  $school_2 = ucfirst($_POST['school']);
+  $school_id_2 = $_POST['school_id'];
   $division = $_POST['division'];
   $district = ucfirst($_POST['district']);
   $region = ucfirst($_POST['region']);
@@ -739,7 +739,7 @@ if(isset($_POST['next'])){
 
 
   //scholastic records, remedial_classes, students_grades lang ang may phase 
-  $insert_scholastic = "INSERT INTO scholastic_records (lrn,school_2,school_id_2,district,division,region,
+  $insert_scholastic = "INSERT INTO scholastic_records (lrn,school,school_id,district,division,region,
   classified_as_grade,section,school_year,name_of_adviser,phase,remarks,date_time_created,date_time_updated)
   VALUES ('$lrn', '$school_2','$school_id_2','$district', '$division', '$region', '$classified_as_grade', '$section', '$school_year', '$name_of_adviser','$phase', '$remarks', '$dateCreated', '$dateUpdated')";
   $run_scholastic = mysqli_query($conn,$insert_scholastic);

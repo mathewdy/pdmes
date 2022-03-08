@@ -245,6 +245,8 @@ if(mysqli_num_rows($run) > 0){
 }
 ?>
 <h2> Phase 2 </h2>
+<h2>1st Quarter  </h2> 
+
 
 <?php
 $phase1_query = "SELECT * FROM `learners_personal_infos` LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn WHERE learners_personal_infos.lrn = '$lrn' AND students_grades.phase = '2' AND students_grades.term = '1';";
@@ -254,7 +256,6 @@ if(mysqli_num_rows($run) > 0){
 
 ?>
 
-<h2> 1 </h2> 
 
 
 <p><span> Mother tounge: <?php echo$rows ['mother_tounge'];?></p> </span>
@@ -277,7 +278,7 @@ if(mysqli_num_rows($run) > 0){
 }
 ?>
 
-<h2> 2 </h2>
+<h2> 2nd Quarter </h2>
 <?php
 $phase1_query = "SELECT * FROM `learners_personal_infos` LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn WHERE learners_personal_infos.lrn = '$lrn' AND students_grades.phase = '2' AND students_grades.term = '2';";
 $run = mysqli_query($conn, $phase1_query);
@@ -307,7 +308,7 @@ if(mysqli_num_rows($run) > 0){
 }
 ?>
 
-<h2> 3 </h2>
+<h2> 3rd Quarter </h2>
 <?php
 $phase1_query = "SELECT * FROM `learners_personal_infos` LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn WHERE learners_personal_infos.lrn = '$lrn' AND students_grades.phase = '2' AND students_grades.term = '3';";
 $run = mysqli_query($conn, $phase1_query);
@@ -337,7 +338,7 @@ if(mysqli_num_rows($run) > 0){
 }
 ?>
 
-<h2> 4 </h2>
+<h2> 4th Quarter </h2>
 <?php
 $phase1_query = "SELECT * FROM `learners_personal_infos` LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn WHERE learners_personal_infos.lrn = '$lrn' AND students_grades.phase = '2' AND students_grades.term = '4';";
 $run = mysqli_query($conn, $phase1_query);
@@ -367,7 +368,7 @@ if(mysqli_num_rows($run) > 0){
 }
 ?>
 </body>
-<h2> final rating </h2>
+<h2> Finals </h2>
 <?php
 $phase1_query = "SELECT * FROM `learners_personal_infos` LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn WHERE learners_personal_infos.lrn = '$lrn' AND students_grades.phase = '2' AND students_grades.term = '5';";
 $run = mysqli_query($conn, $phase1_query);
@@ -397,6 +398,8 @@ if(mysqli_num_rows($run) > 0){
 ?>
 
 <h2> Phase 3 </h2>
+<h2> 1st Quarter </h2> 
+
 <?php
 $phase1_query = "SELECT * FROM `learners_personal_infos` LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn WHERE learners_personal_infos.lrn = '$lrn' AND students_grades.phase = '2' AND students_grades.term = '1';";
 $run = mysqli_query($conn, $phase1_query);
@@ -405,7 +408,6 @@ if(mysqli_num_rows($run) > 0){
 
 ?>
 
-<h2> 1 </h2> 
 
 
 <p><span> Mother tounge: <?php echo$rows ['mother_tounge'];?></p> </span>
@@ -428,7 +430,7 @@ if(mysqli_num_rows($run) > 0){
 }
 ?>
 
-<h2> 2 </h2>
+<h2> 2nd Quarter </h2>
 <?php
 $phase1_query = "SELECT * FROM `learners_personal_infos` LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn WHERE learners_personal_infos.lrn = '$lrn' AND students_grades.phase = '2' AND students_grades.term = '2';";
 $run = mysqli_query($conn, $phase1_query);
@@ -458,7 +460,7 @@ if(mysqli_num_rows($run) > 0){
 }
 ?>
 
-<h2> 3 </h2>
+<h2> 3rd Quarter </h2>
 <?php
 $phase1_query = "SELECT * FROM `learners_personal_infos` LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn WHERE learners_personal_infos.lrn = '$lrn' AND students_grades.phase = '2' AND students_grades.term = '3';";
 $run = mysqli_query($conn, $phase1_query);
@@ -488,7 +490,7 @@ if(mysqli_num_rows($run) > 0){
 }
 ?>
 
-<h2> 4 </h2>
+<h2> 4th Quarter </h2>
 <?php
 $phase1_query = "SELECT * FROM `learners_personal_infos` LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn WHERE learners_personal_infos.lrn = '$lrn' AND students_grades.phase = '2' AND students_grades.term = '4';";
 $run = mysqli_query($conn, $phase1_query);
@@ -518,7 +520,7 @@ if(mysqli_num_rows($run) > 0){
 }
 ?>
 </body>
-<h2> final rating </h2>
+<h2> Finals  </h2>
 <?php
 $phase1_query = "SELECT * FROM `learners_personal_infos` LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn WHERE learners_personal_infos.lrn = '$lrn' AND students_grades.phase = '2' AND students_grades.term = '5';";
 $run = mysqli_query($conn, $phase1_query);
@@ -547,6 +549,8 @@ if(mysqli_num_rows($run) > 0){
 }
 ?>
 <h2> Phase 4 </h2>
+<h2> 1st Quarter </h2> 
+
 <?php
 $phase1_query = "SELECT * FROM `learners_personal_infos` LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn WHERE learners_personal_infos.lrn = '$lrn' AND students_grades.phase = '4' AND students_grades.term = '1';";
 $run = mysqli_query($conn, $phase1_query);
@@ -555,7 +559,6 @@ if(mysqli_num_rows($run) > 0){
 
 ?>
 
-<h2> 1 </h2> 
 
 
 <p><span> Mother tounge: <?php echo$rows ['mother_tounge'];?></p> </span>
@@ -578,7 +581,7 @@ if(mysqli_num_rows($run) > 0){
 }
 ?>
 
-<h2> 2 </h2>
+<h2> 2nd Quarter </h2>
 <?php
 $phase1_query = "SELECT * FROM `learners_personal_infos` LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn WHERE learners_personal_infos.lrn = '$lrn' AND students_grades.phase = '4' AND students_grades.term = '2';";
 $run = mysqli_query($conn, $phase1_query);
@@ -608,7 +611,7 @@ if(mysqli_num_rows($run) > 0){
 }
 ?>
 
-<h2> 3 </h2>
+<h2> 3rd Quarter </h2>
 <?php
 $phase1_query = "SELECT * FROM `learners_personal_infos` LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn WHERE learners_personal_infos.lrn = '109857060083' AND students_grades.phase = '4' AND students_grades.term = '3';";
 $run = mysqli_query($conn, $phase1_query);
@@ -638,7 +641,7 @@ if(mysqli_num_rows($run) > 0){
 }
 ?>
 
-<h2> 4 </h2>
+<h2> 4th Quarter </h2>
 <?php
 $phase1_query = "SELECT * FROM `learners_personal_infos` LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn WHERE learners_personal_infos.lrn = '$lrn' AND students_grades.phase = '4' AND students_grades.term = '4';";
 $run = mysqli_query($conn, $phase1_query);
@@ -668,7 +671,7 @@ if(mysqli_num_rows($run) > 0){
 }
 ?>
 </body>
-<h2> final rating </h2>
+<h2> Finals </h2>
 <?php
 $phase1_query = "SELECT * FROM `learners_personal_infos` LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn WHERE learners_personal_infos.lrn = '$lrn' AND students_grades.phase = '4' AND students_grades.term = '5';";
 $run = mysqli_query($conn, $phase1_query);
@@ -697,6 +700,8 @@ if(mysqli_num_rows($run) > 0){
 }
 ?>
 <h2> Phase 5 </h2>
+<h2> 1st Quarter </h2> 
+
 <?php
 $phase1_query = "SELECT * FROM `learners_personal_infos` LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn WHERE learners_personal_infos.lrn = '$lrn' AND students_grades.phase = '5' AND students_grades.term = '1';";
 $run = mysqli_query($conn, $phase1_query);
@@ -705,7 +710,6 @@ if(mysqli_num_rows($run) > 0){
 
 ?>
 
-<h2> 1 </h2> 
 
 
 <p><span> Mother tounge: <?php echo$rows ['mother_tounge'];?></p> </span>
@@ -728,7 +732,7 @@ if(mysqli_num_rows($run) > 0){
 }
 ?>
 
-<h2> 2 </h2>
+<h2> 2nd Quarter </h2>
 <?php
 $phase1_query = "SELECT * FROM `learners_personal_infos` LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn WHERE learners_personal_infos.lrn = '$lrn' AND students_grades.phase = '5' AND students_grades.term = '2';";
 $run = mysqli_query($conn, $phase1_query);
@@ -758,7 +762,7 @@ if(mysqli_num_rows($run) > 0){
 }
 ?>
 
-<h2> 3 </h2>
+<h2> 3rd Quarter </h2>
 <?php
 $phase1_query = "SELECT * FROM `learners_personal_infos` LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn WHERE learners_personal_infos.lrn = '$lrn' AND students_grades.phase = '5' AND students_grades.term = '3';";
 $run = mysqli_query($conn, $phase1_query);
@@ -788,7 +792,7 @@ if(mysqli_num_rows($run) > 0){
 }
 ?>
 
-<h2> 4 </h2>
+<h2> 4th Quarter </h2>
 <?php
 $phase1_query = "SELECT * FROM `learners_personal_infos` LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn WHERE learners_personal_infos.lrn = '$lrn' AND students_grades.phase = '5' AND students_grades.term = '4';";
 $run = mysqli_query($conn, $phase1_query);
@@ -818,7 +822,7 @@ if(mysqli_num_rows($run) > 0){
 }
 ?>
 </body>
-<h2> final rating </h2>
+<h2> Finals  </h2>
 <?php
 $phase1_query = "SELECT * FROM `learners_personal_infos` LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn WHERE learners_personal_infos.lrn = '$lrn' AND students_grades.phase = '5' AND students_grades.term = '5';";
 $run = mysqli_query($conn, $phase1_query);
@@ -848,6 +852,8 @@ if(mysqli_num_rows($run) > 0){
 ?>
 
 <h2> Phase 6 </h2>
+<h2> 1st Quarter </h2> 
+
 <?php
 $phase1_query = "SELECT * FROM `learners_personal_infos` LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn WHERE learners_personal_infos.lrn = '$lrn' AND students_grades.phase = '6' AND students_grades.term = '1';";
 $run = mysqli_query($conn, $phase1_query);
@@ -856,7 +862,6 @@ if(mysqli_num_rows($run) > 0){
 
 ?>
 
-<h2> 1 </h2> 
 
 
 <p><span> Mother tounge: <?php echo$rows ['mother_tounge'];?></p> </span>
@@ -879,7 +884,7 @@ if(mysqli_num_rows($run) > 0){
 }
 ?>
 
-<h2> 2 </h2>
+<h2> 2nd Quarter </h2>
 <?php
 $phase1_query = "SELECT * FROM `learners_personal_infos` LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn WHERE learners_personal_infos.lrn = '$lrn' AND students_grades.phase = '6' AND students_grades.term = '2';";
 $run = mysqli_query($conn, $phase1_query);
@@ -909,7 +914,7 @@ if(mysqli_num_rows($run) > 0){
 }
 ?>
 
-<h2> 3 </h2>
+<h2> 3rd Quarter </h2>
 <?php
 $phase1_query = "SELECT * FROM `learners_personal_infos` LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn WHERE learners_personal_infos.lrn = '$lrn' AND students_grades.phase = '6' AND students_grades.term = '3';";
 $run = mysqli_query($conn, $phase1_query);
@@ -939,7 +944,7 @@ if(mysqli_num_rows($run) > 0){
 }
 ?>
 
-<h2> 4 </h2>
+<h2> 4th Quarter </h2>
 <?php
 $phase1_query = "SELECT * FROM `learners_personal_infos` LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn WHERE learners_personal_infos.lrn = '$lrn' AND students_grades.phase = '6' AND students_grades.term = '4';";
 $run = mysqli_query($conn, $phase1_query);
@@ -969,7 +974,7 @@ if(mysqli_num_rows($run) > 0){
 }
 ?>
 </body>
-<h2> final rating </h2>
+<h2> Finals  </h2>
 <?php
 $phase1_query = "SELECT * FROM `learners_personal_infos` LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn WHERE learners_personal_infos.lrn = '$lrn' AND students_grades.phase = '6' AND students_grades.term = '5';";
 $run = mysqli_query($conn, $phase1_query);
@@ -999,6 +1004,8 @@ if(mysqli_num_rows($run) > 0){
 ?>
 
 <h2> Phase 7 </h2>
+<h2> 1st Quarter </h2> 
+
 <?php
 $phase1_query = "SELECT * FROM `learners_personal_infos` LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn WHERE learners_personal_infos.lrn = '$lrn' AND students_grades.phase = '7' AND students_grades.term = '1';";
 $run = mysqli_query($conn, $phase1_query);
@@ -1007,7 +1014,6 @@ if(mysqli_num_rows($run) > 0){
 
 ?>
 
-<h2> 1 </h2> 
 
 
 <p><span> Mother tounge: <?php echo$rows ['mother_tounge'];?></p> </span>
@@ -1030,7 +1036,7 @@ if(mysqli_num_rows($run) > 0){
 }
 ?>
 
-<h2> 2 </h2>
+<h2> 2nd Quarter </h2>
 <?php
 $phase1_query = "SELECT * FROM `learners_personal_infos` LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn WHERE learners_personal_infos.lrn = '$lrn' AND students_grades.phase = '7' AND students_grades.term = '2';";
 $run = mysqli_query($conn, $phase1_query);
@@ -1060,7 +1066,7 @@ if(mysqli_num_rows($run) > 0){
 }
 ?>
 
-<h2> 3 </h2>
+<h2> 3rd Quarter </h2>
 <?php
 $phase1_query = "SELECT * FROM `learners_personal_infos` LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn WHERE learners_personal_infos.lrn = '$lrn' AND students_grades.phase = '7' AND students_grades.term = '3';";
 $run = mysqli_query($conn, $phase1_query);
@@ -1090,7 +1096,7 @@ if(mysqli_num_rows($run) > 0){
 }
 ?>
 
-<h2> 4 </h2>
+<h2> 4th Quarter </h2>
 <?php
 $phase1_query = "SELECT * FROM `learners_personal_infos` LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn WHERE learners_personal_infos.lrn = '$lrn' AND students_grades.phase = '7' AND students_grades.term = '4';";
 $run = mysqli_query($conn, $phase1_query);
@@ -1120,7 +1126,7 @@ if(mysqli_num_rows($run) > 0){
 }
 ?>
 </body>
-<h2> final rating </h2>
+<h2> Finals  </h2>
 <?php
 $phase1_query = "SELECT * FROM `learners_personal_infos` LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn WHERE learners_personal_infos.lrn = '$lrn' AND students_grades.phase = '7' AND students_grades.term = '5';";
 $run = mysqli_query($conn, $phase1_query);
@@ -1150,6 +1156,8 @@ if(mysqli_num_rows($run) > 0){
 ?>
 
 <h2> Phase 8 </h2>
+<h2> 1st Quarter </h2> 
+
 <?php
 $phase1_query = "SELECT * FROM `learners_personal_infos` LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn WHERE learners_personal_infos.lrn = '$lrn' AND students_grades.phase = '8' AND students_grades.term = '1';";
 $run = mysqli_query($conn, $phase1_query);
@@ -1158,7 +1166,6 @@ if(mysqli_num_rows($run) > 0){
 
 ?>
 
-<h2> 1 </h2> 
 
 
 <p><span> Mother tounge: <?php echo$rows ['mother_tounge'];?></p> </span>
@@ -1181,7 +1188,7 @@ if(mysqli_num_rows($run) > 0){
 }
 ?>
 
-<h2> 2 </h2>
+<h2> 2nd Quarter </h2>
 <?php
 $phase1_query = "SELECT * FROM `learners_personal_infos` LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn WHERE learners_personal_infos.lrn = '$lrn' AND students_grades.phase = '8' AND students_grades.term = '2';";
 $run = mysqli_query($conn, $phase1_query);
@@ -1211,7 +1218,7 @@ if(mysqli_num_rows($run) > 0){
 }
 ?>
 
-<h2> 3 </h2>
+<h2> 3rd Quarter </h2>
 <?php
 $phase1_query = "SELECT * FROM `learners_personal_infos` LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn WHERE learners_personal_infos.lrn = '$lrn' AND students_grades.phase = '8' AND students_grades.term = '3';";
 $run = mysqli_query($conn, $phase1_query);
@@ -1241,7 +1248,7 @@ if(mysqli_num_rows($run) > 0){
 }
 ?>
 
-<h2> 4 </h2>
+<h2> 4th Quarter </h2>
 <?php
 $phase1_query = "SELECT * FROM `learners_personal_infos` LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn WHERE learners_personal_infos.lrn = '$lrn' AND students_grades.phase = '8' AND students_grades.term = '4';";
 $run = mysqli_query($conn, $phase1_query);
@@ -1271,7 +1278,7 @@ if(mysqli_num_rows($run) > 0){
 }
 ?>
 </body>
-<h2> final rating </h2>
+<h2> Finals </h2>
 <?php
 $phase1_query = "SELECT * FROM `learners_personal_infos` LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn WHERE learners_personal_infos.lrn = '$lrn' AND students_grades.phase = '8' AND students_grades.term = '5';";
 $run = mysqli_query($conn, $phase1_query);
