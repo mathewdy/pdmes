@@ -7,7 +7,11 @@ if(empty($_SESSION['username'])){
 }
 
 
+error_reporting(E_ERROR & E_WARNING);
 $lrn123 = $_SESSION['lrn'] . '<br>';
+if(empty($_SESSION['lrn'])){
+  echo "<script>window.location.href='addrecord.php'</script>";
+}
 $query_lrn = "SELECT * FROM learners_personal_infos WHERE lrn = '$lrn123' ";
 $run_query_lrn = mysqli_query($conn,$query_lrn);
 
