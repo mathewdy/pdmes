@@ -61,7 +61,11 @@ if(isset($_GET['lrn'])){
     <p><span>Birthday: <?php echo $rows['birth_date'];?></span></p>
     <p><span>Sex: <?php echo $rows['sex'];?></span></p>
     <br>
-    <h2>Eligibility For Elementary School Enrollment</h2>wspan></p>
+    <h2>Eligibility For Elementary School Enrollment</h2>
+    <p><span>Credential Presented: <?php echo $rows['credential_presented'];?></span></p>
+    <p><span>Name Of School: <?php echo $rows['name_of_school'];?></span></p>
+    <p><span>School ID: <?php echo $rows['school_id'];?></span></p>
+    <p><span>Adress of School: <?php echo $rows['address_of_school'];?></span></p>
     <p><span>Others: <?php echo $rows['others'];?></span></p>
     <?php
     }
@@ -92,7 +96,11 @@ if(mysqli_num_rows($run) > 0){
 ?>
 <h2> Phase 1 </h2>
 <?php
-$phase1_query = "SELECT * FROM `learners_personal_infos` LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn LEFT JOIN remedial_classes ON learners_personal_infos.lrn= remedial_classes.lrn WHERE learners_personal_infos.lrn = '$lrn' AND students_grades.phase = '1' AND students_grades.term = '1' AND remedial_classes.phase = '1'";
+$phase1_query = "SELECT * FROM `learners_personal_infos` 
+LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn 
+LEFT JOIN remedial_classes ON learners_personal_infos.lrn= remedial_classes.lrn 
+WHERE learners_personal_infos.lrn = '$lrn' 
+AND students_grades.phase = '1' AND students_grades.term = '1' AND remedial_classes.phase = '1'";
 $run = mysqli_query($conn, $phase1_query);
 if(mysqli_num_rows($run) > 0){
     $rows = mysqli_fetch_array($run);
@@ -122,24 +130,18 @@ if(mysqli_num_rows($run) > 0){
 }
 ?>
 
-<h2>Remedial Classes</h2>
-<p><span>Date from: <?php if ($rows['date_from'] = '000-00-00'){ echo 'N/A'?> 
-        <?php }else{ echo $rows['date_from']; }?></span></p>
-<p><span> To:<?php if ($rows['date_to'] = '000-00-00'){ echo 'N/A'?> 
-        <?php }else{ echo $rows['date_to']; }?></span></p>
-<h3>Learning areas</h3>
-<p><span> <?php echo $rows ['learning_areas']  ?></span></p>
-<p><span> Final Rating <?php echo $rows ['final_rating']  ?></span></p>
-<p><span> Remedial class mark <?php echo $rows ['remedial_class_mark']  ?></span></p>
-<p><span> Recomputed final grade <?php echo $rows ['recomputed_final_grade']  ?></span></p>
-<p><span> Remarks <?php echo $rows ['remarks']  ?></span></p>
+
 
 <p><span> </span></p>
 
 
 <h2> 2 </h2>
 <?php
-$phase1_query = "SELECT * FROM `learners_personal_infos` LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn WHERE learners_personal_infos.lrn = '$lrn' AND students_grades.phase = '1' AND students_grades.term = '2';";
+$phase1_query = "SELECT * FROM `learners_personal_infos` 
+LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn 
+LEFT JOIN remedial_classes ON learners_personal_infos.lrn= remedial_classes.lrn 
+WHERE learners_personal_infos.lrn = '$lrn' 
+AND students_grades.phase = '1' AND students_grades.term = '2' AND remedial_classes.phase = '1'";
 $run = mysqli_query($conn, $phase1_query);
 if(mysqli_num_rows($run) > 0){
     $rows = mysqli_fetch_array($run);
@@ -169,7 +171,11 @@ if(mysqli_num_rows($run) > 0){
 
 <h2> 3 </h2>
 <?php
-$phase1_query = "SELECT * FROM `learners_personal_infos` LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn WHERE learners_personal_infos.lrn = '$lrn' AND students_grades.phase = '1' AND students_grades.term = '3';";
+$phase1_query = "SELECT * FROM `learners_personal_infos` 
+LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn 
+LEFT JOIN remedial_classes ON learners_personal_infos.lrn= remedial_classes.lrn 
+WHERE learners_personal_infos.lrn = '$lrn' 
+AND students_grades.phase = '1' AND students_grades.term = '3' AND remedial_classes.phase = '1'";
 $run = mysqli_query($conn, $phase1_query);
 if(mysqli_num_rows($run) > 0){
     $rows = mysqli_fetch_array($run);
@@ -199,7 +205,11 @@ if(mysqli_num_rows($run) > 0){
 
 <h2> 4 </h2>
 <?php
-$phase1_query = "SELECT * FROM `learners_personal_infos` LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn WHERE learners_personal_infos.lrn = '$lrn' AND students_grades.phase = '1' AND students_grades.term = '4';";
+$phase1_query = "SELECT * FROM `learners_personal_infos` 
+LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn 
+LEFT JOIN remedial_classes ON learners_personal_infos.lrn= remedial_classes.lrn 
+WHERE learners_personal_infos.lrn = '$lrn' 
+AND students_grades.phase = '1' AND students_grades.term = '4' AND remedial_classes.phase = '1'";
 $run = mysqli_query($conn, $phase1_query);
 if(mysqli_num_rows($run) > 0){
     $rows = mysqli_fetch_array($run);
@@ -229,12 +239,18 @@ if(mysqli_num_rows($run) > 0){
 </body>
 <h2> final rating </h2>
 <?php
-$phase1_query = "SELECT * FROM `learners_personal_infos` LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn WHERE learners_personal_infos.lrn = '$lrn' AND students_grades.phase = '1' AND students_grades.term = '5';";
+$phase1_query = "SELECT * FROM `learners_personal_infos` 
+LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn 
+LEFT JOIN remedial_classes ON learners_personal_infos.lrn= remedial_classes.lrn 
+WHERE learners_personal_infos.lrn = '$lrn' 
+AND students_grades.phase = '1' AND students_grades.term = '4' AND remedial_classes.phase = '1'";
 $run = mysqli_query($conn, $phase1_query);
 if(mysqli_num_rows($run) > 0){
     $rows = mysqli_fetch_array($run);
 
 ?>
+
+
 
 <p><span> Mother tounge: <?php echo$rows ['mother_tounge'];?></p> </span>
 <p> <span> Filipino: <?php echo $rows ['filipino'];?> </p> </span>
@@ -255,17 +271,35 @@ if(mysqli_num_rows($run) > 0){
 <?php
 }
 ?>
+
+<h2>Remedial Classes</h2>
+<p><span>Date from: <?php if ($rows['date_from'] = '000-00-00'){ echo 'N/A'?> 
+        <?php }else{ echo $rows['date_from']; }?></span></p>
+<p><span> To:<?php if ($rows['date_to'] = '000-00-00'){ echo 'N/A'?> 
+        <?php }else{ echo $rows['date_to']; }?></span></p>
+<h3>Learning areas</h3>
+<p><span> <?php echo $rows ['learning_areas']  ?></span></p>
+<p><span> Final Rating: <?php echo $rows ['final_rating']  ?></span></p>
+<p><span> Remedial class mark: <?php echo $rows ['remedial_class_mark']  ?></span></p>
+<p><span> Recomputed final grade: <?php echo $rows ['recomputed_final_grade']  ?></span></p>
+<p><span> Remarks: <?php echo $rows ['remarks']  ?></span></p>
+
 <h2> Phase 2 </h2>
 <h2>1st Quarter  </h2> 
 
 
 <?php
-$phase1_query = "SELECT * FROM `learners_personal_infos` LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn WHERE learners_personal_infos.lrn = '$lrn' AND students_grades.phase = '2' AND students_grades.term = '1';";
-$run = mysqli_query($conn, $phase1_query);
+$phase2_query = "SELECT * FROM `learners_personal_infos` 
+LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn 
+LEFT JOIN remedial_classes ON learners_personal_infos.lrn= remedial_classes.lrn 
+WHERE learners_personal_infos.lrn = '$lrn' 
+AND students_grades.phase = '2' AND students_grades.term = '2' AND remedial_classes.phase = '2'";
+$run = mysqli_query($conn, $phase2_query);
 if(mysqli_num_rows($run) > 0){
     $rows = mysqli_fetch_array($run);
 
 ?>
+
 
 
 
@@ -291,8 +325,12 @@ if(mysqli_num_rows($run) > 0){
 
 <h2> 2nd Quarter </h2>
 <?php
-$phase1_query = "SELECT * FROM `learners_personal_infos` LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn WHERE learners_personal_infos.lrn = '$lrn' AND students_grades.phase = '2' AND students_grades.term = '2';";
-$run = mysqli_query($conn, $phase1_query);
+$phase2_query = "SELECT * FROM `learners_personal_infos` 
+LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn 
+LEFT JOIN remedial_classes ON learners_personal_infos.lrn= remedial_classes.lrn 
+WHERE learners_personal_infos.lrn = '$lrn' 
+AND students_grades.phase = '2' AND students_grades.term = '2' AND remedial_classes.phase = '2'";
+$run = mysqli_query($conn, $phase2_query);
 if(mysqli_num_rows($run) > 0){
     $rows = mysqli_fetch_array($run);
 
@@ -321,10 +359,16 @@ if(mysqli_num_rows($run) > 0){
 
 <h2> 3rd Quarter </h2>
 <?php
-$phase1_query = "SELECT * FROM `learners_personal_infos` LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn WHERE learners_personal_infos.lrn = '$lrn' AND students_grades.phase = '2' AND students_grades.term = '3';";
-$run = mysqli_query($conn, $phase1_query);
+$phase2_query = "SELECT * FROM `learners_personal_infos` 
+LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn 
+LEFT JOIN remedial_classes ON learners_personal_infos.lrn= remedial_classes.lrn 
+WHERE learners_personal_infos.lrn = '$lrn' 
+AND students_grades.phase = '2' AND students_grades.term = '3' AND remedial_classes.phase = '2'";
+$run = mysqli_query($conn, $phase2_query);
 if(mysqli_num_rows($run) > 0){
     $rows = mysqli_fetch_array($run);
+
+?>
 
 ?>
 
@@ -351,10 +395,16 @@ if(mysqli_num_rows($run) > 0){
 
 <h2> 4th Quarter </h2>
 <?php
-$phase1_query = "SELECT * FROM `learners_personal_infos` LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn WHERE learners_personal_infos.lrn = '$lrn' AND students_grades.phase = '2' AND students_grades.term = '4';";
-$run = mysqli_query($conn, $phase1_query);
+$phase2_query = "SELECT * FROM `learners_personal_infos` 
+LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn 
+LEFT JOIN remedial_classes ON learners_personal_infos.lrn= remedial_classes.lrn 
+WHERE learners_personal_infos.lrn = '$lrn' 
+AND students_grades.phase = '2' AND students_grades.term = '4' AND remedial_classes.phase = '2'";
+$run = mysqli_query($conn, $phase2_query);
 if(mysqli_num_rows($run) > 0){
     $rows = mysqli_fetch_array($run);
+
+?>
 
 ?>
 
@@ -381,12 +431,17 @@ if(mysqli_num_rows($run) > 0){
 </body>
 <h2> Finals </h2>
 <?php
-$phase1_query = "SELECT * FROM `learners_personal_infos` LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn WHERE learners_personal_infos.lrn = '$lrn' AND students_grades.phase = '2' AND students_grades.term = '5';";
-$run = mysqli_query($conn, $phase1_query);
+$phase2_query = "SELECT * FROM `learners_personal_infos` 
+LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn 
+LEFT JOIN remedial_classes ON learners_personal_infos.lrn= remedial_classes.lrn 
+WHERE learners_personal_infos.lrn = '$lrn' 
+AND students_grades.phase = '2' AND students_grades.term = '5' AND remedial_classes.phase = '2'";
+$run = mysqli_query($conn, $phase2_query);
 if(mysqli_num_rows($run) > 0){
     $rows = mysqli_fetch_array($run);
 
 ?>
+
 
 <p><span> Mother tounge: <?php echo$rows ['mother_tounge'];?></p> </span>
 <p> <span> Filipino: <?php echo $rows ['filipino'];?> </p> </span>
@@ -407,13 +462,29 @@ if(mysqli_num_rows($run) > 0){
 <?php
 }
 ?>
+
+<h2>Remedial Classes</h2>
+<p><span>Date from: <?php if ($rows['date_from'] = '000-00-00'){ echo 'N/A'?> 
+        <?php }else{ echo $rows['date_from']; }?></span></p>
+<p><span> To:<?php if ($rows['date_to'] = '000-00-00'){ echo 'N/A'?> 
+        <?php }else{ echo $rows['date_to']; }?></span></p>
+<h3>Learning areas</h3>
+<p><span> <?php echo $rows ['learning_areas']  ?></span></p>
+<p><span> Final Rating: <?php echo $rows ['final_rating']  ?></span></p>
+<p><span> Remedial class mark: <?php echo $rows ['remedial_class_mark']  ?></span></p>
+<p><span> Recomputed final grade: <?php echo $rows ['recomputed_final_grade']  ?></span></p>
+<p><span> Remarks: <?php echo $rows ['remarks']  ?></span></p>
 
 <h2> Phase 3 </h2>
 <h2> 1st Quarter </h2> 
 
 <?php
-$phase1_query = "SELECT * FROM `learners_personal_infos` LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn WHERE learners_personal_infos.lrn = '$lrn' AND students_grades.phase = '2' AND students_grades.term = '1';";
-$run = mysqli_query($conn, $phase1_query);
+$phase3_query = "SELECT * FROM `learners_personal_infos` 
+LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn 
+LEFT JOIN remedial_classes ON learners_personal_infos.lrn= remedial_classes.lrn 
+WHERE learners_personal_infos.lrn = '$lrn' 
+AND students_grades.phase = '3' AND students_grades.term = '1' AND remedial_classes.phase = '3'";
+$run = mysqli_query($conn, $phase3_query);
 if(mysqli_num_rows($run) > 0){
     $rows = mysqli_fetch_array($run);
 
@@ -443,8 +514,12 @@ if(mysqli_num_rows($run) > 0){
 
 <h2> 2nd Quarter </h2>
 <?php
-$phase1_query = "SELECT * FROM `learners_personal_infos` LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn WHERE learners_personal_infos.lrn = '$lrn' AND students_grades.phase = '2' AND students_grades.term = '2';";
-$run = mysqli_query($conn, $phase1_query);
+$phase3_query = "SELECT * FROM `learners_personal_infos` 
+LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn 
+LEFT JOIN remedial_classes ON learners_personal_infos.lrn= remedial_classes.lrn 
+WHERE learners_personal_infos.lrn = '$lrn' 
+AND students_grades.phase = '3' AND students_grades.term = '2' AND remedial_classes.phase = '3'";
+$run = mysqli_query($conn, $phase3_query);
 if(mysqli_num_rows($run) > 0){
     $rows = mysqli_fetch_array($run);
 
@@ -473,8 +548,12 @@ if(mysqli_num_rows($run) > 0){
 
 <h2> 3rd Quarter </h2>
 <?php
-$phase1_query = "SELECT * FROM `learners_personal_infos` LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn WHERE learners_personal_infos.lrn = '$lrn' AND students_grades.phase = '2' AND students_grades.term = '3';";
-$run = mysqli_query($conn, $phase1_query);
+$phase3_query = "SELECT * FROM `learners_personal_infos` 
+LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn 
+LEFT JOIN remedial_classes ON learners_personal_infos.lrn= remedial_classes.lrn 
+WHERE learners_personal_infos.lrn = '$lrn' 
+AND students_grades.phase = '3' AND students_grades.term = '3' AND remedial_classes.phase = '3'";
+$run = mysqli_query($conn, $phase3_query);
 if(mysqli_num_rows($run) > 0){
     $rows = mysqli_fetch_array($run);
 
@@ -503,11 +582,14 @@ if(mysqli_num_rows($run) > 0){
 
 <h2> 4th Quarter </h2>
 <?php
-$phase1_query = "SELECT * FROM `learners_personal_infos` LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn WHERE learners_personal_infos.lrn = '$lrn' AND students_grades.phase = '2' AND students_grades.term = '4';";
-$run = mysqli_query($conn, $phase1_query);
+$phase3_query = "SELECT * FROM `learners_personal_infos` 
+LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn 
+LEFT JOIN remedial_classes ON learners_personal_infos.lrn= remedial_classes.lrn 
+WHERE learners_personal_infos.lrn = '$lrn' 
+AND students_grades.phase = '3' AND students_grades.term = '4' AND remedial_classes.phase = '3'";
+$run = mysqli_query($conn, $phase3_query);
 if(mysqli_num_rows($run) > 0){
     $rows = mysqli_fetch_array($run);
-
 ?>
 
 
@@ -533,8 +615,12 @@ if(mysqli_num_rows($run) > 0){
 </body>
 <h2> Finals  </h2>
 <?php
-$phase1_query = "SELECT * FROM `learners_personal_infos` LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn WHERE learners_personal_infos.lrn = '$lrn' AND students_grades.phase = '2' AND students_grades.term = '5';";
-$run = mysqli_query($conn, $phase1_query);
+$phase3_query = "SELECT * FROM `learners_personal_infos` 
+LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn 
+LEFT JOIN remedial_classes ON learners_personal_infos.lrn= remedial_classes.lrn 
+WHERE learners_personal_infos.lrn = '$lrn' 
+AND students_grades.phase = '3' AND students_grades.term = '5' AND remedial_classes.phase = '3'";
+$run = mysqli_query($conn, $phase3_query);
 if(mysqli_num_rows($run) > 0){
     $rows = mysqli_fetch_array($run);
 
@@ -559,12 +645,29 @@ if(mysqli_num_rows($run) > 0){
 <?php
 }
 ?>
+<h2>Remedial Classes</h2>
+<p><span>Date from: <?php if ($rows['date_from'] = '000-00-00'){ echo 'N/A'?> 
+        <?php }else{ echo $rows['date_from']; }?></span></p>
+<p><span> To:<?php if ($rows['date_to'] = '000-00-00'){ echo 'N/A'?> 
+        <?php }else{ echo $rows['date_to']; }?></span></p>
+<h3>Learning areas</h3>
+<p><span> <?php echo $rows ['learning_areas']  ?></span></p>
+<p><span> Final Rating: <?php echo $rows ['final_rating']  ?></span></p>
+<p><span> Remedial class mark: <?php echo $rows ['remedial_class_mark']  ?></span></p>
+<p><span> Recomputed final grade: <?php echo $rows ['recomputed_final_grade']  ?></span></p>
+<p><span> Remarks: <?php echo $rows ['remarks']  ?></span></p>
+
+
 <h2> Phase 4 </h2>
 <h2> 1st Quarter </h2> 
 
 <?php
-$phase1_query = "SELECT * FROM `learners_personal_infos` LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn WHERE learners_personal_infos.lrn = '$lrn' AND students_grades.phase = '4' AND students_grades.term = '1';";
-$run = mysqli_query($conn, $phase1_query);
+$phase4_query = "SELECT * FROM `learners_personal_infos` 
+LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn 
+LEFT JOIN remedial_classes ON learners_personal_infos.lrn= remedial_classes.lrn 
+WHERE learners_personal_infos.lrn = '$lrn' 
+AND students_grades.phase = '4' AND students_grades.term = '1' AND remedial_classes.phase = '4'";
+$run = mysqli_query($conn, $phase4_query);
 if(mysqli_num_rows($run) > 0){
     $rows = mysqli_fetch_array($run);
 
@@ -594,10 +697,14 @@ if(mysqli_num_rows($run) > 0){
 
 <h2> 2nd Quarter </h2>
 <?php
-$phase1_query = "SELECT * FROM `learners_personal_infos` LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn WHERE learners_personal_infos.lrn = '$lrn' AND students_grades.phase = '4' AND students_grades.term = '2';";
-$run = mysqli_query($conn, $phase1_query);
+$phase4_query = "SELECT * FROM `learners_personal_infos` 
+LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn 
+LEFT JOIN remedial_classes ON learners_personal_infos.lrn= remedial_classes.lrn 
+WHERE learners_personal_infos.lrn = '$lrn' 
+AND students_grades.phase = '4' AND students_grades.term = '2' AND remedial_classes.phase = '4'";
+$run = mysqli_query($conn, $phase4_query);
 if(mysqli_num_rows($run) > 0){
-    $rows = mysqli_fetch_array($run);
+    $rows = mysqli_fetch_array($run)
 
 ?>
 
@@ -624,11 +731,14 @@ if(mysqli_num_rows($run) > 0){
 
 <h2> 3rd Quarter </h2>
 <?php
-$phase1_query = "SELECT * FROM `learners_personal_infos` LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn WHERE learners_personal_infos.lrn = '109857060083' AND students_grades.phase = '4' AND students_grades.term = '3';";
-$run = mysqli_query($conn, $phase1_query);
+$phase4_query = "SELECT * FROM `learners_personal_infos` 
+LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn 
+LEFT JOIN remedial_classes ON learners_personal_infos.lrn= remedial_classes.lrn 
+WHERE learners_personal_infos.lrn = '$lrn' 
+AND students_grades.phase = '4' AND students_grades.term = '3' AND remedial_classes.phase = '4'";
+$run = mysqli_query($conn, $phase4_query);
 if(mysqli_num_rows($run) > 0){
-    $rows = mysqli_fetch_array($run);
-
+    $rows = mysqli_fetch_array($run)
 ?>
 
 
@@ -654,8 +764,12 @@ if(mysqli_num_rows($run) > 0){
 
 <h2> 4th Quarter </h2>
 <?php
-$phase1_query = "SELECT * FROM `learners_personal_infos` LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn WHERE learners_personal_infos.lrn = '$lrn' AND students_grades.phase = '4' AND students_grades.term = '4';";
-$run = mysqli_query($conn, $phase1_query);
+$phase4_query = "SELECT * FROM `learners_personal_infos` 
+LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn 
+LEFT JOIN remedial_classes ON learners_personal_infos.lrn= remedial_classes.lrn 
+WHERE learners_personal_infos.lrn = '$lrn' 
+AND students_grades.phase = '4' AND students_grades.term = '4' AND remedial_classes.phase = '4'";
+$run = mysqli_query($conn, $phase4_query);
 if(mysqli_num_rows($run) > 0){
     $rows = mysqli_fetch_array($run);
 
@@ -684,10 +798,14 @@ if(mysqli_num_rows($run) > 0){
 </body>
 <h2> Finals </h2>
 <?php
-$phase1_query = "SELECT * FROM `learners_personal_infos` LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn WHERE learners_personal_infos.lrn = '$lrn' AND students_grades.phase = '4' AND students_grades.term = '5';";
-$run = mysqli_query($conn, $phase1_query);
+$phase4_query = "SELECT * FROM `learners_personal_infos` 
+LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn 
+LEFT JOIN remedial_classes ON learners_personal_infos.lrn= remedial_classes.lrn 
+WHERE learners_personal_infos.lrn = '$lrn' 
+AND students_grades.phase = '4' AND students_grades.term = '5' AND remedial_classes.phase = '4'";
+$run = mysqli_query($conn, $phase4_query);
 if(mysqli_num_rows($run) > 0){
-    $rows = mysqli_fetch_array($run);
+    $rows = mysqli_fetch_array($run)
 
 ?>
 
@@ -710,15 +828,31 @@ if(mysqli_num_rows($run) > 0){
 <?php
 }
 ?>
+
+<h2>Remedial Classes</h2>
+<p><span>Date from: <?php if ($rows['date_from'] = '000-00-00'){ echo 'N/A'?> 
+        <?php }else{ echo $rows['date_from']; }?></span></p>
+<p><span> To:<?php if ($rows['date_to'] = '000-00-00'){ echo 'N/A'?> 
+        <?php }else{ echo $rows['date_to']; }?></span></p>
+<h3>Learning areas</h3>
+<p><span> <?php echo $rows ['learning_areas']  ?></span></p>
+<p><span> Final Rating: <?php echo $rows ['final_rating']  ?></span></p>
+<p><span> Remedial class mark: <?php echo $rows ['remedial_class_mark']  ?></span></p>
+<p><span> Recomputed final grade: <?php echo $rows ['recomputed_final_grade']  ?></span></p>
+<p><span> Remarks: <?php echo $rows ['remarks']  ?></span></p>
+
 <h2> Phase 5 </h2>
 <h2> 1st Quarter </h2> 
 
 <?php
-$phase1_query = "SELECT * FROM `learners_personal_infos` LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn WHERE learners_personal_infos.lrn = '$lrn' AND students_grades.phase = '5' AND students_grades.term = '1';";
-$run = mysqli_query($conn, $phase1_query);
+$phase5_query = "SELECT * FROM `learners_personal_infos` 
+LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn 
+LEFT JOIN remedial_classes ON learners_personal_infos.lrn= remedial_classes.lrn 
+WHERE learners_personal_infos.lrn = '$lrn' 
+AND students_grades.phase = '5' AND students_grades.term = '1' AND remedial_classes.phase = '5'";
+$run = mysqli_query($conn, $phase5_query);
 if(mysqli_num_rows($run) > 0){
-    $rows = mysqli_fetch_array($run);
-
+    $rows = mysqli_fetch_array($run)
 ?>
 
 
@@ -745,10 +879,14 @@ if(mysqli_num_rows($run) > 0){
 
 <h2> 2nd Quarter </h2>
 <?php
-$phase1_query = "SELECT * FROM `learners_personal_infos` LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn WHERE learners_personal_infos.lrn = '$lrn' AND students_grades.phase = '5' AND students_grades.term = '2';";
-$run = mysqli_query($conn, $phase1_query);
+$phase5_query = "SELECT * FROM `learners_personal_infos` 
+LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn 
+LEFT JOIN remedial_classes ON learners_personal_infos.lrn= remedial_classes.lrn 
+WHERE learners_personal_infos.lrn = '$lrn' 
+AND students_grades.phase = '5' AND students_grades.term = '2' AND remedial_classes.phase = '5'";
+$run = mysqli_query($conn, $phase5_query);
 if(mysqli_num_rows($run) > 0){
-    $rows = mysqli_fetch_array($run);
+    $rows = mysqli_fetch_array($run)
 
 ?>
 
@@ -775,11 +913,14 @@ if(mysqli_num_rows($run) > 0){
 
 <h2> 3rd Quarter </h2>
 <?php
-$phase1_query = "SELECT * FROM `learners_personal_infos` LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn WHERE learners_personal_infos.lrn = '$lrn' AND students_grades.phase = '5' AND students_grades.term = '3';";
-$run = mysqli_query($conn, $phase1_query);
+$phase5_query = "SELECT * FROM `learners_personal_infos` 
+LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn 
+LEFT JOIN remedial_classes ON learners_personal_infos.lrn= remedial_classes.lrn 
+WHERE learners_personal_infos.lrn = '$lrn' 
+AND students_grades.phase = '5' AND students_grades.term = '3' AND remedial_classes.phase = '5'";
+$run = mysqli_query($conn, $phase5_query);
 if(mysqli_num_rows($run) > 0){
-    $rows = mysqli_fetch_array($run);
-
+    $rows = mysqli_fetch_array($run)
 ?>
 
 
@@ -805,10 +946,14 @@ if(mysqli_num_rows($run) > 0){
 
 <h2> 4th Quarter </h2>
 <?php
-$phase1_query = "SELECT * FROM `learners_personal_infos` LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn WHERE learners_personal_infos.lrn = '$lrn' AND students_grades.phase = '5' AND students_grades.term = '4';";
-$run = mysqli_query($conn, $phase1_query);
+$phase5_query = "SELECT * FROM `learners_personal_infos` 
+LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn 
+LEFT JOIN remedial_classes ON learners_personal_infos.lrn= remedial_classes.lrn 
+WHERE learners_personal_infos.lrn = '$lrn' 
+AND students_grades.phase = '5' AND students_grades.term = '4' AND remedial_classes.phase = '5'";
+$run = mysqli_query($conn, $phase5_query);
 if(mysqli_num_rows($run) > 0){
-    $rows = mysqli_fetch_array($run);
+    $rows = mysqli_fetch_array($run)
 
 ?>
 
@@ -835,11 +980,14 @@ if(mysqli_num_rows($run) > 0){
 </body>
 <h2> Finals  </h2>
 <?php
-$phase1_query = "SELECT * FROM `learners_personal_infos` LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn WHERE learners_personal_infos.lrn = '$lrn' AND students_grades.phase = '5' AND students_grades.term = '5';";
-$run = mysqli_query($conn, $phase1_query);
+$phase5_query = "SELECT * FROM `learners_personal_infos` 
+LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn 
+LEFT JOIN remedial_classes ON learners_personal_infos.lrn= remedial_classes.lrn 
+WHERE learners_personal_infos.lrn = '$lrn' 
+AND students_grades.phase = '5' AND students_grades.term = '5' AND remedial_classes.phase = '5'";
+$run = mysqli_query($conn, $phase5_query);
 if(mysqli_num_rows($run) > 0){
-    $rows = mysqli_fetch_array($run);
-
+    $rows = mysqli_fetch_array($run)
 ?>
 
 <p><span> Mother tounge: <?php echo$rows ['mother_tounge'];?></p> </span>
@@ -861,15 +1009,32 @@ if(mysqli_num_rows($run) > 0){
 <?php
 }
 ?>
+
+<h2>Remedial Classes</h2>
+<p><span>Date from: <?php if ($rows['date_from'] = '000-00-00'){ echo 'N/A'?> 
+        <?php }else{ echo $rows['date_from']; }?></span></p>
+<p><span> To:<?php if ($rows['date_to'] = '000-00-00'){ echo 'N/A'?> 
+        <?php }else{ echo $rows['date_to']; }?></span></p>
+<h3>Learning areas</h3>
+<p><span> <?php echo $rows ['learning_areas']  ?></span></p>
+<p><span> Final Rating: <?php echo $rows ['final_rating']  ?></span></p>
+<p><span> Remedial class mark: <?php echo $rows ['remedial_class_mark']  ?></span></p>
+<p><span> Recomputed final grade: <?php echo $rows ['recomputed_final_grade']  ?></span></p>
+<p><span> Remarks: <?php echo $rows ['remarks']  ?></span></p>
+
 
 <h2> Phase 6 </h2>
 <h2> 1st Quarter </h2> 
 
 <?php
-$phase1_query = "SELECT * FROM `learners_personal_infos` LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn WHERE learners_personal_infos.lrn = '$lrn' AND students_grades.phase = '6' AND students_grades.term = '1';";
-$run = mysqli_query($conn, $phase1_query);
+$phase6_query = "SELECT * FROM `learners_personal_infos` 
+LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn 
+LEFT JOIN remedial_classes ON learners_personal_infos.lrn= remedial_classes.lrn 
+WHERE learners_personal_infos.lrn = '$lrn' 
+AND students_grades.phase = '6' AND students_grades.term = '1' AND remedial_classes.phase = '6'";
+$run = mysqli_query($conn, $phase6_query);
 if(mysqli_num_rows($run) > 0){
-    $rows = mysqli_fetch_array($run);
+    $rows = mysqli_fetch_array($run)
 
 ?>
 
@@ -897,10 +1062,14 @@ if(mysqli_num_rows($run) > 0){
 
 <h2> 2nd Quarter </h2>
 <?php
-$phase1_query = "SELECT * FROM `learners_personal_infos` LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn WHERE learners_personal_infos.lrn = '$lrn' AND students_grades.phase = '6' AND students_grades.term = '2';";
-$run = mysqli_query($conn, $phase1_query);
+$phase6_query = "SELECT * FROM `learners_personal_infos` 
+LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn 
+LEFT JOIN remedial_classes ON learners_personal_infos.lrn= remedial_classes.lrn 
+WHERE learners_personal_infos.lrn = '$lrn' 
+AND students_grades.phase = '6' AND students_grades.term = '2' AND remedial_classes.phase = '6'";
+$run = mysqli_query($conn, $phase6_query);
 if(mysqli_num_rows($run) > 0){
-    $rows = mysqli_fetch_array($run);
+    $rows = mysqli_fetch_array($run)
 
 ?>
 
@@ -927,10 +1096,14 @@ if(mysqli_num_rows($run) > 0){
 
 <h2> 3rd Quarter </h2>
 <?php
-$phase1_query = "SELECT * FROM `learners_personal_infos` LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn WHERE learners_personal_infos.lrn = '$lrn' AND students_grades.phase = '6' AND students_grades.term = '3';";
-$run = mysqli_query($conn, $phase1_query);
+$phase6_query = "SELECT * FROM `learners_personal_infos` 
+LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn 
+LEFT JOIN remedial_classes ON learners_personal_infos.lrn= remedial_classes.lrn 
+WHERE learners_personal_infos.lrn = '$lrn' 
+AND students_grades.phase = '6' AND students_grades.term = '3' AND remedial_classes.phase = '6'";
+$run = mysqli_query($conn, $phase6_query);
 if(mysqli_num_rows($run) > 0){
-    $rows = mysqli_fetch_array($run);
+    $rows = mysqli_fetch_array($run)
 
 ?>
 
@@ -957,10 +1130,14 @@ if(mysqli_num_rows($run) > 0){
 
 <h2> 4th Quarter </h2>
 <?php
-$phase1_query = "SELECT * FROM `learners_personal_infos` LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn WHERE learners_personal_infos.lrn = '$lrn' AND students_grades.phase = '6' AND students_grades.term = '4';";
-$run = mysqli_query($conn, $phase1_query);
+$phase6_query = "SELECT * FROM `learners_personal_infos` 
+LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn 
+LEFT JOIN remedial_classes ON learners_personal_infos.lrn= remedial_classes.lrn 
+WHERE learners_personal_infos.lrn = '$lrn' 
+AND students_grades.phase = '6' AND students_grades.term = '4' AND remedial_classes.phase = '6'";
+$run = mysqli_query($conn, $phase6_query);
 if(mysqli_num_rows($run) > 0){
-    $rows = mysqli_fetch_array($run);
+    $rows = mysqli_fetch_array($run)
 
 ?>
 
@@ -987,10 +1164,14 @@ if(mysqli_num_rows($run) > 0){
 </body>
 <h2> Finals  </h2>
 <?php
-$phase1_query = "SELECT * FROM `learners_personal_infos` LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn WHERE learners_personal_infos.lrn = '$lrn' AND students_grades.phase = '6' AND students_grades.term = '5';";
-$run = mysqli_query($conn, $phase1_query);
+$phase6_query = "SELECT * FROM `learners_personal_infos` 
+LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn 
+LEFT JOIN remedial_classes ON learners_personal_infos.lrn= remedial_classes.lrn 
+WHERE learners_personal_infos.lrn = '$lrn' 
+AND students_grades.phase = '6' AND students_grades.term = '5' AND remedial_classes.phase = '6'";
+$run = mysqli_query($conn, $phase6_query);
 if(mysqli_num_rows($run) > 0){
-    $rows = mysqli_fetch_array($run);
+    $rows = mysqli_fetch_array($run)
 
 ?>
 
@@ -1013,15 +1194,32 @@ if(mysqli_num_rows($run) > 0){
 <?php
 }
 ?>
+
+<h2>Remedial Classes</h2>
+<p><span>Date from: <?php if ($rows['date_from'] = '000-00-00'){ echo 'N/A'?> 
+        <?php }else{ echo $rows['date_from']; }?></span></p>
+<p><span> To:<?php if ($rows['date_to'] = '000-00-00'){ echo 'N/A'?> 
+        <?php }else{ echo $rows['date_to']; }?></span></p>
+<h3>Learning areas</h3>
+<p><span> <?php echo $rows ['learning_areas']  ?></span></p>
+<p><span> Final Rating: <?php echo $rows ['final_rating']  ?></span></p>
+<p><span> Remedial class mark: <?php echo $rows ['remedial_class_mark']  ?></span></p>
+<p><span> Recomputed final grade: <?php echo $rows ['recomputed_final_grade']  ?></span></p>
+<p><span> Remarks: <?php echo $rows ['remarks']  ?></span></p>
+
 
 <h2> Phase 7 </h2>
 <h2> 1st Quarter </h2> 
 
 <?php
-$phase1_query = "SELECT * FROM `learners_personal_infos` LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn WHERE learners_personal_infos.lrn = '$lrn' AND students_grades.phase = '7' AND students_grades.term = '1';";
-$run = mysqli_query($conn, $phase1_query);
+$phase7_query = "SELECT * FROM `learners_personal_infos` 
+LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn 
+LEFT JOIN remedial_classes ON learners_personal_infos.lrn= remedial_classes.lrn 
+WHERE learners_personal_infos.lrn = '$lrn' 
+AND students_grades.phase = '7' AND students_grades.term = '1' AND remedial_classes.phase = '7'";
+$run = mysqli_query($conn, $phase6_query);
 if(mysqli_num_rows($run) > 0){
-    $rows = mysqli_fetch_array($run);
+    $rows = mysqli_fetch_array($run)
 
 ?>
 
@@ -1049,10 +1247,15 @@ if(mysqli_num_rows($run) > 0){
 
 <h2> 2nd Quarter </h2>
 <?php
-$phase1_query = "SELECT * FROM `learners_personal_infos` LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn WHERE learners_personal_infos.lrn = '$lrn' AND students_grades.phase = '7' AND students_grades.term = '2';";
-$run = mysqli_query($conn, $phase1_query);
+$phase7_query = "SELECT * FROM `learners_personal_infos` 
+LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn 
+LEFT JOIN remedial_classes ON learners_personal_infos.lrn= remedial_classes.lrn 
+WHERE learners_personal_infos.lrn = '$lrn' 
+AND students_grades.phase = '7' AND students_grades.term = '2' AND remedial_classes.phase = '7'";
+$run = mysqli_query($conn, $phase6_query);
 if(mysqli_num_rows($run) > 0){
-    $rows = mysqli_fetch_array($run);
+    $rows = mysqli_fetch_array($run)
+
 
 ?>
 
@@ -1079,10 +1282,15 @@ if(mysqli_num_rows($run) > 0){
 
 <h2> 3rd Quarter </h2>
 <?php
-$phase1_query = "SELECT * FROM `learners_personal_infos` LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn WHERE learners_personal_infos.lrn = '$lrn' AND students_grades.phase = '7' AND students_grades.term = '3';";
-$run = mysqli_query($conn, $phase1_query);
+$phase7_query = "SELECT * FROM `learners_personal_infos` 
+LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn 
+LEFT JOIN remedial_classes ON learners_personal_infos.lrn= remedial_classes.lrn 
+WHERE learners_personal_infos.lrn = '$lrn' 
+AND students_grades.phase = '7' AND students_grades.term = '3' AND remedial_classes.phase = '7'";
+$run = mysqli_query($conn, $phase6_query);
 if(mysqli_num_rows($run) > 0){
-    $rows = mysqli_fetch_array($run);
+    $rows = mysqli_fetch_array($run)
+
 
 ?>
 
@@ -1109,10 +1317,15 @@ if(mysqli_num_rows($run) > 0){
 
 <h2> 4th Quarter </h2>
 <?php
-$phase1_query = "SELECT * FROM `learners_personal_infos` LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn WHERE learners_personal_infos.lrn = '$lrn' AND students_grades.phase = '7' AND students_grades.term = '4';";
-$run = mysqli_query($conn, $phase1_query);
+$phase7_query = "SELECT * FROM `learners_personal_infos` 
+LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn 
+LEFT JOIN remedial_classes ON learners_personal_infos.lrn= remedial_classes.lrn 
+WHERE learners_personal_infos.lrn = '$lrn' 
+AND students_grades.phase = '7' AND students_grades.term = '4' AND remedial_classes.phase = '7'";
+$run = mysqli_query($conn, $phase6_query);
 if(mysqli_num_rows($run) > 0){
-    $rows = mysqli_fetch_array($run);
+    $rows = mysqli_fetch_array($run)
+
 
 ?>
 
@@ -1139,10 +1352,14 @@ if(mysqli_num_rows($run) > 0){
 </body>
 <h2> Finals  </h2>
 <?php
-$phase1_query = "SELECT * FROM `learners_personal_infos` LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn WHERE learners_personal_infos.lrn = '$lrn' AND students_grades.phase = '7' AND students_grades.term = '5';";
-$run = mysqli_query($conn, $phase1_query);
+$phase7_query = "SELECT * FROM `learners_personal_infos` 
+LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn 
+LEFT JOIN remedial_classes ON learners_personal_infos.lrn= remedial_classes.lrn 
+WHERE learners_personal_infos.lrn = '$lrn' 
+AND students_grades.phase = '7' AND students_grades.term = '5' AND remedial_classes.phase = '7'";
+$run = mysqli_query($conn, $phase6_query);
 if(mysqli_num_rows($run) > 0){
-    $rows = mysqli_fetch_array($run);
+    $rows = mysqli_fetch_array($run)
 
 ?>
 
@@ -1166,14 +1383,31 @@ if(mysqli_num_rows($run) > 0){
 }
 ?>
 
+<h2>Remedial Classes</h2>
+<p><span>Date from: <?php if ($rows['date_from'] = '000-00-00'){ echo 'N/A'?> 
+        <?php }else{ echo $rows['date_from']; }?></span></p>
+<p><span> To:<?php if ($rows['date_to'] = '000-00-00'){ echo 'N/A'?> 
+        <?php }else{ echo $rows['date_to']; }?></span></p>
+<h3>Learning areas</h3>
+<p><span> <?php echo $rows ['learning_areas']  ?></span></p>
+<p><span> Final Rating: <?php echo $rows ['final_rating']  ?></span></p>
+<p><span> Remedial class mark: <?php echo $rows ['remedial_class_mark']  ?></span></p>
+<p><span> Recomputed final grade: <?php echo $rows ['recomputed_final_grade']  ?></span></p>
+<p><span> Remarks: <?php echo $rows ['remarks']  ?></span></p>
+
 <h2> Phase 8 </h2>
 <h2> 1st Quarter </h2> 
 
 <?php
-$phase1_query = "SELECT * FROM `learners_personal_infos` LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn WHERE learners_personal_infos.lrn = '$lrn' AND students_grades.phase = '8' AND students_grades.term = '1';";
-$run = mysqli_query($conn, $phase1_query);
+$phase8_query = "SELECT * FROM `learners_personal_infos` 
+LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn 
+LEFT JOIN remedial_classes ON learners_personal_infos.lrn= remedial_classes.lrn 
+WHERE learners_personal_infos.lrn = '$lrn' 
+AND students_grades.phase = '8' AND students_grades.term = '1' AND remedial_classes.phase = '8'";
+$run = mysqli_query($conn, $phase8_query);
 if(mysqli_num_rows($run) > 0){
-    $rows = mysqli_fetch_array($run);
+    $rows = mysqli_fetch_array($run)
+
 
 ?>
 
@@ -1201,10 +1435,17 @@ if(mysqli_num_rows($run) > 0){
 
 <h2> 2nd Quarter </h2>
 <?php
-$phase1_query = "SELECT * FROM `learners_personal_infos` LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn WHERE learners_personal_infos.lrn = '$lrn' AND students_grades.phase = '8' AND students_grades.term = '2';";
-$run = mysqli_query($conn, $phase1_query);
+$phase8_query = "SELECT * FROM `learners_personal_infos` 
+LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn 
+LEFT JOIN remedial_classes ON learners_personal_infos.lrn= remedial_classes.lrn 
+WHERE learners_personal_infos.lrn = '$lrn' 
+AND students_grades.phase = '8' AND students_grades.term = '2' AND remedial_classes.phase = '8'";
+$run = mysqli_query($conn, $phase8_query);
 if(mysqli_num_rows($run) > 0){
-    $rows = mysqli_fetch_array($run);
+    $rows = mysqli_fetch_array($run)
+
+
+
 
 ?>
 
@@ -1231,10 +1472,17 @@ if(mysqli_num_rows($run) > 0){
 
 <h2> 3rd Quarter </h2>
 <?php
-$phase1_query = "SELECT * FROM `learners_personal_infos` LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn WHERE learners_personal_infos.lrn = '$lrn' AND students_grades.phase = '8' AND students_grades.term = '3';";
-$run = mysqli_query($conn, $phase1_query);
+$phase8_query = "SELECT * FROM `learners_personal_infos` 
+LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn 
+LEFT JOIN remedial_classes ON learners_personal_infos.lrn= remedial_classes.lrn 
+WHERE learners_personal_infos.lrn = '$lrn' 
+AND students_grades.phase = '8' AND students_grades.term = '3' AND remedial_classes.phase = '8'";
+$run = mysqli_query($conn, $phase8_query);
 if(mysqli_num_rows($run) > 0){
-    $rows = mysqli_fetch_array($run);
+    $rows = mysqli_fetch_array($run)
+
+
+
 
 ?>
 
@@ -1261,10 +1509,16 @@ if(mysqli_num_rows($run) > 0){
 
 <h2> 4th Quarter </h2>
 <?php
-$phase1_query = "SELECT * FROM `learners_personal_infos` LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn WHERE learners_personal_infos.lrn = '$lrn' AND students_grades.phase = '8' AND students_grades.term = '4';";
-$run = mysqli_query($conn, $phase1_query);
+$phase8_query = "SELECT * FROM `learners_personal_infos` 
+LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn 
+LEFT JOIN remedial_classes ON learners_personal_infos.lrn= remedial_classes.lrn 
+WHERE learners_personal_infos.lrn = '$lrn' 
+AND students_grades.phase = '8' AND students_grades.term = '4' AND remedial_classes.phase = '8'";
+$run = mysqli_query($conn, $phase8_query);
 if(mysqli_num_rows($run) > 0){
-    $rows = mysqli_fetch_array($run);
+    $rows = mysqli_fetch_array($run)
+
+
 
 ?>
 
@@ -1291,10 +1545,17 @@ if(mysqli_num_rows($run) > 0){
 </body>
 <h2> Finals </h2>
 <?php
-$phase1_query = "SELECT * FROM `learners_personal_infos` LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn WHERE learners_personal_infos.lrn = '$lrn' AND students_grades.phase = '8' AND students_grades.term = '5';";
-$run = mysqli_query($conn, $phase1_query);
+$phase8_query = "SELECT * FROM `learners_personal_infos` 
+LEFT JOIN students_grades ON learners_personal_infos.lrn = students_grades.lrn 
+LEFT JOIN remedial_classes ON learners_personal_infos.lrn= remedial_classes.lrn 
+WHERE learners_personal_infos.lrn = '$lrn' 
+AND students_grades.phase = '8' AND students_grades.term = '5' AND remedial_classes.phase = '8'";
+$run = mysqli_query($conn, $phase8_query);
 if(mysqli_num_rows($run) > 0){
-    $rows = mysqli_fetch_array($run);
+    $rows = mysqli_fetch_array($run)
+
+
+
 
 ?>
 
@@ -1317,5 +1578,18 @@ if(mysqli_num_rows($run) > 0){
 <?php
 }
 ?>
+
+
+<h2>Remedial Classes</h2>
+<p><span>Date from: <?php if ($rows['date_from'] = '000-00-00'){ echo 'N/A'?> 
+        <?php }else{ echo $rows['date_from']; }?></span></p>
+<p><span> To:<?php if ($rows['date_to'] = '000-00-00'){ echo 'N/A'?> 
+        <?php }else{ echo $rows['date_to']; }?></span></p>
+<h3>Learning areas</h3>
+<p><span> <?php echo $rows ['learning_areas']  ?></span></p>
+<p><span> Final Rating: <?php echo $rows ['final_rating']  ?></span></p>
+<p><span> Remedial class mark: <?php echo $rows ['remedial_class_mark']  ?></span></p>
+<p><span> Recomputed final grade: <?php echo $rows ['recomputed_final_grade']  ?></span></p>
+<p><span> Remarks: <?php echo $rows ['remarks']  ?></span></p>
 
 </html>

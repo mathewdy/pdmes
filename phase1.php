@@ -159,7 +159,7 @@ $run_query_lrn = mysqli_query($conn,$query_lrn);
     <label for="">Remarks :</label>
     <select name="remarks1" id="" required> 
       <option value="">-Remakrs-</option>
-      <option value="Pass">Pass</option>
+      <option value="Passed">Passed</option>
       <option value="Failed">Failed</option>
     </select> 
    
@@ -242,7 +242,7 @@ $run_query_lrn = mysqli_query($conn,$query_lrn);
     <label for="">Remarks :</label>
     <select name="remarks2" id="" required> 
       <option value="">-Remarks-</option>
-      <option value="Pass">Pass</option>
+      <option value="Passed">Passed</option>
       <option value="Failed">Failed</option>
     </select> 
 
@@ -325,7 +325,7 @@ $run_query_lrn = mysqli_query($conn,$query_lrn);
     <label for="">Remarks :</label>
     <select name="remarks3" id="" required> 
       <option value="">-Remarks-</option>
-      <option value="Pass">Pass</option>
+      <option value="Passed">Passed</option>
       <option value="Failed">Failed</option>
     </select> 
 
@@ -406,7 +406,7 @@ $run_query_lrn = mysqli_query($conn,$query_lrn);
     <label for="">Remarks :</label>
     <select name="remarks4" id="" required> 
       <option value="">-Remarks-</option>
-      <option value="Pass">Pass</option>
+      <option value="Passed">Passed</option>
       <option value="Failed">Failed</option>
     </select> >
     <br>
@@ -490,7 +490,7 @@ $run_query_lrn = mysqli_query($conn,$query_lrn);
     <label for="">Remarks :</label>
     <select name="remarks5" id="" required> 
       <option value="">-Remarks-</option>
-      <option value="Pass">Pass</option>
+      <option value="Passed">Passed</option>
       <option value="Failed">Failed</option>
     </select> 
    
@@ -523,7 +523,7 @@ $run_query_lrn = mysqli_query($conn,$query_lrn);
     <label for="">Remarks :</label>
     <select name="remedial_remarks1" id="" required> 
       <option value="">-Remakrs-</option>
-      <option value="Pass">Pass</option>
+      <option value="Passed">Passed</option>
       <option value="Failed">Failed</option>
     </select> 
 
@@ -536,7 +536,7 @@ $run_query_lrn = mysqli_query($conn,$query_lrn);
     <label for="">Remarks :</label>
     <select name="remedial_remarks1" id="" required> 
       <option value="">-Remakrs-</option>
-      <option value="Pass">Pass</option>
+      <option value="Passed">Passed</option>
       <option value="Failed">Failed</option>
     </select> 
     <br>
@@ -558,7 +558,7 @@ $run_query_lrn = mysqli_query($conn,$query_lrn);
     <label for="">Remarks :</label>
     <select name="remedial_remarks2" id="" required> 
       <option value="">-Remakrs-</option>
-      <option value="Pass">Pass</option>
+      <option value="Passed">Passed</option>
       <option value="Failed">Failed</option>
     </select> 
 
@@ -571,7 +571,7 @@ $run_query_lrn = mysqli_query($conn,$query_lrn);
     <label for="">Remarks :</label>
     <select name="remedial_remarks2" id="" required> 
       <option value="">-Remarks-</option>
-      <option value="Pass">Pass</option>
+      <option value="Passed">Passed</option>
       <option value="Failed">Failed</option>
     </select> 
     <br>
