@@ -29,9 +29,11 @@ th{
     }
     $result = mysqli_query($conn, $query);
     if(mysqli_num_rows($result)>0){
+        $number = 0;
         $output .='<table class="table table-hover table-light table-striped" id="table-data">
         <thead class="text-center">
             <tr>
+                <th>No.</th>
                 <th>LRN</th>
                 <th>STUDENT NAME</th>
                 <th>GENDER</th>
@@ -39,8 +41,11 @@ th{
             </tr>
         </thead>';
         while($row = mysqli_fetch_array($result)){
+            
+            $number++;
             $output .='
             <tr class="clickable-row text-center" data-href="view-student.php?lrn='.$row ["lrn"].'" style="cursor:pointer;">
+            <td>'.$number.'</td>
             <td>'.$row["lrn"].'</td>
             <td>'.$row["first_name"].' '.$row["middle_name"].' '.$row["last_name"].'</td>
             <td>'.$row["sex"].'</td>
