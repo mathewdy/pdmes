@@ -1,4 +1,5 @@
 <?php
+ob_flush();
 session_start();
 include('connection.php');
 if(empty($_SESSION['username'])){
@@ -150,12 +151,12 @@ if(isset($_GET['lrn'])){
                             <div class="row justify-content-center">
                                 <div class="col-md-4">
                                     <label for="" class="form-label">School</label>
-                                    <input type="text" class="form-control" name="school_2" value="<?php echo $row ['school_2']?>"> 
+                                    <input type="text" class="form-control" name="nane_of_school" value="<?php echo $row ['name_of_school']?>"> 
                                 </div>
 
                                 <div class="col-md-4">
                                     <label for="" class="form-label">School Id</label>
-                                    <input type="text"  class="form-control" name="school_id_2" value="<?php echo $row ['school_id_2']?>">
+                                    <input type="text"  class="form-control" name="school_id" value="<?php echo $row ['school_id']?>">
                                 </div>
                             </div>
                             
@@ -253,5 +254,6 @@ if(isset($_POST['update'])){
 
 }
 
+ob_end_flush();
 
 ?>

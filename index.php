@@ -1,4 +1,5 @@
 <?php
+ob_start();
 include('connection.php');
 session_start();
 if(empty($_SESSION['username'])){
@@ -74,5 +75,6 @@ if($i > $page ){
 </script>
 <?php
 include 'includes/footer.php';
+ob_end_flush();
 ?>
     

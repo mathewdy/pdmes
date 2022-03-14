@@ -1,4 +1,5 @@
 <?php
+ob_start();
 include('connection.php');
 date_default_timezone_set('Asia/Manila');
 session_start();
@@ -44,7 +45,7 @@ if(empty($_SESSION['username'])){
       <div class="row justify-content-md-center  ">
         <div class="col-md-4">
           <label for="" class="form-label"> Last Name : </label>
-          <input list="text" name="last_name " class="form-control"  required> 
+          <input list="text" name="last_name" class="form-control"  required> 
         </div>
 
         <div class="col-md-4">
@@ -73,7 +74,7 @@ if(empty($_SESSION['username'])){
           </div>
           <div class="col-md-12 ">
             <label for="" class="form-label">Suffix Name : </label>
-            <input type="text" name="suffix_name" class="form-control" required>
+            <input type="text" name="suffix_name" class="form-control">
           </div>  
         </div>
        <div class="col-md-4">
@@ -236,6 +237,7 @@ if(isset($_POST['next'])){
   }
  
 }
+ob_end_flush();
 ?>
 </body>
 </html>
