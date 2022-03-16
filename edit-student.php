@@ -39,9 +39,7 @@ if(isset($_GET['lrn'])){
     <title>PDMES</title>
 </head>
 <body>
-
-<a href="index.php">Back</a>
-<br>
+    <?php include('../pdmes/includes/header.php')?>
 <?php
 
     $sql = "SELECT * FROM learners_personal_infos 
@@ -53,129 +51,121 @@ if(isset($_GET['lrn'])){
     if(mysqli_num_rows($run) > 0){
         foreach($run as $row){
             ?>  
-            <div class="container bg-light py-5">
+            <div class="container  py-5">
                 <form action="edit-students.php" method="POST">
                     <div class="container">
-                    <h3 class="text-center bg-light">Learner's Personal Information</h3>
+                    <h3 class="text-center">Learner's Personal Information</h3>
 
-                    <div class="container justify-content-between">
-                        <div class="row justify-content-md-center">
+                        <div class="container justify-content-between">
+        <div class="row justify-content-md-center ">
+            <div class="col-md-3">
+            <label for="" class="form-label"> Last Name : </label>
+            <input list="text" name="last_name" class="form-control"  required> 
+            </div>
 
-                            <div class="col-md-4">
-                            <label for="" class="form-label">First Name: </label>
-                            <input type="text" name="first_name" class="form-control" value="<?php echo $row ['first_name']?>" required>
-                            </div>
+            <div class="col-md-3">
+            <label for="" class="form-label">First Name : </label>
+            <input type="text" name="first_name" class="form-control" required>
+            </div>
 
-                            <div class="col-md-4">
-                                <label for="" class="form-label">LRN:</label>
-                                <input type="text" name="lrn" class="form-control" value="<?php echo $row ['lrn']?>" required readonly>
-                            </div>
-                        </div>
+            <div class="col-md-3">
+            <label for="" class="form-label">Middle Name : </label>
+            <input type="text" name="middle_name" class="form-control" required>
+            </div>
 
-                        <div class="row justify-content-md-center">
-                            <div class="col-md-4">
-                            <label for="" class="form-label">Last Name: </label>
-                            <input type="text" class="form-control" name="last_name" value="<?php echo $row ['last_name'] ?>" required>
-                            </div>
+            <div class="col-md-3">
+            <label for="" class="form-label">Suffix Name : </label>
+            <input type="text" name="suffix_name" class="form-control">
+            </div>
+        </div>
 
-                            <div class="col-md-4">
-                            <label for="" class="form-label" >Birthday:</label>
-                            <input type="date" class="form-control"  name="birth_date" value="<?php echo $row ['birth_date']?>"> 
-                            </div>
-                        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-4">
+            <label for="" class="form-label"> LRN : </label>
+            <input type="text" name="lrn" class="form-control" required>
+            </div>
 
-                        <div class="row justify-content-md-center">
-                            <div class="col-md-4 flex-column">
-                                <div class="col-md-4">
-                                    <label for="" class="form-label">Middle Name</label>
-                                    <input type="text"  class="form-control"  name="middle_name" value="<?php echo $row ['middle_name']?>" required>
-                                </div>
+            <div class="col-md-4">
+            <label for="" class="form-label"> Birthdate : </label>
+            <input type="date" name="birthday" class="form-control" required>
+            </div>
+            
+            <div class="col-md-4 flex-rgow">
+            <label for="" class="form-label">Sex :</label>
+            <select  class="form-select form-select-md mb-3" name="sex" id="" required> 
+            <option value="">-Gender-</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            </select> 
+        </div>  
+    </div>
 
-                                <div class="col-md-12">
-                                    <label for="" class="form-label">Suffix:</label>
-                                    <input type="text"  class="form-control" name="suffix" value="<?php if(empty($row ['suffix'])){ echo 'N/A'; }else{ echo $row ['suffix']; }?>" >
-                                </div>
-                            </div>
-                                
-                                <div class="col-md-4">
-                                    <label for="" class="form-label">Sex:</label>
-                                    <input type="text" name="" hidden value="<?php echo $row ['sex']?>">
-                                    <select class="form-select form-select-md mb-3" name="sex" id="">
-                                        <option value="Male">Male</option>
-                                        <option value="Female">Female</option>
-                                    </select>
-                                </div>
+    <div class="container mt-5">
+    <h3  class="text-center "> Eligibity for Elementary School Enrollment </h3>
+    <p class="text-center">Credential Presented for Grade1</p>
+    <p class="text-center"> - -Please check below --</p> 
 
+    
 
-                                <div class="container bg-light mt-5">
-                                    <h3  class="text-center bg-light"> Eligibity for Elementary School Enrollment </h3>
-                                    <p class="text-center">Credential Presented for Grade1</p>
-                                    <p class="text-center"> - -Please check below --</p> 
+    <div class="container justify-content-between">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <label for=""class="form-label" >Credential Presented:</label>
+                <input type="text" class="form-control" name="credential_presented" id="" value="<?php echo $row['credential_presented']?>" required>
+            </div>
 
-                                    <div class="container justify-content-between">
-                                        <div class="row justify-content-center">
-                                        <div class="col-md-4">
-                                            <label for=""class="form-label" >Credential Presented:</label>
-                                            <input type="text" class="form-control" name="credential_presented" id="" value="<?php echo $row['credential_presented']?>" required>
-                                        </div>
+            
+            <div class="col-md-4">
+                <label for="" class="form-label" >Name of School:</label>
+                <input type="text"  class="form-control"  name="name_of_school" value="<?php echo $row ['name_of_school']?>" required>
+                </div>
+        </div>
 
-                                        <div class="col-md-4">
-                                            <label for="" class="form-label" >Name of School:</label>
-                                            <input type="text"  class="form-control"  name="name_of_school" value="<?php echo $row ['name_of_school']?>" required>
-                                        </div>
-                                    </div>
+        <div class="row justify-content-center">
+            <div class="col-md-4">
+            <label for="" class="form-label" >School ID:</label>
+            <input type="text"  class="form-control"  name="school_id" value="<?php echo $row ['school_id']?>">
+        </div>
+        <div class="col-md-4">
+            <label for="" class="form-label">School Address</label>
+            <input type="text" class="form-control" name="address_of_school" value="<?php echo $row ['address_of_school']?>" required>
+        </div>
 
-                                    <div class="row justify-content-center">
-                                        <div class="col-md-4 flex-column">
-                                        <div class="col-md-12">
-                                            <label for="" class="form-label" >School ID:</label>
-                                            <input type="text"  class="form-control"  name="school_id" value="<?php echo $row ['school_id']?>">
-                                        </div>
+        <div class="col-md-4">
+            <label for="" class="form-label">Others</label>
+            <input type="text" class="form-control" name="others" value="<?php echo $row ['others']?>">
+        </div>
+    </div>
 
-                                        <div class="col-md-12">
-                                            <label for="" class="form-label">School Address</label>
-                                            <input type="text" class="form-control" name="address_of_school" value="<?php echo $row ['address_of_school']?>" required>
-                                        </div>
-                                    </div>
-                                        <div class="col-md-4">
-                                            <label for="" class="form-label">Others</label>
-                                            <input type="text" class="form-control" name="others" value="<?php echo $row ['others']?>">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="container bg-light mt-5">
-                            <h3 class="text-center bg-light">Scholastic Records</h3>
-                            
-                            <div class="row justify-content-center">
-                                <div class="col-md-4">
-                                    <label for="" class="form-label">School</label>
-                                    <input type="text" class="form-control" name="nane_of_school" value="<?php echo $row ['name_of_school']?>"> 
-                                </div>
+    <div class="container mt-5">
+        <h3 class="text-center">Scholastic Records</h3>
 
-                                <div class="col-md-4">
-                                    <label for="" class="form-label">School Id</label>
-                                    <input type="text"  class="form-control" name="school_id" value="<?php echo $row ['school_id']?>">
-                                </div>
-                            </div>
-                            
-                            <div class="row justify-content-center">
-                                <div class="col-md-4">
-                                    <label for="" class="form-label">District</label>
-                                    <input type="text" class="form-control" name="district" value="<?php echo $row ['district']?>">
-                                </div>
+        <div class="row justify-content-center">
+        <div class="col-md-3">
+            <label for="" class="form-label">School</label>
+            <input type="text" class="form-control" name="nane_of_school" value="<?php echo $row ['name_of_school']?>"> 
+            </div>
+        <div class="col-md-3">
+            <label for="" class="form-label">School Id</label>
+            <input type="text"  class="form-control" name="school_id" value="<?php echo $row ['school_id']?>">
+        </div>
+        <div class="col-md-3">
+            <label for="" class="form-label">District</label>
+            <input type="text" class="form-control" name="district" value="<?php echo $row ['district']?>">
+        </div>
+        
+        <div class="col-md-3">
+            <label for="" class="form-label">Division</label>
+            <input type="text" class="form-control" name="division" value="<?php echo $row ['division']?>">
+        </div>
+        </div>
+    </div>
 
-                                <div class="col-md-4">
-                                                
-                                <label for="" class="form-label">Division</label>
-                                <input type="text" class="form-control" name="division" value="<?php echo $row ['division']?>">
-                                </div>
                             </div>
                             </div>
 
-                            <div class="col-5-lg mt-4 text-end ">
-                                
+                            <div class="col-5-lg mt-4 text-center ">
+                                <input type="submit" name="update" class="btn btn-lg btn-success" value="Update">
                             </div>
 
                         </div>
@@ -187,20 +177,14 @@ if(isset($_GET['lrn'])){
  </div>
 
 
-
-                    <br>
-
-                    <label for=""></label>
-<!-----hindi pa tapos---->
-                    <input type="submit" name="update" value="Update">
-
-                </form>
             <?php
         }
     }
 }
 
 ?>
+
+<?php include('../pdmes/includes/footer.php') ?> 
 </body>
 </html>
 
