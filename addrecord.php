@@ -20,137 +20,134 @@ if(empty($_SESSION['username'])){
     <link rel="stylesheet" href="styles.css">
     <title>PDMES</title>
 </head>
-<nav class="navbar navbar-expand">
-    <h2>Logo</h2>
-    <div class="header ">
-        <ul class="navbar-nav ">
-
-        <li class="navbar-nav">
-              <a class="nav-link   btn btn-outline-success" href="index.php">Back</a>
-         </li>
-            <li class="nav-item">
-                <a class="nav-link" href="logout.php">Logout</a>
-            </li>
-            
-        </ul>
-    </div>
-</nav>
-<body class="">
-<div class="container  bg-light py-5">
+<?php
+include('../pdmes/includes/header.php')
+?>
+<body class="mt-">
+<div class="container  my-5 py-5">
 <form action="addrecord.php"  class="" method="POST">
   <div class="container ">
-  <h3 class="text-center bg-light"> Learner's Presonal Information </h3>
+  <h3 class="text-center "> Learner's Presonal Information </h3>
 
   <div class="container justify-content-between">
-      <div class="row justify-content-md-center  ">
-        <div class="col-md-4">
+      <div class="row justify-content-md-center ">
+        <div class="col-md-3">
           <label for="" class="form-label"> Last Name : </label>
           <input list="text" name="last_name" class="form-control"  required> 
         </div>
 
+        <div class="col-md-3">
+          <label for="" class="form-label">First Name : </label>
+          <input type="text" name="first_name" class="form-control" required>
+        </div>
+
+        <div class="col-md-3">
+          <label for="" class="form-label">Middle Name : </label>
+          <input type="text" name="middle_name" class="form-control" required>
+        </div>
+
+        <div class="col-md-3">
+          <label for="" class="form-label">Suffix Name : </label>
+          <input type="text" name="suffix_name" class="form-control">
+        </div>
+      </div>
+
+      <div class="row justify-content-center">
         <div class="col-md-4">
           <label for="" class="form-label"> LRN : </label>
           <input type="text" name="lrn" class="form-control" required>
-        </div>
-      </div>
-      
-      <div class="row justify-content-center">
-        <div class="col-md-4">
-        <label for="" class="form-label">First Name : </label>
-        <input type="text" name="first_name" class="form-control" required>
         </div>
 
         <div class="col-md-4">
           <label for="" class="form-label"> Birthdate : </label>
           <input type="date" name="birthday" class="form-control" required>
         </div>
-      </div>
-
-      <div class="row  justify-content-md-center">
-        <div class="col-md-4 flex-column">
-          <div clas="col-md-4">
-          <label for="" class="form-label">Middle Name : </label>
-          <input type="text" name="middle_name" class="form-control" required>
-          </div>
-          <div class="col-md-12 ">
-            <label for="" class="form-label">Suffix Name : </label>
-            <input type="text" name="suffix_name" class="form-control">
-          </div>  
-        </div>
-       <div class="col-md-4">
-        <label for="" class="form-label">Sex :</label>
-        <select  class="form-select form-select-md mb-3" name="sex" id="" required> 
-        <option value="">-Gender-</option>
-        <option value="Male">Male</option>
-        <option value="Female">Female</option>
-      </select> 
-    </div>
-</div>
+        
+        <div class="col-md-4 flex-rgow">
+          <label for="" class="form-label">Sex :</label>
+          <select  class="form-select form-select-md mb-3" name="sex" id="" required> 
+          <option value="">-Gender-</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+        </select> 
+    </div>  
+  </div>
+  
 
 
 
-
-
-  <div class="container bg-light mt-5 ">
-    <h3  class="text-center bg-light"> Eligibity for Elementary School Enrollment </h3>
+  <div class="container  mt-5 ">
+    <h3  class="text-center "> Eligibity for Elementary School Enrollment </h3>
     <p class="text-center">Credential Presented for Grade1</p>
     <p class="text-center"> - -Please check below --</p> 
 
-  
-    <div class="container justify-content-between ">
-      <div class="check checkbox ">
-        <div class="col-md-3">
-          <label class="form-label checkbox-label" for=""> Kinder progress report: </label>
+    <div class="container">
+      <div class="row align-items-center my-4">
+        <div class="col-md-4">
+          <label>Kinder Porgress Report:</label>
           <input type="checkbox" name="credential[]" value="Kinder progress report">
         </div>
 
+        <div class="col-md-4">
+          <label>ECCD Checklist:</label>
+          <input type="checkbox" name="credential[]" value="ECCD Checklist" >
+        </div>
+
+        <div class="col-md-4">
+          <label>Kindergarden Certificate of Completion:</label>
+          <input type="checkbox" name="credential[]" value="Kindergarden Certificate of Completion" >
+        </div>
+      </div>
+
+      <div class="row justify-content-center my-5 ">
         <div class="col-md-3">
-        <label class="form-label checkbox-label" for=""> ECCD Checklist: </label>
-        <input type="checkbox" name="credential[]" value="ECCD Checklist" >
+          <label class="form-label">Name of School:</label>
+          <input list="text" class="form-control"  name="name_of_school" >
         </div>
 
-        <div class="col-md-4">
-        <label class="form-label checkbox-label" for="" >Kindergarden Certificate of Completion : </label>
-        <input type="checkbox" name="credential[]" value="Kindergarden Certificate of Completion" >
+        <div class="col-md-3">
+          <label class="form-label" for="">School Id : </label>
+          <input list="text" class="form-control" name="school_id" >
         </div>
-      </div>
 
-
-        <div class="row  justify-content-center">
-        <div class="col-md-4">
-        <label class="form-label" for="">Name of School : </label>
-        <input list="text" class="form-control" name="name_of_school" >
-      </div>
-      
-      <div class="col-md-4">
-      <label class="form-label" for="">School Id : </label>
-      <input list="text" class="form-control" name="school_id" >
-      </div>
-  </div>
-      <div class="row  justify-content-center">
-        <div class="col-md-4">
+        <div class="col-md-3">
           <label class="form-label" for="">Address of School :</label>
           <input list="text" class="form-control" name="address_school">
-      </div>
-        <div class="col-md-4">
+        </div>
+
+        <div class="col-md-3">
           <label class="form-label" for="">Others :</label>
           <input list="text" class="form-control" name="others">
         </div>
       </div>
+    </div>
+
+
+    
+  </div>
+      <div class="row  justify-content-center">
+        <div class="col-md-4">
+         
+      </div>
+        <div class="col-md-4">
+          
+        </div>
+      </div>
   </div>
 </div>
 
-    <div class="col-5-lg mt-4 text-end ">
+    <div class="col-5-lg mt-4 text-center ">
       <input type="submit" name="next" class="btn btn-lg btn-success " value="Next">
     </div>
    </div>
 </div>
-
-    
-   
 </form>
+</div>
 
 
+<?php
+include('../pdmes/includes/footer.php')
+?>
   <script>
     // Example starter JavaScript for disabling form submissions if there are invalid fields
 (function () {
@@ -241,3 +238,9 @@ ob_end_flush();
 ?>
 </body>
 </html>
+
+
+
+
+
+
