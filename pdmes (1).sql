@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 20, 2022 at 09:05 AM
+-- Generation Time: Mar 20, 2022 at 02:08 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.2
 
@@ -177,6 +177,7 @@ CREATE TABLE `students_grades` (
   `science` int(11) NOT NULL,
   `araling_panlipunan` int(11) NOT NULL,
   `epp_tle` int(11) NOT NULL,
+  `mapeh` int(11) NOT NULL,
   `music` int(11) NOT NULL,
   `arts` int(11) NOT NULL,
   `p_e` int(11) NOT NULL,
@@ -264,25 +265,25 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `certifications`
 --
 ALTER TABLE `certifications`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `eligibility_for_elementary_school_enrollment`
 --
 ALTER TABLE `eligibility_for_elementary_school_enrollment`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=79;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=80;
 
 --
 -- AUTO_INCREMENT for table `learners_personal_infos`
 --
 ALTER TABLE `learners_personal_infos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=116;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=117;
 
 --
 -- AUTO_INCREMENT for table `remedial_classes`
 --
 ALTER TABLE `remedial_classes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=125;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=141;
 
 --
 -- AUTO_INCREMENT for table `sample`
@@ -294,13 +295,13 @@ ALTER TABLE `sample`
 -- AUTO_INCREMENT for table `scholastic_records`
 --
 ALTER TABLE `scholastic_records`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=101;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=114;
 
 --
 -- AUTO_INCREMENT for table `students_grades`
 --
 ALTER TABLE `students_grades`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=296;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=344;
 
 --
 -- Constraints for dumped tables
