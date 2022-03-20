@@ -10,7 +10,9 @@ if(empty($_SESSION['username'])){
 }
 
 $lrn = $_SESSION['lrn'];
-echo $lrn;
+if(empty($_SESSION['lrn'])){
+    echo "<script>window,location.href='addrecord.php' </script>";
+}
 
 $query_lrn = "SELECT * FROM learners_personal_infos WHERE lrn = '$lrn' ";
 $run_query_lrn = mysqli_query($conn,$query_lrn);
@@ -117,6 +119,7 @@ if(isset($_POST['next'])){
     if($run_certification){
         echo "added certification";
         header("Location: index.php");
+        
         exit();
     }else{
         echo "Error certification" . $conn->error;
