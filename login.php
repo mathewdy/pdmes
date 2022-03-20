@@ -1,4 +1,5 @@
 <?php
+ob_start();
 include('connection.php');
 session_start();
 
@@ -51,7 +52,6 @@ if(isset($_POST['submit'])){
     if (mysqli_num_rows($result)>0){
         while($row=mysqli_fetch_assoc($result)){
             if (password_verify($password, $row['password'])){ 
-               
                 $_SESSION['username'] = $username;
                 header("location: index.php");
                 die();
@@ -71,7 +71,7 @@ $conn->close();
     
  
 
-    
+ob_flush();
 
 
    

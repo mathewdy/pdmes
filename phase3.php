@@ -7,12 +7,13 @@ if(empty($_SESSION['username'])){
 }
 
 
-error_reporting(E_ERROR & E_WARNING);
-$lrn123 = $_SESSION['lrn'] . '<br>';
+// error_reporting(E_ERROR & E_WARNING);
+$lrn = $_SESSION['lrn'] ;
+echo $lrn;
 if(empty($_SESSION['lrn'])){
   echo "<script>window.location.href='addrecord.php'</script>";
 }
-$query_lrn = "SELECT * FROM learners_personal_infos WHERE lrn = '$lrn123' ";
+$query_lrn = "SELECT * FROM learners_personal_infos WHERE lrn = '$lrn' ";
 $run_query_lrn = mysqli_query($conn,$query_lrn);
 
 
@@ -152,13 +153,12 @@ $run_query_lrn = mysqli_query($conn,$query_lrn);
     <label for="">General Average : </label>
     <input type="text" name="general_average1" pattern="[0-9]{2}" title="Please input 2 Numbers only">
 
-
     <br>
 
     <label for="">Remarks :</label>
-    <select name="remarks1" id="" required> 
+    <select name="remarks1" id="" > 
       <option value="">-Remarks-</option>
-      <option value="Pass">Pass</option>
+      <option value="Passed">Passed</option>
       <option value="Failed">Failed</option>
     </select> 
     <h4>2nd Quarter</h4>
@@ -238,9 +238,9 @@ $run_query_lrn = mysqli_query($conn,$query_lrn);
     <br>
 
     <label for="">Remarks :</label>
-    <select name="remarks2" id="" required> 
+    <select name="remarks2" id="" > 
       <option value="">-Remarks-</option>
-      <option value="Pass">Pass</option>
+      <option value="Passed">Passed</option>
       <option value="Failed">Failed</option>
     </select> 
     <h4>3rd Quarter</h4>
@@ -320,9 +320,9 @@ $run_query_lrn = mysqli_query($conn,$query_lrn);
     <br>
 
     <label for="">Remarks :</label>
-    <select name="remarks3" id="" required> 
+    <select name="remarks3" id="" > 
       <option value="">-Remarks-</option>
-      <option value="Pass">Pass</option>
+      <option value="Passed">Passed</option>
       <option value="Failed">Failed</option>
     </select> 
     <h4>4th Quarter</h4>
@@ -400,9 +400,9 @@ $run_query_lrn = mysqli_query($conn,$query_lrn);
 
     <br>
     <label for="">Remarks :</label>
-    <select name="remarks1" id="" required> 
+    <select name="remarks1" id="" > 
       <option value="">-Remarks-</option>
-      <option value="Pass">Pass</option>
+      <option value="Passed">Passed</option>
       <option value="Failed">Failed</option>
     </select> 
     <br>
@@ -484,9 +484,9 @@ $run_query_lrn = mysqli_query($conn,$query_lrn);
     <br>
 
     <label for="">Remarks :</label>
-    <select name="remarks5" id="" required> 
+    <select name="remarks5" id="" > 
       <option value="">-Remarks-</option>
-      <option value="Pass">Pass</option>
+      <option value="Passed">Passed</option>
       <option value="Failed">Failed</option>
     </select> 
    
@@ -517,9 +517,9 @@ $run_query_lrn = mysqli_query($conn,$query_lrn);
     <br>
 
     <label for="">Remarks :</label>
-    <select name="remedial_remarks1" id="" required> 
+    <select name="remedial_remarks1" id="" > 
       <option value="">-Remarks-</option>
-      <option value="Pass">Pass</option>
+      <option value="Passed">Passed</option>
       <option value="Failed">Failed</option>
     </select> 
     <br>
@@ -529,9 +529,9 @@ $run_query_lrn = mysqli_query($conn,$query_lrn);
     <br>
           
     <label for="">Remarks :</label>
-    <select name="remedial_remarks1" id="" required> 
+    <select name="remedial_remarks1" id="" > 
       <option value="">-Remarks-</option>
-      <option value="Pass">Pass</option>
+      <option value="Passed">Passed</option>
       <option value="Failed">Failed</option>
     </select> 
     <br>
@@ -551,9 +551,9 @@ $run_query_lrn = mysqli_query($conn,$query_lrn);
     <br>
 
     <label for="">Remarks :</label>
-    <select name="remedial_remarks2" id="" required> 
+    <select name="remedial_remarks2" id="" > 
       <option value="">-Remarks-</option>
-      <option value="Pass">Pass</option>
+      <option value="Passed">Passed</option>
       <option value="Failed">Failed</option>
     </select> 
     <br>
@@ -563,9 +563,9 @@ $run_query_lrn = mysqli_query($conn,$query_lrn);
     <br>
           
     <label for="">Remarks :</label>
-    <select name="remedial_remarks2" id="" required> 
+    <select name="remedial_remarks2" id="" > 
       <option value="">-Remarks-</option>
-      <option value="Pass">Pass</option>
+      <option value="Passed">Passed</option>
       <option value="Failed">Failed</option>
     </select> 
     <br>
@@ -814,7 +814,7 @@ if(isset($_POST['next'])){
 
       if($run_remedial_class2){
         echo "added 5 REMEDIAL CLASSES 2" .'<br>';
-
+        $_SESSION['lrn'] = $lrn;
         header('Location: phase4.php');  
         exit();
       }else{

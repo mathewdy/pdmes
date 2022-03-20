@@ -7,13 +7,11 @@ if(empty($_SESSION['username'])){
 }
 
 
+$lrn = $_SESSION['lrn'];
+echo $lrn;
 
-error_reporting(E_ERROR & E_WARNING);
-$lrn123 = $_SESSION['lrn'] . '<br>';
-if(empty($_SESSION['lrn'])){
-  echo "<script>window.location.href='addrecord.php'</script>";
-}
-$query_lrn = "SELECT * FROM learners_personal_infos WHERE lrn = '$lrn123' ";
+
+$query_lrn = "SELECT * FROM learners_personal_infos WHERE lrn = '$lrn' ";
 $run_query_lrn = mysqli_query($conn,$query_lrn);
 
 
@@ -157,8 +155,8 @@ $run_query_lrn = mysqli_query($conn,$query_lrn);
     <br>
 
     <label for="">Remarks :</label>
-    <select name="remarks1" id="" required> 
-      <option value="">-Remakrs-</option>
+    <select name="remarks1" id="" > 
+      <option value="">-Remarks-</option>
       <option value="Passed">Passed</option>
       <option value="Failed">Failed</option>
     </select> 
@@ -240,7 +238,7 @@ $run_query_lrn = mysqli_query($conn,$query_lrn);
     <br>
 
     <label for="">Remarks :</label>
-    <select name="remarks2" id="" required> 
+    <select name="remarks2" id="" > 
       <option value="">-Remarks-</option>
       <option value="Passed">Passed</option>
       <option value="Failed">Failed</option>
@@ -323,7 +321,7 @@ $run_query_lrn = mysqli_query($conn,$query_lrn);
     <br>
 
     <label for="">Remarks :</label>
-    <select name="remarks3" id="" required> 
+    <select name="remarks3" id="" > 
       <option value="">-Remarks-</option>
       <option value="Passed">Passed</option>
       <option value="Failed">Failed</option>
@@ -404,11 +402,11 @@ $run_query_lrn = mysqli_query($conn,$query_lrn);
 
     <br>
     <label for="">Remarks :</label>
-    <select name="remarks4" id="" required> 
+    <select name="remarks4" id="" > 
       <option value="">-Remarks-</option>
       <option value="Passed">Passed</option>
       <option value="Failed">Failed</option>
-    </select> >
+    </select> 
     <br>
 
     <h4>FINALS Quarter</h4>
@@ -488,7 +486,7 @@ $run_query_lrn = mysqli_query($conn,$query_lrn);
     <br>
 
     <label for="">Remarks :</label>
-    <select name="remarks5" id="" required> 
+    <select name="remarks5" id="" > 
       <option value="">-Remarks-</option>
       <option value="Passed">Passed</option>
       <option value="Failed">Failed</option>
@@ -521,7 +519,7 @@ $run_query_lrn = mysqli_query($conn,$query_lrn);
     <br>
 
     <label for="">Remarks :</label>
-    <select name="remedial_remarks1" id="" required> 
+    <select name="remedial_class_mark1" id=""> 
       <option value="">-Remakrs-</option>
       <option value="Passed">Passed</option>
       <option value="Failed">Failed</option>
@@ -534,7 +532,7 @@ $run_query_lrn = mysqli_query($conn,$query_lrn);
     <br>
           
     <label for="">Remarks :</label>
-    <select name="remedial_remarks1" id="" required> 
+    <select name="remedial_remarks1" id="" > 
       <option value="">-Remakrs-</option>
       <option value="Passed">Passed</option>
       <option value="Failed">Failed</option>
@@ -556,7 +554,7 @@ $run_query_lrn = mysqli_query($conn,$query_lrn);
     <br>
 
     <label for="">Remarks :</label>
-    <select name="remedial_remarks2" id="" required> 
+    <select name="remedial_class_mark2" id="" > 
       <option value="">-Remakrs-</option>
       <option value="Passed">Passed</option>
       <option value="Failed">Failed</option>
@@ -569,7 +567,7 @@ $run_query_lrn = mysqli_query($conn,$query_lrn);
     <br>
           
     <label for="">Remarks :</label>
-    <select name="remedial_remarks2" id="" required> 
+    <select name="remedial_remarks2" id="" > 
       <option value="">-Remarks-</option>
       <option value="Passed">Passed</option>
       <option value="Failed">Failed</option>
@@ -586,7 +584,7 @@ $run_query_lrn = mysqli_query($conn,$query_lrn);
 if(isset($_POST['next'])){
   date_default_timezone_set('Asia/Manila');
   //scholastic_record
-  $lrn = $_SESSION['lrn'];
+  $lrn123 = $_SESSION['lrn'];
 
   $school_2 = ucfirst($_POST['school']);
   $school_id_2 = $_POST['school_id'];
@@ -742,52 +740,53 @@ if(isset($_POST['next'])){
   //scholastic records, remedial_classes, students_grades lang ang may phase 
   $insert_scholastic = "INSERT INTO scholastic_records (lrn,school,school_id,district,division,region,
   classified_as_grade,section,school_year,name_of_adviser,phase,remarks,date_time_created,date_time_updated)
-  VALUES ('$lrn', '$school_2','$school_id_2','$district', '$division', '$region', '$classified_as_grade', '$section', '$school_year', '$name_of_adviser','$phase', '$remarks', '$dateCreated', '$dateUpdated')";
+  VALUES ('$lrn123', '$school_2','$school_id_2','$district', '$division', '$region', '$classified_as_grade', '$section', '$school_year', '$name_of_adviser','$phase', '$remarks', '$dateCreated', '$dateUpdated')";
   $run_scholastic = mysqli_query($conn,$insert_scholastic);
 
+
   if($run_scholastic){
-    echo "added 3 SCHOLASTIC RECORD" . '<br>';
+    echo "added 3 SCHOLASTIC RECORD";
 
     $insert_students_grades1 = "INSERT INTO students_grades (lrn,mother_tounge,filipino,english,math,science,araling_panlipunan,epp_tle,music,arts,p_e,health,edukasyon_sa_pagpapakatao,arabic_language,islamic_values,general_average,term,phase,date_time_created,date_time_updated)
-    VALUES ('$lrn','$mother_tounge1', '$filipino1', '$english1', '$math1', '$science1', '$araling_panlipunan1', '$epp_tle1', '$music1', '$arts1', '$p_e1', '$health1', '$edukasyon_sa_pagpapakatao1', '$arabic_language1', '$islamic_values1', '$general_average1', '$quarterly_rating1', '$phase','$dateCreated', '$dateUpdated' ) ";
+    VALUES ('$lrn123','$mother_tounge1', '$filipino1', '$english1', '$math1', '$science1', '$araling_panlipunan1', '$epp_tle1', '$music1', '$arts1', '$p_e1', '$health1', '$edukasyon_sa_pagpapakatao1', '$arabic_language1', '$islamic_values1', '$general_average1', '$quarterly_rating1', '$phase','$dateCreated', '$dateUpdated' ) ";
     $run_insert_students_grades1 = mysqli_query($conn,$insert_students_grades1);
 
     if($run_insert_students_grades1){
-      echo "added 4 STUDENT GRADES 1". '<br>';
+      echo "added 4 STUDENT GRADES 1";
 
       $insert_students_grades2 = "INSERT INTO students_grades (lrn,mother_tounge,filipino,english,math,science,araling_panlipunan,epp_tle,music,arts,p_e,health,edukasyon_sa_pagpapakatao,arabic_language,islamic_values,general_average,term,phase,date_time_created,date_time_updated)
-      VALUES ('$lrn','$mother_tounge2', '$filipino2', '$english2', '$math2', '$science2', '$araling_panlipunan2', '$epp_tle2', '$music2', '$arts2', '$p_e2', '$health2', '$edukasyon_sa_pagpapakatao2', '$arabic_language2', '$islamic_values2', '$general_average2', '$quarterly_rating2', '$phase','$dateCreated', '$dateUpdated') ";
+      VALUES ('$lrn123','$mother_tounge2', '$filipino2', '$english2', '$math2', '$science2', '$araling_panlipunan2', '$epp_tle2', '$music2', '$arts2', '$p_e2', '$health2', '$edukasyon_sa_pagpapakatao2', '$arabic_language2', '$islamic_values2', '$general_average2', '$quarterly_rating2', '$phase','$dateCreated', '$dateUpdated') ";
       $run_insert_students_grades2 = mysqli_query($conn,$insert_students_grades2);
       
 
       if($run_insert_students_grades2){
-        echo "added 4 STUDENT GRADES 2". '<br>';
+        echo "added 4 STUDENT GRADES 2";
 
         $insert_students_grades3 = "INSERT INTO students_grades (lrn,mother_tounge,filipino,english,math,science,araling_panlipunan,epp_tle,music,arts,p_e,health,edukasyon_sa_pagpapakatao,arabic_language,islamic_values,general_average,term,phase,date_time_created,date_time_updated)
-        VALUES ('$lrn','$mother_tounge3', '$filipino3', '$english3', '$math3', '$science3', '$araling_panlipunan3', '$epp_tle3', '$music3', '$arts3', '$p_e3', '$health3', '$edukasyon_sa_pagpapakatao3', '$arabic_language3', '$islamic_values3', '$general_average3', '$quarterly_rating3', '$phase','$dateCreated', '$dateUpdated') ";
+        VALUES ('$lrn123','$mother_tounge3', '$filipino3', '$english3', '$math3', '$science3', '$araling_panlipunan3', '$epp_tle3', '$music3', '$arts3', '$p_e3', '$health3', '$edukasyon_sa_pagpapakatao3', '$arabic_language3', '$islamic_values3', '$general_average3', '$quarterly_rating3', '$phase','$dateCreated', '$dateUpdated') ";
         $run_insert_students_grades3 = mysqli_query($conn,$insert_students_grades3);
       
         if($run_insert_students_grades3){
-          echo "added 4 STUDENT GRADES 3" . '<br>';
+          echo "added 4 STUDENT GRADES 3" ;
 
 
           $insert_students_grades4 = "INSERT INTO students_grades (lrn,mother_tounge,filipino,english,math,science,araling_panlipunan,epp_tle,music,arts,p_e,health,edukasyon_sa_pagpapakatao,arabic_language,islamic_values,general_average,term,phase,date_time_created,date_time_updated)
-          VALUES ('$lrn','$mother_tounge4', '$filipino4', '$english4', '$math4', '$science4', '$araling_panlipunan4', '$epp_tle4', '$music4', '$arts4', '$p_e4', '$health4', '$edukasyon_sa_pagpapakatao4', '$arabic_language4', '$islamic_values4', '$general_average4', '$quarterly_rating4', '$phase','$dateCreated', '$dateUpdated') ";
+          VALUES ('$lrn123','$mother_tounge4', '$filipino4', '$english4', '$math4', '$science4', '$araling_panlipunan4', '$epp_tle4', '$music4', '$arts4', '$p_e4', '$health4', '$edukasyon_sa_pagpapakatao4', '$arabic_language4', '$islamic_values4', '$general_average4', '$quarterly_rating4', '$phase','$dateCreated', '$dateUpdated') ";
           $run_insert_students_grades4 = mysqli_query($conn,$insert_students_grades4);
 
 
           if($run_insert_students_grades4){
-            echo "added 4 STUDENT GRADES 4" . '<br>';
+            echo "added 4 STUDENT GRADES 4" ;
 
 
 
             $insert_students_grades5 = "INSERT INTO students_grades (lrn,mother_tounge,filipino,english,math,science,araling_panlipunan,epp_tle,music,arts,p_e,health,edukasyon_sa_pagpapakatao,arabic_language,islamic_values,general_average,term,phase,date_time_created,date_time_updated)
-            VALUES ('$lrn','$mother_tounge5', '$filipino5', '$english5', '$math5', '$science5', '$araling_panlipunan5', '$epp_tle5', '$music5', '$arts5', '$p_e5', '$health5', '$edukasyon_sa_pagpapakatao5', '$arabic_language5', '$islamic_values5', '$general_average5', '$quarterly_rating5', '$phase','$dateCreated', '$dateUpdated') ";
+            VALUES ('$lrn123','$mother_tounge5', '$filipino5', '$english5', '$math5', '$science5', '$araling_panlipunan5', '$epp_tle5', '$music5', '$arts5', '$p_e5', '$health5', '$edukasyon_sa_pagpapakatao5', '$arabic_language5', '$islamic_values5', '$general_average5', '$quarterly_rating5', '$phase','$dateCreated', '$dateUpdated') ";
             $run_insert_students_grades5 = mysqli_query($conn,$insert_students_grades5);
 
             
             if($run_insert_students_grades5){
-              echo "added 5 STUDENT GRADES 5 " . '<br>';
+              echo "added 5 STUDENT GRADES 5 ";
             }else{
               echo "error " . $conn->error;
             }
@@ -802,24 +801,24 @@ if(isset($_POST['next'])){
 
 
       }else{
-        echo "error 4  student grades 4" . '<br>'. $conn->error;
+        echo "error 4  student grades 4" . $conn->error;
       }
 
       $insert_remedial_class1 = "INSERT INTO remedial_classes (lrn,date_from,date_to,learning_areas,final_rating,remedial_class_mark,recomputed_final_grade,phase,remarks,date_time_created,date_time_updated)
-      VALUES ('$lrn', '$date_from', '$date_to' ,'$learning_areas1', '$final_rating1', '$remedial_class_mark1','$recomputed_final_grade1', '$phase','$remedial_remarks1', '$dateCreated', '$dateUpdated')";
+      VALUES ('$lrn123', '$date_from', '$date_to' ,'$learning_areas1', '$final_rating1', '$remedial_class_mark1','$recomputed_final_grade1', '$phase','$remedial_remarks1', '$dateCreated', '$dateUpdated')";
       $run_remedial_class1 = mysqli_query($conn,$insert_remedial_class1);
 
       if($run_remedial_class1){
-        echo "added 5 REMEDIAL CLASSES" . '<br>';
+        echo "added 5 REMEDIAL CLASSES" ;
 
 
       $insert_remedial_class2 = "INSERT INTO remedial_classes (lrn,date_from,date_to,learning_areas,final_rating,remedial_class_mark,recomputed_final_grade,phase,remarks,date_time_created,date_time_updated)
-      VALUES ('$lrn', '$date_from', '$date_to' ,'$learning_areas2', '$final_rating2', '$remedial_class_mark2','$recomputed_final_grade2', '$phase','$remedial_remarks2', '$dateCreated', '$dateUpdated')";
+      VALUES ('$lrn123', '$date_from', '$date_to' ,'$learning_areas2', '$final_rating2', '$remedial_class_mark2','$recomputed_final_grade2', '$phase','$remedial_remarks2', '$dateCreated', '$dateUpdated')";
       $run_remedial_class2 = mysqli_query($conn,$insert_remedial_class2);
 
       if($run_remedial_class2){
-        echo "added 5 REMEDIAL CLASSES 2" .'<br>';
-
+        echo "added 5 REMEDIAL CLASSES 2";
+        $_SESSION['lrn'] = $lrn;
         header('Location: phase2.php');  
         exit();
       }else{

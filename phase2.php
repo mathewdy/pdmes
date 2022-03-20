@@ -7,12 +7,12 @@ if(empty($_SESSION['username'])){
 }
 
 
-error_reporting(E_ERROR & E_WARNING);
-$lrn123 = $_SESSION['lrn'] . '<br>';
-if(empty($_SESSION['lrn'])){
-  echo "<script>window.location.href='addrecords.php'</script>";
-}
-$query_lrn = "SELECT * FROM learners_personal_infos WHERE lrn = '$lrn123' ";
+$lrn = $_SESSION['lrn'] ;
+echo $lrn;
+// if(empty($_SESSION['lrn'])){
+//   echo "<script>window.location.href='addrecords.php'</script>";
+// }
+$query_lrn = "SELECT * FROM learners_personal_infos WHERE lrn = '$lrn' ";
 $run_query_lrn = mysqli_query($conn,$query_lrn);
 
 
@@ -157,9 +157,9 @@ $run_query_lrn = mysqli_query($conn,$query_lrn);
     <br>
 
     <label for="">Remarks :</label>
-    <select name="remarks1" id="" required> 
+    <select name="remarks1" id="" > 
       <option value="">-Remarks-</option>
-      <option value="Pass">Pass</option>
+      <option value="Passed">Passed</option>
       <option value="Failed">Failed</option>
     </select> 
    
@@ -240,9 +240,9 @@ $run_query_lrn = mysqli_query($conn,$query_lrn);
     <br>
 
     <label for="">Remarks :</label>
-    <select name="remarks2" id="" required> 
+    <select name="remarks2" id="" > 
       <option value="">-Remarks-</option>
-      <option value="Pass">Pass</option>
+      <option value="Passed">Passed</option>
       <option value="Failed">Failed</option>
     </select> 
 
@@ -323,9 +323,9 @@ $run_query_lrn = mysqli_query($conn,$query_lrn);
     <br>
 
     <label for="">Remarks :</label>
-    <select name="remarks3" id="" required> 
+    <select name="remarks3" id="" > 
       <option value="">-Remarks-</option>
-      <option value="Pass">Pass</option>
+      <option value="Passed">Passed</option>
       <option value="Failed">Failed</option>
     </select> 
 
@@ -404,9 +404,9 @@ $run_query_lrn = mysqli_query($conn,$query_lrn);
 
     <br>
     <label for="">Remarks :</label>
-    <select name="remarks4" id="" required> 
+    <select name="remarks4" id="" > 
       <option value="">-Remarks-</option>
-      <option value="Pass">Pass</option>
+      <option value="Passed">Passed</option>
       <option value="Failed">Failed</option>
     </select> 
     <br>
@@ -488,9 +488,9 @@ $run_query_lrn = mysqli_query($conn,$query_lrn);
     <br>
 
     <label for="">Remarks :</label>
-    <select name="remarks5" id="" required> 
+    <select name="remarks5" id="" > 
       <option value="">-Remarks-</option>
-      <option value="Pass">Pass</option>
+      <option value="Passed">Passed</option>
       <option value="Failed">Failed</option>
     </select> 
    
@@ -521,9 +521,9 @@ $run_query_lrn = mysqli_query($conn,$query_lrn);
     <br>
 
     <label for="">Remarks :</label>
-    <select name="remedial_remarks1" id="" required> 
+    <select name="remedial_remarks1" id="" > 
       <option value="">-Remarks-</option>
-      <option value="Pass">Pass</option>
+      <option value="Passed">Passed</option>
       <option value="Failed">Failed</option>
     </select> 
 
@@ -534,9 +534,9 @@ $run_query_lrn = mysqli_query($conn,$query_lrn);
     <br>
           
     <label for="">Remarks :</label>
-    <select name="remedial_remarks1" id="" required> 
+    <select name="remedial_remarks1" id="" > 
       <option value="">-Remarks-</option>
-      <option value="Pass">Pass</option>
+      <option value="Passed">Passed</option>
       <option value="Failed">Failed</option>
     </select> 
     <br>
@@ -556,9 +556,9 @@ $run_query_lrn = mysqli_query($conn,$query_lrn);
     <br>
 
     <label for="">Remarks :</label>
-    <select name="remedial_remarks2" id="" required> 
+    <select name="remedial_remarks2" id="" > 
       <option value="">-Remarks-</option>
-      <option value="Pass">Pass</option>
+      <option value="Passed">Passed</option>
       <option value="Failed">Failed</option>
     </select> 
 
@@ -569,12 +569,14 @@ $run_query_lrn = mysqli_query($conn,$query_lrn);
     <br>
           
     <label for="">Remarks :</label>
-    <select name="remedial_remarks2" id="" required> 
+    <select name="remedial_remarks2" id="" > 
       <option value="">-Remarks-</option>
-      <option value="Pass">Pass</option>
+      <option value="Passed">Passed</option>
       <option value="Failed">Failed</option>
     </select> 
 
+    <br>
+    <input type="submit" name="next" value="Next">
     </form>
     
 </body>
@@ -752,7 +754,7 @@ if(isset($_POST['next'])){
     $run_insert_students_grades1 = mysqli_query($conn,$insert_students_grades1);
 
     if($run_insert_students_grades1){
-      echo "added 4 STUDENT GRADES 1". '<br>';
+      echo "added 4 STUDENT GRADES 1";
 
       $insert_students_grades2 = "INSERT INTO students_grades (lrn,mother_tounge,filipino,english,math,science,araling_panlipunan,epp_tle,music,arts,p_e,health,edukasyon_sa_pagpapakatao,arabic_language,islamic_values,general_average,term,phase,date_time_created,date_time_updated)
       VALUES ('$lrn','$mother_tounge2', '$filipino2', '$english2', '$math2', '$science2', '$araling_panlipunan2', '$epp_tle2', '$music2', '$arts2', '$p_e2', '$health2', '$edukasyon_sa_pagpapakatao2', '$arabic_language2', '$islamic_values2', '$general_average2', '$quarterly_rating2', '$phase','$dateCreated', '$dateUpdated') ";
@@ -760,14 +762,14 @@ if(isset($_POST['next'])){
       
 
       if($run_insert_students_grades2){
-        echo "added 4 STUDENT GRADES 2". '<br>';
+        echo "added 4 STUDENT GRADES 2";
 
         $insert_students_grades3 = "INSERT INTO students_grades (lrn,mother_tounge,filipino,english,math,science,araling_panlipunan,epp_tle,music,arts,p_e,health,edukasyon_sa_pagpapakatao,arabic_language,islamic_values,general_average,term,phase,date_time_created,date_time_updated)
         VALUES ('$lrn','$mother_tounge3', '$filipino3', '$english3', '$math3', '$science3', '$araling_panlipunan3', '$epp_tle3', '$music3', '$arts3', '$p_e3', '$health3', '$edukasyon_sa_pagpapakatao3', '$arabic_language3', '$islamic_values3', '$general_average3', '$quarterly_rating3', '$phase','$dateCreated', '$dateUpdated') ";
         $run_insert_students_grades3 = mysqli_query($conn,$insert_students_grades3);
       
         if($run_insert_students_grades3){
-          echo "added 4 STUDENT GRADES 3" . '<br>';
+          echo "added 4 STUDENT GRADES 3";
 
 
           $insert_students_grades4 = "INSERT INTO students_grades (lrn,mother_tounge,filipino,english,math,science,araling_panlipunan,epp_tle,music,arts,p_e,health,edukasyon_sa_pagpapakatao,arabic_language,islamic_values,general_average,term,phase,date_time_created,date_time_updated)
@@ -776,7 +778,7 @@ if(isset($_POST['next'])){
 
 
           if($run_insert_students_grades4){
-            echo "added 4 STUDENT GRADES 4" . '<br>';
+            echo "added 4 STUDENT GRADES 4" ;
 
 
 
@@ -786,7 +788,8 @@ if(isset($_POST['next'])){
 
             
             if($run_insert_students_grades5){
-              echo "added 5 STUDENT GRADES 5 " . '<br>';
+              echo "added 5 STUDENT GRADES 5 ";
+
             }else{
               echo "error " . $conn->error;
             }
@@ -817,8 +820,8 @@ if(isset($_POST['next'])){
       $run_remedial_class2 = mysqli_query($conn,$insert_remedial_class2);
 
       if($run_remedial_class2){
-        echo "added 5 REMEDIAL CLASSES 2" .'<br>';
-
+        echo "added 5 REMEDIAL CLASSES 2";
+        $_SESSION['lrn'] = $lrn;
         header('Location: phase3.php');  
         exit();
       }else{
