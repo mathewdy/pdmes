@@ -37,6 +37,7 @@ if(isset($_GET['sid'])){
         exit();
     }
 
+    echo $decrypted_lrn;
 
     $sql = "SELECT * FROM learners_personal_infos 
     LEFT JOIN remedial_classes ON learners_personal_infos.lrn = remedial_classes.lrn 
@@ -44,7 +45,7 @@ if(isset($_GET['sid'])){
     LEFT JOIN scholastic_records ON learners_personal_infos.lrn = scholastic_records.lrn
     LEFT JOIN students_grades ON learners_personal_infos.lrn = scholastic_records.lrn
     LEFT JOIN certifications ON learners_personal_infos.lrn = scholastic_records.lrn
-    WHERE learners_personal_infos.lrn = '$decrypted_lrn'";
+    WHERE learners_personal_infos.lrn = '109857060083'";
     $run = mysqli_query($conn,$sql);
 
     if(mysqli_num_rows($run) > 0){
@@ -72,6 +73,13 @@ if(isset($_GET['sid'])){
 
 <?php
 
+// SELECT * FROM learners_personal_infos 
+// LEFT JOIN remedial_classes ON learners_personal_infos.lrn = remedial_classes.lrn 
+// LEFT JOIN eligibility_for_elementary_school_enrollment ON learners_personal_infos.lrn = remedial_classes.lrn
+// LEFT JOIN scholastic_records ON learners_personal_infos.lrn = scholastic_records.lrn
+// LEFT JOIN students_grades ON learners_personal_infos.lrn = scholastic_records.lrn
+// LEFT JOIN certifications ON learners_personal_infos.lrn = scholastic_records.lrn
+// WHERE learners_personal_infos.lrn = '109857060083'
 
 
 ob_flush();
