@@ -5,24 +5,26 @@ include('connection.php');
 if(empty($_SESSION['username'])){
     echo "<script>window.location.href='login.php' </script>";
 }
+$key = 'ajbh^ZskSgk2kavCjQtkgx9dG3%&';
 
-
-if(isset($_GET['lrn'])){
-    $lrn =  $_GET['lrn'];
-    if(empty($lrn)){    //lrn verification starts here
+if(isset($_GET['sid'])){
+    foreach ($_GET as $encrypting_lrn => $encrypt_lrn){
+        $decrypt_lrn = $_GET[$encrypting_lrn] = base64_decode(urldecode($encrypt_lrn));
+        $decrypted_lrn = ((($decrypt_lrn * 582374)/ 4692)/ 859273574 );
+    }
+    
+    if(empty($_GET['sid'])){    //lrn verification starts here
         echo "<script>alert('LRN not found');
         window.location = 'index.php';</script>";
         exit();
     }
-    $verify_lrn = "SELECT learners_personal_infos.lrn FROM `learners_personal_infos` WHERE lrn = '$lrn'";
+    $verify_lrn = "SELECT learners_personal_infos.lrn FROM `learners_personal_infos` WHERE lrn = '$decrypted_lrn'";
     $query_request = mysqli_query($conn, $verify_lrn) or die (mysqli_error($conn));
     if(mysqli_num_rows($query_request) == 0){
-            echo '
-            <script type = "text/javascript">
-                alert("LRN does not exist");
-                window.location = "index.php";
-            </script>
-        ';
+            echo "
+            <script type = 'text/javascript'>
+            window.location = 'index.php';
+            </script>";
             exit();
     }   //lrn verification ends here
     
@@ -47,7 +49,7 @@ if(isset($_GET['lrn'])){
     $sql = "SELECT * FROM learners_personal_infos 
     LEFT JOIN eligibility_for_elementary_school_enrollment ON learners_personal_infos.lrn = eligibility_for_elementary_school_enrollment.lrn
     LEFT JOIN scholastic_records ON learners_personal_infos.lrn = scholastic_records.lrn
-    WHERE learners_personal_infos.lrn = '$lrn'";
+    WHERE learners_personal_infos.lrn = '$decrypted_lrn'";
     $run = mysqli_query($conn,$sql);
 
     if(mysqli_num_rows($run) > 0){

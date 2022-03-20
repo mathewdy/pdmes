@@ -8,6 +8,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <title>Document</title>
 </head>
+<script>
+    function readyDeleteState(){
+        var ask = confirm("Are you sure to delete this row?");
+        if (ask == false){
+            return false;
+        }
+    }
+</script>
 <style>
 th{
     border: 2px solid #ddd;
@@ -17,7 +25,6 @@ th{
 <?php
     include('connection.php');
     $output = '';
-
     if(isset($_POST['query'])){
         $search = mysqli_real_escape_string($conn, $_POST['query']);
         $query = "SELECT * FROM learners_personal_infos WHERE first_name LIKE '%".$search."%'
@@ -41,17 +48,21 @@ th{
             </tr>
         </thead>';
         while($row = mysqli_fetch_array($result)){
-            
+            $lrn = $row['lrn'];
+            $parse_lrn = intval($lrn);
+            $int_lrn = (($parse_lrn * 859273574 * 4692)/ 582374);
+            $lrn_link = "edit-student.php?sid=". urlencode(base64_encode($int_lrn));
+            $lrn_link2 = "view-student.php?sid=" . urlencode(base64_encode($int_lrn));
             $number++;
             $output .='
-            <tr class="clickable-row text-center" data-href="view-student.php?lrn='.$row ["lrn"].'" style="cursor:pointer;">
+            <tr class="clickable-row text-center" data-href="'.$lrn_link2.'" style="cursor:pointer;">
             <td>'.$number.'</td>
             <td>'.$row["lrn"].'</td>
             <td>'.$row["first_name"].' '.$row["middle_name"].' '.$row["last_name"].'</td>
             <td>'.$row["sex"].'</td>
             <td class="d-flex flex-row justify-content-evenly">
-                <a href="edit-student.php?lrn='.$row ["lrn"].'"><i style="color:#56BBF1; font-size:30px;" class="fa-solid fa-pen-to-square"></i></a>
-                <a href="delete-student.php?lrn='.$row ["lrn"].'"><i style="color:red; font-size:30px;" class="fa-solid fa-circle-minus"></i></a>
+                <a href="'.$lrn_link.'"><i style="color:#56BBF1; font-size:30px;" class="fa-solid fa-pen-to-square"></i></a>
+                <a onclick="readyDeleteState()" href="delete-student.php?lrn='.$row ["lrn"].'"><i style="color:red; font-size:30px;" class="fa-solid fa-circle-minus"></i></a>
             </td>   
             </tr>  
             ';
