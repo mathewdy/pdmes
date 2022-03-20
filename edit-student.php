@@ -5,7 +5,6 @@ include('connection.php');
 if(empty($_SESSION['username'])){
     echo "<script>window.location.href='login.php' </script>";
 }
-$key = 'ajbh^ZskSgk2kavCjQtkgx9dG3%&';
 
 if(isset($_GET['sid'])){
     foreach ($_GET as $encrypting_lrn => $encrypt_lrn){
@@ -62,42 +61,57 @@ if(isset($_GET['sid'])){
         <div class="row justify-content-md-center ">
             <div class="col-md-3">
             <label for="" class="form-label"> Last Name : </label>
-            <input list="text" name="last_name" class="form-control"  required> 
+            <input list="text" name="last_name" class="form-control" value="<?php echo $row['last_name'];?>"  required> 
             </div>
 
             <div class="col-md-3">
             <label for="" class="form-label">First Name : </label>
-            <input type="text" name="first_name" class="form-control" required>
+            <input type="text" name="first_name" class="form-control" value="<?php echo $row['first_name'];?>" required>
             </div>
 
             <div class="col-md-3">
             <label for="" class="form-label">Middle Name : </label>
-            <input type="text" name="middle_name" class="form-control" required>
+            <input type="text" name="middle_name" class="form-control" value="<?php echo $row['middle_name'];?>" required>
             </div>
 
             <div class="col-md-3">
             <label for="" class="form-label">Suffix Name : </label>
-            <input type="text" name="suffix_name" class="form-control">
+            <input type="text" name="suffix_name" class="form-control" 
+            value="<?php if (empty($row['suffix'])){ echo "N/A"; }else{ echo $row['suffix'];}?>">
             </div>
         </div>
 
         <div class="row justify-content-center">
             <div class="col-md-4">
             <label for="" class="form-label"> LRN : </label>
-            <input type="text" name="lrn" class="form-control" required>
+            <input type="text" name="lrn" class="form-control" value="<?php echo $row['lrn'];?>" required>
             </div>
 
             <div class="col-md-4">
             <label for="" class="form-label"> Birthdate : </label>
-            <input type="date" name="birthday" class="form-control" required>
+            
+            <input type="date" name="birthday" class="form-control" 
+            value="<?php echo strftime('%Y-%m-%d', strtotime($row['birth_date']));?>"required>
             </div>
             
             <div class="col-md-4 flex-rgow">
             <label for="" class="form-label">Sex :</label>
             <select  class="form-select form-select-md mb-3" name="sex" id="" required> 
             <option value="">-Gender-</option>
-            <option value="Male">Male</option>
-            <option value="Female">Female</option>
+            <option value="Male"
+            <?php
+                if ($row['sex'] == "Male"){
+                    echo "Selected";
+                }
+                ?>
+            >Male</option>
+            <option value="Female"
+            <?php
+                if ($row['sex'] == "Female"){
+                    echo "Selected";
+                }
+            ?>
+            >Female</option>
             </select> 
         </div>  
     </div>
@@ -126,7 +140,7 @@ if(isset($_GET['sid'])){
         <div class="row justify-content-center">
             <div class="col-md-4">
             <label for="" class="form-label" >School ID:</label>
-            <input type="text"  class="form-control"  name="school_id" value="<?php echo $row ['school_id']?>">
+            <input type="text"  class="form-control"  name="school_id" value="<?php echo $row ['school_id']?>" required>
         </div>
         <div class="col-md-4">
             <label for="" class="form-label">School Address</label>

@@ -10,7 +10,7 @@ if(isset($_GET['sid'])){
         $decrypted_lrn = ((($decrypt_lrn * 582374)/ 4692)/ 859273574 );
     }
     if(empty($_GET['sid'])){
-        echo "<script>window.location.href='index.php' </script>";
+        echo "<script>window.location.href='index.php'</script>";
       }
 
 
@@ -75,7 +75,7 @@ if(isset($_GET['sid'])){
     <h2> Scholastic Records </h2>
 <?php
 
-$query = "SELECT * FROM `scholastic_records` WHERE '$decryped_lrn' ";
+$query = "SELECT * FROM `scholastic_records` WHERE lrn = '$decrypted_lrn' ";
 $run = mysqli_query($conn, $query);
 if(mysqli_num_rows($run) > 0){
     $rows = mysqli_fetch_array($run);

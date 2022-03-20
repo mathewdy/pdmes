@@ -52,18 +52,18 @@ th{
             $parse_lrn = intval($lrn);
             $int_lrn = (($parse_lrn * 859273574 * 4692)/ 582374);
             $edit_link = "edit-student.php?sid=". urlencode(base64_encode($int_lrn));
-            $view_link = "view-student.php?sid=" . urlencode(base64_encode($int_lrn));
+            $lrn_link2 = "view-student.php?sid=" . urlencode(base64_encode($int_lrn));
             $delete_link = "delete-student.php?sid=" . urlencode(base64_encode($int_lrn));
             $number++;
             $output .='
-            <tr class="clickable-row text-center" data-href="'.$view_link.'" style="cursor:pointer;">
+            <tr class="clickable-row text-center" data-href="'.$lrn_link2.'" style="cursor:pointer;">
             <td>'.$number.'</td>
             <td>'.$row["lrn"].'</td>
             <td>'.$row["first_name"].' '.$row["middle_name"].' '.$row["last_name"].'</td>
             <td>'.$row["sex"].'</td>
             <td class="d-flex flex-row justify-content-evenly">
                 <a href="'.$edit_link.'"><i style="color:#56BBF1; font-size:30px;" class="fa-solid fa-pen-to-square"></i></a>
-                <a href="'.$delete_link.'"><i style="color:red; font-size:30px;" class="fa-solid fa-circle-minus"></i></a>
+                <a onclick="confirmDelete()" href="'.$delete_link.'"><i style="color:red; font-size:30px;" class="fa-solid fa-circle-minus"></i></a>
             </td>   
             </tr>  
             ';
@@ -78,8 +78,7 @@ th{
     }
 
 ?>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></>
 <script>
     $(document).ready(function($) {
         $(".clickable-row").click(function() {
