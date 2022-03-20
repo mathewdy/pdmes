@@ -12,6 +12,7 @@
 .nav-item{
     border-radius: 5px;
     border: 2px solid white;
+    font-family: var(--poppins);
 }
 .table-container{
     margin: 5em 0 0 0 ;
@@ -20,17 +21,16 @@
 .table-top{
     margin: 0 0 2.5em 0 ;
 }
-
 /* login design  */
 .address{
     font-size: 15px;
 }
 .form-container{
-    height: 65vh;
+    min-height: 85vh;
+    padding: 5em 0 10em 0;
 }
 .login-form{
     border: 1px solid #ccc;
-    margin: 8em 25em;
     border-radius: 0 0 12px 12px;
 }
 .header-text{
@@ -43,21 +43,15 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 2em 10em 5em 10em;
+    padding: 2em 5em;
 }
 .input-boxes input[type=text], input[type=password]{
     margin: 12px ;
     padding: 1px 8px;
     text-align: center;
     border-radius: 15px;
-    outline: none;
-    border: 2px solid #ccc;
     font-size: 20px;
     font-family: var(--poppins);
-}
-.input-boxes input[type=text]:focus, input[type=password]:focus{
-    border: 2px solid rgb(1, 124, 240);
-    transition: all .5s ease;
 }
 .input-boxes input[type=submit]{
     padding: 2px 20px;
@@ -72,8 +66,10 @@
     background: #00df4a;
 }
 
-@media (max-width: 1024px) {
-    .login-form{
-        margin: 8em 10em;
-    }
+/* login design end */
+
+
+/* add record design */
+.record-wrapper{
+    background: #ccc;
 }
