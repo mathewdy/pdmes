@@ -51,7 +51,7 @@ th{
             $lrn = $row['lrn'];
             $parse_lrn = intval($lrn);
             $int_lrn = (($parse_lrn * 859273574 * 4692)/ 582374);
-            $edit_link = "new-edit-student.php?sid=". urlencode(base64_encode($int_lrn));
+            $edit_link = "new-edit-students.php?sid=". urlencode(base64_encode($int_lrn));
             $view_link = "view-student.php?sid=" . urlencode(base64_encode($int_lrn));
             $delete_link = "delete-student.php?sid=" . urlencode(base64_encode($int_lrn));
             $number++;

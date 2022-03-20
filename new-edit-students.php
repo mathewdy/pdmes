@@ -26,7 +26,16 @@ if(empty($_SESSION['username'])){
 
 <?php
 if(isset($_GET['sid'])){
-    $lrn = $_GET['sid'];
+    foreach ($_GET as $encrypting_lrn => $encrypt_lrn){
+        $decrypt_lrn = $_GET[$encrypting_lrn] = base64_decode(urldecode($encrypt_lrn));
+        $decrypted_lrn = ((($decrypt_lrn * 582374)/ 4692)/ 859273574 );
+    }
+    
+    if(empty($_GET['sid'])){    //lrn verification starts here
+        echo "<script>alert('LRN not found');
+        window.location = 'index.php';</script>";
+        exit();
+    }
 
 
     $sql = "SELECT * FROM learners_personal_infos 
@@ -35,7 +44,7 @@ if(isset($_GET['sid'])){
     LEFT JOIN scholastic_records ON learners_personal_infos.lrn = scholastic_records.lrn
     LEFT JOIN students_grades ON learners_personal_infos.lrn = scholastic_records.lrn
     LEFT JOIN certifications ON learners_personal_infos.lrn = scholastic_records.lrn
-    WHERE learners_personal_infos.lrn = '$lrn'";
+    WHERE learners_personal_infos.lrn = '$decrypted_lrn'";
     $run = mysqli_query($conn,$sql);
 
     if(mysqli_num_rows($run) > 0){
