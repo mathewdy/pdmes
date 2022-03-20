@@ -218,7 +218,7 @@ if(isset($_POST['next'])){
 
       $run_insert_eligibility_for_elem = mysqli_query($conn,$insert_eligibility_for_elem);
 
-      if($run_insert_eligibility_for_elem){
+      if($run_insert_eligibility_for_elem ){
         echo "Added insert_eligibility_for_elem";
         $_SESSION['lrn'] = $lrn;
         header('Location: phase1.php');
