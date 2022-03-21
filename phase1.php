@@ -1,21 +1,22 @@
 <?php
-ob_start();
-include('connection.php');
-session_start();
-if(empty($_SESSION['username'])){
-    echo "<script>window.location.href='login.php'</script>";
-}
+// ob_start();
+// include('connection.php');
+// session_start();
+// if(empty($_SESSION['username'])){
+//     echo "<script>window.location.href='login.php'</script>";
+// }
 
-error_reporting(E_ERROR & E_WARNING);
-$lrn = $_SESSION['lrn'];
-if(empty($_SESSION['lrn'])){
-  echo "<script>window,location.href='addrecord.php' </script>";
-}
+// error_reporting(E_ERROR & E_WARNING);
+// $lrn = $_SESSION['lrn'];
+// if(empty($_SESSION['lrn'])){
+//   echo "<script>window,location.href='addrecord.php' </script>";
+// }
 
 
-$query_lrn = "SELECT * FROM learners_personal_infos WHERE lrn = '$lrn' ";
-$run_query_lrn = mysqli_query($conn,$query_lrn);
-?>
+// $query_lrn = "SELECT * FROM learners_personal_infos WHERE lrn = '$lrn' ";
+// $run_query_lrn = mysqli_query($conn,$query_lrn);
+
+?> 
 
 <!DOCTYPE html>
 <html lang="en">
@@ -113,9 +114,9 @@ $run_query_lrn = mysqli_query($conn,$query_lrn);
                 
             <label class="mother_tongue1" for="">Mother Tounge  </label> 
             <input type="tel" name="mother_tounge1" class="mother mother_tongue1txt" pattern="[0-9]{2}" title="Please input 2 Numbers only" >
-          <input type="tel" name="mother_tounge1" class="mother mother_tongue2txt" pattern="[0-9]{2}" title="Please input 2 Numbers only" >
-          <input type="tel" name="mother_tounge1" class="mother mother_tongue3txt" pattern="[0-9]{2}" title="Please input 2 Numbers only" >
-          <input type="tel" name="mother_tounge1" class="mother mother_tongue4txt" pattern="[0-9]{2}" title="Please input 2 Numbers only" >
+          <input type="tel" name="mother_tounge2" class="mother mother_tongue2txt" pattern="[0-9]{2}" title="Please input 2 Numbers only" >
+          <input type="tel" name="mother_tounge3" class="mother mother_tongue3txt" pattern="[0-9]{2}" title="Please input 2 Numbers only" >
+          <input type="tel" name="mother_tounge4" class="mother mother_tongue4txt" pattern="[0-9]{2}" title="Please input 2 Numbers only" >
             <input type="text" name="general_average4" pattern="[0-9]{2}" class="general_average" title="Please input 2 Numbers only">
             <select name="remarks1" class="remarks" id="" required> 
                 <option value="">-Remarks-</option>
@@ -157,9 +158,9 @@ $run_query_lrn = mysqli_query($conn,$query_lrn);
           <div class="fourth-row">
             <label class="Math1">Math</label>
             <input type="text" class="math math1" name="math1" pattern="[0-9]{2}" title="Please input 2 Numbers only">
-            <input type="text" class="math math2" name="math1" pattern="[0-9]{2}" title="Please input 2 Numbers only">
-            <input type="text" class="math math3" name="math1" pattern="[0-9]{2}" title="Please input 2 Numbers only">
-            <input type="text" class="math math4" name="math1" pattern="[0-9]{2}" title="Please input 2 Numbers only">
+            <input type="text" class="math math2" name="math2" pattern="[0-9]{2}" title="Please input 2 Numbers only">
+            <input type="text" class="math math3" name="math3" pattern="[0-9]{2}" title="Please input 2 Numbers only">
+            <input type="text" class="math math4" name="math4" pattern="[0-9]{2}" title="Please input 2 Numbers only">
 
             <input type="text" name="general_average4" pattern="[0-9]{2}" class="general_average" title="Please input 2 Numbers only">
             <select name="remarks1" class="remarks" id="" required> 
@@ -171,10 +172,17 @@ $run_query_lrn = mysqli_query($conn,$query_lrn);
 
           <div class="fifth-row">
             <label class="Science1" for="">Science : </label>
-            <input type="text" name="science science1 " class="science1 science" pattern="[0-9]{2}" title="Please input 2 Numbers only">
-            <input type="text" name="science science2" class="science2 science" pattern="[0-9]{2}" title="Please input 2 Numbers only">
-            <input type="text" name="science science3" class="science3 science" pattern="[0-9]{2}" title="Please input 2 Numbers only">
-            <input type="text" name="science" class="science4 science" pattern="[0-9]{2}" title="Please input 2 Numbers only">
+            <input type="text" name=" science1 " class="science1 science" pattern="[0-9]{2}" title="Please input 2 Numbers only">
+            <input type="text" name=" science2" class="science2 science" pattern="[0-9]{2}" title="Please input 2 Numbers only">
+            <input type="text" name=" science3" class="science3 science" pattern="[0-9]{2}" title="Please input 2 Numbers only">
+            <input type="text" name="science4" class="science4 science" pattern="[0-9]{2}" title="Please input 2 Numbers only">
+            
+            <input type="text" name="general_average4" pattern="[0-9]{2}" class="general_average" title="Please input 2 Numbers only">
+            <select name="remarks1" class="remarks" id="" required> 
+                <option value="">-Remarks-</option>
+                <option value="Passed">Passed</option>
+                <option value="Failed">Failed</option>
+              </select>  
           </div>
 
           <div class="sixth-row">
@@ -184,30 +192,58 @@ $run_query_lrn = mysqli_query($conn,$query_lrn);
             <input type="text" name="araling_panlipunan2" class="aralinpanlipunan aralinpanlipunan2"  pattern="[0-9]{2}" title="Please input 2 Numbers only">
             <input type="text" name="araling_panlipunan3" class="aralinpanlipunan aralinpanlipunan3"  pattern="[0-9]{2}" title="Please input 2 Numbers only">
             <input type="text" name="araling_panlipunan4" class="aralinpanlipunan aralinpanlipunan4"  pattern="[0-9]{2}" title="Please input 2 Numbers only">
-
+            
+            <input type="text" name="general_average4" pattern="[0-9]{2}" class="general_average" title="Please input 2 Numbers only">
+            <select name="remarks1" class="remarks" id="" required> 
+                <option value="">-Remarks-</option>
+                <option value="Passed">Passed</option>
+                <option value="Failed">Failed</option>
+              </select>  
           </div>
 
+
           <div class="seventh-row">
-            <label for="">EPP / TLE : </label>
-            <input type="text" name="epp_tle1" pattern="[0-9]{2}" title="Please input 2 Numbers only">
+            <label class="epp_tle1" for="">EPP / TLE  </label>
+            <input type="text" name="epp_tle1" class="epp1 epp" pattern="[0-9]{2}" title="Please input 2 Numbers only">
+            <input type="text" class="epp2 epp" name="epp_tle2" pattern="[0-9]{2}" title="Please input 2 Numbers only">
+            <input type="text" class="epp3 epp" name="epp_tle3" pattern="[0-9]{2}" title="Please input 2 Numbers only">
+            <input type="text" class="epp4 epp" name="epp_tle4" pattern="[0-9]{2}" title="Please input 2 Numbers only">
+            
+            <input type="text" name="general_average4" pattern="[0-9]{2}" class="general_average" title="Please input 2 Numbers only">
+            <select name="remarks1" class="remarks" id="" required> 
+                <option value="">-Remarks-</option>
+                <option value="Passed">Passed</option>
+                <option value="Failed">Failed</option>
+              </select>  
           </div>
 
           <div class="eighth-row">
-            <label for="">Music : </label>
+            <label class="Mapeh1">MAPEH</label>
+            <input type="text" name="mapeh1"
+            class="mapeh mapeh1" pattern="[0-9]{2}" title="Please input 2 Numbers only">
+            <input type="text" name="mapeh2"
+            class="mapeh mapeh2" pattern="[0-9]{2}" title="Please input 2 Numbers only">
+            <input type="text" name="mapeh3"
+            class="mapeh mapeh3" pattern="[0-9]{2}" title="Please input 2 Numbers only">
+            <input type="text" name="mapeh4"
+            class="mapeh mapeh4" pattern="[0-9]{2}" title="Please input 2 Numbers only">
+          </div>
+          <div class="nineth-row">
+            <label class="Music1" for="">Music : </label>
             <input type="text" name="music1" pattern="[0-9]{2}" title="Please input 2 Numbers only">
           </div>
 
-          <div class="nineth-row">
+          <div class="tenth-row">
             <label for="">Arts : </label>
             <input type="text" name="arts1" pattern="[0-9]{2}" title="Please input 2 Numbers only">
           </div>
 
-          <div class="tenth-row">
+          <div class="eleventh-row">
             <label for="">P.E. : </label>
             <input type="text" name="p_e1" pattern="[0-9]{2}" title="Please input 2 Numbers only">
           </div>
 
-          <div class="eleventh-row">
+          <div class="twelfth-row">
             <label for="">Health :</label>
             <input type="text" name="health1" pattern="[0-9]{2}" title="Please input 2 Numbers only">
           </div>
@@ -234,15 +270,6 @@ $run_query_lrn = mysqli_query($conn,$query_lrn);
           </div>
         </div> 
 
-<<<<<<< HEAD
-        
-          </div>
-            
-        <div>
-          LAKJDF
-        </div>
-        </div>
-=======
     <br>
 
     <label for="">Science : </label>
@@ -271,7 +298,6 @@ $run_query_lrn = mysqli_query($conn,$query_lrn);
     <input type="text" name="arts1" pattern="[0-9]{2}" title="Please input 2 Numbers only">
 
     <br>
->>>>>>> cfab5f12295958819664d6faa4deb014cd29cc82
 
       
         
@@ -282,6 +308,8 @@ $run_query_lrn = mysqli_query($conn,$query_lrn);
 
   
 </div>
+
+
 
 
 

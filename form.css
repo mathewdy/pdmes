@@ -166,6 +166,40 @@
     margin-top:5px;
 }
 
+.seventh-row{
+    display:grid;
+    grid-template-areas:
+    "Epp_tle  input_epp1  input_epp2  input_epp3 input_epp4 average remarks";
+    grid-template-columns: 175px 55px 55px 55px 70px  135px 100px;
+    margin-top:5px;
+}
+
+.eighth-row{
+    display:grid;
+    grid-template-areas:
+    "Mapeh1  input_mapeh1  input_mapeh2  input_mapeh3 input_mapeh4 average remarks";
+    grid-template-columns: 175px 55px 55px 55px 70px  135px 100px;
+    margin-top:5px;
+}
+
+.nineth-row{
+    display:grid;
+    grid-template-areas:
+    "Mapeh1  input_mapeh1  input_mapeh2  input_mapeh3 input_mapeh4 average remarks";
+    grid-template-columns: 175px 55px 55px 55px 70px  135px 100px;
+    margin-top:5px;
+}
+
+
+
+.eighth-row{
+    display:grid;
+    grid-template-areas:
+    "Mapeh1  input_mapeh1  input_mapeh2  input_mapeh3 input_mapeh4 average remarks";
+    grid-template-columns: 175px 55px 55px 55px 70px  135px 100px;
+    margin-top:5px;
+}
+
 /* Grid Area */
 .mother_tongue1{
     grid-area: Mothers;
@@ -185,6 +219,7 @@
 .mother_tongue4txt{
     grid-area: input_mothers4
 }
+
 
 .remarks{
     grid-area: remarks;
@@ -288,6 +323,50 @@
     grid-area:input_Aralinpanlipunan4;
 
 }
+
+.epp_tle1{
+    grid-area:Epp_tle
+}
+
+.epp1{
+    grid-area:input_epp1;
+}
+
+.epp2{
+    grid-area:input_epp2;
+}
+
+.epp3{
+    grid-area:input_epp3;
+}
+
+.epp4{
+    grid-area:input_epp4
+}
+
+
+.Mapeh1{
+    grid-area:Mapeh1;
+}
+
+.mapeh1{
+    grid-area:input_mapeh1;
+}
+
+.mapeh2{
+    grid-area:input_mapeh2;
+
+}
+.mapeh3{
+    grid-area:input_mapeh3;
+
+}
+.mapeh4{
+    grid-area:input_mapeh4;
+
+}
+
+
 /* Textbox sizes */
 
 
@@ -313,6 +392,14 @@
 }
 
 .aralinpanlipunan{
+    width:40px;
+}
+
+.epp{
+    width:40px;
+}
+
+.mapeh{
     width:40px;
 }
 
