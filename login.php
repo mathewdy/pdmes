@@ -1,4 +1,5 @@
 <?php
+ob_start();
 include('connection.php');
 session_start();
 
@@ -22,14 +23,14 @@ session_start();
     <p class="lead m-0">ELEMENTARY SCHOOL</p>
     <p class="address">1116 Quirino Hwy, Novaliches, Quezon City, 1116 Metro Manila</p>
 </div>
-<div class="form-container container text-center">
+<div class="form-container container-lg mt-0 d-flex flex-column justify-content-center align-items-center text-center">
     <form action="#" method="POST" class="login-form">
         <span class="form-header">
             <h1 class="header-text bg-success display-6">SIGN IN</h5>
         </span>
         <span class="input-boxes">
-            <input type="text" name="username" placeholder="USERNAME" required >
-            <input type="password" name="password" placeholder="PASSWORD" required>
+            <input type="text" class="form-control" name="username" placeholder="USERNAME" required >
+            <input type="password" class="form-control" name="password" placeholder="PASSWORD" required>
             <input type="submit" name="submit" value="SUBMIT">
         </span>
     </form>
@@ -51,7 +52,6 @@ if(isset($_POST['submit'])){
     if (mysqli_num_rows($result)>0){
         while($row=mysqli_fetch_assoc($result)){
             if (password_verify($password, $row['password'])){ 
-               
                 $_SESSION['username'] = $username;
                 header("location: index.php");
                 die();
@@ -71,7 +71,7 @@ $conn->close();
     
  
 
-    
+ob_flush();
 
 
    

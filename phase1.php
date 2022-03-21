@@ -1,4 +1,21 @@
+<?php
+ob_start();
+include('connection.php');
+session_start();
+if(empty($_SESSION['username'])){
+    echo "<script>window.location.href='login.php'</script>";
+}
 
+error_reporting(E_ERROR & E_WARNING);
+$lrn = $_SESSION['lrn'];
+if(empty($_SESSION['lrn'])){
+  echo "<script>window,location.href='addrecord.php' </script>";
+}
+
+
+$query_lrn = "SELECT * FROM learners_personal_infos WHERE lrn = '$lrn' ";
+$run_query_lrn = mysqli_query($conn,$query_lrn);
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -217,6 +234,7 @@
           </div>
         </div> 
 
+<<<<<<< HEAD
         
           </div>
             
@@ -224,6 +242,36 @@
           LAKJDF
         </div>
         </div>
+=======
+    <br>
+
+    <label for="">Science : </label>
+    <input type="text" name="science1" pattern="[0-9]{2}" title="Please input 2 Numbers only">
+
+    <br>
+
+    <label for="">Araling Panlipunan : </label>
+    <input type="text" name="araling_panlipunan1" pattern="[0-9]{2}" title="Please input 2 Numbers only">
+
+    <br>
+
+    <label for="">EPP / TLE : </label>
+    <input type="text" name="epp_tle1" pattern="[0-9]{2}" title="Please input 2 Numbers only">
+
+    <br>
+    <label for="">MAPEH</label>
+    <input type="text" name="mapeh1" pattern="[0-9]{2}" title="Please input 2 Numbers only">
+
+    <br>
+    <label for="">Music : </label>
+    <input type="text" name="music1" pattern="[0-9]{2}" title="Please input 2 Numbers only">
+
+    <br>
+    <label for="">Arts : </label>
+    <input type="text" name="arts1" pattern="[0-9]{2}" title="Please input 2 Numbers only">
+
+    <br>
+>>>>>>> cfab5f12295958819664d6faa4deb014cd29cc82
 
       
         
@@ -255,12 +303,7 @@
 
     <br>
 
-    <label for="">Remarks :</label>
-    <select name="remarks1" id="" required> 
-      <option value="">-Remakrs-</option>
-      <option value="Passed">Passed</option>
-      <option value="Failed">Failed</option>
-    </select> 
+     
    
     <h4>2nd Quarter</h4>
     <!------- 2nd quarter--->
@@ -295,6 +338,11 @@
 
     <label for="">EPP / TLE : </label>
     <input type="text" name="epp_tle2" pattern="[0-9]{2}" title="Please input 2 Numbers only">
+
+    <br>
+    <label for="">MAPEH</label>
+    <input type="text" name="mapeh2" pattern="[0-9]{2}" title="Please input 2 Numbers only">
+    
 
     <br>
     <label for="">Music : </label>
@@ -338,12 +386,7 @@
 
     <br>
 
-    <label for="">Remarks :</label>
-    <select name="remarks2" id="" required> 
-      <option value="">-Remarks-</option>
-      <option value="Passed">Passed</option>
-      <option value="Failed">Failed</option>
-    </select> 
+   
 
     <h4>3rd Quarter</h4>
     <!------- 3rd quarter--->
@@ -378,6 +421,11 @@
 
     <label for="">EPP / TLE : </label>
     <input type="text" name="epp_tle3" pattern="[0-9]{2}" title="Please input 2 Numbers only">
+
+    <br>
+    <label for="">MAPEH</label>
+    <input type="text" name="mapeh3" pattern="[0-9]{2}" title="Please input 2 Numbers only">
+    
 
     <br>
     <label for="">Music : </label>
@@ -421,12 +469,7 @@
 
     <br>
 
-    <label for="">Remarks :</label>
-    <select name="remarks3" id="" required> 
-      <option value="">-Remarks-</option>
-      <option value="Passed">Passed</option>
-      <option value="Failed">Failed</option>
-    </select> 
+    
 
     <h4>4th Quarter</h4>
     <!------- 4th quarter--->
@@ -461,6 +504,11 @@
 
     <label for="">EPP / TLE : </label>
     <input type="text" name="epp_tle4" pattern="[0-9]{2}" title="Please input 2 Numbers only">
+
+    <br>
+    <label for="">MAPEH</label>
+    <input type="text" name="mapeh4" pattern="[0-9]{2}" title="Please input 2 Numbers only">
+    
 
     <br>
     <label for="">Music : </label>
@@ -501,13 +549,8 @@
     <label for="">General Average : </label>
     <input type="text" name="general_average4" pattern="[0-9]{2}" title="Please input 2 Numbers only">
 
-    <br>
-    <label for="">Remarks :</label>
-    <select name="remarks4" id="" required> 
-      <option value="">-Remarks-</option>
-      <option value="Passed">Passed</option>
-      <option value="Failed">Failed</option>
-    </select> >
+  
+   
     <br>
 
     <h4>FINALS Quarter</h4>
@@ -543,6 +586,11 @@
 
     <label for="">EPP / TLE : </label>
     <input type="text" name="epp_tle5" pattern="[0-9]{2}" title="Please input 2 Numbers only">
+
+    <br>
+    <label for="">MAPEH</label>
+    <input type="text" name="mapeh5" pattern="[0-9]{2}" title="Please input 2 Numbers only">
+    
 
     <br>
     <label for="">Music : </label>
@@ -586,13 +634,7 @@
 
     <br>
 
-    <label for="">Remarks :</label>
-    <select name="remarks5" id="" required> 
-      <option value="">-Remarks-</option>
-      <option value="Passed">Passed</option>
-      <option value="Failed">Failed</option>
-    </select> 
-   
+  
     
 
     <!--remedial classes-->
@@ -620,7 +662,7 @@
     <br>
 
     <label for="">Remarks :</label>
-    <select name="remedial_remarks1" id="" required> 
+    <select name="remedial_class_mark1" id=""> 
       <option value="">-Remakrs-</option>
       <option value="Passed">Passed</option>
       <option value="Failed">Failed</option>
@@ -633,7 +675,7 @@
     <br>
           
     <label for="">Remarks :</label>
-    <select name="remedial_remarks1" id="" required> 
+    <select name="remedial_remarks1" id="" > 
       <option value="">-Remakrs-</option>
       <option value="Passed">Passed</option>
       <option value="Failed">Failed</option>
@@ -655,7 +697,7 @@
     <br>
 
     <label for="">Remarks :</label>
-    <select name="remedial_remarks2" id="" required> 
+    <select name="remedial_class_mark2" id="" > 
       <option value="">-Remakrs-</option>
       <option value="Passed">Passed</option>
       <option value="Failed">Failed</option>
@@ -668,7 +710,7 @@
     <br>
           
     <label for="">Remarks :</label>
-    <select name="remedial_remarks2" id="" required> 
+    <select name="remedial_remarks2" id="" > 
       <option value="">-Remarks-</option>
       <option value="Passed">Passed</option>
       <option value="Failed">Failed</option>
@@ -685,7 +727,7 @@
 if(isset($_POST['next'])){
   date_default_timezone_set('Asia/Manila');
   //scholastic_record
-  $lrn = $_SESSION['lrn'];
+  $lrn123 = $_SESSION['lrn'];
 
   $school_2 = ucfirst($_POST['school']);
   $school_id_2 = $_POST['school_id'];
@@ -706,6 +748,7 @@ if(isset($_POST['next'])){
   $science1 = $_POST['science1'];
   $araling_panlipunan1 = $_POST['araling_panlipunan1'];
   $epp_tle1 = $_POST['epp_tle1'];
+  $mapeh1 = $_POST['mapeh1'];
   $music1 = $_POST['music1'];
   $arts1 = $_POST['arts1'];
   $p_e1 = $_POST['p_e1'];
@@ -725,6 +768,8 @@ if(isset($_POST['next'])){
   $science2 = $_POST['science2'];
   $araling_panlipunan2 = $_POST['araling_panlipunan2'];
   $epp_tle2 = $_POST['epp_tle2'];
+  $mapeh2 = $_POST['mapeh2'];
+
   $music2 = $_POST['music2'];
   $arts2 = $_POST['arts2'];
   $p_e2 = $_POST['p_e2'];
@@ -744,6 +789,8 @@ if(isset($_POST['next'])){
   $science3 = $_POST['science3'];
   $araling_panlipunan3 = $_POST['araling_panlipunan3'];
   $epp_tle3 = $_POST['epp_tle3'];
+  $mapeh3 = $_POST['mapeh3'];
+
   $music3 = $_POST['music3'];
   $arts3 = $_POST['arts3'];
   $p_e3 = $_POST['p_e3'];
@@ -763,7 +810,9 @@ if(isset($_POST['next'])){
   $science3 = $_POST['science3'];
   $araling_panlipunan3 = $_POST['araling_panlipunan3'];
   $epp_tle3 = $_POST['epp_tle3'];
-  $music3 = $_POST['music3'];
+  $mapeh3 = $_POST['mapeh3'];
+
+  $music3 = $_POST['music4'];
   $arts3 = $_POST['arts3'];
   $p_e3 = $_POST['p_e3'];
   $health3 = $_POST['health3'];
@@ -782,6 +831,8 @@ if(isset($_POST['next'])){
   $science4 = $_POST['science4'];
   $araling_panlipunan4 = $_POST['araling_panlipunan4'];
   $epp_tle4 = $_POST['epp_tle4'];
+  $mapeh4 = $_POST['mapeh4'];
+
   $music4 = $_POST['music4'];
   $arts4 = $_POST['arts4'];
   $p_e4 = $_POST['p_e4'];
@@ -794,22 +845,24 @@ if(isset($_POST['next'])){
 
    //FINALS quarter
 
-   $mother_tounge5 = $_POST['mother_tounge5'];
-   $filipino5 = $_POST['filipino5'];
-   $english5 = $_POST['english5'];
-   $math5 = $_POST['math5'];
-   $science5 = $_POST['science5'];
-   $araling_panlipunan5 = $_POST['araling_panlipunan5'];
-   $epp_tle5 = $_POST['epp_tle5'];
-   $music5 = $_POST['music5'];
-   $arts5 = $_POST['arts5'];
-   $p_e5 = $_POST['p_e5'];
-   $health5 = $_POST['health5'];
-   $edukasyon_sa_pagpapakatao5 = $_POST['edukasyon_sa_pagpapakatao5'];
-   $arabic_language5 = $_POST['arabic_language5'];
-   $islamic_values5 = $_POST['islamic_values5'];
-   $general_average5 = $_POST['general_average5'];
-   $quarterly_rating5 = 5;
+  $mother_tounge5 = $_POST['mother_tounge5'];
+  $filipino5 = $_POST['filipino5'];
+  $english5 = $_POST['english5'];
+  $math5 = $_POST['math5'];
+  $science5 = $_POST['science5'];
+  $araling_panlipunan5 = $_POST['araling_panlipunan5'];
+  $epp_tle5 = $_POST['epp_tle5'];
+  $mapeh5 = $_POST['mapeh5'];
+
+  $music5 = $_POST['music5'];
+  $arts5 = $_POST['arts5'];
+  $p_e5 = $_POST['p_e5'];
+  $health5 = $_POST['health5'];
+  $edukasyon_sa_pagpapakatao5 = $_POST['edukasyon_sa_pagpapakatao5'];
+  $arabic_language5 = $_POST['arabic_language5'];
+  $islamic_values5 = $_POST['islamic_values5'];
+  $general_average5 = $_POST['general_average5'];
+  $quarterly_rating5 = 5;
  
 
   //remedial_classes
@@ -841,52 +894,84 @@ if(isset($_POST['next'])){
   //scholastic records, remedial_classes, students_grades lang ang may phase 
   $insert_scholastic = "INSERT INTO scholastic_records (lrn,school,school_id,district,division,region,
   classified_as_grade,section,school_year,name_of_adviser,phase,remarks,date_time_created,date_time_updated)
-  VALUES ('$lrn', '$school_2','$school_id_2','$district', '$division', '$region', '$classified_as_grade', '$section', '$school_year', '$name_of_adviser','$phase', '$remarks', '$dateCreated', '$dateUpdated')";
+  VALUES ('$lrn123', '$school_2','$school_id_2','$district', '$division', '$region', '$classified_as_grade', '$section', '$school_year', '$name_of_adviser','$phase', '$remarks', '$dateCreated', '$dateUpdated')";
   $run_scholastic = mysqli_query($conn,$insert_scholastic);
 
-  if($run_scholastic){
-    echo "added 3 SCHOLASTIC RECORD" . '<br>';
 
-    $insert_students_grades1 = "INSERT INTO students_grades (lrn,mother_tounge,filipino,english,math,science,araling_panlipunan,epp_tle,music,arts,p_e,health,edukasyon_sa_pagpapakatao,arabic_language,islamic_values,general_average,term,phase,date_time_created,date_time_updated)
-    VALUES ('$lrn','$mother_tounge1', '$filipino1', '$english1', '$math1', '$science1', '$araling_panlipunan1', '$epp_tle1', '$music1', '$arts1', '$p_e1', '$health1', '$edukasyon_sa_pagpapakatao1', '$arabic_language1', '$islamic_values1', '$general_average1', '$quarterly_rating1', '$phase','$dateCreated', '$dateUpdated' ) ";
+  if($run_scholastic){
+    echo "added 3 SCHOLASTIC RECORD";
+
+    //calculate ng grade
+    
+    if($general_average1 > 75){
+      $remarks1 = 'Passed';
+    }else{
+      $remarks1 = 'Failed';
+    }
+
+    $insert_students_grades1 = "INSERT INTO students_grades (lrn,mother_tounge,filipino,english,math,science,araling_panlipunan,epp_tle,mapeh,music,arts,p_e,health,edukasyon_sa_pagpapakatao,arabic_language,islamic_values,general_average,term,remarks,phase,date_time_created,date_time_updated)
+    VALUES ('$lrn123','$mother_tounge1', '$filipino1', '$english1', '$math1', '$science1', '$araling_panlipunan1', '$epp_tle1','$mapeh1', '$music1', '$arts1', '$p_e1', '$health1', '$edukasyon_sa_pagpapakatao1', '$arabic_language1', '$islamic_values1', '$general_average1', '$quarterly_rating1', '$phase','$remarks1','$dateCreated', '$dateUpdated')";
     $run_insert_students_grades1 = mysqli_query($conn,$insert_students_grades1);
 
     if($run_insert_students_grades1){
-      echo "added 4 STUDENT GRADES 1". '<br>';
+      echo "added 4 STUDENT GRADES 1";
 
-      $insert_students_grades2 = "INSERT INTO students_grades (lrn,mother_tounge,filipino,english,math,science,araling_panlipunan,epp_tle,music,arts,p_e,health,edukasyon_sa_pagpapakatao,arabic_language,islamic_values,general_average,term,phase,date_time_created,date_time_updated)
-      VALUES ('$lrn','$mother_tounge2', '$filipino2', '$english2', '$math2', '$science2', '$araling_panlipunan2', '$epp_tle2', '$music2', '$arts2', '$p_e2', '$health2', '$edukasyon_sa_pagpapakatao2', '$arabic_language2', '$islamic_values2', '$general_average2', '$quarterly_rating2', '$phase','$dateCreated', '$dateUpdated') ";
+      if($general_average2 > 75){
+        $remarks2 = 'Passed';
+      }else{
+        $remarks2 = 'Failed';
+      }
+
+      $insert_students_grades2 = "INSERT INTO students_grades  (lrn,mother_tounge,filipino,english,math,science,araling_panlipunan,epp_tle,mapeh,music,arts,p_e,health,edukasyon_sa_pagpapakatao,arabic_language,islamic_values,general_average,term,remarks,phase,date_time_created,date_time_updated)
+      VALUES ('$lrn123','$mother_tounge2', '$filipino2', '$english2', '$math2', '$science2', '$araling_panlipunan2', '$epp_tle2','$mapeh2', '$music2', '$arts2', '$p_e2', '$health2', '$edukasyon_sa_pagpapakatao2', '$arabic_language2', '$islamic_values2', '$general_average2', '$quarterly_rating2', '$phase','$remarks2','$dateCreated', '$dateUpdated') ";
       $run_insert_students_grades2 = mysqli_query($conn,$insert_students_grades2);
       
 
       if($run_insert_students_grades2){
-        echo "added 4 STUDENT GRADES 2". '<br>';
+        echo "added 4 STUDENT GRADES 2";
 
-        $insert_students_grades3 = "INSERT INTO students_grades (lrn,mother_tounge,filipino,english,math,science,araling_panlipunan,epp_tle,music,arts,p_e,health,edukasyon_sa_pagpapakatao,arabic_language,islamic_values,general_average,term,phase,date_time_created,date_time_updated)
-        VALUES ('$lrn','$mother_tounge3', '$filipino3', '$english3', '$math3', '$science3', '$araling_panlipunan3', '$epp_tle3', '$music3', '$arts3', '$p_e3', '$health3', '$edukasyon_sa_pagpapakatao3', '$arabic_language3', '$islamic_values3', '$general_average3', '$quarterly_rating3', '$phase','$dateCreated', '$dateUpdated') ";
+        if($general_average3 > 75){
+          $remarks3 = 'Passed';
+        }else{
+          $remarks3 = 'Failed';
+        }
+
+        $insert_students_grades3 = "INSERT INTO students_grades (lrn,mother_tounge,filipino,english,math,science,araling_panlipunan,epp_tle,mapeh,music,arts,p_e,health,edukasyon_sa_pagpapakatao,arabic_language,islamic_values,general_average,term,remarks,phase,date_time_created,date_time_updated)
+        VALUES ('$lrn123','$mother_tounge3', '$filipino3', '$english3', '$math3', '$science3', '$araling_panlipunan3', '$epp_tle3','$mapeh3', '$music3', '$arts3', '$p_e3', '$health3', '$edukasyon_sa_pagpapakatao3', '$arabic_language3', '$islamic_values3', '$general_average3', '$quarterly_rating3', '$remarks3','$phase','$dateCreated', '$dateUpdated') ";
         $run_insert_students_grades3 = mysqli_query($conn,$insert_students_grades3);
       
         if($run_insert_students_grades3){
-          echo "added 4 STUDENT GRADES 3" . '<br>';
+          echo "added 4 STUDENT GRADES 3" ;
+
+          if($general_average4 > 75){
+            $remarks4 = 'Passed';
+          }else{
+            $remarks4 = 'Failed';
+          }
 
 
-          $insert_students_grades4 = "INSERT INTO students_grades (lrn,mother_tounge,filipino,english,math,science,araling_panlipunan,epp_tle,music,arts,p_e,health,edukasyon_sa_pagpapakatao,arabic_language,islamic_values,general_average,term,phase,date_time_created,date_time_updated)
-          VALUES ('$lrn','$mother_tounge4', '$filipino4', '$english4', '$math4', '$science4', '$araling_panlipunan4', '$epp_tle4', '$music4', '$arts4', '$p_e4', '$health4', '$edukasyon_sa_pagpapakatao4', '$arabic_language4', '$islamic_values4', '$general_average4', '$quarterly_rating4', '$phase','$dateCreated', '$dateUpdated') ";
+          $insert_students_grades4 = "INSERT INTO students_grades (lrn,mother_tounge,filipino,english,math,science,araling_panlipunan,epp_tle,mapeh,music,arts,p_e,health,edukasyon_sa_pagpapakatao,arabic_language,islamic_values,general_average,term,remarks,phase,date_time_created,date_time_updated)
+          VALUES ('$lrn123','$mother_tounge4', '$filipino4', '$english4', '$math4', '$science4', '$araling_panlipunan4', '$epp_tle4','$mapeh4', '$music4', '$arts4', '$p_e4', '$health4', '$edukasyon_sa_pagpapakatao4', '$arabic_language4', '$islamic_values4', '$general_average4', '$quarterly_rating4','$remarks4', '$phase','$dateCreated', '$dateUpdated') ";
           $run_insert_students_grades4 = mysqli_query($conn,$insert_students_grades4);
 
 
           if($run_insert_students_grades4){
-            echo "added 4 STUDENT GRADES 4" . '<br>';
+            echo "added 4 STUDENT GRADES 4" ;
+
+            if($general_average5 > 75){
+              $remarks5 = 'Passed';
+            }else{
+              $remarks5 = 'Failed';
+            }
 
 
-
-            $insert_students_grades5 = "INSERT INTO students_grades (lrn,mother_tounge,filipino,english,math,science,araling_panlipunan,epp_tle,music,arts,p_e,health,edukasyon_sa_pagpapakatao,arabic_language,islamic_values,general_average,term,phase,date_time_created,date_time_updated)
-            VALUES ('$lrn','$mother_tounge5', '$filipino5', '$english5', '$math5', '$science5', '$araling_panlipunan5', '$epp_tle5', '$music5', '$arts5', '$p_e5', '$health5', '$edukasyon_sa_pagpapakatao5', '$arabic_language5', '$islamic_values5', '$general_average5', '$quarterly_rating5', '$phase','$dateCreated', '$dateUpdated') ";
+            $insert_students_grades5 = "INSERT INTO students_grades (lrn,mother_tounge,filipino,english,math,science,araling_panlipunan,epp_tle,mapeh,music,arts,p_e,health,edukasyon_sa_pagpapakatao,arabic_language,islamic_values,general_average,term,remarks,phase,date_time_created,date_time_updated)
+            VALUES ('$lrn123','$mother_tounge5', '$filipino5', '$english5', '$math5', '$science5', '$araling_panlipunan5', '$epp_tle5','$mapeh5', '$music5', '$arts5', '$p_e5', '$health5', '$edukasyon_sa_pagpapakatao5', '$arabic_language5', '$islamic_values5', '$general_average5', '$quarterly_rating5','$remarks5', '$phase','$dateCreated', '$dateUpdated') ";
             $run_insert_students_grades5 = mysqli_query($conn,$insert_students_grades5);
 
             
             if($run_insert_students_grades5){
-              echo "added 5 STUDENT GRADES 5 " . '<br>';
+              echo "added 5 STUDENT GRADES 5 ";
             }else{
               echo "error " . $conn->error;
             }
@@ -901,24 +986,24 @@ if(isset($_POST['next'])){
 
 
       }else{
-        echo "error 4  student grades 4" . '<br>'. $conn->error;
+        echo "error 4  student grades 4" . $conn->error;
       }
 
       $insert_remedial_class1 = "INSERT INTO remedial_classes (lrn,date_from,date_to,learning_areas,final_rating,remedial_class_mark,recomputed_final_grade,phase,remarks,date_time_created,date_time_updated)
-      VALUES ('$lrn', '$date_from', '$date_to' ,'$learning_areas1', '$final_rating1', '$remedial_class_mark1','$recomputed_final_grade1', '$phase','$remedial_remarks1', '$dateCreated', '$dateUpdated')";
+      VALUES ('$lrn123', '$date_from', '$date_to' ,'$learning_areas1', '$final_rating1', '$remedial_class_mark1','$recomputed_final_grade1', '$phase','$remedial_remarks1', '$dateCreated', '$dateUpdated')";
       $run_remedial_class1 = mysqli_query($conn,$insert_remedial_class1);
 
       if($run_remedial_class1){
-        echo "added 5 REMEDIAL CLASSES" . '<br>';
+        echo "added 5 REMEDIAL CLASSES" ;
 
 
       $insert_remedial_class2 = "INSERT INTO remedial_classes (lrn,date_from,date_to,learning_areas,final_rating,remedial_class_mark,recomputed_final_grade,phase,remarks,date_time_created,date_time_updated)
-      VALUES ('$lrn', '$date_from', '$date_to' ,'$learning_areas2', '$final_rating2', '$remedial_class_mark2','$recomputed_final_grade2', '$phase','$remedial_remarks2', '$dateCreated', '$dateUpdated')";
+      VALUES ('$lrn123', '$date_from', '$date_to' ,'$learning_areas2', '$final_rating2', '$remedial_class_mark2','$recomputed_final_grade2', '$phase','$remedial_remarks2', '$dateCreated', '$dateUpdated')";
       $run_remedial_class2 = mysqli_query($conn,$insert_remedial_class2);
 
       if($run_remedial_class2){
-        echo "added 5 REMEDIAL CLASSES 2" .'<br>';
-
+        echo "added 5 REMEDIAL CLASSES 2";
+        $_SESSION['lrn'] = $lrn;
         header('Location: phase2.php');  
         exit();
       }else{
