@@ -50,7 +50,7 @@ th{
         while($row = mysqli_fetch_array($result)){
             $lrn = $row['lrn'];
             $parse_lrn = intval($lrn);
-            $int_lrn = (($parse_lrn * 859273574 * 4692)/ 582374);
+            $int_lrn = (($parse_lrn * 123456789 * 5977)/ 859475);
             $edit_link = "new-edit-students.php?sid=". urlencode(base64_encode($int_lrn));
             $view_link = "view-student.php?sid=" . urlencode(base64_encode($int_lrn));
             $delete_link = "delete-student.php?sid=" . urlencode(base64_encode($int_lrn));

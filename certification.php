@@ -111,7 +111,7 @@ if(isset($_POST['next'])){
     
 
 
-    $insert_certification = "INSERT certifications (full_name,lrn,grade,school_name,school_id,division, last_school_year_attended,
+    $insert_certification = "INSERT certifications (full_name,lrn,grade,school_name,c_school_id,division, last_school_year_attended,
     date,name_of_principal,affix) VALUES ('$full_name', '$lrn', '$grade' , '$school_name', '$school_id',
     '$division', '$last_school_year_attended', '$date' , '$name_of_principal' , '$affix')";
     $run_certification = mysqli_query($conn,$insert_certification);
