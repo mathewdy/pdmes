@@ -747,7 +747,7 @@ if(isset($_POST['next'])){
 
 
   //scholastic records, remedial_classes, students_grades lang ang may phase 
-  $insert_scholastic = "INSERT INTO scholastic_records (lrn,school,school_id,district,division,region,
+  $insert_scholastic = "INSERT INTO scholastic_records (lrn,school,sr_school_id,district,division,region,
   classified_as_grade,section,school_year,name_of_adviser,phase,remarks,date_time_created,date_time_updated)
   VALUES ('$lrn', '$school_2','$school_id_2','$district', '$division', '$region', '$classified_as_grade', '$section', '$school_year', '$name_of_adviser','$phase', '$remarks', '$dateCreated', '$dateUpdated')";
   $run_scholastic = mysqli_query($conn,$insert_scholastic);

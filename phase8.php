@@ -729,7 +729,7 @@ if(isset($_POST['next'])){
 
 
   //scholastic records, remedial_classes, students_grades lang ang may phase 
-  $insert_scholastic = "INSERT INTO scholastic_records (lrn,school,school_id,district,division,region,
+  $insert_scholastic = "INSERT INTO scholastic_records (lrn,school,sr_school_id,district,division,region,
   classified_as_grade,section,school_year,name_of_adviser,phase,remarks,date_time_created,date_time_updated)
   VALUES ('$lrn', '$school_2','$school_id_2','$district', '$division', '$region', '$classified_as_grade', '$section', '$school_year', '$name_of_adviser','$phase', '$remarks', '$dateCreated', '$dateUpdated')";
   $run_scholastic = mysqli_query($conn,$insert_scholastic);
@@ -800,7 +800,7 @@ if(isset($_POST['next'])){
 
 
             $insert_students_grades5 = "INSERT INTO students_grades (lrn,mother_tounge,filipino,english,math,science,araling_panlipunan,epp_tle,mapeh,music,arts,p_e,health,edukasyon_sa_pagpapakatao,arabic_language,islamic_values,general_average,term,remarks,phase,date_time_created,date_time_updated)
-            VALUES ('$lrn','$mother_tounge5', '$filipino5', '$english5', '$math5', '$science5', '$araling_panlipunan5', '$epp_tle5','$mapeh5', '$music5', '$arts5', '$p_e5', '$health5', '$edukasyon_sa_pagpapakatao5', '$arabic_language5', '$islamic_values5', '$general_average5', '$quarterly_rating5','$remarks', '$phase','$dateCreated', '$dateUpdated') ";
+            VALUES ('$lrn','$mother_tounge5', '$filipino5', '$english5', '$math5', '$science5', '$araling_panlipunan5', '$epp_tle5','$mapeh5', '$music5', '$arts5', '$p_e5', '$health5', '$edukasyon_sa_pagpapakatao5', '$arabic_language5', '$islamic_values5', '$general_average5', '$quarterly_rating5','$remarks5', '$phase','$dateCreated', '$dateUpdated') ";
             $run_insert_students_grades5 = mysqli_query($conn,$insert_students_grades5);
 
             

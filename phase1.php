@@ -749,7 +749,7 @@ if(isset($_POST['next'])){
 
 
   //scholastic records, remedial_classes, students_grades lang ang may phase 
-  $insert_scholastic = "INSERT INTO scholastic_records (lrn,school,school_id,district,division,region,
+  $insert_scholastic = "INSERT INTO scholastic_records (lrn,school,sr_school_id,district,division,region,
   classified_as_grade,section,school_year,name_of_adviser,phase,remarks,date_time_created,date_time_updated)
   VALUES ('$lrn123', '$school_2','$school_id_2','$district', '$division', '$region', '$classified_as_grade', '$section', '$school_year', '$name_of_adviser','$phase', '$remarks', '$dateCreated', '$dateUpdated')";
   $run_scholastic = mysqli_query($conn,$insert_scholastic);
@@ -767,8 +767,8 @@ if(isset($_POST['next'])){
     }
 
     $insert_students_grades1 = "INSERT INTO students_grades (lrn,mother_tounge,filipino,english,math,science,araling_panlipunan,epp_tle,mapeh,music,arts,p_e,health,edukasyon_sa_pagpapakatao,arabic_language,islamic_values,general_average,term,remarks,phase,date_time_created,date_time_updated)
-    VALUES ('$lrn123','$mother_tounge1', '$filipino1', '$english1', '$math1', '$science1', '$araling_panlipunan1', '$epp_tle1','$mapeh1', '$music1', '$arts1', '$p_e1', '$health1', '$edukasyon_sa_pagpapakatao1', '$arabic_language1', '$islamic_values1', '$general_average1', '$quarterly_rating1', '$phase','$remarks1','$dateCreated', '$dateUpdated')";
-    $run_insert_students_grades1 = mysqli_query($conn,$insert_students_grades1);
+        VALUES ('$lrn123','$mother_tounge1', '$filipino1', '$english1', '$math1', '$science1', '$araling_panlipunan1', '$epp_tle1','$mapeh1', '$music1', '$arts1', '$p_e1', '$health1', '$edukasyon_sa_pagpapakatao1', '$arabic_language1', '$islamic_values1', '$general_average1', '$quarterly_rating1', '$remarks1','$phase','$dateCreated', '$dateUpdated') ";
+        $run_insert_students_grades1 = mysqli_query($conn,$insert_students_grades1);
 
     if($run_insert_students_grades1){
       echo "added 4 STUDENT GRADES 1";
@@ -779,9 +779,9 @@ if(isset($_POST['next'])){
         $remarks2 = 'Failed';
       }
 
-      $insert_students_grades2 = "INSERT INTO students_grades  (lrn,mother_tounge,filipino,english,math,science,araling_panlipunan,epp_tle,mapeh,music,arts,p_e,health,edukasyon_sa_pagpapakatao,arabic_language,islamic_values,general_average,term,remarks,phase,date_time_created,date_time_updated)
-      VALUES ('$lrn123','$mother_tounge2', '$filipino2', '$english2', '$math2', '$science2', '$araling_panlipunan2', '$epp_tle2','$mapeh2', '$music2', '$arts2', '$p_e2', '$health2', '$edukasyon_sa_pagpapakatao2', '$arabic_language2', '$islamic_values2', '$general_average2', '$quarterly_rating2', '$phase','$remarks2','$dateCreated', '$dateUpdated') ";
-      $run_insert_students_grades2 = mysqli_query($conn,$insert_students_grades2);
+      $insert_students_grades2 = "INSERT INTO students_grades (lrn,mother_tounge,filipino,english,math,science,araling_panlipunan,epp_tle,mapeh,music,arts,p_e,health,edukasyon_sa_pagpapakatao,arabic_language,islamic_values,general_average,term,remarks,phase,date_time_created,date_time_updated)
+        VALUES ('$lrn123','$mother_tounge2', '$filipino2', '$english2', '$math2', '$science2', '$araling_panlipunan2', '$epp_tle2','$mapeh2', '$music2', '$arts2', '$p_e2', '$health2', '$edukasyon_sa_pagpapakatao2', '$arabic_language2', '$islamic_values2', '$general_average2', '$quarterly_rating2', '$remarks2','$phase','$dateCreated', '$dateUpdated') ";
+        $run_insert_students_grades2 = mysqli_query($conn,$insert_students_grades2);
       
 
       if($run_insert_students_grades2){
