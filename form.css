@@ -17,8 +17,9 @@
 
 .container{
     width:95%;
-    min-width: 980px;
+    max-width: 980px;
     margin:0 auto;
+    border:1px solid black;
 }
 
  label{
@@ -27,20 +28,33 @@
 }
 
 .top-1st{
-    width:35rem;
-    margin:0 1rem;
+    display:grid;
+    grid-template-columns: 4rem 22rem 6rem 3rem;
+    row-gap: 4rem;
+    
+    margin:0.3rem 1rem;
 }
 
 .top-2nd{
-    margin-top:0.5rem;
+    display:grid;
+    grid-template-columns:5em 9rem 4.5rem 10rem 4rem 3rem   ;
+    row-gap: 4rem;
+    margin-top:2rem;
+    margin:0 1rem;
 }
 
 .top-3rd{
-    margin-top:0.5rem;
+    display:grid;
+    grid-template-columns:10.5rem 4rem 4.5rem 8.5rem 7rem 4rem ;
+    row-gap: 4rem;
+    margin:0.5rem 1rem;
+    
 }
 
 .top-4th{
-    margin-top:0.5rem;
+    display:grid;
+    grid-template-columns: 10rem 16rem 5rem 3rem;
+    margin:0.5rem 1rem;
 }
 
 
@@ -54,6 +68,8 @@
 .phase{
     display:grid;
     border:1px solid black;
+    width:100%;
+    max-width: 720px;
     display:block;
     grid-template-columns: 1fr 1fr;
    
@@ -64,8 +80,40 @@
     display:grid;
     grid-template-areas:
     "Learning  quarterly final_raiting remarks" ;
+    grid-template-columns: 250px 200px 100px 130px;
     font-size:0.9rem;
     text-align: center;
+
+}
+
+.q1 {
+    border:1px solid black;
+}
+.quarters{
+    display:grid;
+    grid-template-areas:"q-1 q-2 q-3 q-4" ;
+    grid-template-columns:"20px";
+
+    width:5px;
+
+}
+
+.q-1{
+    grid-area: q-1;
+}
+
+.q-2{
+    grid-area: q-2
+
+}
+
+.q-3{
+    grid-area:q-3;
+
+}
+
+.q-4{
+    grid-area:q-4;
 
 }
 
@@ -119,8 +167,8 @@
 .first-row{
     display:grid;
     grid-template-areas:
-    "Mothers input_mothers1 input_mothers2 input_mothers3 input_mothers4 average remarks";
-    grid-template-columns: 175px 55px 55px 55px 70px  135px 100px;
+    "Mothers input_mothers1 input_mothers2 input_mothers3 input_mothers4 input_mothers5  remarks";
+    grid-template-columns:    250px 50px 50px 50px  80px 100px 90px  ;
     
 
 }
@@ -128,32 +176,38 @@
 .second-row{
     display:grid;
     grid-template-areas:
-    "Filipino  input_filipino1  input_filipino2  input_filipino3  input_filipino4 average remarks";
-    grid-template-columns: 175px 55px 55px 55px 70px  135px 100px;
+    "Filipino  input_filipino1  input_filipino2  input_filipino3  input_filipino4 input_filipino5  remarks";
+    grid-template-columns:    250px 50px 50px 50px  80px 100px 90px  ;
+    
+    
     margin-top:5px;
 } 
 
 .third-row{
     display:grid;
     grid-template-areas:
-    "Filipino  input_filipino1  input_filipino2  input_filipino3  input_filipino4 average remarks";
-    grid-template-columns: 175px 55px 55px 55px 70px  135px 100px;
+    "Filipino  input_english1  input_english2 input_english3  input_english4 input_english5   remarks";
+    grid-template-columns:    250px 50px 50px 50px  80px 100px 90px  ;
+    
+    
     margin-top:5px;
 }
 
 .fourth-row{
     display:grid;
     grid-template-areas:
-    "Math1  input_math1  input_math2  input_math3  input_math4 average remarks";
-    grid-template-columns: 175px 55px 55px 55px 70px  135px 100px;
+    "Math1  input_math1  input_math2  input_math3  input_math4 input_math5 remarks";
+    grid-template-columns:    250px 50px 50px 50px  80px 100px 90px  ;
+    
     margin-top:5px;
 }
 
 .fifth-row{
     display:grid;
     grid-template-areas:
-    "Science1  input_science1  input_science2  input_science3  input_science4 average remarks";
-    grid-template-columns: 175px 55px 55px 55px 70px  135px 100px;
+    "Science1  input_science1  input_science2  input_science3  input_science4 input_science5 remarks";
+    grid-template-columns:    250px 50px 50px 50px  80px 100px 90px  ;
+    
     margin-top:5px;
 }
 
@@ -161,64 +215,127 @@
 .sixth-row{
     display:grid;
     grid-template-areas:
-    "Aralinpanlipunan1  input_Aralinpanlipunan1  input_Aralinpanlipunan2  input_Aralinpanlipunan3 input_Aralinpanlipunan4 average remarks";
-    grid-template-columns: 175px 55px 55px 55px 70px  135px 100px;
+    "Aralinpanlipunan1  input_Aralinpanlipunan1  input_Aralinpanlipunan2  input_Aralinpanlipunan3 input_Aralinpanlipunan4 input_Aralinpanlipunan5 remarks";
+    grid-template-columns:    250px 50px 50px 50px  80px 100px 90px  ;
+    
+    
     margin-top:5px;
 }
 
 .seventh-row{
     display:grid;
     grid-template-areas:
-    "Epp_tle  input_epp1  input_epp2  input_epp3 input_epp4 average remarks";
-    grid-template-columns: 175px 55px 55px 55px 70px  135px 100px;
+    "Epp_tle  input_epp1  input_epp2  input_epp3 input_epp4 input_epp5 remarks";
+    grid-template-columns:    250px 50px 50px 50px  80px 100px 90px  ;
+    
     margin-top:5px;
 }
 
 .eighth-row{
     display:grid;
     grid-template-areas:
-    "Mapeh1  input_mapeh1  input_mapeh2  input_mapeh3 input_mapeh4 average remarks";
-    grid-template-columns: 175px 55px 55px 55px 70px  135px 100px;
+    "Mapeh1  input_mapeh1  input_mapeh2  input_mapeh3 input_mapeh4 input_mapeh5 remarks";
+    grid-template-columns:    250px 50px 50px 50px  80px 100px 90px  ;
+    
+    
     margin-top:5px;
 }
+
 
 .nineth-row{
     display:grid;
     grid-template-areas:
-    "Mapeh1  input_mapeh1  input_mapeh2  input_mapeh3 input_mapeh4 average remarks";
-    grid-template-columns: 175px 55px 55px 55px 70px  135px 100px;
+    "Music1  input_music1  input_music2  input_music3 input_music4 input_music5  remarks";
+    grid-template-columns:    250px 50px 50px 50px  80px 100px 90px  ;
+    
     margin-top:5px;
 }
 
-
-
-.eighth-row{
+.tenth-row{
     display:grid;
     grid-template-areas:
-    "Mapeh1  input_mapeh1  input_mapeh2  input_mapeh3 input_mapeh4 average remarks";
-    grid-template-columns: 175px 55px 55px 55px 70px  135px 100px;
+    "Arts1  input_arts1  input_arts2  input_arts3 input_arts4 input_arts5  remarks";
+    grid-template-columns:    250px 50px 50px 50px  80px 100px 90px  ;
+    
+    
     margin-top:5px;
 }
 
+.eleventh-row{
+    display:grid;
+    grid-template-areas:
+    "PE1  input_pe1  input_pe2  input_pe3 input_pe4 input_pe5  remarks";
+    grid-template-columns:    250px 50px 50px 50px  80px 100px 90px  ;
+    
+    
+    margin-top:5px;
+}
+
+.twelfth-row{
+    display:grid;
+    grid-template-areas:
+    "Health1  input_health1  input_health2  input_health3 input_health4 input_health5  remarks";
+    grid-template-columns:    250px 50px 50px 50px  80px 100px 90px  ;
+    
+    
+    margin-top:5px;
+}
+
+.thirteenth-row{
+    display:grid;
+    grid-template-areas:
+    "EP1  input_ep1  input_ep2  input_ep3 input_ep4 input_ep5  remarks";
+    grid-template-columns:    250px 50px 50px 50px  80px 100px 90px;
+    margin-top:5px;
+}
+
+.fourteenth-row{
+    display:grid;
+    grid-template-areas:
+    "EP1  input_ep1  input_ep2  input_ep3 input_ep4 input_ep5  remarks";
+    grid-template-columns:    250px 50px 50px 50px  80px 100px 90px;
+    margin-top:5px;
+}
+
+.fifteenth-row{
+    display:grid;
+    grid-template-areas:
+    "EP1  input_ep1  input_ep2  input_ep3 input_ep4 input_ep5  remarks";
+    grid-template-columns:    250px 50px 50px 50px  80px 100px 90px;
+    margin-top:5px;
+}
+
+.sixteenth-row{
+    display:grid;
+    grid-template-areas:
+    "EP1  input_ep1  input_ep2  input_ep3 input_ep4 input_ep5  remarks";
+    grid-template-columns:    250px 50px 50px 50px  80px 100px 90px;
+    margin-top:5px;
+}
 /* Grid Area */
 .mother_tongue1{
     grid-area: Mothers;
 }
 .mother_tongue1txt{
-    grid-area: input_mothers1
+    grid-area: input_mothers1;
 }
 
 .mother_tongue2txt{
-    grid-area: input_mothers2
+    grid-area: input_mothers2;
 }
 
 .mother_tongue3txt{
-    grid-area: input_mothers3
+    grid-area: input_mothers3;
 }
 
 .mother_tongue4txt{
-    grid-area: input_mothers4
+    grid-area: input_mothers4;
 }
+
+.mother_tongue5txt{
+    grid-area: input_mothers5;
+}
+
 
 
 .remarks{
@@ -250,6 +367,11 @@
 
 }
 
+.filipino5txt{
+    grid-area:input_filipino5;
+
+}
+
 .Math1{
     grid-area:Math1;
 }
@@ -276,6 +398,11 @@
     grid-area:input_math4;
 }
 
+.math5{
+    grid-area:input_math5;
+}
+
+
 .Science1{
     grid-area:Science1;
 
@@ -298,6 +425,10 @@
 
 .science4{
     grid-area:input_science4
+
+}
+.science5{
+    grid-area:input_science5
 
 }
 
@@ -344,6 +475,9 @@
     grid-area:input_epp4
 }
 
+.epp5{
+    grid-area:input_epp5;
+}
 
 .Mapeh1{
     grid-area:Mapeh1;
@@ -366,6 +500,146 @@
 
 }
 
+.mapeh5{
+    grid-area:input_mapeh5;
+}
+
+.Music1{
+    grid-area:Music1;
+}
+
+.music1{
+    grid-area:input_music1;
+}
+.music2{
+    grid-area:input_music2;
+
+}
+
+.music1{
+    grid-area:input_music3;
+
+}
+
+.music4{
+    grid-area:input_music4;
+
+}
+
+.music5{
+    grid-area:input_music5;
+}
+
+
+.Arts1{
+    grid-area:Arts1;
+}
+.arts1{
+    grid-area:input_arts1;
+}
+
+.arts2{
+    grid-area:input_arts2;
+
+}
+
+.arts3{
+    grid-area:input_arts3;
+
+}
+
+.arts4{
+    grid-area:input_arts4;
+}
+
+.arts5{
+    grid-area:input_arts5;
+}
+
+.PE1{
+    grid-area:PE1;
+
+}
+
+
+.pe1{
+    grid-area:input_pe1;
+
+}
+
+.pe2{
+    grid-area:input_pe2;
+
+}
+
+.pe3{
+    grid-area:input_pe3;
+
+}
+
+.pe4{
+    grid-area:input_pe4;
+
+}
+
+.pe5{
+    grid-area:input_pe5;
+
+}
+
+.Health1{
+    grid-area:Health1;
+
+}
+
+.health1{
+    grid-area:input_health1;
+
+}
+
+.health2{
+    grid-area:input_health2;
+
+}
+
+.health3{
+    grid-area:input_health3;
+
+}
+
+.health4{
+    grid-area:input_health4;
+
+}
+
+.health5{
+    grid-area:input_health5;
+
+}
+
+.Edukasyon_sa_pagpapakatao1{
+    grid-area:EP1;
+}
+
+.edukasyon_sa_pagpapakatao1{
+    grid-area:input_ep1;
+}
+
+.edukasyon_sa_pagpapakatao2{
+    grid-area:input_ep2;
+}
+
+.edukasyon_sa_pagpapakatao3{
+    grid-area:input_ep3;
+}
+
+.edukasyon_sa_pagpapakatao4{
+    grid-area:input_ep4;
+}
+
+.edukasyon_sa_pagpapakatao5{
+    grid-area:input_ep5;
+}
 
 /* Textbox sizes */
 
@@ -403,6 +677,27 @@
     width:40px;
 }
 
+.music{
+    width:40px;
+}
+
+.arts{
+    width:40px;
+}
+
+.pe{
+    width:40px;
+}
+
+.health{
+    width:40px;
+}
+
+.edukasyon_sa_pagpapakatao{
+    width:40px;
+}
+
+
 .general_average{
     width:100px;
 }
@@ -410,27 +705,27 @@
 .remarks{
 }
 
-/*.try-2{
+.try-2{
     width:40px;
-}  */
-.schooltxt{
-    width:18rem;
+} 
+ .schooltxt{
+    width:20rem;
 }
 
 .school_idtxt{
-    width:7rem;
-}
+    width:9rem;
+} 
 
 .districttxt{
-    width:7rem;
+    width:8rem;
 }
 
 .divisiontxt{
-    width:7rem;
+    width:8rem;
 }
 
 .regiontxt{
-    width:7rem;
+    width:8rem;
 }
 
 .classified_as_gradetxt{
@@ -439,7 +734,7 @@
 
 
 .sectiontxt{
-    width:4rem;
+    width:6rem;
 }
 .school_yeartxt{
     width:6rem;
