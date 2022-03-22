@@ -119,6 +119,7 @@ if(isset($_GET['sid'])){
             $query_phase_1_record = mysqli_query($conn, $sql_phase_1_record);
             if(mysqli_num_rows($query_phase_1_record) > 0){ 
                 $term1 = mysqli_fetch_array($query_phase_1_record);
+            }
             ?>
             <span><h3>Phase 1 (pala tandaan lang tang ina nyo -jd)</h3></span>
                 <label for="">School</label>
@@ -247,9 +248,6 @@ if(isset($_GET['sid'])){
 
                     <!-- Learning Areas Ends Here -->
 
-            <?php
-            } 
-            ?>
             <!-- 1st Quarter of Phase 1 Ends Here -->
 
 
@@ -264,6 +262,7 @@ if(isset($_GET['sid'])){
             $query_phase_1_record = mysqli_query($conn, $sql_phase_1_record);
             if(mysqli_num_rows($query_phase_1_record) > 0){ 
                 $term2 = mysqli_fetch_array($query_phase_1_record);
+            }
             ?>
             
             <!-- learning areas starts here -->
@@ -346,9 +345,6 @@ if(isset($_GET['sid'])){
 
                     <!-- Learning Areas Ends Here -->
 
-            <?php
-            }
-            ?>
             <!-- 2nd Quarter of Phase 1 Ends Here -->
 
 
@@ -362,6 +358,7 @@ if(isset($_GET['sid'])){
             $query_phase_1_record = mysqli_query($conn, $sql_phase_1_record);
             if(mysqli_num_rows($query_phase_1_record) > 0){ 
                 $term3 = mysqli_fetch_array($query_phase_1_record);
+            }
             ?>
             
             <!-- learning areas starts here -->
@@ -444,9 +441,6 @@ if(isset($_GET['sid'])){
 
                     <!-- Learning Areas Ends Here -->
 
-            <?php
-            }
-            ?>
             <!-- 3rd Quarter of Phase 1 Ends Here -->
             <!-- Term 3 -->
 
@@ -462,6 +456,7 @@ if(isset($_GET['sid'])){
             $query_phase_1_record = mysqli_query($conn, $sql_phase_1_record);
             if(mysqli_num_rows($query_phase_1_record) > 0){ 
                 $term4 = mysqli_fetch_array($query_phase_1_record);
+            }
             ?>
             
             <!-- learning areas starts here -->
@@ -544,9 +539,6 @@ if(isset($_GET['sid'])){
 
                     <!-- Learning Areas Ends Here -->
 
-            <?php
-            }
-            ?>
             <!-- 4th Quarter of Phase 1 Ends Here -->
             <!-- Term 4 -->
 
@@ -561,6 +553,7 @@ if(isset($_GET['sid'])){
             $query_phase_1_record = mysqli_query($conn, $sql_phase_1_record);
             if(mysqli_num_rows($query_phase_1_record) > 0){ 
                 $term5 = mysqli_fetch_array($query_phase_1_record);
+            }
             ?>
             
             <!-- learning areas starts here -->
@@ -669,9 +662,7 @@ if(isset($_GET['sid'])){
                 <input type="text" name="remarks_p1_t5" 
                 value="<?php if(empty($term5['remarks'])){ 
                     echo "";} else { echo $term5['remarks'];}?>">
-            <?php
-            }
-            ?>
+
             <!-- Final Quarter of Phase 1 Ends Here -->
             <!-- Final Rating -->
 
@@ -689,6 +680,7 @@ if(isset($_GET['sid'])){
             $query_phase_2_record = mysqli_query($conn, $sql_phase_2_record);
             if(mysqli_num_rows($query_phase_2_record) > 0){ 
                 $term1 = mysqli_fetch_array($query_phase_2_record);
+            }
             ?>
             <span><h3>Phase 2(pala tandaan lang tang ina nyo -jd)</h3></span>
                 <label for="">School</label>
@@ -817,9 +809,6 @@ if(isset($_GET['sid'])){
 
                     <!-- Learning Areas Ends Here -->
 
-            <?php
-            } 
-            ?>
             <!-- 1st Quarter of Phase 2 Ends Here -->
 
 
@@ -834,6 +823,7 @@ if(isset($_GET['sid'])){
             $query_phase_2_record = mysqli_query($conn, $sql_phase_2_record);
             if(mysqli_num_rows($query_phase_2_record) > 0){ 
                 $term2 = mysqli_fetch_array($query_phase_2_record);
+            }
             ?>
             
             <!-- learning areas starts here -->
@@ -916,9 +906,6 @@ if(isset($_GET['sid'])){
 
                     <!-- Learning Areas Ends Here -->
 
-            <?php
-            }
-            ?>
             <!-- 2nd Quarter of Phase 2 Ends Here -->
 
 
@@ -932,6 +919,7 @@ if(isset($_GET['sid'])){
             $query_phase_2_record = mysqli_query($conn, $sql_phase_2_record);
             if(mysqli_num_rows($query_phase_2_record) > 0){ 
                 $term3 = mysqli_fetch_array($query_phase_2_record);
+            }
             ?>
             
             <!-- learning areas starts here -->
@@ -1014,9 +1002,6 @@ if(isset($_GET['sid'])){
 
                     <!-- Learning Areas Ends Here -->
 
-            <?php
-            }
-            ?>
             <!-- 3rd Quarter of Phase 2 Ends Here -->
             <!-- Term 3 -->
 
@@ -1032,6 +1017,7 @@ if(isset($_GET['sid'])){
             $query_phase_2_record = mysqli_query($conn, $sql_phase_2_record);
             if(mysqli_num_rows($query_phase_2_record) > 0){ 
                 $term4 = mysqli_fetch_array($query_phase_2_record);
+            }
             ?>
             
             <!-- learning areas starts here -->
@@ -1114,9 +1100,6 @@ if(isset($_GET['sid'])){
 
                     <!-- Learning Areas Ends Here -->
 
-            <?php
-            }
-            ?>
             <!-- 4th Quarter of Phase 2 Ends Here -->
             <!-- Term 4 -->
 
@@ -1131,6 +1114,7 @@ if(isset($_GET['sid'])){
             $query_phase_2_record = mysqli_query($conn, $sql_phase_2_record);
             if(mysqli_num_rows($query_phase_2_record) > 0){ 
                 $term5 = mysqli_fetch_array($query_phase_2_record);
+            }
             ?>
             
             <!-- learning areas starts here -->
@@ -1239,9 +1223,7 @@ if(isset($_GET['sid'])){
                 <input type="text" name="remarks_p2_t5" 
                 value="<?php if(empty($term5['remarks'])){ 
                     echo "";} else { echo $term5['remarks'];}?>">
-            <?php
-            }
-            ?>
+            
             <!-- Final Quarter of Phase 2 Ends Here -->
             <!-- Final Rating -->
 
@@ -1260,6 +1242,7 @@ if(isset($_GET['sid'])){
             $query_phase_3_record = mysqli_query($conn, $sql_phase_3_record);
             if(mysqli_num_rows($query_phase_3_record) > 0){ 
                 $term1 = mysqli_fetch_array($query_phase_3_record);
+            }
             ?>
             <span><h3>Phase 3(pala tandaan lang tang ina nyo -jd)</h3></span>
                 <label for="">School</label>
@@ -1388,9 +1371,6 @@ if(isset($_GET['sid'])){
 
                     <!-- Learning Areas Ends Here -->
 
-            <?php
-            } 
-            ?>
             <!-- 1st Quarter of Phase 3 Ends Here -->
 
 
@@ -1405,6 +1385,7 @@ if(isset($_GET['sid'])){
             $query_phase_3_record = mysqli_query($conn, $sql_phase_3_record);
             if(mysqli_num_rows($query_phase_3_record) > 0){ 
                 $term2 = mysqli_fetch_array($query_phase_3_record);
+            }
             ?>
             
             <!-- learning areas starts here -->
@@ -1487,9 +1468,6 @@ if(isset($_GET['sid'])){
 
                     <!-- Learning Areas Ends Here -->
 
-            <?php
-            }
-            ?>
             <!-- 2nd Quarter of Phase 3 Ends Here -->
 
 
@@ -1603,6 +1581,7 @@ if(isset($_GET['sid'])){
             $query_phase_3_record = mysqli_query($conn, $sql_phase_3_record);
             if(mysqli_num_rows($query_phase_3_record) > 0){ 
                 $term4 = mysqli_fetch_array($query_phase_3_record);
+            }
             ?>
             
             <!-- learning areas starts here -->
@@ -1685,9 +1664,6 @@ if(isset($_GET['sid'])){
 
                     <!-- Learning Areas Ends Here -->
 
-            <?php
-            }
-            ?>
             <!-- 4th Quarter of Phase 3 Ends Here -->
             <!-- Term 4 -->
 
@@ -1702,6 +1678,7 @@ if(isset($_GET['sid'])){
             $query_phase_3_record = mysqli_query($conn, $sql_phase_3_record);
             if(mysqli_num_rows($query_phase_3_record) > 0){ 
                 $term5 = mysqli_fetch_array($query_phase_3_record);
+            }
             ?>
             
             <!-- learning areas starts here -->
@@ -1810,9 +1787,7 @@ if(isset($_GET['sid'])){
                 <input type="text" name="remarks_p3_t5" 
                 value="<?php if(empty($term5['remarks'])){ 
                     echo "";} else { echo $term5['remarks'];}?>">
-            <?php
-            }
-            ?>
+
             <!-- Final Quarter of Phase 3 Ends Here -->
             <!-- Final Rating -->
             
@@ -1831,6 +1806,7 @@ if(isset($_GET['sid'])){
             $query_phase_4_record = mysqli_query($conn, $sql_phase_4_record);
             if(mysqli_num_rows($query_phase_4_record) > 0){ 
                 $term1 = mysqli_fetch_array($query_phase_4_record);
+            }
             ?>
             <span><h3>Phase 4(pala tandaan lang tang ina nyo -jd)</h3></span>
                 <label for="">School</label>
@@ -1959,9 +1935,6 @@ if(isset($_GET['sid'])){
 
                     <!-- Learning Areas Ends Here -->
 
-            <?php
-            } 
-            ?>
             <!-- 1st Quarter of Phase 4 Ends Here -->
 
 
@@ -1976,6 +1949,7 @@ if(isset($_GET['sid'])){
             $query_phase_4_record = mysqli_query($conn, $sql_phase_4_record);
             if(mysqli_num_rows($query_phase_4_record) > 0){ 
                 $term2 = mysqli_fetch_array($query_phase_4_record);
+            }
             ?>
             
             <!-- learning areas starts here -->
@@ -2058,9 +2032,6 @@ if(isset($_GET['sid'])){
 
                     <!-- Learning Areas Ends Here -->
 
-            <?php
-            }
-            ?>
             <!-- 2nd Quarter of Phase 4 Ends Here -->
 
 
@@ -2074,6 +2045,7 @@ if(isset($_GET['sid'])){
             $query_phase_4_record = mysqli_query($conn, $sql_phase_4_record);
             if(mysqli_num_rows($query_phase_4_record) > 0){ 
                 $term3 = mysqli_fetch_array($query_phase_4_record);
+            }
             ?>
             
             <!-- learning areas starts here -->
@@ -2156,9 +2128,6 @@ if(isset($_GET['sid'])){
 
                     <!-- Learning Areas Ends Here -->
 
-            <?php
-            }
-            ?>
             <!-- 3rd Quarter of Phase 4 Ends Here -->
             <!-- Term 3 -->
 
@@ -2174,6 +2143,7 @@ if(isset($_GET['sid'])){
             $query_phase_4_record = mysqli_query($conn, $sql_phase_4_record);
             if(mysqli_num_rows($query_phase_4_record) > 0){ 
                 $term4 = mysqli_fetch_array($query_phase_4_record);
+            }
             ?>
             
             <!-- learning areas starts here -->
@@ -2256,9 +2226,6 @@ if(isset($_GET['sid'])){
 
                     <!-- Learning Areas Ends Here -->
 
-            <?php
-            }
-            ?>
             <!-- 4th Quarter of Phase 4 Ends Here -->
             <!-- Term 4 -->
 
@@ -2273,6 +2240,7 @@ if(isset($_GET['sid'])){
             $query_phase_4_record = mysqli_query($conn, $sql_phase_4_record);
             if(mysqli_num_rows($query_phase_4_record) > 0){ 
                 $term5 = mysqli_fetch_array($query_phase_4_record);
+            }
             ?>
             
             <!-- learning areas starts here -->
@@ -2381,9 +2349,7 @@ if(isset($_GET['sid'])){
                 <input type="text" name="remarks_p4_t5" 
                 value="<?php if(empty($term5['remarks'])){ 
                     echo "";} else { echo $term5['remarks'];}?>">
-            <?php
-            }
-            ?>
+            
             <!-- Final Quarter of Phase 4 Ends Here -->
             <!-- Final Rating -->
 
@@ -2402,6 +2368,7 @@ if(isset($_GET['sid'])){
             $query_phase_5_record = mysqli_query($conn, $sql_phase_5_record);
             if(mysqli_num_rows($query_phase_5_record) > 0){ 
                 $term1 = mysqli_fetch_array($query_phase_5_record);
+            }
             ?>
             <span><h3>Phase 5(pala tandaan lang tang ina nyo -jd)</h3></span>
                 <label for="">School</label>
@@ -2530,9 +2497,7 @@ if(isset($_GET['sid'])){
 
                     <!-- Learning Areas Ends Here -->
 
-            <?php
-            } 
-            ?>
+
             <!-- 1st Quarter of Phase 5 Ends Here -->
 
 
@@ -2547,6 +2512,7 @@ if(isset($_GET['sid'])){
             $query_phase_5_record = mysqli_query($conn, $sql_phase_5_record);
             if(mysqli_num_rows($query_phase_5_record) > 0){ 
                 $term2 = mysqli_fetch_array($query_phase_5_record);
+            }
             ?>
             
             <!-- learning areas starts here -->
@@ -2629,9 +2595,7 @@ if(isset($_GET['sid'])){
 
                     <!-- Learning Areas Ends Here -->
 
-            <?php
-            }
-            ?>
+            
             <!-- 2nd Quarter of Phase 5 Ends Here -->
 
 
@@ -2645,6 +2609,7 @@ if(isset($_GET['sid'])){
             $query_phase_5_record = mysqli_query($conn, $sql_phase_5_record);
             if(mysqli_num_rows($query_phase_5_record) > 0){ 
                 $term3 = mysqli_fetch_array($query_phase_5_record);
+            }
             ?>
             
             <!-- learning areas starts here -->
@@ -2727,9 +2692,7 @@ if(isset($_GET['sid'])){
 
                     <!-- Learning Areas Ends Here -->
 
-            <?php
-            }
-            ?>
+
             <!-- 3rd Quarter of Phase 5 Ends Here -->
             <!-- Term 3 -->
 
@@ -2745,6 +2708,7 @@ if(isset($_GET['sid'])){
             $query_phase_5_record = mysqli_query($conn, $sql_phase_5_record);
             if(mysqli_num_rows($query_phase_5_record) > 0){ 
                 $term4 = mysqli_fetch_array($query_phase_5_record);
+            }
             ?>
             
             <!-- learning areas starts here -->
@@ -2827,9 +2791,7 @@ if(isset($_GET['sid'])){
 
                     <!-- Learning Areas Ends Here -->
 
-            <?php
-            }
-            ?>
+
             <!-- 4th Quarter of Phase 5 Ends Here -->
             <!-- Term 4 -->
 
@@ -2844,6 +2806,7 @@ if(isset($_GET['sid'])){
             $query_phase_5_record = mysqli_query($conn, $sql_phase_5_record);
             if(mysqli_num_rows($query_phase_5_record) > 0){ 
                 $term5 = mysqli_fetch_array($query_phase_5_record);
+            }
             ?>
             
             <!-- learning areas starts here -->
@@ -2952,9 +2915,7 @@ if(isset($_GET['sid'])){
                 <input type="text" name="remarks_p5_t5" 
                 value="<?php if(empty($term5['remarks'])){ 
                     echo "";} else { echo $term5['remarks'];}?>">
-            <?php
-            }
-            ?>
+ 
             <!-- Final Quarter of Phase 5 Ends Here -->
             <!-- Final Rating -->
 
@@ -2973,6 +2934,7 @@ if(isset($_GET['sid'])){
             $query_phase_6_record = mysqli_query($conn, $sql_phase_6_record);
             if(mysqli_num_rows($query_phase_6_record) > 0){ 
                 $term1 = mysqli_fetch_array($query_phase_6_record);
+            }
             ?>
             <span><h3>Phase 6(pala tandaan lang tang ina nyo -jd)</h3></span>
                 <label for="">School</label>
@@ -3101,9 +3063,6 @@ if(isset($_GET['sid'])){
 
                     <!-- Learning Areas Ends Here -->
 
-            <?php
-            } 
-            ?>
             <!-- 1st Quarter of Phase 6 Ends Here -->
 
 
@@ -3118,6 +3077,7 @@ if(isset($_GET['sid'])){
             $query_phase_6_record = mysqli_query($conn, $sql_phase_6_record);
             if(mysqli_num_rows($query_phase_6_record) > 0){ 
                 $term2 = mysqli_fetch_array($query_phase_6_record);
+            }
             ?>
             
             <!-- learning areas starts here -->
@@ -3200,9 +3160,6 @@ if(isset($_GET['sid'])){
 
                     <!-- Learning Areas Ends Here -->
 
-            <?php
-            }
-            ?>
             <!-- 2nd Quarter of Phase 6 Ends Here -->
 
 
@@ -3216,6 +3173,7 @@ if(isset($_GET['sid'])){
             $query_phase_6_record = mysqli_query($conn, $sql_phase_6_record);
             if(mysqli_num_rows($query_phase_6_record) > 0){ 
                 $term3 = mysqli_fetch_array($query_phase_6_record);
+            }
             ?>
             
             <!-- learning areas starts here -->
@@ -3298,9 +3256,6 @@ if(isset($_GET['sid'])){
 
                     <!-- Learning Areas Ends Here -->
 
-            <?php
-            }
-            ?>
             <!-- 3rd Quarter of Phase 6 Ends Here -->
             <!-- Term 3 -->
 
@@ -3316,6 +3271,7 @@ if(isset($_GET['sid'])){
             $query_phase_6_record = mysqli_query($conn, $sql_phase_6_record);
             if(mysqli_num_rows($query_phase_6_record) > 0){ 
                 $term4 = mysqli_fetch_array($query_phase_6_record);
+            }
             ?>
             
             <!-- learning areas starts here -->
@@ -3398,9 +3354,6 @@ if(isset($_GET['sid'])){
 
                     <!-- Learning Areas Ends Here -->
 
-            <?php
-            }
-            ?>
             <!-- 4th Quarter of Phase 6 Ends Here -->
             <!-- Term 4 -->
 
@@ -3415,6 +3368,7 @@ if(isset($_GET['sid'])){
             $query_phase_6_record = mysqli_query($conn, $sql_phase_6_record);
             if(mysqli_num_rows($query_phase_6_record) > 0){ 
                 $term5 = mysqli_fetch_array($query_phase_6_record);
+            }
             ?>
             
             <!-- learning areas starts here -->
@@ -3523,9 +3477,7 @@ if(isset($_GET['sid'])){
                 <input type="text" name="remarks_p6_t5" 
                 value="<?php if(empty($term5['remarks'])){ 
                     echo "";} else { echo $term5['remarks'];}?>">
-            <?php
-            }
-            ?>
+    
             <!-- Final Quarter of Phase 6 Ends Here -->
             <!-- Final Rating -->
 
@@ -3544,6 +3496,7 @@ if(isset($_GET['sid'])){
             $query_phase_7_record = mysqli_query($conn, $sql_phase_7_record);
             if(mysqli_num_rows($query_phase_7_record) > 0){ 
                 $term1 = mysqli_fetch_array($query_phase_7_record);
+            }
             ?>
             <span><h3>Phase 7(pala tandaan lang tang ina nyo -jd)</h3></span>
                 <label for="">School</label>
@@ -3672,9 +3625,7 @@ if(isset($_GET['sid'])){
 
                     <!-- Learning Areas Ends Here -->
 
-            <?php
-            } 
-            ?>
+
             <!-- 1st Quarter of Phase 7 Ends Here -->
 
 
@@ -3689,6 +3640,7 @@ if(isset($_GET['sid'])){
             $query_phase_7_record = mysqli_query($conn, $sql_phase_7_record);
             if(mysqli_num_rows($query_phase_7_record) > 0){ 
                 $term2 = mysqli_fetch_array($query_phase_7_record);
+            }
             ?>
             
             <!-- learning areas starts here -->
@@ -3771,9 +3723,6 @@ if(isset($_GET['sid'])){
 
                     <!-- Learning Areas Ends Here -->
 
-            <?php
-            }
-            ?>
             <!-- 2nd Quarter of Phase 7 Ends Here -->
 
 
@@ -3787,6 +3736,7 @@ if(isset($_GET['sid'])){
             $query_phase_7_record = mysqli_query($conn, $sql_phase_7_record);
             if(mysqli_num_rows($query_phase_7_record) > 0){ 
                 $term3 = mysqli_fetch_array($query_phase_7_record);
+            }
             ?>
             
             <!-- learning areas starts here -->
@@ -3869,9 +3819,6 @@ if(isset($_GET['sid'])){
 
                     <!-- Learning Areas Ends Here -->
 
-            <?php
-            }
-            ?>
             <!-- 3rd Quarter of Phase 7 Ends Here -->
             <!-- Term 3 -->
 
@@ -3887,6 +3834,7 @@ if(isset($_GET['sid'])){
             $query_phase_7_record = mysqli_query($conn, $sql_phase_7_record);
             if(mysqli_num_rows($query_phase_7_record) > 0){ 
                 $term4 = mysqli_fetch_array($query_phase_7_record);
+            }
             ?>
             
             <!-- learning areas starts here -->
@@ -3969,9 +3917,7 @@ if(isset($_GET['sid'])){
 
                     <!-- Learning Areas Ends Here -->
 
-            <?php
-            }
-            ?>
+
             <!-- 4th Quarter of Phase 7 Ends Here -->
             <!-- Term 4 -->
 
@@ -3986,6 +3932,7 @@ if(isset($_GET['sid'])){
             $query_phase_7_record = mysqli_query($conn, $sql_phase_7_record);
             if(mysqli_num_rows($query_phase_7_record) > 0){ 
                 $term5 = mysqli_fetch_array($query_phase_7_record);
+            }
             ?>
             
             <!-- learning areas starts here -->
@@ -4094,9 +4041,7 @@ if(isset($_GET['sid'])){
                 <input type="text" name="remarks_p7_t5" 
                 value="<?php if(empty($term5['remarks'])){ 
                     echo "";} else { echo $term5['remarks'];}?>">
-            <?php
-            }
-            ?>
+
             <!-- Final Quarter of Phase 7 Ends Here -->
             <!-- Final Rating -->
 
@@ -4115,6 +4060,7 @@ if(isset($_GET['sid'])){
             $query_phase_8_record = mysqli_query($conn, $sql_phase_8_record);
             if(mysqli_num_rows($query_phase_8_record) > 0){ 
                 $term1 = mysqli_fetch_array($query_phase_8_record);
+            }
             ?>
             <span><h3>Phase 8(pala tandaan lang tang ina nyo -jd)</h3></span>
                 <label for="">School</label>
@@ -4243,9 +4189,6 @@ if(isset($_GET['sid'])){
 
                     <!-- Learning Areas Ends Here -->
 
-            <?php
-            } 
-            ?>
             <!-- 1st Quarter of Phase 8 Ends Here -->
 
 
@@ -4260,6 +4203,7 @@ if(isset($_GET['sid'])){
             $query_phase_8_record = mysqli_query($conn, $sql_phase_8_record);
             if(mysqli_num_rows($query_phase_8_record) > 0){ 
                 $term2 = mysqli_fetch_array($query_phase_8_record);
+            }
             ?>
             
             <!-- learning areas starts here -->
@@ -4342,9 +4286,6 @@ if(isset($_GET['sid'])){
 
                     <!-- Learning Areas Ends Here -->
 
-            <?php
-            }
-            ?>
             <!-- 2nd Quarter of Phase 8 Ends Here -->
 
 
@@ -4358,6 +4299,7 @@ if(isset($_GET['sid'])){
             $query_phase_8_record = mysqli_query($conn, $sql_phase_8_record);
             if(mysqli_num_rows($query_phase_8_record) > 0){ 
                 $term3 = mysqli_fetch_array($query_phase_8_record);
+            }
             ?>
             
             <!-- learning areas starts here -->
@@ -4440,9 +4382,6 @@ if(isset($_GET['sid'])){
 
                     <!-- Learning Areas Ends Here -->
 
-            <?php
-            }
-            ?>
             <!-- 3rd Quarter of Phase 8 Ends Here -->
             <!-- Term 3 -->
 
@@ -4458,6 +4397,7 @@ if(isset($_GET['sid'])){
             $query_phase_8_record = mysqli_query($conn, $sql_phase_8_record);
             if(mysqli_num_rows($query_phase_8_record) > 0){ 
                 $term4 = mysqli_fetch_array($query_phase_8_record);
+            }
             ?>
             
             <!-- learning areas starts here -->
@@ -4540,9 +4480,6 @@ if(isset($_GET['sid'])){
 
                     <!-- Learning Areas Ends Here -->
 
-            <?php
-            }
-            ?>
             <!-- 4th Quarter of Phase 8 Ends Here -->
             <!-- Term 4 -->
 
@@ -4557,6 +4494,7 @@ if(isset($_GET['sid'])){
             $query_phase_8_record = mysqli_query($conn, $sql_phase_8_record);
             if(mysqli_num_rows($query_phase_8_record) > 0){ 
                 $term5 = mysqli_fetch_array($query_phase_8_record);
+            }
             ?>
             
             <!-- learning areas starts here -->
@@ -4665,9 +4603,6 @@ if(isset($_GET['sid'])){
                 <input type="text" name="remarks_p8_t5" 
                 value="<?php if(empty($term5['remarks'])){ 
                     echo "";} else { echo $term5['remarks'];}?>">
-            <?php
-            }
-            ?>
             <!-- Final Quarter of Phase 8 Ends Here -->
             <!-- Final Rating -->
 
@@ -4683,6 +4618,8 @@ if(isset($_GET['sid'])){
 </html>
 
 <?php
+
+    if(isset($_POST['']))
 // SELECT * FROM learners_personal_infos 
 // LEFT JOIN remedial_classes ON learners_personal_infos.lrn = remedial_classes.lrn 
 // LEFT JOIN eligibility_for_elementary_school_enrollment ON learners_personal_infos.lrn = remedial_classes.lrn
