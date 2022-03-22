@@ -319,12 +319,12 @@
           </div>
 
           <div class="fourteenth-row">
-            <label for="">Arabic Language  </label>
-            <input type="text" name="arabic_language1" pattern="[0-9]{2}" title="Please input 2 Numbers only">
-            <input type="text" name="arabic_language2" pattern="[0-9]{2}" title="Please input 2 Numbers only">
-            <input type="text" name="arabic_language3" pattern="[0-9]{2}" title="Please input 2 Numbers only">
-            <input type="text" name="arabic_language4" pattern="[0-9]{2}" title="Please input 2 Numbers only">
-            <input type="text" name="arabic_language5" pattern="[0-9]{2}" title="Please input 2 Numbers only">
+            <label class="Arabiclanguage1" for="">Arabic Language  </label>
+            <input type="text" name="arabic_language1"class="arabic_language arabic_language1" pattern="[0-9]{2}" title="Please input 2 Numbers only">
+            <input type="text" name="arabic_language2"class="arabic_language arabic_language2" pattern="[0-9]{2}" title="Please input 2 Numbers only">
+            <input type="text" name="arabic_language3"class="arabic_language arabic_language3" pattern="[0-9]{2}" title="Please input 2 Numbers only">
+            <input type="text" name="arabic_language4"class="arabic_language arabic_language4" pattern="[0-9]{2}" title="Please input 2 Numbers only">
+            <input type="text" name="arabic_language5"class="arabic_language arabic_language5" pattern="[0-9]{2}" title="Please input 2 Numbers only">
             <select name="remarks1" class="remarks" id="" required> 
                 <option value="">-Remarks-</option>
                 <option value="Passed">Passed</option>
@@ -336,12 +336,12 @@
 
           <!-- nilagyan na ng finals ito -->
           <div class="fifteenth-row">
-            <label for="">Islamic Values  </label>
-            <input type="text" name="islamic_values1" pattern="[0-9]{2}" title="Please input 2 Numbers only">
-            <input type="text" name="islamic_values2" pattern="[0-9]{2}" title="Please input 2 Numbers only">
-            <input type="text" name="islamic_values3" pattern="[0-9]{2}" title="Please input 2 Numbers only">
-            <input type="text" name="islamic_values4" pattern="[0-9]{2}" title="Please input 2 Numbers only">
-            <input type="text" name="islamic_values5" pattern="[0-9]{2}" title="Please input 2 Numbers only">
+            <label class="Islamicvalues1" for="">Islamic Values  </label>
+            <input type="text" name="islamic_values1" class="islamic_value islamic_value1" pattern="[0-9]{2}" title="Please input 2 Numbers only">
+            <input type="text" name="islamic_values2" class="islamic_value islamic_value2" pattern="[0-9]{2}" title="Please input 2 Numbers only">
+            <input type="text" name="islamic_values3" class="islamic_value islamic_value3" pattern="[0-9]{2}" title="Please input 2 Numbers only">
+            <input type="text" name="islamic_values4" class="islamic_value islamic_value4" pattern="[0-9]{2}" title="Please input 2 Numbers only">
+            <input type="text" name="islamic_values5" class="islamic_value islamic_value5" pattern="[0-9]{2}" title="Please input 2 Numbers only">
             <select name="remarks1" class="remarks" id="" required> 
                 <option value="">-Remarks-</option>
                 <option value="Passed">Passed</option>
@@ -350,12 +350,12 @@
           </div>
 
           <div class="sixteenth-row">
-            <label for="">General Average  </label>
-            <input type="text" name="general_average1" pattern="[0-9]{2}" title="Please input 2 Numbers only">
-            <input type="text" name="general_average2" pattern="[0-9]{2}" title="Please input 2 Numbers only">
-            <input type="text" name="general_average3" pattern="[0-9]{2}" title="Please input 2 Numbers only">
-            <input type="text" name="general_average4" pattern="[0-9]{2}" title="Please input 2 Numbers only">
-            <input type="text" name="general_average5" pattern="[0-9]{2}" title="Please input 2 Numbers only">
+            <label class="General_average1" for="">General Average  </label>
+            <input type="text" name="general_average1" class="general_average general_average1" pattern="[0-9]{2}" title="Please input 2 Numbers only">
+            <input type="text" name="general_average2" class="general_average general_average2" pattern="[0-9]{2}" title="Please input 2 Numbers only">
+            <input type="text" name="general_average3" class="general_average general_average3" pattern="[0-9]{2}" title="Please input 2 Numbers only">
+            <input type="text" name="general_average4" class="general_average general_average4" pattern="[0-9]{2}" title="Please input 2 Numbers only">
+            <input type="text" name="general_average5" class="general_average general_average5" pattern="[0-9]{2}" title="Please input 2 Numbers only">
             <select name="remarks1" class="remarks" id="" required> 
                 <option value="">-Remarks-</option>
                 <option value="Passed">Passed</option>
