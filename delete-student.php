@@ -8,7 +8,7 @@ if(empty($_SESSION['username'])){
 if(isset($_GET['sid'])){
     foreach ($_GET as $encrypting_lrn => $encrypt_lrn){
         $decrypt_lrn = $_GET[$encrypting_lrn] = base64_decode(urldecode($encrypt_lrn));
-        $decrypted_lrn = ((($decrypt_lrn * 582374)/ 4692)/ 859273574 );
+        $decrypted_lrn = ((($decrypt_lrn*859475)/5977)/123456789);
     }
     if(empty($_GET['sid'])){    //lrn verification starts here
         echo "<script>alert('LRN not found');
