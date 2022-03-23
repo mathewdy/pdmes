@@ -1,6 +1,4 @@
 
-
-
 <?php
 include('connection.php');
 require_once 'dompdf/autoload.inc.php';
@@ -10,6 +8,16 @@ if(isset($_GET['lrn'])){
     $lrn = $_GET['lrn'];
 
 
+
+    $validate = "SELECT lrn FROM learners_personal_infos WHERE learners_personal_infos.lrn = '$lrn'";
+    $vali = mysqli_query($conn, $validate);
+    if(mysqli_num_rows($vali) == 0){
+    
+        echo "<script>alert('LRN does not exist');
+        window.location.href='index.php';</script>";
+        exit();
+ 
+    }
     
 
 
