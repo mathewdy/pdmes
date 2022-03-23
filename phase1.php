@@ -1,20 +1,20 @@
 <?php
-// ob_start();
-// include('connection.php');
-// session_start();
-// if(empty($_SESSION['username'])){
-//     echo "<script>window.location.href='login.php'</script>";
-// }
+ob_start();
+include('connection.php');
+session_start();
+if(empty($_SESSION['username'])){
+    echo "<script>window.location.href='login.php'</script>";
+}
 
-// error_reporting(E_ERROR & E_WARNING);
-// $lrn = $_SESSION['lrn'];
-// if(empty($_SESSION['lrn'])){
-//   echo "<script>window,location.href='addrecord.php' </script>";
-// }
+error_reporting(E_ERROR & E_WARNING);
+$lrn = $_SESSION['lrn'];
+if(empty($_SESSION['lrn'])){
+  echo "<script>window,location.href='addrecord.php' </script>";
+}
 
 
-// $query_lrn = "SELECT * FROM learners_personal_infos WHERE lrn = '$lrn' ";
-// $run_query_lrn = mysqli_query($conn,$query_lrn);
+$query_lrn = "SELECT * FROM learners_personal_infos WHERE lrn = '$lrn' ";
+$run_query_lrn = mysqli_query($conn,$query_lrn);
 
 
 
@@ -34,7 +34,6 @@
 
 <body>
 
-<a href="index.php">Back</a>
 
 <!---scholastic record  phase 1--->
 <h3>Scholastic records</h3>
@@ -454,6 +453,11 @@
 
     </form>
     
+    </form>
+  </div>
+  <div class="">
+    <?php include('phase2.php'); ?> 
+  </div>
 </body>
 
 </html>
