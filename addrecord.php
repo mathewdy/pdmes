@@ -204,7 +204,7 @@ if(isset($_POST['next'])){
     echo "already added" . '<br>';
   }else{
     //
-    $insert_learners_personal_infos = "INSERT INTO learners_personal_infos (last_name,first_name,middle_name,suffix,lrn,birth_date,sex,date_time_created,date_time_updated,remarks)
+    $insert_learners_personal_infos = "INSERT INTO learners_personal_infos (last_name,first_name,middle_name,suffix,lrn,birth_date,sex,date_time_created,date_time_updated,lpi_remarks)
     VALUES ('$last_name', '$first_name', '$middle_name', '$suffix' , '$lrn', '$birthdate', '$sex', '$dateCreated', '$dateUpdated', '$remarks')";
 
     $run_insert_learners_personal_infos = mysqli_query($conn,$insert_learners_personal_infos);
@@ -214,7 +214,7 @@ if(isset($_POST['next'])){
       echo "Added learners_personal_infos" . '<br>';
       
 
-      $insert_eligibility_for_elem = "INSERT INTO eligibility_for_elementary_school_enrollment (lrn,credential_presented,name_of_school,efese_school_id,address_of_school,others ,date_time_created,date_time_updated,remarks) VALUES ('$lrn','$new_credential', '$name_of_school' , '$school_id', '$address_school','$others', '$dateCreated', '$dateUpdated', '$remarks')";
+      $insert_eligibility_for_elem = "INSERT INTO eligibility_for_elementary_school_enrollment (lrn,credential_presented,name_of_school,efese_school_id,address_of_school,others ,date_time_created,date_time_updated,efese_remarks) VALUES ('$lrn','$new_credential', '$name_of_school' , '$school_id', '$address_school','$others', '$dateCreated', '$dateUpdated', '$remarks')";
 
       $run_insert_eligibility_for_elem = mysqli_query($conn,$insert_eligibility_for_elem);
 
