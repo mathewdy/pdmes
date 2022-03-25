@@ -276,8 +276,6 @@
     grid-template-areas:
     "Health1  input_health1  input_health2  input_health3 input_health4 input_health5  remarks";
     grid-template-columns:    250px 50px 50px 50px  80px 100px 90px  ;
-    
-    
     margin-top:5px;
 }
 
@@ -292,7 +290,7 @@
 .fourteenth-row{
     display:grid;
     grid-template-areas:
-    "EP1  input_ep1  input_ep2  input_ep3 input_ep4 input_ep5  remarks";
+    "Arabiclanguage1  input_ep1  input_ep2  input_ep3 input_ep4 input_ep5  remarks";
     grid-template-columns:    250px 50px 50px 50px  80px 100px 90px;
     margin-top:5px;
 }
@@ -300,7 +298,7 @@
 .fifteenth-row{
     display:grid;
     grid-template-areas:
-    "EP1  input_ep1  input_ep2  input_ep3 input_ep4 input_ep5  remarks";
+    "Islamicvalues1  input_ep1  input_ep2  input_ep3 input_ep4 input_ep5  remarks";
     grid-template-columns:    250px 50px 50px 50px  80px 100px 90px;
     margin-top:5px;
 }
@@ -640,6 +638,68 @@
 .edukasyon_sa_pagpapakatao5{
     grid-area:input_ep5;
 }
+
+.Arabiclanguage1{
+    grid-area:Arabiclanguage1;
+}
+.arabic_language1{
+    grid-area:input_arabiclanguage1;
+}
+.arabic_language2{
+    grid-area:input_arabiclanguage2;
+
+}
+.arabic_language3{
+    grid-area:input_arabiclanguage3;
+
+}
+.arabic_language4{
+    grid-area:input_arabiclanguage4;
+
+}
+.arabic_language5{
+    grid-area:input_arabiclanguage5;
+}
+
+.Islamicvalue1{
+    grid-area:Islamicvalue1;
+
+}
+.islamic_value1{
+    grid-area:input_islamicvalue1;
+}
+.islamic_value2{
+    grid-area:input_islamicvalue2;
+}
+.islamic_value3{
+    grid-area:input_islamicvalue3;
+}
+.islamic_value4{
+    grid-area:input_islamicvalue4;
+}
+.islamic_value5{
+    grid-area:input_islamicvalue5;
+}
+
+.Generalaverage1{
+    grid-area:Generalaverage;
+}
+.general_average1{
+    grid-area:input_generalave1
+}
+.general_average2{
+    grid-area:input_generalave2
+}
+.general_average3{
+    grid-area:input_generalave3;
+}
+.general_average4{
+    grid-area:input_generalave4;
+}
+.general_average5{
+    grid-area:input_generalave5;
+}
+
 
 /* Textbox sizes */
 
