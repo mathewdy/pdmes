@@ -51,6 +51,7 @@ $(document).ready(function(){
         next_form = $(this).parent().next();
         next_form.show();
         previous_form.hide();
+        
     });  
     $(".previous-form").click(function(){
         previous_form = $(this).parent();
