@@ -669,12 +669,11 @@ if(isset($_GET['sid'])){
                     <p><h4>Remedial Classes</h4></p>
                     
                     <label for="">Date Conducted From : </label>
-                    <input type="date" value="<?php echo strftime('%Y-%m-%d', 
-                    strtotime($row['date_from']));?>" name="date_from_p1">
+                    <input type="date" value="<?php echo strftime('%Y-%m-%d', strtotime($term5['date_from']));?>" name="date_from_p1">
                     <br>
                     <label for="">Date Conducted To :</label>
                     <input type="date" value="<?php echo strftime('%Y-%m-%d', 
-                    strtotime($row['date_to']));?>" name="date_to_p1">
+                    strtotime($term5['date_to']));?>" name="date_to_p1">
                     
                     <label for="">Learning Areas</label>
                 <input type="text" name="learning_areas_p1_t5_1" 
@@ -1289,11 +1288,11 @@ if(isset($_GET['sid'])){
 
                     <label for="">Date Conducted From : </label>
                     <input type="date" value="<?php echo strftime('%Y-%m-%d', 
-                    strtotime($row['date_from']));?>" name="date_from_p2">
+                    strtotime($term5['date_from']));?>" name="date_from_p2">
                     <br>
                     <label for="">Date Conducted To :</label>
                     <input type="date" value="<?php echo strftime('%Y-%m-%d', 
-                    strtotime($row['date_to']));?>" name="date_to_p2">
+                    strtotime($term5['date_to']));?>" name="date_to_p2">
                     
                     <label for="">Learning Areas</label>
                 <input type="text" name="learning_areas_p2_t5_1" 
@@ -1911,11 +1910,11 @@ if(isset($_GET['sid'])){
 
                     <label for="">Date Conducted From : </label>
                     <input type="date" value="<?php echo strftime('%Y-%m-%d', 
-                    strtotime($row['date_from']));?>" name="date_from_p3">
+                    strtotime($term5['date_from']));?>" name="date_from_p3">
                     <br>
                     <label for="">Date Conducted To :</label>
                     <input type="date" value="<?php echo strftime('%Y-%m-%d', 
-                    strtotime($row['date_to']));?>" name="date_to_p3">
+                    strtotime($term5['date_to']));?>" name="date_to_p3">
                     
                     <label for="">Learning Areas</label>
                 <input type="text" name="learning_areas_p3_t5_1" 
@@ -2531,11 +2530,11 @@ if(isset($_GET['sid'])){
 
                     <label for="">Date Conducted From : </label>
                     <input type="date" value="<?php echo strftime('%Y-%m-%d', 
-                    strtotime($row['date_from']));?>" name="date_from_p4">
+                    strtotime($term5['date_from']));?>" name="date_from_p4">
                     <br>
                     <label for="">Date Conducted To :</label>
                     <input type="date" value="<?php echo strftime('%Y-%m-%d', 
-                    strtotime($row['date_to']));?>" name="date_to_p4">
+                    strtotime($term5['date_to']));?>" name="date_to_p4">
                     
                     <label for="">Learning Areas</label>
                 <input type="text" name="learning_areas_p4_t5_1" 
@@ -3154,11 +3153,11 @@ if(isset($_GET['sid'])){
 
                     <label for="">Date Conducted From : </label>
                     <input type="date" value="<?php echo strftime('%Y-%m-%d', 
-                    strtotime($row['date_from']));?>" name="date_from_p5">
+                    strtotime($term5['date_from']));?>" name="date_from_p5">
                     <br>
                     <label for="">Date Conducted To :</label>
                     <input type="date" value="<?php echo strftime('%Y-%m-%d', 
-                    strtotime($row['date_to']));?>" name="date_to_p5">
+                    strtotime($term5['date_to']));?>" name="date_to_p5">
                     
                     <label for="">Learning Areas</label>
                 <input type="text" name="learning_areas_p5_t5_1" 
@@ -3774,11 +3773,11 @@ if(isset($_GET['sid'])){
 
                     <label for="">Date Conducted From : </label>
                     <input type="date" value="<?php echo strftime('%Y-%m-%d', 
-                    strtotime($row['date_from']));?>" name="date_from_p6">
+                    strtotime($term5['date_from']));?>" name="date_from_p6">
                     <br>
                     <label for="">Date Conducted To :</label>
                     <input type="date" value="<?php echo strftime('%Y-%m-%d', 
-                    strtotime($row['date_to']));?>" name="date_to_p6">
+                    strtotime($term5['date_to']));?>" name="date_to_p6">
                     
                     <label for="">Learning Areas</label>
                 <input type="text" name="learning_areas_p6_t5_1" 
@@ -4396,11 +4395,11 @@ if(isset($_GET['sid'])){
 
                     <label for="">Date Conducted From : </label>
                     <input type="date" value="<?php echo strftime('%Y-%m-%d', 
-                    strtotime($row['date_from']));?>" name="date_from_p7">
+                    strtotime($term5['date_from']));?>" name="date_from_p7">
                     <br>
                     <label for="">Date Conducted To :</label>
                     <input type="date" value="<?php echo strftime('%Y-%m-%d', 
-                    strtotime($row['date_to']));?>" name="date_to_p7">
+                    strtotime($term5['date_to']));?>" name="date_to_p7">
                     
                     <label for="">Learning Areas</label>
                 <input type="text" name="learning_areas_p7_t5_1" 
@@ -5016,11 +5015,11 @@ if(isset($_GET['sid'])){
 
                     <label for="">Date Conducted From : </label>
                     <input type="date" value="<?php echo strftime('%Y-%m-%d', 
-                    strtotime($row['date_from']));?>" name="date_from_p8">
+                    strtotime($term5['date_from']));?>" name="date_from_p8">
                     <br>
                     <label for="">Date Conducted To :</label>
                     <input type="date" value="<?php echo strftime('%Y-%m-%d', 
-                    strtotime($row['date_to']));?>" name="date_to_p8">
+                    strtotime($term5['date_to']));?>" name="date_to_p8">
                     
                     <label for="">Learning Areas</label>
                 <input type="text" name="learning_areas_p8_t5_1" 
@@ -5096,7 +5095,7 @@ if(isset($_GET['sid'])){
         $credential_presented = ucfirst($_POST['credential_presented']);
         $name_of_school = ucfirst($_POST['name_of_school']);
         $efese_school_id = $_POST['efese_school_id'];
-        $address_of_school ucfirst($_POST['address_of_school']);
+        $address_of_school = $_POST['address_of_school'];
         $others = ucfirst($_POST['others']);
         // Eligibility Ends Here
 
