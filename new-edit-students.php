@@ -130,6 +130,33 @@ if(isset($_GET['sid'])){
                             </span>
                         </section>
                     </div>
+                    <div class="other-cred">
+                        <p>Other Credential Presented</p>
+                        <span class="wrapper w-100">
+                            <span class="PEPT px-2 w-10 d-flex align-items-center justify-content-center">
+                                PEPT Passer 
+                            </span>
+                            <label for="">Rating:</label>
+                            <input type="text" style="width:5%;  margin:0 12px 0 0;" required>
+                            
+                            <label for="">Date of Examination/Assessment (dd/mm/yyyy):</label>
+                            <input type="date" name="" id=""> 
+                            
+                            <label for="">Others (Pls. Specify):</label>
+                            <input type="text" style="width:20%;" name="" id="">
+
+                        </span>
+                        <section class="last-cred px-3 row">
+                            <span class="col-8 hstack d-flex align-items-center">
+                                <label for="">Name and Address of Testing Center:</label>
+                                <input type="text" style="width:65%;" name=""  id="">
+                            </span>
+                            <span class="col-4 hstack d-flex align-items-end">
+                                <label for="">Remark:</label>
+                                <input type="text"  name="" id="">
+                            </span>
+                        </section>
+                    </div>
                     <?php
             }
                     ?>
@@ -152,13 +179,13 @@ if(isset($_GET['sid'])){
                     ?>
                     <section class="grade-header">
                         <section class="first-row">
-                            <span class="hstack d-flex justify-content-end align-items-end">
+                            <span class="hstack d-flex justify-content-start align-items-center">
                                 <label for="">School: </label>
                                 <input type="text" name="school_p1" 
                                 value="<?php if(empty($term1['school'])){ 
                                     echo "";} else { echo $term1['school'];}?>"> 
                             </span>
-                            <span class="hstack d-flex justify-content-end align-items-end">
+                            <span class="hstack d-flex justify-content-end align-items-center">
                                 <label for="">School ID:</label>
                                 <input type="text" style="width: 70%;" name="sr_school_id_p1" 
                                 value="<?php if(empty($term1['sr_school_id'])){ 
@@ -166,48 +193,48 @@ if(isset($_GET['sid'])){
                             </span>
                         </section>
                         <section class="second-row">
-                            <span class="hstack d-flex justify-content-end align-items-end">
-                                <label for="">District</label>
+                            <span class="hstack d-flex align-items-center">
+                                <label for="">District:</label>
                                 <input type="text" name="district_p1" 
                                 value="<?php if(empty($term1['district'])){ 
                                     echo "";} else { echo $term1['district'];}?>">
                             </span>
-                            <span class="hstack d-flex justify-content-end align-items-end">
-                                <label for="">Division</label>
+                            <span class="hstack d-flex  align-items-center">
+                                <label for="">Division:</label>
                                 <input type="text" name="division_p1" 
                                 value="<?php if(empty($term1['division'])){ 
                                     echo "";} else { echo $term1['division'];}?>">
                             </span>
-                            <span class="hstack d-flex justify-content-end align-items-end">
-                                <label for="">Region</label>
+                            <span class="hstack d-flex align-items-center">
+                                <label for="">Region:</label>
                                 <input type="text" name="region_p1" 
                                 value="<?php if(empty($term1['region'])){ 
                                     echo "";} else { echo $term1['region'];}?>">
                             </span>
                         </section>
                         <section class="third-row">
-                            <span class="hstack d-flex justify-content-start align-items-end">
+                            <span class="hstack d-flex justify-content-start align-items-center">
                                 <label for="">Classified as Grade: </label>
                                 <input type="text" style="width: 30%;"  name="classified_as_grade_p1" 
                                 value="<?php if(empty($term1['classified_as_grade'])){ 
                                     echo "";} else { echo $term1['classified_as_grade'];}?>">
                             </span>
-                            <span class="hstack d-flex justify-content-start align-items-end">
-                                <label for="">Section</label>
+                            <span class="hstack d-flex justify-content-start align-items-center">
+                                <label for="">Section: </label>
                                 <input type="text" name="section_p1" 
                                 value="<?php if(empty($term1['section'])){ 
                                     echo "";} else { echo $term1['section'];}?>">
                             </span>
-                            <span class="hstack d-flex justify-content-end align-items-end">
+                            <span class="hstack d-flex justify-content-center align-items-center">
                                 <label for="">School Year: </label>
-                                <input type="text" style="width: 50%;" name="school_year_p1" 
+                                <input type="text" style="width: 4%;" name="school_year_p1" 
                                 value="<?php if(empty($term1['school_year'])){ 
                                     echo "";} else { echo $term1['school_year'];}?>">
                             </span>
                         </section>
                         <section class="fourth-row">
-                            <span class="hstack d-flex align-items-end">
-                                <label for="">Name of Adviser</label>
+                            <span class="hstack d-flex align-items-center">
+                                <label for="">Name of Adviser: </label>
                                 <input type="text" name="name_of_adviser_p1" 
                                 value="<?php if(empty($term1['name_of_adviser'])){ 
                                     echo "";} else { echo $term1['name_of_adviser'];}?>">
@@ -532,14 +559,14 @@ if(isset($_GET['sid'])){
                         }
                     ?>
                     <section class="grade-header">
-                        <section class="first-row">
-                            <span class="hstack d-flex justify-content-end align-items-end">
+                    <section class="first-row">
+                            <span class="hstack d-flex justify-content-start align-items-center">
                                 <label for="">School: </label>
                                 <input type="text" name="school_p1" 
                                 value="<?php if(empty($term1['school'])){ 
                                     echo "";} else { echo $term1['school'];}?>"> 
                             </span>
-                            <span class="hstack d-flex justify-content-end align-items-end">
+                            <span class="hstack d-flex justify-content-end align-items-center">
                                 <label for="">School ID:</label>
                                 <input type="text" style="width: 70%;" name="sr_school_id_p1" 
                                 value="<?php if(empty($term1['sr_school_id'])){ 
@@ -547,52 +574,51 @@ if(isset($_GET['sid'])){
                             </span>
                         </section>
                         <section class="second-row">
-                            <span class="hstack d-flex justify-content-end align-items-end">
-                                <label for="">District</label>
+                            <span class="hstack d-flex align-items-center">
+                                <label for="">District:</label>
                                 <input type="text" name="district_p1" 
                                 value="<?php if(empty($term1['district'])){ 
                                     echo "";} else { echo $term1['district'];}?>">
                             </span>
-                            <span class="hstack d-flex justify-content-end align-items-end">
-                                <label for="">Division</label>
+                            <span class="hstack d-flex  align-items-center">
+                                <label for="">Division:</label>
                                 <input type="text" name="division_p1" 
                                 value="<?php if(empty($term1['division'])){ 
                                     echo "";} else { echo $term1['division'];}?>">
                             </span>
-                            <span class="hstack d-flex justify-content-end align-items-end">
-                                <label for="">Region</label>
+                            <span class="hstack d-flex align-items-center">
+                                <label for="">Region:</label>
                                 <input type="text" name="region_p1" 
                                 value="<?php if(empty($term1['region'])){ 
                                     echo "";} else { echo $term1['region'];}?>">
                             </span>
                         </section>
                         <section class="third-row">
-                            <span class="hstack d-flex justify-content-start align-items-end">
+                            <span class="hstack d-flex justify-content-start align-items-center">
                                 <label for="">Classified as Grade: </label>
                                 <input type="text" style="width: 30%;"  name="classified_as_grade_p1" 
                                 value="<?php if(empty($term1['classified_as_grade'])){ 
                                     echo "";} else { echo $term1['classified_as_grade'];}?>">
                             </span>
-                            <span class="hstack d-flex justify-content-start align-items-end">
-                                <label for="">Section</label>
+                            <span class="hstack d-flex justify-content-start align-items-center">
+                                <label for="">Section: </label>
                                 <input type="text" name="section_p1" 
                                 value="<?php if(empty($term1['section'])){ 
                                     echo "";} else { echo $term1['section'];}?>">
                             </span>
-                            <span class="hstack d-flex justify-content-end align-items-end">
+                            <span class="hstack d-flex justify-content-center align-items-center">
                                 <label for="">School Year: </label>
-                                <input type="text" style="width: 50%;" name="school_year_p1" 
+                                <input type="text" style="width: 47%;" name="school_year_p1" 
                                 value="<?php if(empty($term1['school_year'])){ 
                                     echo "";} else { echo $term1['school_year'];}?>">
                             </span>
                         </section>
                         <section class="fourth-row">
-                            <span class="hstack d-flex align-items-end">
-                                <label for="">Name of Adviser</label>
+                            <span class="hstack d-flex align-items-center">
+                                <label for="">Name of Adviser: </label>
                                 <input type="text" name="name_of_adviser_p1" 
                                 value="<?php if(empty($term1['name_of_adviser'])){ 
                                     echo "";} else { echo $term1['name_of_adviser'];}?>">
-
                             </span>
                         </section>
                     </section>
@@ -613,7 +639,7 @@ if(isset($_GET['sid'])){
                     </thead>
                     <tbody>
                     <?php
-                    $show_student_grades = "SELECT mother_tounge FROM students_grades WHERE phase = '1' AND lrn = '123456789012'";
+                    $show_student_grades = "SELECT mother_tounge FROM students_grades WHERE phase = '2' AND lrn = '123456789012'";
                     $query_student_grades = mysqli_query($conn, $show_student_grades);
                     ?>
                         <tr>
@@ -629,7 +655,7 @@ if(isset($_GET['sid'])){
                             <td></td>
                         </tr>
                     <?php
-                    $show_student_grade_fil = "SELECT filipino FROM students_grades WHERE phase = '1' AND lrn = '123456789012'";
+                    $show_student_grade_fil = "SELECT filipino FROM students_grades WHERE phase = '2' AND lrn = '123456789012'";
                     $query_student_grade_fil = mysqli_query($conn, $show_student_grade_fil);
                     ?> 
                         <tr>
@@ -645,7 +671,7 @@ if(isset($_GET['sid'])){
                             <td></td>
                         </tr>
                     <?php
-                    $show_student_grade_eng = "SELECT english FROM students_grades WHERE phase = '1' AND lrn = '123456789012'";
+                    $show_student_grade_eng = "SELECT english FROM students_grades WHERE phase = '2' AND lrn = '123456789012'";
                     $query_student_grade_eng = mysqli_query($conn, $show_student_grade_eng);
                     ?> 
                         </tr>
@@ -661,7 +687,7 @@ if(isset($_GET['sid'])){
                             <td></td>
                         </tr>
                     <?php
-                    $show_student_grade_math = "SELECT math FROM students_grades WHERE phase = '1' AND lrn = '123456789012'";
+                    $show_student_grade_math = "SELECT math FROM students_grades WHERE phase = '2' AND lrn = '123456789012'";
                     $query_student_grade_math = mysqli_query($conn, $show_student_grade_math);
                     ?> 
                         </tr>
@@ -677,7 +703,7 @@ if(isset($_GET['sid'])){
                             <td></td>
                         </tr>
                     <?php
-                    $show_student_grade_sci = "SELECT science FROM students_grades WHERE phase = '1' AND lrn = '123456789012'";
+                    $show_student_grade_sci = "SELECT science FROM students_grades WHERE phase = '2' AND lrn = '123456789012'";
                     $query_student_grade_sci = mysqli_query($conn, $show_student_grade_sci);
                     ?> 
                         </tr>
@@ -693,7 +719,7 @@ if(isset($_GET['sid'])){
                             <td></td>
                         </tr>
                     <?php
-                    $show_student_grade_ap = "SELECT araling_panlipunan FROM students_grades WHERE phase = '1' AND lrn = '123456789012'";
+                    $show_student_grade_ap = "SELECT araling_panlipunan FROM students_grades WHERE phase = '2' AND lrn = '123456789012'";
                     $query_student_grade_ap = mysqli_query($conn, $show_student_grade_ap);
                     ?> 
                         </tr>
@@ -709,7 +735,7 @@ if(isset($_GET['sid'])){
                             <td></td>
                         </tr>
                     <?php
-                    $show_student_grade_epp = "SELECT epp_tle FROM students_grades WHERE phase = '1' AND lrn = '123456789012'";
+                    $show_student_grade_epp = "SELECT epp_tle FROM students_grades WHERE phase = '2' AND lrn = '123456789012'";
                     $query_student_grade_epp = mysqli_query($conn, $show_student_grade_epp);
                     ?> 
                         </tr>
@@ -725,7 +751,7 @@ if(isset($_GET['sid'])){
                             <td></td>
                         </tr>
                     <?php
-                    $show_student_grade_mapeh = "SELECT mapeh FROM students_grades WHERE phase = '1' AND lrn = '123456789012'";
+                    $show_student_grade_mapeh = "SELECT mapeh FROM students_grades WHERE phase = '2' AND lrn = '123456789012'";
                     $query_student_grade_mapeh = mysqli_query($conn, $show_student_grade_mapeh);
                     ?> 
                         </tr>
@@ -741,7 +767,7 @@ if(isset($_GET['sid'])){
                             <td></td>
                         </tr>
                     <?php
-                    $show_student_grade_music = "SELECT music FROM students_grades WHERE phase = '1' AND lrn = '123456789012'";
+                    $show_student_grade_music = "SELECT music FROM students_grades WHERE phase = '2' AND lrn = '123456789012'";
                     $query_student_grade_music = mysqli_query($conn, $show_student_grade_music);
                     ?> 
                         </tr>
@@ -757,7 +783,7 @@ if(isset($_GET['sid'])){
                             <td></td>
                         </tr>
                     <?php
-                    $show_student_grade_arts = "SELECT arts FROM students_grades WHERE phase = '1' AND lrn = '123456789012'";
+                    $show_student_grade_arts = "SELECT arts FROM students_grades WHERE phase = '2' AND lrn = '123456789012'";
                     $query_student_grade_arts = mysqli_query($conn, $show_student_grade_arts);
                     ?> 
                         </tr>
@@ -773,7 +799,7 @@ if(isset($_GET['sid'])){
                             <td></td>
                         </tr>
                     <?php
-                    $show_student_grade_pe = "SELECT p_e FROM students_grades WHERE phase = '1' AND lrn = '123456789012'";
+                    $show_student_grade_pe = "SELECT p_e FROM students_grades WHERE phase = '2' AND lrn = '123456789012'";
                     $query_student_grade_pe = mysqli_query($conn, $show_student_grade_pe);
                     ?> 
                         </tr>
@@ -789,7 +815,7 @@ if(isset($_GET['sid'])){
                             <td></td>
                         </tr>
                     <?php
-                    $show_student_grade_health = "SELECT health FROM students_grades WHERE phase = '1' AND lrn = '123456789012'";
+                    $show_student_grade_health = "SELECT health FROM students_grades WHERE phase = '2' AND lrn = '123456789012'";
                     $query_student_grade_health = mysqli_query($conn, $show_student_grade_health);
                     ?> 
                         </tr>
@@ -805,7 +831,7 @@ if(isset($_GET['sid'])){
                             <td></td>
                         </tr>
                     <?php
-                    $show_student_grade_esp = "SELECT edukasyon_sa_pagpapakatao FROM students_grades WHERE phase = '1' AND lrn = '123456789012'";
+                    $show_student_grade_esp = "SELECT edukasyon_sa_pagpapakatao FROM students_grades WHERE phase = '2' AND lrn = '123456789012'";
                     $query_student_grade_esp = mysqli_query($conn, $show_student_grade_esp);
                     ?> 
                         </tr>
@@ -821,7 +847,7 @@ if(isset($_GET['sid'])){
                             <td></td>
                         </tr>
                     <?php
-                    $show_student_grade_arabic = "SELECT arabic_language FROM students_grades WHERE phase = '1' AND lrn = '123456789012'";
+                    $show_student_grade_arabic = "SELECT arabic_language FROM students_grades WHERE phase = '2' AND lrn = '123456789012'";
                     $query_student_grade_arabic = mysqli_query($conn, $show_student_grade_arabic);
                     ?> 
                         </tr>
@@ -837,7 +863,7 @@ if(isset($_GET['sid'])){
                             <td></td>
                         </tr>
                     <?php
-                    $show_student_grade_islamic_values = "SELECT islamic_values FROM students_grades WHERE phase = '1' AND lrn = '123456789012'";
+                    $show_student_grade_islamic_values = "SELECT islamic_values FROM students_grades WHERE phase = '2' AND lrn = '123456789012'";
                     $query_student_grade_islamic_values = mysqli_query($conn, $show_student_grade_islamic_values);
                     ?> 
                         </tr>
@@ -853,7 +879,7 @@ if(isset($_GET['sid'])){
                             <td></td>
                         </tr>
                     <?php
-                    $show_student_grade_ave = "SELECT general_average FROM students_grades WHERE phase = '1' AND lrn = '123456789012'";
+                    $show_student_grade_ave = "SELECT general_average FROM students_grades WHERE phase = '2' AND lrn = '123456789012'";
                     $query_student_grade_ave = mysqli_query($conn, $show_student_grade_ave);
                     ?> 
                         </tr>
@@ -915,14 +941,14 @@ if(isset($_GET['sid'])){
                         }
                     ?>
                     <section class="grade-header">
-                        <section class="first-row">
-                            <span class="hstack d-flex justify-content-end align-items-end">
+                    <section class="first-row">
+                            <span class="hstack d-flex justify-content-start align-items-center">
                                 <label for="">School: </label>
                                 <input type="text" name="school_p1" 
                                 value="<?php if(empty($term1['school'])){ 
                                     echo "";} else { echo $term1['school'];}?>"> 
                             </span>
-                            <span class="hstack d-flex justify-content-end align-items-end">
+                            <span class="hstack d-flex justify-content-end align-items-center">
                                 <label for="">School ID:</label>
                                 <input type="text" style="width: 70%;" name="sr_school_id_p1" 
                                 value="<?php if(empty($term1['sr_school_id'])){ 
@@ -930,52 +956,51 @@ if(isset($_GET['sid'])){
                             </span>
                         </section>
                         <section class="second-row">
-                            <span class="hstack d-flex justify-content-end align-items-end">
-                                <label for="">District</label>
+                            <span class="hstack d-flex align-items-center">
+                                <label for="">District:</label>
                                 <input type="text" name="district_p1" 
                                 value="<?php if(empty($term1['district'])){ 
                                     echo "";} else { echo $term1['district'];}?>">
                             </span>
-                            <span class="hstack d-flex justify-content-end align-items-end">
-                                <label for="">Division</label>
+                            <span class="hstack d-flex  align-items-center">
+                                <label for="">Division:</label>
                                 <input type="text" name="division_p1" 
                                 value="<?php if(empty($term1['division'])){ 
                                     echo "";} else { echo $term1['division'];}?>">
                             </span>
-                            <span class="hstack d-flex justify-content-end align-items-end">
-                                <label for="">Region</label>
+                            <span class="hstack d-flex align-items-center">
+                                <label for="">Region:</label>
                                 <input type="text" name="region_p1" 
                                 value="<?php if(empty($term1['region'])){ 
                                     echo "";} else { echo $term1['region'];}?>">
                             </span>
                         </section>
                         <section class="third-row">
-                            <span class="hstack d-flex justify-content-start align-items-end">
+                            <span class="hstack d-flex justify-content-start align-items-center">
                                 <label for="">Classified as Grade: </label>
                                 <input type="text" style="width: 30%;"  name="classified_as_grade_p1" 
                                 value="<?php if(empty($term1['classified_as_grade'])){ 
                                     echo "";} else { echo $term1['classified_as_grade'];}?>">
                             </span>
-                            <span class="hstack d-flex justify-content-start align-items-end">
-                                <label for="">Section</label>
+                            <span class="hstack d-flex justify-content-start align-items-center">
+                                <label for="">Section: </label>
                                 <input type="text" name="section_p1" 
                                 value="<?php if(empty($term1['section'])){ 
                                     echo "";} else { echo $term1['section'];}?>">
                             </span>
-                            <span class="hstack d-flex justify-content-end align-items-end">
+                            <span class="hstack d-flex justify-content-center align-items-center">
                                 <label for="">School Year: </label>
-                                <input type="text" style="width: 50%;" name="school_year_p1" 
+                                <input type="text" style="width: 47%;" name="school_year_p1" 
                                 value="<?php if(empty($term1['school_year'])){ 
                                     echo "";} else { echo $term1['school_year'];}?>">
                             </span>
                         </section>
                         <section class="fourth-row">
-                            <span class="hstack d-flex align-items-end">
-                                <label for="">Name of Adviser</label>
+                            <span class="hstack d-flex align-items-center">
+                                <label for="">Name of Adviser: </label>
                                 <input type="text" name="name_of_adviser_p1" 
                                 value="<?php if(empty($term1['name_of_adviser'])){ 
                                     echo "";} else { echo $term1['name_of_adviser'];}?>">
-
                             </span>
                         </section>
                     </section>
@@ -996,7 +1021,7 @@ if(isset($_GET['sid'])){
                     </thead>
                     <tbody>
                     <?php
-                    $show_student_grades = "SELECT mother_tounge FROM students_grades WHERE phase = '1' AND lrn = '123456789012'";
+                    $show_student_grades = "SELECT mother_tounge FROM students_grades WHERE phase = '3' AND lrn = '123456789012'";
                     $query_student_grades = mysqli_query($conn, $show_student_grades);
                     ?>
                         <tr>
@@ -1012,7 +1037,7 @@ if(isset($_GET['sid'])){
                             <td></td>
                         </tr>
                     <?php
-                    $show_student_grade_fil = "SELECT filipino FROM students_grades WHERE phase = '1' AND lrn = '123456789012'";
+                    $show_student_grade_fil = "SELECT filipino FROM students_grades WHERE phase = '3' AND lrn = '123456789012'";
                     $query_student_grade_fil = mysqli_query($conn, $show_student_grade_fil);
                     ?> 
                         <tr>
@@ -1028,7 +1053,7 @@ if(isset($_GET['sid'])){
                             <td></td>
                         </tr>
                     <?php
-                    $show_student_grade_eng = "SELECT english FROM students_grades WHERE phase = '1' AND lrn = '123456789012'";
+                    $show_student_grade_eng = "SELECT english FROM students_grades WHERE phase = '3' AND lrn = '123456789012'";
                     $query_student_grade_eng = mysqli_query($conn, $show_student_grade_eng);
                     ?> 
                         </tr>
@@ -1044,7 +1069,7 @@ if(isset($_GET['sid'])){
                             <td></td>
                         </tr>
                     <?php
-                    $show_student_grade_math = "SELECT math FROM students_grades WHERE phase = '1' AND lrn = '123456789012'";
+                    $show_student_grade_math = "SELECT math FROM students_grades WHERE phase = '3' AND lrn = '123456789012'";
                     $query_student_grade_math = mysqli_query($conn, $show_student_grade_math);
                     ?> 
                         </tr>
@@ -1060,7 +1085,7 @@ if(isset($_GET['sid'])){
                             <td></td>
                         </tr>
                     <?php
-                    $show_student_grade_sci = "SELECT science FROM students_grades WHERE phase = '1' AND lrn = '123456789012'";
+                    $show_student_grade_sci = "SELECT science FROM students_grades WHERE phase = '3' AND lrn = '123456789012'";
                     $query_student_grade_sci = mysqli_query($conn, $show_student_grade_sci);
                     ?> 
                         </tr>
@@ -1076,7 +1101,7 @@ if(isset($_GET['sid'])){
                             <td></td>
                         </tr>
                     <?php
-                    $show_student_grade_ap = "SELECT araling_panlipunan FROM students_grades WHERE phase = '1' AND lrn = '123456789012'";
+                    $show_student_grade_ap = "SELECT araling_panlipunan FROM students_grades WHERE phase = '3' AND lrn = '123456789012'";
                     $query_student_grade_ap = mysqli_query($conn, $show_student_grade_ap);
                     ?> 
                         </tr>
@@ -1092,7 +1117,7 @@ if(isset($_GET['sid'])){
                             <td></td>
                         </tr>
                     <?php
-                    $show_student_grade_epp = "SELECT epp_tle FROM students_grades WHERE phase = '1' AND lrn = '123456789012'";
+                    $show_student_grade_epp = "SELECT epp_tle FROM students_grades WHERE phase = '3' AND lrn = '123456789012'";
                     $query_student_grade_epp = mysqli_query($conn, $show_student_grade_epp);
                     ?> 
                         </tr>
@@ -1108,7 +1133,7 @@ if(isset($_GET['sid'])){
                             <td></td>
                         </tr>
                     <?php
-                    $show_student_grade_mapeh = "SELECT mapeh FROM students_grades WHERE phase = '1' AND lrn = '123456789012'";
+                    $show_student_grade_mapeh = "SELECT mapeh FROM students_grades WHERE phase = '3' AND lrn = '123456789012'";
                     $query_student_grade_mapeh = mysqli_query($conn, $show_student_grade_mapeh);
                     ?> 
                         </tr>
@@ -1124,7 +1149,7 @@ if(isset($_GET['sid'])){
                             <td></td>
                         </tr>
                     <?php
-                    $show_student_grade_music = "SELECT music FROM students_grades WHERE phase = '1' AND lrn = '123456789012'";
+                    $show_student_grade_music = "SELECT music FROM students_grades WHERE phase = '3' AND lrn = '123456789012'";
                     $query_student_grade_music = mysqli_query($conn, $show_student_grade_music);
                     ?> 
                         </tr>
@@ -1140,7 +1165,7 @@ if(isset($_GET['sid'])){
                             <td></td>
                         </tr>
                     <?php
-                    $show_student_grade_arts = "SELECT arts FROM students_grades WHERE phase = '1' AND lrn = '123456789012'";
+                    $show_student_grade_arts = "SELECT arts FROM students_grades WHERE phase = '3' AND lrn = '123456789012'";
                     $query_student_grade_arts = mysqli_query($conn, $show_student_grade_arts);
                     ?> 
                         </tr>
@@ -1156,7 +1181,7 @@ if(isset($_GET['sid'])){
                             <td></td>
                         </tr>
                     <?php
-                    $show_student_grade_pe = "SELECT p_e FROM students_grades WHERE phase = '1' AND lrn = '123456789012'";
+                    $show_student_grade_pe = "SELECT p_e FROM students_grades WHERE phase = '3' AND lrn = '123456789012'";
                     $query_student_grade_pe = mysqli_query($conn, $show_student_grade_pe);
                     ?> 
                         </tr>
@@ -1172,7 +1197,7 @@ if(isset($_GET['sid'])){
                             <td></td>
                         </tr>
                     <?php
-                    $show_student_grade_health = "SELECT health FROM students_grades WHERE phase = '1' AND lrn = '123456789012'";
+                    $show_student_grade_health = "SELECT health FROM students_grades WHERE phase = '3' AND lrn = '123456789012'";
                     $query_student_grade_health = mysqli_query($conn, $show_student_grade_health);
                     ?> 
                         </tr>
@@ -1188,7 +1213,7 @@ if(isset($_GET['sid'])){
                             <td></td>
                         </tr>
                     <?php
-                    $show_student_grade_esp = "SELECT edukasyon_sa_pagpapakatao FROM students_grades WHERE phase = '1' AND lrn = '123456789012'";
+                    $show_student_grade_esp = "SELECT edukasyon_sa_pagpapakatao FROM students_grades WHERE phase = '3' AND lrn = '123456789012'";
                     $query_student_grade_esp = mysqli_query($conn, $show_student_grade_esp);
                     ?> 
                         </tr>
@@ -1204,7 +1229,7 @@ if(isset($_GET['sid'])){
                             <td></td>
                         </tr>
                     <?php
-                    $show_student_grade_arabic = "SELECT arabic_language FROM students_grades WHERE phase = '1' AND lrn = '123456789012'";
+                    $show_student_grade_arabic = "SELECT arabic_language FROM students_grades WHERE phase = '3' AND lrn = '123456789012'";
                     $query_student_grade_arabic = mysqli_query($conn, $show_student_grade_arabic);
                     ?> 
                         </tr>
@@ -1220,7 +1245,7 @@ if(isset($_GET['sid'])){
                             <td></td>
                         </tr>
                     <?php
-                    $show_student_grade_islamic_values = "SELECT islamic_values FROM students_grades WHERE phase = '1' AND lrn = '123456789012'";
+                    $show_student_grade_islamic_values = "SELECT islamic_values FROM students_grades WHERE phase = '3' AND lrn = '123456789012'";
                     $query_student_grade_islamic_values = mysqli_query($conn, $show_student_grade_islamic_values);
                     ?> 
                         </tr>
@@ -1236,7 +1261,7 @@ if(isset($_GET['sid'])){
                             <td></td>
                         </tr>
                     <?php
-                    $show_student_grade_ave = "SELECT general_average FROM students_grades WHERE phase = '1' AND lrn = '123456789012'";
+                    $show_student_grade_ave = "SELECT general_average FROM students_grades WHERE phase = '3' AND lrn = '123456789012'";
                     $query_student_grade_ave = mysqli_query($conn, $show_student_grade_ave);
                     ?> 
                         </tr>
@@ -1298,14 +1323,14 @@ if(isset($_GET['sid'])){
                         }
                     ?>
                     <section class="grade-header">
-                        <section class="first-row">
-                            <span class="hstack d-flex justify-content-end align-items-end">
+                    <section class="first-row">
+                            <span class="hstack d-flex justify-content-start align-items-center">
                                 <label for="">School: </label>
                                 <input type="text" name="school_p1" 
                                 value="<?php if(empty($term1['school'])){ 
                                     echo "";} else { echo $term1['school'];}?>"> 
                             </span>
-                            <span class="hstack d-flex justify-content-end align-items-end">
+                            <span class="hstack d-flex justify-content-end align-items-center">
                                 <label for="">School ID:</label>
                                 <input type="text" style="width: 70%;" name="sr_school_id_p1" 
                                 value="<?php if(empty($term1['sr_school_id'])){ 
@@ -1313,52 +1338,51 @@ if(isset($_GET['sid'])){
                             </span>
                         </section>
                         <section class="second-row">
-                            <span class="hstack d-flex justify-content-end align-items-end">
-                                <label for="">District</label>
+                            <span class="hstack d-flex align-items-center">
+                                <label for="">District:</label>
                                 <input type="text" name="district_p1" 
                                 value="<?php if(empty($term1['district'])){ 
                                     echo "";} else { echo $term1['district'];}?>">
                             </span>
-                            <span class="hstack d-flex justify-content-end align-items-end">
-                                <label for="">Division</label>
+                            <span class="hstack d-flex  align-items-center">
+                                <label for="">Division:</label>
                                 <input type="text" name="division_p1" 
                                 value="<?php if(empty($term1['division'])){ 
                                     echo "";} else { echo $term1['division'];}?>">
                             </span>
-                            <span class="hstack d-flex justify-content-end align-items-end">
-                                <label for="">Region</label>
+                            <span class="hstack d-flex align-items-center">
+                                <label for="">Region:</label>
                                 <input type="text" name="region_p1" 
                                 value="<?php if(empty($term1['region'])){ 
                                     echo "";} else { echo $term1['region'];}?>">
                             </span>
                         </section>
                         <section class="third-row">
-                            <span class="hstack d-flex justify-content-start align-items-end">
+                            <span class="hstack d-flex justify-content-start align-items-center">
                                 <label for="">Classified as Grade: </label>
                                 <input type="text" style="width: 30%;"  name="classified_as_grade_p1" 
                                 value="<?php if(empty($term1['classified_as_grade'])){ 
                                     echo "";} else { echo $term1['classified_as_grade'];}?>">
                             </span>
-                            <span class="hstack d-flex justify-content-start align-items-end">
-                                <label for="">Section</label>
+                            <span class="hstack d-flex justify-content-start align-items-center">
+                                <label for="">Section: </label>
                                 <input type="text" name="section_p1" 
                                 value="<?php if(empty($term1['section'])){ 
                                     echo "";} else { echo $term1['section'];}?>">
                             </span>
-                            <span class="hstack d-flex justify-content-end align-items-end">
+                            <span class="hstack d-flex justify-content-center align-items-center">
                                 <label for="">School Year: </label>
-                                <input type="text" style="width: 50%;" name="school_year_p1" 
+                                <input type="text" style="width: 47%;" name="school_year_p1" 
                                 value="<?php if(empty($term1['school_year'])){ 
                                     echo "";} else { echo $term1['school_year'];}?>">
                             </span>
                         </section>
                         <section class="fourth-row">
-                            <span class="hstack d-flex align-items-end">
-                                <label for="">Name of Adviser</label>
+                            <span class="hstack d-flex align-items-center">
+                                <label for="">Name of Adviser: </label>
                                 <input type="text" name="name_of_adviser_p1" 
                                 value="<?php if(empty($term1['name_of_adviser'])){ 
                                     echo "";} else { echo $term1['name_of_adviser'];}?>">
-
                             </span>
                         </section>
                     </section>
@@ -1379,7 +1403,7 @@ if(isset($_GET['sid'])){
                     </thead>
                     <tbody>
                     <?php
-                    $show_student_grades = "SELECT mother_tounge FROM students_grades WHERE phase = '1' AND lrn = '123456789012'";
+                    $show_student_grades = "SELECT mother_tounge FROM students_grades WHERE phase = '4' AND lrn = '123456789012'";
                     $query_student_grades = mysqli_query($conn, $show_student_grades);
                     ?>
                         <tr>
@@ -1395,7 +1419,7 @@ if(isset($_GET['sid'])){
                             <td></td>
                         </tr>
                     <?php
-                    $show_student_grade_fil = "SELECT filipino FROM students_grades WHERE phase = '1' AND lrn = '123456789012'";
+                    $show_student_grade_fil = "SELECT filipino FROM students_grades WHERE phase = '4' AND lrn = '123456789012'";
                     $query_student_grade_fil = mysqli_query($conn, $show_student_grade_fil);
                     ?> 
                         <tr>
@@ -1411,7 +1435,7 @@ if(isset($_GET['sid'])){
                             <td></td>
                         </tr>
                     <?php
-                    $show_student_grade_eng = "SELECT english FROM students_grades WHERE phase = '1' AND lrn = '123456789012'";
+                    $show_student_grade_eng = "SELECT english FROM students_grades WHERE phase = '4' AND lrn = '123456789012'";
                     $query_student_grade_eng = mysqli_query($conn, $show_student_grade_eng);
                     ?> 
                         </tr>
@@ -1427,7 +1451,7 @@ if(isset($_GET['sid'])){
                             <td></td>
                         </tr>
                     <?php
-                    $show_student_grade_math = "SELECT math FROM students_grades WHERE phase = '1' AND lrn = '123456789012'";
+                    $show_student_grade_math = "SELECT math FROM students_grades WHERE phase = '4' AND lrn = '123456789012'";
                     $query_student_grade_math = mysqli_query($conn, $show_student_grade_math);
                     ?> 
                         </tr>
@@ -1443,7 +1467,7 @@ if(isset($_GET['sid'])){
                             <td></td>
                         </tr>
                     <?php
-                    $show_student_grade_sci = "SELECT science FROM students_grades WHERE phase = '1' AND lrn = '123456789012'";
+                    $show_student_grade_sci = "SELECT science FROM students_grades WHERE phase = '4' AND lrn = '123456789012'";
                     $query_student_grade_sci = mysqli_query($conn, $show_student_grade_sci);
                     ?> 
                         </tr>
@@ -1459,7 +1483,7 @@ if(isset($_GET['sid'])){
                             <td></td>
                         </tr>
                     <?php
-                    $show_student_grade_ap = "SELECT araling_panlipunan FROM students_grades WHERE phase = '1' AND lrn = '123456789012'";
+                    $show_student_grade_ap = "SELECT araling_panlipunan FROM students_grades WHERE phase = '4' AND lrn = '123456789012'";
                     $query_student_grade_ap = mysqli_query($conn, $show_student_grade_ap);
                     ?> 
                         </tr>
@@ -1475,7 +1499,7 @@ if(isset($_GET['sid'])){
                             <td></td>
                         </tr>
                     <?php
-                    $show_student_grade_epp = "SELECT epp_tle FROM students_grades WHERE phase = '1' AND lrn = '123456789012'";
+                    $show_student_grade_epp = "SELECT epp_tle FROM students_grades WHERE phase = '4' AND lrn = '123456789012'";
                     $query_student_grade_epp = mysqli_query($conn, $show_student_grade_epp);
                     ?> 
                         </tr>
@@ -1491,7 +1515,7 @@ if(isset($_GET['sid'])){
                             <td></td>
                         </tr>
                     <?php
-                    $show_student_grade_mapeh = "SELECT mapeh FROM students_grades WHERE phase = '1' AND lrn = '123456789012'";
+                    $show_student_grade_mapeh = "SELECT mapeh FROM students_grades WHERE phase = '4' AND lrn = '123456789012'";
                     $query_student_grade_mapeh = mysqli_query($conn, $show_student_grade_mapeh);
                     ?> 
                         </tr>
@@ -1507,7 +1531,7 @@ if(isset($_GET['sid'])){
                             <td></td>
                         </tr>
                     <?php
-                    $show_student_grade_music = "SELECT music FROM students_grades WHERE phase = '1' AND lrn = '123456789012'";
+                    $show_student_grade_music = "SELECT music FROM students_grades WHERE phase = '4' AND lrn = '123456789012'";
                     $query_student_grade_music = mysqli_query($conn, $show_student_grade_music);
                     ?> 
                         </tr>
@@ -1523,7 +1547,7 @@ if(isset($_GET['sid'])){
                             <td></td>
                         </tr>
                     <?php
-                    $show_student_grade_arts = "SELECT arts FROM students_grades WHERE phase = '1' AND lrn = '123456789012'";
+                    $show_student_grade_arts = "SELECT arts FROM students_grades WHERE phase = '4' AND lrn = '123456789012'";
                     $query_student_grade_arts = mysqli_query($conn, $show_student_grade_arts);
                     ?> 
                         </tr>
@@ -1539,7 +1563,7 @@ if(isset($_GET['sid'])){
                             <td></td>
                         </tr>
                     <?php
-                    $show_student_grade_pe = "SELECT p_e FROM students_grades WHERE phase = '1' AND lrn = '123456789012'";
+                    $show_student_grade_pe = "SELECT p_e FROM students_grades WHERE phase = '4' AND lrn = '123456789012'";
                     $query_student_grade_pe = mysqli_query($conn, $show_student_grade_pe);
                     ?> 
                         </tr>
@@ -1555,7 +1579,7 @@ if(isset($_GET['sid'])){
                             <td></td>
                         </tr>
                     <?php
-                    $show_student_grade_health = "SELECT health FROM students_grades WHERE phase = '1' AND lrn = '123456789012'";
+                    $show_student_grade_health = "SELECT health FROM students_grades WHERE phase = '4' AND lrn = '123456789012'";
                     $query_student_grade_health = mysqli_query($conn, $show_student_grade_health);
                     ?> 
                         </tr>
@@ -1571,7 +1595,7 @@ if(isset($_GET['sid'])){
                             <td></td>
                         </tr>
                     <?php
-                    $show_student_grade_esp = "SELECT edukasyon_sa_pagpapakatao FROM students_grades WHERE phase = '1' AND lrn = '123456789012'";
+                    $show_student_grade_esp = "SELECT edukasyon_sa_pagpapakatao FROM students_grades WHERE phase = '4' AND lrn = '123456789012'";
                     $query_student_grade_esp = mysqli_query($conn, $show_student_grade_esp);
                     ?> 
                         </tr>
@@ -1587,7 +1611,7 @@ if(isset($_GET['sid'])){
                             <td></td>
                         </tr>
                     <?php
-                    $show_student_grade_arabic = "SELECT arabic_language FROM students_grades WHERE phase = '1' AND lrn = '123456789012'";
+                    $show_student_grade_arabic = "SELECT arabic_language FROM students_grades WHERE phase = '4' AND lrn = '123456789012'";
                     $query_student_grade_arabic = mysqli_query($conn, $show_student_grade_arabic);
                     ?> 
                         </tr>
@@ -1603,7 +1627,7 @@ if(isset($_GET['sid'])){
                             <td></td>
                         </tr>
                     <?php
-                    $show_student_grade_islamic_values = "SELECT islamic_values FROM students_grades WHERE phase = '1' AND lrn = '123456789012'";
+                    $show_student_grade_islamic_values = "SELECT islamic_values FROM students_grades WHERE phase = '4' AND lrn = '123456789012'";
                     $query_student_grade_islamic_values = mysqli_query($conn, $show_student_grade_islamic_values);
                     ?> 
                         </tr>
@@ -1619,7 +1643,7 @@ if(isset($_GET['sid'])){
                             <td></td>
                         </tr>
                     <?php
-                    $show_student_grade_ave = "SELECT general_average FROM students_grades WHERE phase = '1' AND lrn = '123456789012'";
+                    $show_student_grade_ave = "SELECT general_average FROM students_grades WHERE phase = '4' AND lrn = '123456789012'";
                     $query_student_grade_ave = mysqli_query($conn, $show_student_grade_ave);
                     ?> 
                         </tr>
@@ -1693,14 +1717,14 @@ if(isset($_GET['sid'])){
                         }
                     ?>
                     <section class="grade-header">
-                        <section class="first-row">
-                            <span class="hstack d-flex justify-content-end align-items-end">
+                    <section class="first-row">
+                            <span class="hstack d-flex justify-content-start align-items-center">
                                 <label for="">School: </label>
                                 <input type="text" name="school_p1" 
                                 value="<?php if(empty($term1['school'])){ 
                                     echo "";} else { echo $term1['school'];}?>"> 
                             </span>
-                            <span class="hstack d-flex justify-content-end align-items-end">
+                            <span class="hstack d-flex justify-content-end align-items-center">
                                 <label for="">School ID:</label>
                                 <input type="text" style="width: 70%;" name="sr_school_id_p1" 
                                 value="<?php if(empty($term1['sr_school_id'])){ 
@@ -1708,48 +1732,48 @@ if(isset($_GET['sid'])){
                             </span>
                         </section>
                         <section class="second-row">
-                            <span class="hstack d-flex justify-content-end align-items-end">
-                                <label for="">District</label>
+                            <span class="hstack d-flex align-items-center">
+                                <label for="">District:</label>
                                 <input type="text" name="district_p1" 
                                 value="<?php if(empty($term1['district'])){ 
                                     echo "";} else { echo $term1['district'];}?>">
                             </span>
-                            <span class="hstack d-flex justify-content-end align-items-end">
-                                <label for="">Division</label>
+                            <span class="hstack d-flex  align-items-center">
+                                <label for="">Division:</label>
                                 <input type="text" name="division_p1" 
                                 value="<?php if(empty($term1['division'])){ 
                                     echo "";} else { echo $term1['division'];}?>">
                             </span>
-                            <span class="hstack d-flex justify-content-end align-items-end">
-                                <label for="">Region</label>
+                            <span class="hstack d-flex align-items-center">
+                                <label for="">Region:</label>
                                 <input type="text" name="region_p1" 
                                 value="<?php if(empty($term1['region'])){ 
                                     echo "";} else { echo $term1['region'];}?>">
                             </span>
                         </section>
                         <section class="third-row">
-                            <span class="hstack d-flex justify-content-start align-items-end">
+                            <span class="hstack d-flex justify-content-start align-items-center">
                                 <label for="">Classified as Grade: </label>
                                 <input type="text" style="width: 30%;"  name="classified_as_grade_p1" 
                                 value="<?php if(empty($term1['classified_as_grade'])){ 
                                     echo "";} else { echo $term1['classified_as_grade'];}?>">
                             </span>
-                            <span class="hstack d-flex justify-content-start align-items-end">
-                                <label for="">Section</label>
+                            <span class="hstack d-flex justify-content-start align-items-center">
+                                <label for="">Section: </label>
                                 <input type="text" name="section_p1" 
                                 value="<?php if(empty($term1['section'])){ 
                                     echo "";} else { echo $term1['section'];}?>">
                             </span>
-                            <span class="hstack d-flex justify-content-end align-items-end">
+                            <span class="hstack d-flex justify-content-center align-items-center">
                                 <label for="">School Year: </label>
-                                <input type="text" style="width: 50%;" name="school_year_p1" 
+                                <input type="text" style="width: 47%;" name="school_year_p1" 
                                 value="<?php if(empty($term1['school_year'])){ 
                                     echo "";} else { echo $term1['school_year'];}?>">
                             </span>
                         </section>
                         <section class="fourth-row">
-                            <span class="hstack d-flex align-items-end">
-                                <label for="">Name of Adviser</label>
+                            <span class="hstack d-flex align-items-center">
+                                <label for="">Name of Adviser: </label>
                                 <input type="text" name="name_of_adviser_p1" 
                                 value="<?php if(empty($term1['name_of_adviser'])){ 
                                     echo "";} else { echo $term1['name_of_adviser'];}?>">
@@ -1773,7 +1797,7 @@ if(isset($_GET['sid'])){
                     </thead>
                     <tbody>
                     <?php
-                    $show_student_grades = "SELECT mother_tounge FROM students_grades WHERE phase = '1' AND lrn = '123456789012'";
+                    $show_student_grades = "SELECT mother_tounge FROM students_grades WHERE phase = '5' AND lrn = '123456789012'";
                     $query_student_grades = mysqli_query($conn, $show_student_grades);
                     ?>
                         <tr>
@@ -1789,7 +1813,7 @@ if(isset($_GET['sid'])){
                             <td></td>
                         </tr>
                     <?php
-                    $show_student_grade_fil = "SELECT filipino FROM students_grades WHERE phase = '1' AND lrn = '123456789012'";
+                    $show_student_grade_fil = "SELECT filipino FROM students_grades WHERE phase = '5' AND lrn = '123456789012'";
                     $query_student_grade_fil = mysqli_query($conn, $show_student_grade_fil);
                     ?> 
                         <tr>
@@ -1805,7 +1829,7 @@ if(isset($_GET['sid'])){
                             <td></td>
                         </tr>
                     <?php
-                    $show_student_grade_eng = "SELECT english FROM students_grades WHERE phase = '1' AND lrn = '123456789012'";
+                    $show_student_grade_eng = "SELECT english FROM students_grades WHERE phase = '5' AND lrn = '123456789012'";
                     $query_student_grade_eng = mysqli_query($conn, $show_student_grade_eng);
                     ?> 
                         </tr>
@@ -1821,7 +1845,7 @@ if(isset($_GET['sid'])){
                             <td></td>
                         </tr>
                     <?php
-                    $show_student_grade_math = "SELECT math FROM students_grades WHERE phase = '1' AND lrn = '123456789012'";
+                    $show_student_grade_math = "SELECT math FROM students_grades WHERE phase = '5' AND lrn = '123456789012'";
                     $query_student_grade_math = mysqli_query($conn, $show_student_grade_math);
                     ?> 
                         </tr>
@@ -1837,7 +1861,7 @@ if(isset($_GET['sid'])){
                             <td></td>
                         </tr>
                     <?php
-                    $show_student_grade_sci = "SELECT science FROM students_grades WHERE phase = '1' AND lrn = '123456789012'";
+                    $show_student_grade_sci = "SELECT science FROM students_grades WHERE phase = '5' AND lrn = '123456789012'";
                     $query_student_grade_sci = mysqli_query($conn, $show_student_grade_sci);
                     ?> 
                         </tr>
@@ -1853,7 +1877,7 @@ if(isset($_GET['sid'])){
                             <td></td>
                         </tr>
                     <?php
-                    $show_student_grade_ap = "SELECT araling_panlipunan FROM students_grades WHERE phase = '1' AND lrn = '123456789012'";
+                    $show_student_grade_ap = "SELECT araling_panlipunan FROM students_grades WHERE phase = '5' AND lrn = '123456789012'";
                     $query_student_grade_ap = mysqli_query($conn, $show_student_grade_ap);
                     ?> 
                         </tr>
@@ -1869,7 +1893,7 @@ if(isset($_GET['sid'])){
                             <td></td>
                         </tr>
                     <?php
-                    $show_student_grade_epp = "SELECT epp_tle FROM students_grades WHERE phase = '1' AND lrn = '123456789012'";
+                    $show_student_grade_epp = "SELECT epp_tle FROM students_grades WHERE phase = '5' AND lrn = '123456789012'";
                     $query_student_grade_epp = mysqli_query($conn, $show_student_grade_epp);
                     ?> 
                         </tr>
@@ -1885,7 +1909,7 @@ if(isset($_GET['sid'])){
                             <td></td>
                         </tr>
                     <?php
-                    $show_student_grade_mapeh = "SELECT mapeh FROM students_grades WHERE phase = '1' AND lrn = '123456789012'";
+                    $show_student_grade_mapeh = "SELECT mapeh FROM students_grades WHERE phase = '5' AND lrn = '123456789012'";
                     $query_student_grade_mapeh = mysqli_query($conn, $show_student_grade_mapeh);
                     ?> 
                         </tr>
@@ -1901,7 +1925,7 @@ if(isset($_GET['sid'])){
                             <td></td>
                         </tr>
                     <?php
-                    $show_student_grade_music = "SELECT music FROM students_grades WHERE phase = '1' AND lrn = '123456789012'";
+                    $show_student_grade_music = "SELECT music FROM students_grades WHERE phase = '5' AND lrn = '123456789012'";
                     $query_student_grade_music = mysqli_query($conn, $show_student_grade_music);
                     ?> 
                         </tr>
@@ -1917,7 +1941,7 @@ if(isset($_GET['sid'])){
                             <td></td>
                         </tr>
                     <?php
-                    $show_student_grade_arts = "SELECT arts FROM students_grades WHERE phase = '1' AND lrn = '123456789012'";
+                    $show_student_grade_arts = "SELECT arts FROM students_grades WHERE phase = '5' AND lrn = '123456789012'";
                     $query_student_grade_arts = mysqli_query($conn, $show_student_grade_arts);
                     ?> 
                         </tr>
@@ -1933,7 +1957,7 @@ if(isset($_GET['sid'])){
                             <td></td>
                         </tr>
                     <?php
-                    $show_student_grade_pe = "SELECT p_e FROM students_grades WHERE phase = '1' AND lrn = '123456789012'";
+                    $show_student_grade_pe = "SELECT p_e FROM students_grades WHERE phase = '5' AND lrn = '123456789012'";
                     $query_student_grade_pe = mysqli_query($conn, $show_student_grade_pe);
                     ?> 
                         </tr>
@@ -1949,7 +1973,7 @@ if(isset($_GET['sid'])){
                             <td></td>
                         </tr>
                     <?php
-                    $show_student_grade_health = "SELECT health FROM students_grades WHERE phase = '1' AND lrn = '123456789012'";
+                    $show_student_grade_health = "SELECT health FROM students_grades WHERE phase = '5' AND lrn = '123456789012'";
                     $query_student_grade_health = mysqli_query($conn, $show_student_grade_health);
                     ?> 
                         </tr>
@@ -1965,7 +1989,7 @@ if(isset($_GET['sid'])){
                             <td></td>
                         </tr>
                     <?php
-                    $show_student_grade_esp = "SELECT edukasyon_sa_pagpapakatao FROM students_grades WHERE phase = '1' AND lrn = '123456789012'";
+                    $show_student_grade_esp = "SELECT edukasyon_sa_pagpapakatao FROM students_grades WHERE phase = '5' AND lrn = '123456789012'";
                     $query_student_grade_esp = mysqli_query($conn, $show_student_grade_esp);
                     ?> 
                         </tr>
@@ -1981,7 +2005,7 @@ if(isset($_GET['sid'])){
                             <td></td>
                         </tr>
                     <?php
-                    $show_student_grade_arabic = "SELECT arabic_language FROM students_grades WHERE phase = '1' AND lrn = '123456789012'";
+                    $show_student_grade_arabic = "SELECT arabic_language FROM students_grades WHERE phase = '5' AND lrn = '123456789012'";
                     $query_student_grade_arabic = mysqli_query($conn, $show_student_grade_arabic);
                     ?> 
                         </tr>
@@ -1997,7 +2021,7 @@ if(isset($_GET['sid'])){
                             <td></td>
                         </tr>
                     <?php
-                    $show_student_grade_islamic_values = "SELECT islamic_values FROM students_grades WHERE phase = '1' AND lrn = '123456789012'";
+                    $show_student_grade_islamic_values = "SELECT islamic_values FROM students_grades WHERE phase = '5' AND lrn = '123456789012'";
                     $query_student_grade_islamic_values = mysqli_query($conn, $show_student_grade_islamic_values);
                     ?> 
                         </tr>
@@ -2013,7 +2037,7 @@ if(isset($_GET['sid'])){
                             <td></td>
                         </tr>
                     <?php
-                    $show_student_grade_ave = "SELECT general_average FROM students_grades WHERE phase = '1' AND lrn = '123456789012'";
+                    $show_student_grade_ave = "SELECT general_average FROM students_grades WHERE phase = '5' AND lrn = '123456789012'";
                     $query_student_grade_ave = mysqli_query($conn, $show_student_grade_ave);
                     ?> 
                         </tr>
@@ -2074,14 +2098,14 @@ if(isset($_GET['sid'])){
                         }
                     ?>
                     <section class="grade-header">
-                        <section class="first-row">
-                            <span class="hstack d-flex justify-content-end align-items-end">
+                    <section class="first-row">
+                            <span class="hstack d-flex justify-content-start align-items-center">
                                 <label for="">School: </label>
                                 <input type="text" name="school_p1" 
                                 value="<?php if(empty($term1['school'])){ 
                                     echo "";} else { echo $term1['school'];}?>"> 
                             </span>
-                            <span class="hstack d-flex justify-content-end align-items-end">
+                            <span class="hstack d-flex justify-content-end align-items-center">
                                 <label for="">School ID:</label>
                                 <input type="text" style="width: 70%;" name="sr_school_id_p1" 
                                 value="<?php if(empty($term1['sr_school_id'])){ 
@@ -2089,52 +2113,51 @@ if(isset($_GET['sid'])){
                             </span>
                         </section>
                         <section class="second-row">
-                            <span class="hstack d-flex justify-content-end align-items-end">
-                                <label for="">District</label>
+                            <span class="hstack d-flex align-items-center">
+                                <label for="">District:</label>
                                 <input type="text" name="district_p1" 
                                 value="<?php if(empty($term1['district'])){ 
                                     echo "";} else { echo $term1['district'];}?>">
                             </span>
-                            <span class="hstack d-flex justify-content-end align-items-end">
-                                <label for="">Division</label>
+                            <span class="hstack d-flex  align-items-center">
+                                <label for="">Division:</label>
                                 <input type="text" name="division_p1" 
                                 value="<?php if(empty($term1['division'])){ 
                                     echo "";} else { echo $term1['division'];}?>">
                             </span>
-                            <span class="hstack d-flex justify-content-end align-items-end">
-                                <label for="">Region</label>
+                            <span class="hstack d-flex align-items-center">
+                                <label for="">Region:</label>
                                 <input type="text" name="region_p1" 
                                 value="<?php if(empty($term1['region'])){ 
                                     echo "";} else { echo $term1['region'];}?>">
                             </span>
                         </section>
                         <section class="third-row">
-                            <span class="hstack d-flex justify-content-start align-items-end">
+                            <span class="hstack d-flex justify-content-start align-items-center">
                                 <label for="">Classified as Grade: </label>
                                 <input type="text" style="width: 30%;"  name="classified_as_grade_p1" 
                                 value="<?php if(empty($term1['classified_as_grade'])){ 
                                     echo "";} else { echo $term1['classified_as_grade'];}?>">
                             </span>
-                            <span class="hstack d-flex justify-content-start align-items-end">
-                                <label for="">Section</label>
+                            <span class="hstack d-flex justify-content-start align-items-center">
+                                <label for="">Section: </label>
                                 <input type="text" name="section_p1" 
                                 value="<?php if(empty($term1['section'])){ 
                                     echo "";} else { echo $term1['section'];}?>">
                             </span>
-                            <span class="hstack d-flex justify-content-end align-items-end">
+                            <span class="hstack d-flex justify-content-center align-items-center">
                                 <label for="">School Year: </label>
-                                <input type="text" style="width: 50%;" name="school_year_p1" 
+                                <input type="text" style="width: 47%;" name="school_year_p1" 
                                 value="<?php if(empty($term1['school_year'])){ 
                                     echo "";} else { echo $term1['school_year'];}?>">
                             </span>
                         </section>
                         <section class="fourth-row">
-                            <span class="hstack d-flex align-items-end">
-                                <label for="">Name of Adviser</label>
+                            <span class="hstack d-flex align-items-center">
+                                <label for="">Name of Adviser: </label>
                                 <input type="text" name="name_of_adviser_p1" 
                                 value="<?php if(empty($term1['name_of_adviser'])){ 
                                     echo "";} else { echo $term1['name_of_adviser'];}?>">
-
                             </span>
                         </section>
                     </section>
@@ -2155,7 +2178,7 @@ if(isset($_GET['sid'])){
                     </thead>
                     <tbody>
                     <?php
-                    $show_student_grades = "SELECT mother_tounge FROM students_grades WHERE phase = '1' AND lrn = '123456789012'";
+                    $show_student_grades = "SELECT mother_tounge FROM students_grades WHERE phase = '6' AND lrn = '123456789012'";
                     $query_student_grades = mysqli_query($conn, $show_student_grades);
                     ?>
                         <tr>
@@ -2171,7 +2194,7 @@ if(isset($_GET['sid'])){
                             <td></td>
                         </tr>
                     <?php
-                    $show_student_grade_fil = "SELECT filipino FROM students_grades WHERE phase = '1' AND lrn = '123456789012'";
+                    $show_student_grade_fil = "SELECT filipino FROM students_grades WHERE phase = '6' AND lrn = '123456789012'";
                     $query_student_grade_fil = mysqli_query($conn, $show_student_grade_fil);
                     ?> 
                         <tr>
@@ -2187,7 +2210,7 @@ if(isset($_GET['sid'])){
                             <td></td>
                         </tr>
                     <?php
-                    $show_student_grade_eng = "SELECT english FROM students_grades WHERE phase = '1' AND lrn = '123456789012'";
+                    $show_student_grade_eng = "SELECT english FROM students_grades WHERE phase = '6' AND lrn = '123456789012'";
                     $query_student_grade_eng = mysqli_query($conn, $show_student_grade_eng);
                     ?> 
                         </tr>
@@ -2203,7 +2226,7 @@ if(isset($_GET['sid'])){
                             <td></td>
                         </tr>
                     <?php
-                    $show_student_grade_math = "SELECT math FROM students_grades WHERE phase = '1' AND lrn = '123456789012'";
+                    $show_student_grade_math = "SELECT math FROM students_grades WHERE phase = '6' AND lrn = '123456789012'";
                     $query_student_grade_math = mysqli_query($conn, $show_student_grade_math);
                     ?> 
                         </tr>
@@ -2219,7 +2242,7 @@ if(isset($_GET['sid'])){
                             <td></td>
                         </tr>
                     <?php
-                    $show_student_grade_sci = "SELECT science FROM students_grades WHERE phase = '1' AND lrn = '123456789012'";
+                    $show_student_grade_sci = "SELECT science FROM students_grades WHERE phase = '6' AND lrn = '123456789012'";
                     $query_student_grade_sci = mysqli_query($conn, $show_student_grade_sci);
                     ?> 
                         </tr>
@@ -2235,7 +2258,7 @@ if(isset($_GET['sid'])){
                             <td></td>
                         </tr>
                     <?php
-                    $show_student_grade_ap = "SELECT araling_panlipunan FROM students_grades WHERE phase = '1' AND lrn = '123456789012'";
+                    $show_student_grade_ap = "SELECT araling_panlipunan FROM students_grades WHERE phase = '6' AND lrn = '123456789012'";
                     $query_student_grade_ap = mysqli_query($conn, $show_student_grade_ap);
                     ?> 
                         </tr>
@@ -2251,7 +2274,7 @@ if(isset($_GET['sid'])){
                             <td></td>
                         </tr>
                     <?php
-                    $show_student_grade_epp = "SELECT epp_tle FROM students_grades WHERE phase = '1' AND lrn = '123456789012'";
+                    $show_student_grade_epp = "SELECT epp_tle FROM students_grades WHERE phase = '6' AND lrn = '123456789012'";
                     $query_student_grade_epp = mysqli_query($conn, $show_student_grade_epp);
                     ?> 
                         </tr>
@@ -2267,7 +2290,7 @@ if(isset($_GET['sid'])){
                             <td></td>
                         </tr>
                     <?php
-                    $show_student_grade_mapeh = "SELECT mapeh FROM students_grades WHERE phase = '1' AND lrn = '123456789012'";
+                    $show_student_grade_mapeh = "SELECT mapeh FROM students_grades WHERE phase = '6' AND lrn = '123456789012'";
                     $query_student_grade_mapeh = mysqli_query($conn, $show_student_grade_mapeh);
                     ?> 
                         </tr>
@@ -2283,7 +2306,7 @@ if(isset($_GET['sid'])){
                             <td></td>
                         </tr>
                     <?php
-                    $show_student_grade_music = "SELECT music FROM students_grades WHERE phase = '1' AND lrn = '123456789012'";
+                    $show_student_grade_music = "SELECT music FROM students_grades WHERE phase = '6' AND lrn = '123456789012'";
                     $query_student_grade_music = mysqli_query($conn, $show_student_grade_music);
                     ?> 
                         </tr>
@@ -2299,7 +2322,7 @@ if(isset($_GET['sid'])){
                             <td></td>
                         </tr>
                     <?php
-                    $show_student_grade_arts = "SELECT arts FROM students_grades WHERE phase = '1' AND lrn = '123456789012'";
+                    $show_student_grade_arts = "SELECT arts FROM students_grades WHERE phase = '6' AND lrn = '123456789012'";
                     $query_student_grade_arts = mysqli_query($conn, $show_student_grade_arts);
                     ?> 
                         </tr>
@@ -2315,7 +2338,7 @@ if(isset($_GET['sid'])){
                             <td></td>
                         </tr>
                     <?php
-                    $show_student_grade_pe = "SELECT p_e FROM students_grades WHERE phase = '1' AND lrn = '123456789012'";
+                    $show_student_grade_pe = "SELECT p_e FROM students_grades WHERE phase = '6' AND lrn = '123456789012'";
                     $query_student_grade_pe = mysqli_query($conn, $show_student_grade_pe);
                     ?> 
                         </tr>
@@ -2331,7 +2354,7 @@ if(isset($_GET['sid'])){
                             <td></td>
                         </tr>
                     <?php
-                    $show_student_grade_health = "SELECT health FROM students_grades WHERE phase = '1' AND lrn = '123456789012'";
+                    $show_student_grade_health = "SELECT health FROM students_grades WHERE phase = '6' AND lrn = '123456789012'";
                     $query_student_grade_health = mysqli_query($conn, $show_student_grade_health);
                     ?> 
                         </tr>
@@ -2347,7 +2370,7 @@ if(isset($_GET['sid'])){
                             <td></td>
                         </tr>
                     <?php
-                    $show_student_grade_esp = "SELECT edukasyon_sa_pagpapakatao FROM students_grades WHERE phase = '1' AND lrn = '123456789012'";
+                    $show_student_grade_esp = "SELECT edukasyon_sa_pagpapakatao FROM students_grades WHERE phase = '6' AND lrn = '123456789012'";
                     $query_student_grade_esp = mysqli_query($conn, $show_student_grade_esp);
                     ?> 
                         </tr>
@@ -2363,7 +2386,7 @@ if(isset($_GET['sid'])){
                             <td></td>
                         </tr>
                     <?php
-                    $show_student_grade_arabic = "SELECT arabic_language FROM students_grades WHERE phase = '1' AND lrn = '123456789012'";
+                    $show_student_grade_arabic = "SELECT arabic_language FROM students_grades WHERE phase = '6' AND lrn = '123456789012'";
                     $query_student_grade_arabic = mysqli_query($conn, $show_student_grade_arabic);
                     ?> 
                         </tr>
@@ -2379,7 +2402,7 @@ if(isset($_GET['sid'])){
                             <td></td>
                         </tr>
                     <?php
-                    $show_student_grade_islamic_values = "SELECT islamic_values FROM students_grades WHERE phase = '1' AND lrn = '123456789012'";
+                    $show_student_grade_islamic_values = "SELECT islamic_values FROM students_grades WHERE phase = '6' AND lrn = '123456789012'";
                     $query_student_grade_islamic_values = mysqli_query($conn, $show_student_grade_islamic_values);
                     ?> 
                         </tr>
@@ -2395,7 +2418,7 @@ if(isset($_GET['sid'])){
                             <td></td>
                         </tr>
                     <?php
-                    $show_student_grade_ave = "SELECT general_average FROM students_grades WHERE phase = '1' AND lrn = '123456789012'";
+                    $show_student_grade_ave = "SELECT general_average FROM students_grades WHERE phase = '6' AND lrn = '123456789012'";
                     $query_student_grade_ave = mysqli_query($conn, $show_student_grade_ave);
                     ?> 
                         </tr>
@@ -2457,14 +2480,14 @@ if(isset($_GET['sid'])){
                         }
                     ?>
                     <section class="grade-header">
-                        <section class="first-row">
-                            <span class="hstack d-flex justify-content-end align-items-end">
+                    <section class="first-row">
+                            <span class="hstack d-flex justify-content-start align-items-center">
                                 <label for="">School: </label>
                                 <input type="text" name="school_p1" 
                                 value="<?php if(empty($term1['school'])){ 
                                     echo "";} else { echo $term1['school'];}?>"> 
                             </span>
-                            <span class="hstack d-flex justify-content-end align-items-end">
+                            <span class="hstack d-flex justify-content-end align-items-center">
                                 <label for="">School ID:</label>
                                 <input type="text" style="width: 70%;" name="sr_school_id_p1" 
                                 value="<?php if(empty($term1['sr_school_id'])){ 
@@ -2472,52 +2495,51 @@ if(isset($_GET['sid'])){
                             </span>
                         </section>
                         <section class="second-row">
-                            <span class="hstack d-flex justify-content-end align-items-end">
-                                <label for="">District</label>
+                            <span class="hstack d-flex align-items-center">
+                                <label for="">District:</label>
                                 <input type="text" name="district_p1" 
                                 value="<?php if(empty($term1['district'])){ 
                                     echo "";} else { echo $term1['district'];}?>">
                             </span>
-                            <span class="hstack d-flex justify-content-end align-items-end">
-                                <label for="">Division</label>
+                            <span class="hstack d-flex  align-items-center">
+                                <label for="">Division:</label>
                                 <input type="text" name="division_p1" 
                                 value="<?php if(empty($term1['division'])){ 
                                     echo "";} else { echo $term1['division'];}?>">
                             </span>
-                            <span class="hstack d-flex justify-content-end align-items-end">
-                                <label for="">Region</label>
+                            <span class="hstack d-flex align-items-center">
+                                <label for="">Region:</label>
                                 <input type="text" name="region_p1" 
                                 value="<?php if(empty($term1['region'])){ 
                                     echo "";} else { echo $term1['region'];}?>">
                             </span>
                         </section>
                         <section class="third-row">
-                            <span class="hstack d-flex justify-content-start align-items-end">
+                            <span class="hstack d-flex justify-content-start align-items-center">
                                 <label for="">Classified as Grade: </label>
                                 <input type="text" style="width: 30%;"  name="classified_as_grade_p1" 
                                 value="<?php if(empty($term1['classified_as_grade'])){ 
                                     echo "";} else { echo $term1['classified_as_grade'];}?>">
                             </span>
-                            <span class="hstack d-flex justify-content-start align-items-end">
-                                <label for="">Section</label>
+                            <span class="hstack d-flex justify-content-start align-items-center">
+                                <label for="">Section: </label>
                                 <input type="text" name="section_p1" 
                                 value="<?php if(empty($term1['section'])){ 
                                     echo "";} else { echo $term1['section'];}?>">
                             </span>
-                            <span class="hstack d-flex justify-content-end align-items-end">
+                            <span class="hstack d-flex justify-content-center align-items-center">
                                 <label for="">School Year: </label>
-                                <input type="text" style="width: 50%;" name="school_year_p1" 
+                                <input type="text" style="width: 47%;" name="school_year_p1" 
                                 value="<?php if(empty($term1['school_year'])){ 
                                     echo "";} else { echo $term1['school_year'];}?>">
                             </span>
                         </section>
                         <section class="fourth-row">
-                            <span class="hstack d-flex align-items-end">
-                                <label for="">Name of Adviser</label>
+                            <span class="hstack d-flex align-items-center">
+                                <label for="">Name of Adviser: </label>
                                 <input type="text" name="name_of_adviser_p1" 
                                 value="<?php if(empty($term1['name_of_adviser'])){ 
                                     echo "";} else { echo $term1['name_of_adviser'];}?>">
-
                             </span>
                         </section>
                     </section>
@@ -2538,7 +2560,7 @@ if(isset($_GET['sid'])){
                     </thead>
                     <tbody>
                     <?php
-                    $show_student_grades = "SELECT mother_tounge FROM students_grades WHERE phase = '1' AND lrn = '123456789012'";
+                    $show_student_grades = "SELECT mother_tounge FROM students_grades WHERE phase = '7' AND lrn = '123456789012'";
                     $query_student_grades = mysqli_query($conn, $show_student_grades);
                     ?>
                         <tr>
@@ -2554,7 +2576,7 @@ if(isset($_GET['sid'])){
                             <td></td>
                         </tr>
                     <?php
-                    $show_student_grade_fil = "SELECT filipino FROM students_grades WHERE phase = '1' AND lrn = '123456789012'";
+                    $show_student_grade_fil = "SELECT filipino FROM students_grades WHERE phase = '7' AND lrn = '123456789012'";
                     $query_student_grade_fil = mysqli_query($conn, $show_student_grade_fil);
                     ?> 
                         <tr>
@@ -2570,7 +2592,7 @@ if(isset($_GET['sid'])){
                             <td></td>
                         </tr>
                     <?php
-                    $show_student_grade_eng = "SELECT english FROM students_grades WHERE phase = '1' AND lrn = '123456789012'";
+                    $show_student_grade_eng = "SELECT english FROM students_grades WHERE phase = '7' AND lrn = '123456789012'";
                     $query_student_grade_eng = mysqli_query($conn, $show_student_grade_eng);
                     ?> 
                         </tr>
@@ -2586,7 +2608,7 @@ if(isset($_GET['sid'])){
                             <td></td>
                         </tr>
                     <?php
-                    $show_student_grade_math = "SELECT math FROM students_grades WHERE phase = '1' AND lrn = '123456789012'";
+                    $show_student_grade_math = "SELECT math FROM students_grades WHERE phase = '7' AND lrn = '123456789012'";
                     $query_student_grade_math = mysqli_query($conn, $show_student_grade_math);
                     ?> 
                         </tr>
@@ -2602,7 +2624,7 @@ if(isset($_GET['sid'])){
                             <td></td>
                         </tr>
                     <?php
-                    $show_student_grade_sci = "SELECT science FROM students_grades WHERE phase = '1' AND lrn = '123456789012'";
+                    $show_student_grade_sci = "SELECT science FROM students_grades WHERE phase = '7' AND lrn = '123456789012'";
                     $query_student_grade_sci = mysqli_query($conn, $show_student_grade_sci);
                     ?> 
                         </tr>
@@ -2618,7 +2640,7 @@ if(isset($_GET['sid'])){
                             <td></td>
                         </tr>
                     <?php
-                    $show_student_grade_ap = "SELECT araling_panlipunan FROM students_grades WHERE phase = '1' AND lrn = '123456789012'";
+                    $show_student_grade_ap = "SELECT araling_panlipunan FROM students_grades WHERE phase = '7' AND lrn = '123456789012'";
                     $query_student_grade_ap = mysqli_query($conn, $show_student_grade_ap);
                     ?> 
                         </tr>
@@ -2634,7 +2656,7 @@ if(isset($_GET['sid'])){
                             <td></td>
                         </tr>
                     <?php
-                    $show_student_grade_epp = "SELECT epp_tle FROM students_grades WHERE phase = '1' AND lrn = '123456789012'";
+                    $show_student_grade_epp = "SELECT epp_tle FROM students_grades WHERE phase = '7' AND lrn = '123456789012'";
                     $query_student_grade_epp = mysqli_query($conn, $show_student_grade_epp);
                     ?> 
                         </tr>
@@ -2650,7 +2672,7 @@ if(isset($_GET['sid'])){
                             <td></td>
                         </tr>
                     <?php
-                    $show_student_grade_mapeh = "SELECT mapeh FROM students_grades WHERE phase = '1' AND lrn = '123456789012'";
+                    $show_student_grade_mapeh = "SELECT mapeh FROM students_grades WHERE phase = '7' AND lrn = '123456789012'";
                     $query_student_grade_mapeh = mysqli_query($conn, $show_student_grade_mapeh);
                     ?> 
                         </tr>
@@ -2666,7 +2688,7 @@ if(isset($_GET['sid'])){
                             <td></td>
                         </tr>
                     <?php
-                    $show_student_grade_music = "SELECT music FROM students_grades WHERE phase = '1' AND lrn = '123456789012'";
+                    $show_student_grade_music = "SELECT music FROM students_grades WHERE phase = '7' AND lrn = '123456789012'";
                     $query_student_grade_music = mysqli_query($conn, $show_student_grade_music);
                     ?> 
                         </tr>
@@ -2682,7 +2704,7 @@ if(isset($_GET['sid'])){
                             <td></td>
                         </tr>
                     <?php
-                    $show_student_grade_arts = "SELECT arts FROM students_grades WHERE phase = '1' AND lrn = '123456789012'";
+                    $show_student_grade_arts = "SELECT arts FROM students_grades WHERE phase = '7' AND lrn = '123456789012'";
                     $query_student_grade_arts = mysqli_query($conn, $show_student_grade_arts);
                     ?> 
                         </tr>
@@ -2698,7 +2720,7 @@ if(isset($_GET['sid'])){
                             <td></td>
                         </tr>
                     <?php
-                    $show_student_grade_pe = "SELECT p_e FROM students_grades WHERE phase = '1' AND lrn = '123456789012'";
+                    $show_student_grade_pe = "SELECT p_e FROM students_grades WHERE phase = '7' AND lrn = '123456789012'";
                     $query_student_grade_pe = mysqli_query($conn, $show_student_grade_pe);
                     ?> 
                         </tr>
@@ -2714,7 +2736,7 @@ if(isset($_GET['sid'])){
                             <td></td>
                         </tr>
                     <?php
-                    $show_student_grade_health = "SELECT health FROM students_grades WHERE phase = '1' AND lrn = '123456789012'";
+                    $show_student_grade_health = "SELECT health FROM students_grades WHERE phase = '7' AND lrn = '123456789012'";
                     $query_student_grade_health = mysqli_query($conn, $show_student_grade_health);
                     ?> 
                         </tr>
@@ -2730,7 +2752,7 @@ if(isset($_GET['sid'])){
                             <td></td>
                         </tr>
                     <?php
-                    $show_student_grade_esp = "SELECT edukasyon_sa_pagpapakatao FROM students_grades WHERE phase = '1' AND lrn = '123456789012'";
+                    $show_student_grade_esp = "SELECT edukasyon_sa_pagpapakatao FROM students_grades WHERE phase = '7' AND lrn = '123456789012'";
                     $query_student_grade_esp = mysqli_query($conn, $show_student_grade_esp);
                     ?> 
                         </tr>
@@ -2746,7 +2768,7 @@ if(isset($_GET['sid'])){
                             <td></td>
                         </tr>
                     <?php
-                    $show_student_grade_arabic = "SELECT arabic_language FROM students_grades WHERE phase = '1' AND lrn = '123456789012'";
+                    $show_student_grade_arabic = "SELECT arabic_language FROM students_grades WHERE phase = '7' AND lrn = '123456789012'";
                     $query_student_grade_arabic = mysqli_query($conn, $show_student_grade_arabic);
                     ?> 
                         </tr>
@@ -2762,7 +2784,7 @@ if(isset($_GET['sid'])){
                             <td></td>
                         </tr>
                     <?php
-                    $show_student_grade_islamic_values = "SELECT islamic_values FROM students_grades WHERE phase = '1' AND lrn = '123456789012'";
+                    $show_student_grade_islamic_values = "SELECT islamic_values FROM students_grades WHERE phase = '7' AND lrn = '123456789012'";
                     $query_student_grade_islamic_values = mysqli_query($conn, $show_student_grade_islamic_values);
                     ?> 
                         </tr>
@@ -2778,7 +2800,7 @@ if(isset($_GET['sid'])){
                             <td></td>
                         </tr>
                     <?php
-                    $show_student_grade_ave = "SELECT general_average FROM students_grades WHERE phase = '1' AND lrn = '123456789012'";
+                    $show_student_grade_ave = "SELECT general_average FROM students_grades WHERE phase = '7' AND lrn = '123456789012'";
                     $query_student_grade_ave = mysqli_query($conn, $show_student_grade_ave);
                     ?> 
                         </tr>
@@ -2831,23 +2853,23 @@ if(isset($_GET['sid'])){
                         $sql_phase_1_record = "SELECT * FROM scholastic_records
                             LEFT JOIN students_grades on scholastic_records.lrn = students_grades.lrn
                             LEFT JOIN remedial_classes on scholastic_records.lrn = remedial_classes.lrn
-                            WHERE scholastic_records.lrn = '$decrypted_lrn' AND students_grades.phase = '1'
-                            AND students_grades.term = '1' AND remedial_classes.phase = '1'
-                            AND scholastic_records.phase = '1'";
+                            WHERE scholastic_records.lrn = '$decrypted_lrn' AND students_grades.phase = '8'
+                            AND students_grades.term = '8' AND remedial_classes.phase = '8'
+                            AND scholastic_records.phase = '8'";
                         $query_phase_1_record = mysqli_query($conn, $sql_phase_1_record);
                         if(mysqli_num_rows($query_phase_1_record) > 0){ 
                             $term1 = mysqli_fetch_array($query_phase_1_record);
                         }
                     ?>
                     <section class="grade-header">
-                        <section class="first-row">
-                            <span class="hstack d-flex justify-content-end align-items-end">
+                    <section class="first-row">
+                            <span class="hstack d-flex justify-content-start align-items-center">
                                 <label for="">School: </label>
                                 <input type="text" name="school_p1" 
                                 value="<?php if(empty($term1['school'])){ 
                                     echo "";} else { echo $term1['school'];}?>"> 
                             </span>
-                            <span class="hstack d-flex justify-content-end align-items-end">
+                            <span class="hstack d-flex justify-content-end align-items-center">
                                 <label for="">School ID:</label>
                                 <input type="text" style="width: 70%;" name="sr_school_id_p1" 
                                 value="<?php if(empty($term1['sr_school_id'])){ 
@@ -2855,52 +2877,51 @@ if(isset($_GET['sid'])){
                             </span>
                         </section>
                         <section class="second-row">
-                            <span class="hstack d-flex justify-content-end align-items-end">
-                                <label for="">District</label>
+                            <span class="hstack d-flex align-items-center">
+                                <label for="">District:</label>
                                 <input type="text" name="district_p1" 
                                 value="<?php if(empty($term1['district'])){ 
                                     echo "";} else { echo $term1['district'];}?>">
                             </span>
-                            <span class="hstack d-flex justify-content-end align-items-end">
-                                <label for="">Division</label>
+                            <span class="hstack d-flex  align-items-center">
+                                <label for="">Division:</label>
                                 <input type="text" name="division_p1" 
                                 value="<?php if(empty($term1['division'])){ 
                                     echo "";} else { echo $term1['division'];}?>">
                             </span>
-                            <span class="hstack d-flex justify-content-end align-items-end">
-                                <label for="">Region</label>
+                            <span class="hstack d-flex align-items-center">
+                                <label for="">Region:</label>
                                 <input type="text" name="region_p1" 
                                 value="<?php if(empty($term1['region'])){ 
                                     echo "";} else { echo $term1['region'];}?>">
                             </span>
                         </section>
                         <section class="third-row">
-                            <span class="hstack d-flex justify-content-start align-items-end">
+                            <span class="hstack d-flex justify-content-start align-items-center">
                                 <label for="">Classified as Grade: </label>
                                 <input type="text" style="width: 30%;"  name="classified_as_grade_p1" 
                                 value="<?php if(empty($term1['classified_as_grade'])){ 
                                     echo "";} else { echo $term1['classified_as_grade'];}?>">
                             </span>
-                            <span class="hstack d-flex justify-content-start align-items-end">
-                                <label for="">Section</label>
+                            <span class="hstack d-flex justify-content-start align-items-center">
+                                <label for="">Section: </label>
                                 <input type="text" name="section_p1" 
                                 value="<?php if(empty($term1['section'])){ 
                                     echo "";} else { echo $term1['section'];}?>">
                             </span>
-                            <span class="hstack d-flex justify-content-end align-items-end">
+                            <span class="hstack d-flex justify-content-center align-items-center">
                                 <label for="">School Year: </label>
-                                <input type="text" style="width: 50%;" name="school_year_p1" 
+                                <input type="text" style="width: 47%;" name="school_year_p1" 
                                 value="<?php if(empty($term1['school_year'])){ 
                                     echo "";} else { echo $term1['school_year'];}?>">
                             </span>
                         </section>
                         <section class="fourth-row">
-                            <span class="hstack d-flex align-items-end">
-                                <label for="">Name of Adviser</label>
+                            <span class="hstack d-flex align-items-center">
+                                <label for="">Name of Adviser: </label>
                                 <input type="text" name="name_of_adviser_p1" 
                                 value="<?php if(empty($term1['name_of_adviser'])){ 
                                     echo "";} else { echo $term1['name_of_adviser'];}?>">
-
                             </span>
                         </section>
                     </section>
@@ -2921,7 +2942,7 @@ if(isset($_GET['sid'])){
                     </thead>
                     <tbody>
                     <?php
-                    $show_student_grades = "SELECT mother_tounge FROM students_grades WHERE phase = '1' AND lrn = '123456789012'";
+                    $show_student_grades = "SELECT mother_tounge FROM students_grades WHERE phase = '8' AND lrn = '123456789012'";
                     $query_student_grades = mysqli_query($conn, $show_student_grades);
                     ?>
                         <tr>
@@ -2937,7 +2958,7 @@ if(isset($_GET['sid'])){
                             <td></td>
                         </tr>
                     <?php
-                    $show_student_grade_fil = "SELECT filipino FROM students_grades WHERE phase = '1' AND lrn = '123456789012'";
+                    $show_student_grade_fil = "SELECT filipino FROM students_grades WHERE phase = '8' AND lrn = '123456789012'";
                     $query_student_grade_fil = mysqli_query($conn, $show_student_grade_fil);
                     ?> 
                         <tr>
@@ -2953,7 +2974,7 @@ if(isset($_GET['sid'])){
                             <td></td>
                         </tr>
                     <?php
-                    $show_student_grade_eng = "SELECT english FROM students_grades WHERE phase = '1' AND lrn = '123456789012'";
+                    $show_student_grade_eng = "SELECT english FROM students_grades WHERE phase = '8' AND lrn = '123456789012'";
                     $query_student_grade_eng = mysqli_query($conn, $show_student_grade_eng);
                     ?> 
                         </tr>
@@ -2969,7 +2990,7 @@ if(isset($_GET['sid'])){
                             <td></td>
                         </tr>
                     <?php
-                    $show_student_grade_math = "SELECT math FROM students_grades WHERE phase = '1' AND lrn = '123456789012'";
+                    $show_student_grade_math = "SELECT math FROM students_grades WHERE phase = '8' AND lrn = '123456789012'";
                     $query_student_grade_math = mysqli_query($conn, $show_student_grade_math);
                     ?> 
                         </tr>
@@ -2985,7 +3006,7 @@ if(isset($_GET['sid'])){
                             <td></td>
                         </tr>
                     <?php
-                    $show_student_grade_sci = "SELECT science FROM students_grades WHERE phase = '1' AND lrn = '123456789012'";
+                    $show_student_grade_sci = "SELECT science FROM students_grades WHERE phase = '8' AND lrn = '123456789012'";
                     $query_student_grade_sci = mysqli_query($conn, $show_student_grade_sci);
                     ?> 
                         </tr>
@@ -3001,7 +3022,7 @@ if(isset($_GET['sid'])){
                             <td></td>
                         </tr>
                     <?php
-                    $show_student_grade_ap = "SELECT araling_panlipunan FROM students_grades WHERE phase = '1' AND lrn = '123456789012'";
+                    $show_student_grade_ap = "SELECT araling_panlipunan FROM students_grades WHERE phase = '8' AND lrn = '123456789012'";
                     $query_student_grade_ap = mysqli_query($conn, $show_student_grade_ap);
                     ?> 
                         </tr>
@@ -3017,7 +3038,7 @@ if(isset($_GET['sid'])){
                             <td></td>
                         </tr>
                     <?php
-                    $show_student_grade_epp = "SELECT epp_tle FROM students_grades WHERE phase = '1' AND lrn = '123456789012'";
+                    $show_student_grade_epp = "SELECT epp_tle FROM students_grades WHERE phase = '8' AND lrn = '123456789012'";
                     $query_student_grade_epp = mysqli_query($conn, $show_student_grade_epp);
                     ?> 
                         </tr>
@@ -3033,7 +3054,7 @@ if(isset($_GET['sid'])){
                             <td></td>
                         </tr>
                     <?php
-                    $show_student_grade_mapeh = "SELECT mapeh FROM students_grades WHERE phase = '1' AND lrn = '123456789012'";
+                    $show_student_grade_mapeh = "SELECT mapeh FROM students_grades WHERE phase = '8' AND lrn = '123456789012'";
                     $query_student_grade_mapeh = mysqli_query($conn, $show_student_grade_mapeh);
                     ?> 
                         </tr>
@@ -3049,7 +3070,7 @@ if(isset($_GET['sid'])){
                             <td></td>
                         </tr>
                     <?php
-                    $show_student_grade_music = "SELECT music FROM students_grades WHERE phase = '1' AND lrn = '123456789012'";
+                    $show_student_grade_music = "SELECT music FROM students_grades WHERE phase = '8' AND lrn = '123456789012'";
                     $query_student_grade_music = mysqli_query($conn, $show_student_grade_music);
                     ?> 
                         </tr>
@@ -3065,7 +3086,7 @@ if(isset($_GET['sid'])){
                             <td></td>
                         </tr>
                     <?php
-                    $show_student_grade_arts = "SELECT arts FROM students_grades WHERE phase = '1' AND lrn = '123456789012'";
+                    $show_student_grade_arts = "SELECT arts FROM students_grades WHERE phase = '8' AND lrn = '123456789012'";
                     $query_student_grade_arts = mysqli_query($conn, $show_student_grade_arts);
                     ?> 
                         </tr>
@@ -3081,7 +3102,7 @@ if(isset($_GET['sid'])){
                             <td></td>
                         </tr>
                     <?php
-                    $show_student_grade_pe = "SELECT p_e FROM students_grades WHERE phase = '1' AND lrn = '123456789012'";
+                    $show_student_grade_pe = "SELECT p_e FROM students_grades WHERE phase = '8' AND lrn = '123456789012'";
                     $query_student_grade_pe = mysqli_query($conn, $show_student_grade_pe);
                     ?> 
                         </tr>
@@ -3097,7 +3118,7 @@ if(isset($_GET['sid'])){
                             <td></td>
                         </tr>
                     <?php
-                    $show_student_grade_health = "SELECT health FROM students_grades WHERE phase = '1' AND lrn = '123456789012'";
+                    $show_student_grade_health = "SELECT health FROM students_grades WHERE phase = '8' AND lrn = '123456789012'";
                     $query_student_grade_health = mysqli_query($conn, $show_student_grade_health);
                     ?> 
                         </tr>
@@ -3113,7 +3134,7 @@ if(isset($_GET['sid'])){
                             <td></td>
                         </tr>
                     <?php
-                    $show_student_grade_esp = "SELECT edukasyon_sa_pagpapakatao FROM students_grades WHERE phase = '1' AND lrn = '123456789012'";
+                    $show_student_grade_esp = "SELECT edukasyon_sa_pagpapakatao FROM students_grades WHERE phase = '8' AND lrn = '123456789012'";
                     $query_student_grade_esp = mysqli_query($conn, $show_student_grade_esp);
                     ?> 
                         </tr>
@@ -3129,7 +3150,7 @@ if(isset($_GET['sid'])){
                             <td></td>
                         </tr>
                     <?php
-                    $show_student_grade_arabic = "SELECT arabic_language FROM students_grades WHERE phase = '1' AND lrn = '123456789012'";
+                    $show_student_grade_arabic = "SELECT arabic_language FROM students_grades WHERE phase = '8' AND lrn = '123456789012'";
                     $query_student_grade_arabic = mysqli_query($conn, $show_student_grade_arabic);
                     ?> 
                         </tr>
@@ -3145,7 +3166,7 @@ if(isset($_GET['sid'])){
                             <td></td>
                         </tr>
                     <?php
-                    $show_student_grade_islamic_values = "SELECT islamic_values FROM students_grades WHERE phase = '1' AND lrn = '123456789012'";
+                    $show_student_grade_islamic_values = "SELECT islamic_values FROM students_grades WHERE phase = '8' AND lrn = '123456789012'";
                     $query_student_grade_islamic_values = mysqli_query($conn, $show_student_grade_islamic_values);
                     ?> 
                         </tr>
@@ -3161,7 +3182,7 @@ if(isset($_GET['sid'])){
                             <td></td>
                         </tr>
                     <?php
-                    $show_student_grade_ave = "SELECT general_average FROM students_grades WHERE phase = '1' AND lrn = '123456789012'";
+                    $show_student_grade_ave = "SELECT general_average FROM students_grades WHERE phase = '8' AND lrn = '123456789012'";
                     $query_student_grade_ave = mysqli_query($conn, $show_student_grade_ave);
                     ?> 
                         </tr>
@@ -3210,10 +3231,10 @@ if(isset($_GET['sid'])){
                 
             </div>
         </div>
-            <input type="button" name="previous" class="previous-form btn btn-light" value="Previous" />
+        <input type="button" name="previous" class="previous-form btn btn-light" value="Previous" />        
         </fieldset>
-            <button type="submit" name="update">Update</button>
-            </form>
+        <button class="btn btn-primary" style="float:right;" type="submit" name="update">Update</button>
+    </form>
 <script src="src/js/stepper.js"></script>
 </body>
 </html>

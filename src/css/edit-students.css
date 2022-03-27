@@ -77,6 +77,44 @@ select {
 .cred-info input[type=text]:focus{
     outline:none;
 }
+.last-cred{
+    display: flex; 
+    flex-direction: row; 
+    justify-content: space-evenly; 
+}
+.last-cred input[type=text]{
+    width: 100%;
+}
+.last-cred input[type=text]:focus{
+    outline: none;
+}
+.last-cred label{
+    font-size: 10pt;
+}
+.wrapper{
+    display: flex; 
+    flex-direction: row;
+    justify-content: center; 
+    align-items: center;
+}
+.other-cred input[type=date]{
+    border: none;
+    border-bottom: 1px solid black;
+    width:12%; 
+}
+.PEPT{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 11pt;
+}
+.wrapper label{
+    font-size: 10pt;
+}
+.wrapper input[type=text]{
+    width: 100%;
+}
+.wrapper input[type=text]:focus{
+    outline: none;
+}
 th, td{
     border: 1px solid black;
 }
@@ -106,16 +144,20 @@ input[type=text]{
 }
 .first-row input[type=text]{
     width: 100%;
+    padding: 0 5px;
 }
 .second-row{
     display: flex; 
     flex-direction: row; 
     justify-content: space-between; 
-    align-items:center; 
+    align-items:end; 
     padding: 0 5px;
 }
 .second-row input[type=text]{
     width: 100%;
+    padding: 0;
+    margin: 0;
+    padding: 0 4px;
 }
 .third-row{
     display: flex; 
@@ -126,6 +168,7 @@ input[type=text]{
 }
 .third-row input[type=text]{
     width: 100%;
+    padding: 0 4px;
 }
 .fourth-row{
     padding: 0 5px;
