@@ -3228,7 +3228,175 @@ if(isset($_GET['sid'])){
                 </table>
                 <!-- end of phase 8 -->
                 </div>
-                
+                <div class="col-lg-12 p-0">
+                    <p class="fw-bold m-0">For Transfer Out /Elementary School Completer Only</p>
+                    <section class="certification-box">
+                        <h6 class="text-center py-1 " style="background: #ddd; border:none;">CERTIFICATION</h6>
+                            <span class="cert-card px-lg-4 ">
+                                <span class="d-flex flex-row align-items-center">
+                                    <label>I CERTIFY that this is a true record of</label>
+                                    <input type="text" name="" id="">
+                                </span>
+                                <span class="hstack d-flex justify-content-end align-items-end">
+                                    <label>with LRN</label>
+                                    <input type="text" name="" id="">
+                                </span>
+                                <span>
+                                    <label>and that he/she is eligible for admission to Grade </label>
+                                    <input type="text" size="4" style="width: auto;">
+                                </span> 
+                            </span>
+                            <span class="d-flex flex-row justify-content-start align-items-center px-lg-4">
+                                <span class="d-flex flex-row align-items-center justify-content-end">
+                                    <label>School Name: </label>
+                                    <input type="text" style="width: auto;" name="" id="">
+                                </span>
+                                <span class="hstack d-flex justify-content-center align-items-end">
+                                    <label>School ID</label>
+                                    <input type="text" name="" id="">
+                                </span>
+                                <span>
+                                    <label>Division</label>
+                                    <input type="text" size="4">
+                                </span> 
+                                <span class="hstack d-flex justify-content-center align-items-end">
+                                    <label>Last School Year Attended:</label>
+                                    <input type="text" name="" id="">
+                                </span>
+                            </span>
+                            <div class="container pt-5">
+                                <div class="row ">
+                                    <div class="col-3">
+                                        <span class="vstack d-flex flex-column-reverse text-center">
+                                            <label for="" class="">Date</label>
+                                            <input type="text">
+                                        </span>
+                                    </div>
+                                    <div class="col-5">
+                                        <span class="vstack d-flex flex-column-reverse">
+                                            <label for="" class="text-center">Name of Principal/School Head over Printed Name</label>
+                                            <input type="text">
+                                        </span>
+                                    </div>
+                                    <div class="col-4" style="display:grid; place-items:end;">
+                                        <p style="font-size: 14px; font-weight:600; padding:0; margin:0;">(Affix School Seal here)</p>
+                                    </div>
+                                </div>
+                            </div>
+                    </section>
+                </div>
+                <div class="col-lg-12 p-0">
+                    <section class="certification-box">
+                        <h6 class="text-center py-1 " style="background: #ddd; border:none;">CERTIFICATION</h6>
+                            <span class="cert-card px-lg-4 ">
+                                <span class="d-flex flex-row align-items-center">
+                                    <label>I CERTIFY that this is a true record of</label>
+                                    <input type="text" name="" id="">
+                                </span>
+                                <span class="hstack d-flex justify-content-end align-items-end">
+                                    <label>with LRN</label>
+                                    <input type="text" name="" id="">
+                                </span>
+                                <span>
+                                    <label>and that he/she is eligible for admission to Grade </label>
+                                    <input type="text" size="4" style="width: auto;">
+                                </span> 
+                            </span>
+                            <span class="d-flex flex-row justify-content-start align-items-center px-lg-4">
+                                <span class="d-flex flex-row align-items-center justify-content-end">
+                                    <label>School Name: </label>
+                                    <input type="text" style="width: auto;" name="" id="">
+                                </span>
+                                <span class="hstack d-flex justify-content-center align-items-end">
+                                    <label>School ID</label>
+                                    <input type="text" name="" id="">
+                                </span>
+                                <span>
+                                    <label>Division</label>
+                                    <input type="text" size="4">
+                                </span> 
+                                <span class="hstack d-flex justify-content-center align-items-end">
+                                    <label>Last School Year Attended:</label>
+                                    <input type="text" name="" id="">
+                                </span>
+                            </span>
+                            <div class="container pt-5">
+                                <div class="row ">
+                                    <div class="col-3">
+                                        <span class="vstack d-flex flex-column-reverse text-center">
+                                            <label for="" class="">Date</label>
+                                            <input type="text">
+                                        </span>
+                                    </div>
+                                    <div class="col-5">
+                                        <span class="vstack d-flex flex-column-reverse">
+                                            <label for="" class="text-center">Name of Principal/School Head over Printed Name</label>
+                                            <input type="text">
+                                        </span>
+                                    </div>
+                                    <div class="col-4" style="display:grid; place-items:end;">
+                                        <p style="font-size: 14px; font-weight:600; padding:0; margin:0;">(Affix School Seal here)</p>
+                                    </div>
+                                </div>
+                            </div>
+                    </section>
+                </div>
+                <div class="col-lg-12 p-0">
+                    <section class="certification-box">
+                        <h6 class="text-center py-1 " style="background: #ddd; border:none;">CERTIFICATION</h6>
+                            <span class="cert-card px-lg-4 ">
+                                <span class="d-flex flex-row align-items-center">
+                                    <label>I CERTIFY that this is a true record of</label>
+                                    <input type="text" name="" id="">
+                                </span>
+                                <span class="hstack d-flex justify-content-end align-items-end">
+                                    <label>with LRN</label>
+                                    <input type="text" name="" id="">
+                                </span>
+                                <span>
+                                    <label>and that he/she is eligible for admission to Grade </label>
+                                    <input type="text" size="4" style="width: auto;">
+                                </span> 
+                            </span>
+                            <span class="d-flex flex-row justify-content-start align-items-center px-lg-4">
+                                <span class="d-flex flex-row align-items-center justify-content-end">
+                                    <label>School Name: </label>
+                                    <input type="text" style="width: auto;" name="" id="">
+                                </span>
+                                <span class="hstack d-flex justify-content-center align-items-end">
+                                    <label>School ID</label>
+                                    <input type="text" name="" id="">
+                                </span>
+                                <span>
+                                    <label>Division</label>
+                                    <input type="text" size="4">
+                                </span> 
+                                <span class="hstack d-flex justify-content-center align-items-end">
+                                    <label>Last School Year Attended:</label>
+                                    <input type="text" name="" id="">
+                                </span>
+                            </span>
+                            <div class="container pt-5">
+                                <div class="row ">
+                                    <div class="col-3">
+                                        <span class="vstack d-flex flex-column-reverse text-center">
+                                            <label for="" class="">Date</label>
+                                            <input type="text">
+                                        </span>
+                                    </div>
+                                    <div class="col-5">
+                                        <span class="vstack d-flex flex-column-reverse">
+                                            <label for="" class="text-center">Name of Principal/School Head over Printed Name</label>
+                                            <input type="text">
+                                        </span>
+                                    </div>
+                                    <div class="col-4" style="display:grid; place-items:end;">
+                                        <p style="font-size: 14px; font-weight:600; padding:0; margin:0;">(Affix School Seal here)</p>
+                                    </div>
+                                </div>
+                            </div>
+                    </section>
+                </div>
             </div>
         </div>
         <input type="button" name="previous" class="previous-form btn btn-light" value="Previous" />        
