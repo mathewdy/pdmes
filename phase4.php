@@ -28,577 +28,281 @@ $run_query_lrn = mysqli_query($conn,$query_lrn);
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../pdmes/src/css/form.css">
+    <link rel="stylesheet" href="../pdmes/src/css/bootstrap.css">
     <title>Document</title>
 </head>
 
 
 <body>
 
-<a href="index.php">Back</a>
+
 
 <!---scholastic record  phase 4--->
 <h3>Scholastic records</h3>
 <h4>Phase 4</h4>
-<form action="phase4.php" method="POST">
+<div class="container">
+    <form action="phase4.php" method="POST">
+    <div>
+    <label>School</label>
+  <input type="text" name="school" class="school">
+  <label>School ID</label>
+  <input type="text" name="school_id" class="school_id">
+  <div>
+  <label>District</label>
+  <input type="text" name="school" class="district">
+  <label>Division</label>
+  <input type="text" name="school_id" class="division">
+  <label>Region</label>
+  <input type="text" name="school_id" class="region">
 
-<label for="">School : </label>
-      <input type="text" name="school" id="school_2">
-    <br>
+  </div>
+  <label>Classified as Grade</label>
+  <input type="text" name="classified_as_grade" class=" as_grade rounded" >
+  <label>Section</label>
+  <input type="text" name="section" class="section  rounded"> 
+  <label>School Year</label>
+  <input type="text" name="school_year" class="school_year rounded">
+  <div>
+  <label  for="">Name of Adviser: </label>
+          <input type="text" name="name_of_adviser" class=" adviser rounded" >
+  </div>
+</div>
+ 
+ 
 
-    <label for="">School ID : </label>
-      <input type="text" name="school_id" id="school_id_2">
+  <table class="table try table-bordered border border-dark text-center">
+        <thead>
+          <tr>
+            <th rowspan="2">Learner's Area</th>
+            <th colspan="4">Quarterly Rating</th>
+            <th rowspan="2">Final Rating</th>
+          </tr>
+          <tr>
+          <th>1</th>
+            <th>2</th>
+            <th>3</th>
+            <th>4</th>
+          </tr>
+</thead>
+<tbody>
+          <tr>
+            <td>Mother's tongue</td>
+            <td> <input type="tel" name="mother_tounge1"  pattern="[0-9]{2}" title="Please input 2 Numbers only" ></td>
+            <td> <input type="tel" name="mother_tounge2"  pattern="[0-9]{2}" title="Please input 2 Numbers only" ></td>
+            <td>  <input type="tel" name="mother_tounge3"  pattern="[0-9]{2}" title="Please input 2 Numbers only" ></td>
+            <td> 
+              <input type="tel" name="mother_tounge4"  pattern="[0-9]{2}" title="Please input 2 Numbers only" ></td>
+            <td>
+              <input type="tel" name="mother_tounge5"  pattern="[0-9]{2}" title="Please input 2 Numbers only" ></td>
+          </tr>
+          <tr>
+            <td>Filipino</td>
+            <td>
+          <input type="tel" class="filipino  filipino1" name="filipino1" pattern="[0-9]{2}" title="Please input 2 Numbers only">
+</td>
+            <td>
+          <input type="tel" name="filipino2" pattern="[0-9]{2}" title="Please input 2 Numbers only"></td>
+            <td>
+<input type="tel" name="filipino3" pattern="[0-9]{2}" title="Please input 2 Numbers only"></td>
+            <td>
+<input type="tel"   name="filipino4" pattern="[0-9]{2}" title="Please input 2 Numbers only"></td>
+            <td>
+<input type="tel"  name="filipino5" pattern="[0-9]{2}" title="Please input 2 Numbers only"></td>
+          </tr>
 
-    <br>
+ 
 
-    <label for="">District : </label>
-    <input type="text" name="district" id="district" >
-    <br>
+          <tr>
+            <td>English</td>
+            <td>  <input type="tel" name="english1"  pattern="[0-9]{2}" title="Please input 2 Numbers only"></td>
+            <td> <input type="tel" name="english2"   pattern="[0-9]{2}" title="Please input 2 Numbers only"></td>
+            <td> <input type="tel" name="english3"   pattern="[0-9]{2}" title="Please input 2 Numbers only"></td>
+            <td> <input type="tel" name="english4"   pattern="[0-9]{2}" title="Please input 2 Numbers only"></td>
+            <td>
+            <input type="tel" name="english5"   pattern="[0-9]{2}" title="Please input 2 Numbers only">
+</td>
 
-    <label for="">Division</label>
-    <input type="text" name="division" >
-    <br>
+          </tr>
+          <tr>
+            <td>Math</td>
+            <td>    <input type="tel"   name="math1"  pattern="[0-9]{2}" title="Please input 2 Numbers only"></td>
+            <td>   <input type="tel" name="math2"   pattern="[0-9]{2}" title="Please input 2 Numbers only"></td>
+            <td><input type="tel" name="math3"   pattern="[0-9]{2}" title="Please input 2 Numbers only"></td>
+            <td> <input type="tel" name="math4"   pattern="[0-9]{2}" title="Please input 2 Numbers only"></td>
+            <td>  <input type="tel" name="math5"   pattern="[0-9]{2}" title="Please input 2 Numbers only"></td>
+          </tr>
+          <tr>
+            <td>Science</td>
+            <td>  <input type="tel" name="science1"  pattern="[0-9]{2}" title="Please input 2 Numbers only"></td>
+            <td> <input type="tel" name="science2"  pattern="[0-9]{2}" title="Please input 2 Numbers only"></td>
+            <td>  
+              <input type="tel" name="science3"   pattern="[0-9]{2}" title="Please input 2 Numbers only"></td>
+            <td>
+              <input type="tel" name="science4"   pattern="[0-9]{2}" title="Please input 2 Numbers only"></td>
+            <td>
+              <input type="tel" name="science5"  pattern="[0-9]{2}" title="Please input 2 Numbers only"></td>
+          </tr>
+          <tr>
+            <td>Aralin Panlipunan</td>
+            <td>   <input type="tel" name="araling_panlipunan1"  pattern="[0-9]{2}" title="Please input 2 Numbers only"></td>
+            <td> <input type="tel" name="araling_panlipunan2"  pattern="[0-9]{2}" title="Please input 2 Numbers only"></td>
+            <td> <input type="tel" name="araling_panlipunan3"  pattern="[0-9]{2}" title="Please input 2 Numbers only"></td>
+            <td>  <input type="tel" name="araling_panlipunan4"  pattern="[0-9]{2}" title="Please input 2 Numbers only"></td>
+            <td>  <input type="tel" name="araling_panlipunan5"  pattern="[0-9]{2}" title="Please input 2 Numbers only"></td>
+          </tr>
 
-    <label for="">Region:</label>
-    <input type="text" name="region" >
+          <tr>
+            <td>EPP/TLE</td>
+            <td> <input type="tel" name="epp_tle1"  pattern="[0-9]{2}" title="Please input 2 Numbers only"></td>
+            <td>  <input type="tel" name="epp_tle2"  pattern="[0-9]{2}" title="Please input 2 Numbers only"></td>
+            <td>  <input type="tel" name="epp_tle3"  pattern="[0-9]{2}" title="Please input 2 Numbers only"></td>
+            <td>      <input type="tel" name="epp_tle4"   pattern="[0-9]{2}" title="Please input 2 Numbers only"></td>
+            <td> <input type="tel" name="epp_tle5"  pattern="[0-9]{2}" title="Please input 2 Numbers only"></td>
+          </tr>
 
-    <br>
-    <label for="">Classified as Grade : </label>
-    <input type="text" name="classified_as_grade" >
+          <tr>
+            <td>MAPEH</td>
+            <td> <input type="tel" name="mapeh1"  pattern="[0-9]{2}" title="Please input 2 Numbers only"></td>
+            <td> <input type="tel" name="mapeh2"  pattern="[0-9]{2}" title="Please input 2 Numbers only"></td>
+            <td> <input type="tel" name="mapeh3"  pattern="[0-9]{2}" title="Please input 2 Numbers only"></td>
+            <td> <input type="tel" name="mapeh4"  pattern="[0-9]{2}" title="Please input 2 Numbers only"></td>
+            <td>  <input type="tel" name="mapeh5"  pattern="[0-9]{2}" title="Please input 2 Numbers only"></td>
+          </tr>
 
-    <br>
-    <label for="">Section : </label>
-    <input type="text" name="section">
+          <tr>
+            <td>Music</td>
+            <td> <input type="tel" name="music1"  pattern="[0-9]{2}" title="Please input 2 Numbers only"></td>
+            <td>    <input type="tel" name="music2"   pattern="[0-9]{2}" title="Please input 2 Numbers only"></td>
+            <td>            <input type="tel" name="music3"   pattern="[0-9]{2}" title="Please input 2 Numbers only"></td>
+            <td> <input type="tel" name="music4"    pattern="[0-9]{2}" title="Please input 2 Numbers only"></td>
+            <td>  <input type="tel" name="music5"   pattern="[0-9]{2}" title="Please input 2 Numbers only"></td>
+          </tr>
+          <tr>
+            <td>PE</td>
+            <td><input type="tel" name="p_e1"  pattern="[0-9]{2}"  title="Please input 2 Numbers only"></td>
+            <td> <input type="tel"   name="p_e2" pattern="[0-9]{2}" title="Please input 2 Numbers only"></td>
+            <td> <input type="tel" name="p_e3"   pattern="[0-9]{2}" title="Please input 2 Numbers only"></td>
+            <td> <input type="tel" name="p_e4"   pattern="[0-9]{2}" title="Please input 2 Numbers only"></td>
+            <td>  <input type="tel" name="p_e5"   pattern="[0-9]{2}" title="Please input 2 Numbers only"></td>
+          </tr>
+          <tr>
+            <td>Health</td>
+            <td> <input type="tel" name="health1"  pattern="[0-9]{2}" title="Please input 2 Numbers only"></td>
+            <td> <input type="tel" name="health2"  pattern="[0-9]{2}" title="Please input 2 Numbers only"></td>
 
-    <br>
-    <label for="">School Year : </label>
-    <input type="text" name="school_year" >
+            <td> <input type="tel" name="health3"  pattern="[0-9]{2}" title="Please input 2 Numbers only"></td>
+            <td>  <input type="tel" name="health4"  pattern="[0-9]{2}" title="Please input 2 Numbers only"></td>
+            <td><input type="tel" name="health5"  pattern="[0-9]{2}" title="Please input 2 Numbers only"></td>
+          </tr>
 
-    <br>
+          <tr>
+            <td>Eduaksyon sa Pagkakatao</td>
+            <td> <input type="tel" name="edukasyon_sa_pagpapakatao1"   pattern="[0-9]{2}" title="Please input 2 Numbers only"></td>
+            <td> <input type="tel" name="edukasyon_sa_pagpapakatao2"  pattern="[0-9]{2}" title="Please input 2 Numbers only"></td>
+            <td>  <input type="tel" name="edukasyon_sa_pagpapakatao3"  pattern="[0-9]{2}" title="Please input 2 Numbers only"></td>
+            <td> <input type="tel" name="edukasyon_sa_pagpapakatao4"  pattern="[0-9]{2}" title="Please input 2 Numbers only"></td>
+            <td><input type="tel" name="edukasyon_sa_pagpapakatao5"  pattern="[0-9]{2}" title="Please input 2 Numbers only"></td>
+          </tr>
 
-    <label for="">Name of Adviser : </label>
-    <input type="text" name="name_of_adviser" >
+          <tr>
+            <td>
+              Arabic Language
+            </td>
+            <td><input type="tel" name="arabic_language1"  pattern="[0-9]{2}" title="Please input 2 Numbers only"></td>
+            <td> <input type="tel" name="arabic_language2"  pattern="[0-9]{2}" title="Please input 2 Numbers only"></td>
+            <td> <input type="tel" name="arabic_language3"  pattern="[0-9]{2}" title="Please input 2 Numbers only"></td>
+            <td>  <input type="tel" name="arabic_language4"  pattern="[0-9]{2}" title="Please input 2 Numbers only"></td>
+            <td><input type="tel" name="arabic_language5"  pattern="[0-9]{2}" title="Please input 2 Numbers only"></td>
 
-    
+          </tr>
 
-    <!---student's grades--->
-    <h3>Learning Areas</h3>
-    <h4>1st Quarter</h4>
-    <!------- first quarter--->
+          <tr>
+            <td>Islamic Value</td>
+            <td>      <input type="tel" name="islamic_values1"  pattern="[0-9]{2}" title="Please input 2 Numbers only"></td>
+            <td> <input type="tel" name="islamic_values2"   pattern="[0-9]{2}" title="Please input 2 Numbers only"></td>
+            <td> <input type="tel" name="islamic_values3"   pattern="[0-9]{2}" title="Please input 2 Numbers only"></td>
+            <td> <input type="tel" name="islamic_values4"   pattern="[0-9]{2}" title="Please input 2 Numbers only"></td>
+            <td> <input type="tel" name="islamic_values5"   pattern="[0-9]{2}" title="Please input 2 Numbers only"></td>
+          </tr>
 
-    <label for="">Mother Tounge : </label>
-    <input type="tel" name="mother_tounge1" pattern="[0-9]{2}" title="Please input 2 Numbers only" >
-
-    <br>
-    <label for="">Filipino : </label>
-    <input type="text" name="filipino1" pattern="[0-9]{2}" title="Please input 2 Numbers only">
-
-    <br>
-    <label for="">English : </label>
-    <input type="text" name="english1" pattern="[0-9]{2}" title="Please input 2 Numbers only">
-
-    <br>
-
-    <label for="">Math : </label>
-    <input type="text" name="math1" pattern="[0-9]{2}" title="Please input 2 Numbers only">
-
-    <br>
-
-    <label for="">Science : </label>
-    <input type="text" name="science1" pattern="[0-9]{2}" title="Please input 2 Numbers only">
-
-    <br>
-
-    <label for="">Araling Panlipunan : </label>
-    <input type="text" name="araling_panlipunan1" pattern="[0-9]{2}" title="Please input 2 Numbers only">
-
-    <br>
-
-    <label for="">EPP / TLE : </label>
-    <input type="text" name="epp_tle1" pattern="[0-9]{2}" title="Please input 2 Numbers only">
-
-    <br>
-    <label for="">MAPEH</label>
-    <input type="text" name="mapeh1" pattern="[0-9]{2}" title="Please input 2 Numbers only">
-
-    <br>
-    <label for="">Music : </label>
-    <input type="text" name="music1" pattern="[0-9]{2}" title="Please input 2 Numbers only">
-
-    <br>
-    <label for="">Arts : </label>
-    <input type="text" name="arts1" pattern="[0-9]{2}" title="Please input 2 Numbers only">
-
-    <br>
-
-    <label for="">P.E. : </label>
-    <input type="text" name="p_e1" pattern="[0-9]{2}" title="Please input 2 Numbers only">
-
-    <br>
-    <label for="">Health :</label>
-    <input type="text" name="health1" pattern="[0-9]{2}" title="Please input 2 Numbers only">
-    <br>
-
-    <label for="">Edukasyon sa Pagpapakatao : </label>
-    <input type="text" name="edukasyon_sa_pagpapakatao1" pattern="[0-9]{2}" title="Please input 2 Numbers only">
-
-    <br>
-
-
-    <label for="">Arabic Language : </label>
-    <input type="text" name="arabic_language1" pattern="[0-9]{2}" title="Please input 2 Numbers only">
-
-    <br>
-
-    <label for="">Islamic Values : </label>
-    <input type="text" name="islamic_values1" pattern="[0-9]{2}" title="Please input 2 Numbers only">
-
-
-    <br>
-
-
-    <label for="">General Average : </label>
-    <input type="text" name="general_average1" pattern="[0-9]{2}" title="Please input 2 Numbers only">
-
-
-    <br>
-
-    <label for="">Remarks :</label>
-    <select name="remarks1" id="" > 
+          <tr>
+            <td>General Average</td>
+            <td> <input type="tel" name="general_average1"  pattern="[0-9]{2}" title="Please input 2 Numbers only"></td>
+            <td> <input type="tel" name="general_average2"  pattern="[0-9]{2}" title="Please input 2 Numbers only"></td>
+            <td> <input type="tel" name="general_average3"  pattern="[0-9]{2}" title="Please input 2 Numbers only"></td>
+            <td> <input type="tel" name="general_average4"  pattern="[0-9]{2}" title="Please input 2 Numbers only"></td>
+            <td> <input type="tel" name="general_average5"  pattern="[0-9]{2}" title="Please input 2 Numbers only"></td>
+          </tr>
+        </tbody>
+      </table>
+        <table  class="table-bordered border border-dark mt-1  text-center">
+        <tr>
+        <thead>
+        <th colspan="2"  >Remedial Classes</th>
+        <th  colspan="2" >Date conducted: <input type="date" class="datefrom" name="date_from"></th>
+       
+        <th colspan="2" >To:   <input type="date" class="dateto" name="date_to"></th>
+        </tr>
+        <tr>
+          <th>Learning Areas</th>
+          <th>Final Rating</th>
+          <th>Remarks</th>
+          <th>Recomputed Final Grade</th>
+          <th>Remakrs</th>
+        </tr>
+        </thead>
+        <tbody>
+          <td >   <input type="text" class="learning-areas1" name="learning_areas1"></td>
+          <td> <input type="tel" class="final_rating1" name="final_rating1" ></td>
+          <td> <select name="remedial_class_mark1" id=""> 
+      <option value="">-Remarks-</option>
+      <option value="Passed">Passed</option>
+      <option value="Failed">Failed</option>
+    </select> </td>
+    <td>
+    <input type="tel" name="recomputed_final_grade1" pattern="[0-9]{2}" title="Please input 2 Numbers only">
+    </td>
+    <td>
+    <select name="remedial_remarks1" id="" > 
       <option value="">-Remarks-</option>
       <option value="Passed">Passed</option>
       <option value="Failed">Failed</option>
     </select> 
-    <h4>2nd Quarter</h4>
-    <!------- 2nd quarter--->
-
-    <label for="">Mother Tounge : </label>
-    <input type="tel" name="mother_tounge2" pattern="[0-9]{2}" title="Please input 2 Numbers only" >
-
-    <br>
-    <label for="">Filipino : </label>
-    <input type="text" name="filipino2" pattern="[0-9]{2}" title="Please input 2 Numbers only">
-
-    <br>
-    <label for="">English : </label>
-    <input type="text" name="english2" pattern="[0-9]{2}" title="Please input 2 Numbers only">
-
-    <br>
-
-    <label for="">Math : </label>
-    <input type="text" name="math2" pattern="[0-9]{2}" title="Please input 2 Numbers only">
-
-    <br>
-
-    <label for="">Science : </label>
-    <input type="text" name="science2" pattern="[0-9]{2}" title="Please input 2 Numbers only">
-
-    <br>
-
-    <label for="">Araling Panlipunan : </label>
-    <input type="text" name="araling_panlipunan2" pattern="[0-9]{2}" title="Please input 2 Numbers only">
-
-    <br>
-
-    <label for="">EPP / TLE : </label>
-    <input type="text" name="epp_tle2" pattern="[0-9]{2}" title="Please input 2 Numbers only">
-
-    <br>
-    <label for="">MAPEH</label>
-    <input type="text" name="mapeh2" pattern="[0-9]{2}" title="Please input 2 Numbers only">
-
-    <br>
-    <label for="">Music : </label>
-    <input type="text" name="music2" pattern="[0-9]{2}" title="Please input 2 Numbers only">
-
-    <br>
-    <label for="">Arts : </label>
-    <input type="text" name="arts2" pattern="[0-9]{2}" title="Please input 2 Numbers only">
-
-    <br>
-
-    <label for="">P.E. : </label>
-    <input type="text" name="p_e2" pattern="[0-9]{2}" title="Please input 2 Numbers only">
-
-    <br>
-    <label for="">Health :</label>
-    <input type="text" name="health2" pattern="[0-9]{2}" title="Please input 2 Numbers only">
-    <br>
-
-    <label for="">Edukasyon sa Pagpapakatao : </label>
-    <input type="text" name="edukasyon_sa_pagpapakatao2" pattern="[0-9]{2}" title="Please input 2 Numbers only">
-
-    <br>
-
-
-    <label for="">Arabic Language : </label>
-    <input type="text" name="arabic_language2" pattern="[0-9]{2}" title="Please input 2 Numbers only">
-
-    <br>
-
-    <label for="">Islamic Values : </label>
-    <input type="text" name="islamic_values2" pattern="[0-9]{2}" title="Please input 2 Numbers only">
-
-
-    <br>
-
-
-    <label for="">General Average : </label>
-    <input type="text" name="general_average2" pattern="[0-9]{2}" title="Please input 2 Numbers only">
-
-
-    <br>
-
-    <label for="">Remarks :</label>
-    <select name="remarks2" id="" > 
+    </td>
+    <tr>
+    <td>
+     
+      <input type="text" class="learning_areas2" name="learning_areas2">
+    </td>
+    <td>
+    <input type="tel" class="final_rating2" name="final_rating2" >
+    </td>
+    <td>
+    <select name="remedial_class_mark2" id=""> 
       <option value="">-Remarks-</option>
       <option value="Passed">Passed</option>
       <option value="Failed">Failed</option>
     </select> 
-
-    <h4>3rd Quarter</h4>
-    <!------- 3rd quarter--->
-
-    <label for="">Mother Tounge : </label>
-    <input type="tel" name="mother_tounge3" pattern="[0-9]{2}" title="Please input 2 Numbers only" >
-
-    <br>
-    <label for="">Filipino : </label>
-    <input type="text" name="filipino3" pattern="[0-9]{2}" title="Please input 2 Numbers only">
-
-    <br>
-    <label for="">English : </label>
-    <input type="text" name="english3" pattern="[0-9]{2}" title="Please input 2 Numbers only">
-
-    <br>
-
-    <label for="">Math : </label>
-    <input type="text" name="math3" pattern="[0-9]{2}" title="Please input 2 Numbers only">
-
-    <br>
-
-    <label for="">Science : </label>
-    <input type="text" name="science3" pattern="[0-9]{2}" title="Please input 2 Numbers only">
-
-    <br>
-
-    <label for="">Araling Panlipunan : </label>
-    <input type="text" name="araling_panlipunan3" pattern="[0-9]{2}" title="Please input 2 Numbers only">
-
-    <br>
-
-    <label for="">EPP / TLE : </label>
-    <input type="text" name="epp_tle3" pattern="[0-9]{2}" title="Please input 2 Numbers only">
-
-    <br>
-    <label for="">MAPEH</label>
-    <input type="text" name="mapeh3" pattern="[0-9]{2}" title="Please input 2 Numbers only">
-
-    <br>
-    <label for="">Music : </label>
-    <input type="text" name="music3" pattern="[0-9]{2}" title="Please input 2 Numbers only">
-
-    <br>
-    <label for="">Arts : </label>
-    <input type="text" name="arts3" pattern="[0-9]{2}" title="Please input 2 Numbers only">
-
-    <br>
-
-    <label for="">P.E. : </label>
-    <input type="text" name="p_e3" pattern="[0-9]{2}" title="Please input 2 Numbers only">
-
-    <br>
-    <label for="">Health :</label>
-    <input type="text" name="health3" pattern="[0-9]{2}" title="Please input 2 Numbers only">
-    <br>
-
-    <label for="">Edukasyon sa Pagpapakatao : </label>
-    <input type="text" name="edukasyon_sa_pagpapakatao3" pattern="[0-9]{2}" title="Please input 2 Numbers only">
-
-    <br>
-
-
-    <label for="">Arabic Language : </label>
-    <input type="text" name="arabic_language3" pattern="[0-9]{2}" title="Please input 2 Numbers only">
-
-    <br>
-
-    <label for="">Islamic Values : </label>
-    <input type="text" name="islamic_values3" pattern="[0-9]{2}" title="Please input 2 Numbers only">
-
-
-    <br>
-
-
-    <label for="">General Average : </label>
-    <input type="text" name="general_average3" pattern="[0-9]{2}" title="Please input 2 Numbers only">
-
-
-    <br>
-
-    <label for="">Remarks :</label>
-    <select name="remarks3" id="" > 
+    </td>
+    <td>
+    <input type="tel" name="recomputed_final_grade2" pattern="[0-9]{2}" title="Please input 2 Numbers only">
+    </td>
+    <td>
+    <select name="remedial_remarks2" id="" > 
       <option value="">-Remarks-</option>
       <option value="Passed">Passed</option>
       <option value="Failed">Failed</option>
     </select> 
+    </td>
 
-    <h4>4th Quarter</h4>
-    <!------- 4th quarter--->
-
-    <label for="">Mother Tounge : </label>
-    <input type="tel" name="mother_tounge4" pattern="[0-9]{2}" title="Please input 2 Numbers only" >
-
-    <br>
-    <label for="">Filipino : </label>
-    <input type="text" name="filipino4" pattern="[0-9]{2}" title="Please input 2 Numbers only">
-
-    <br>
-    <label for="">English : </label>
-    <input type="text" name="english4" pattern="[0-9]{2}" title="Please input 2 Numbers only">
-
-    <br>
-
-    <label for="">Math : </label>
-    <input type="text" name="math4" pattern="[0-9]{2}" title="Please input 2 Numbers only">
-
-    <br>
-
-    <label for="">Science : </label>
-    <input type="text" name="science4" pattern="[0-9]{2}" title="Please input 2 Numbers only">
-
-    <br>
-
-    <label for="">Araling Panlipunan : </label>
-    <input type="text" name="araling_panlipunan4" pattern="[0-9]{2}" title="Please input 2 Numbers only">
-
-    <br>
-
-    <label for="">EPP / TLE : </label>
-    <input type="text" name="epp_tle4" pattern="[0-9]{2}" title="Please input 2 Numbers only">
-
-    <br>
-    <label for="">MAPEH</label>
-    <input type="text" name="mapeh4" pattern="[0-9]{2}" title="Please input 2 Numbers only">
-
-    <br>
-    <label for="">Music : </label>
-    <input type="text" name="music4" pattern="[0-9]{2}" title="Please input 2 Numbers only">
-
-    <br>
-    <label for="">Arts : </label>
-    <input type="text" name="arts4" pattern="[0-9]{2}" title="Please input 2 Numbers only">
-
-    <br>
-
-    <label for="">P.E. : </label>
-    <input type="text" name="p_e4" pattern="[0-9]{2}" title="Please input 2 Numbers only">
-
-    <br>
-    <label for="">Health :</label>
-    <input type="text" name="health4" pattern="[0-9]{2}" title="Please input 2 Numbers only">
-    <br>
-
-    <label for="">Edukasyon sa Pagpapakatao : </label>
-    <input type="text" name="edukasyon_sa_pagpapakatao4" pattern="[0-9]{2}" title="Please input 2 Numbers only">
-
-    <br>
-
-
-    <label for="">Arabic Language : </label>
-    <input type="text" name="arabic_language4" pattern="[0-9]{2}" title="Please input 2 Numbers only">
-
-    <br>
-
-    <label for="">Islamic Values : </label>
-    <input type="text" name="islamic_values4" pattern="[0-9]{2}" title="Please input 2 Numbers only">
-
-
-    <br>
-
-
-    <label for="">General Average : </label>
-    <input type="text" name="general_average4" pattern="[0-9]{2}" title="Please input 2 Numbers only">
-
-    <br>
-    <label for="">Remarks :</label>
-    <select name="remarks4" id="" > 
-      <option value="">-Remarks-</option>
-      <option value="Passed">Passed</option>
-      <option value="Failed">Failed</option>
-    </select> 
-    <br>
-
-    <h4>FINALS Quarter</h4>
-    <!------- FINALS quarter--->
-
-    <label for="">Mother Tounge : </label>
-    <input type="tel" name="mother_tounge5" pattern="[0-9]{2}" title="Please input 2 Numbers only" >
-
-    <br>
-    <label for="">Filipino : </label>
-    <input type="text" name="filipino5" pattern="[0-9]{2}" title="Please input 2 Numbers only">
-
-    <br>
-    <label for="">English : </label>
-    <input type="text" name="english5" pattern="[0-9]{2}" title="Please input 2 Numbers only">
-
-    <br>
-
-    <label for="">Math : </label>
-    <input type="text" name="math5" pattern="[0-9]{2}" title="Please input 2 Numbers only">
-
-    <br>
-
-    <label for="">Science : </label>
-    <input type="text" name="science5" pattern="[0-9]{2}" title="Please input 2 Numbers only">
-
-    <br>
-
-    <label for="">Araling Panlipunan : </label>
-    <input type="text" name="araling_panlipunan5" pattern="[0-9]{2}" title="Please input 2 Numbers only">
-
-    <br>
-
-    <label for="">EPP / TLE : </label>
-    <input type="text" name="epp_tle5" pattern="[0-9]{2}" title="Please input 2 Numbers only">
-
-    <br>
-    <label for="">MAPEH</label>
-    <input type="text" name="mapeh5" pattern="[0-9]{2}" title="Please input 2 Numbers only">
-
-    <br>
-    <label for="">Music : </label>
-    <input type="text" name="music5" pattern="[0-9]{2}" title="Please input 2 Numbers only">
-
-    <br>
-    <label for="">Arts : </label>
-    <input type="text" name="arts5" pattern="[0-9]{2}" title="Please input 2 Numbers only">
-
-    <br>
-
-    <label for="">P.E. : </label>
-    <input type="text" name="p_e5" pattern="[0-9]{2}" title="Please input 2 Numbers only">
-
-    <br>
-    <label for="">Health :</label>
-    <input type="text" name="health5" pattern="[0-9]{2}" title="Please input 2 Numbers only">
-    <br>
-
-    <label for="">Edukasyon sa Pagpapakatao : </label>
-    <input type="text" name="edukasyon_sa_pagpapakatao5" pattern="[0-9]{2}" title="Please input 2 Numbers only">
-
-    <br>
-
-
-    <label for="">Arabic Language : </label>
-    <input type="text" name="arabic_language5" pattern="[0-9]{2}" title="Please input 2 Numbers only">
-
-    <br>
-
-    <label for="">Islamic Values : </label>
-    <input type="text" name="islamic_values5" pattern="[0-9]{2}" title="Please input 2 Numbers only">
-
-
-    <br>
-
-
-    <label for="">General Average : </label>
-    <input type="text" name="general_average5" pattern="[0-9]{2}" title="Please input 2 Numbers only">
-
-
-    <br>
-
-    <label for="">Remarks :</label>
-    <select name="remarks5" id="" > 
-      <option value="">-Remarks-</option>
-      <option value="Passed">Passed</option>
-      <option value="Failed">Failed</option>
-    </select> 
+      </tr>
    
-    
+        </tbody>
+      </table>
+  </div>
 
-    <!--remedial classes-->
-    <h3>Remedial Classes</h3>
-    <!------phase 4--->
-    <label for="">Date Conducted From : </label>
-    <input type="date" name="date_from">
-
-    <br>
-    <label for="">Date Conducted To :</label>
-    <input type="date" name="date_to">
-    
-
-    <br>
-
-    <!-----line 1 learning areas--->
-    <label for="">Learning Areas : </label>
-    <input type="text" name="learning_areas1">
-
-    <br>
-
-    <label for="">Final Rating : </label>
-    <input type="text" name="final_rating1" >
-
-    <br>
-
-    <label for="">Remarks :</label>
-    <select name="remedial_remarks1" id="" > 
-      <option value="">-Remarks-</option>
-      <option value="Passed">Passed</option>
-      <option value="Failed">Failed</option>
-    </select> 
-
-    <br>
-
-    <label for="">Recomputed Final Grade : </label>
-    <input type="text" name="recomputed_final_grade1" pattern="[0-9]{2}" title="Please input 2 Numbers only">
-    <br>
-          
-    <label for="">Remarks :</label>
-    <select name="remedial_remarks1" id="" > 
-      <option value="">-Remarks-</option>
-      <option value="Passed">Passed</option>
-      <option value="Failed">Failed</option>
-    </select> 
-    <br>
-
-
-    <!-----line 2 learning areas--->
-
-    <br>
-    <label for="">Learning Areas : </label>
-    <input type="text" name="learning_areas2">
-
-    <br>
-
-    <label for="">Final Rating : </label>
-    <input type="text" name="final_rating2" >
-
-    <br>
-
-    <label for="">Remarks :</label>
-    <select name="remedial_class_mark1" id="" > 
-      <option value="">-Remarks-</option>
-      <option value="Passed">Passed</option>
-      <option value="Failed">Failed</option>
-    </select> 
-    <br>
-
-    <label for="">Recomputed Final Grade : </label>
-    <input type="text" name="recomputed_final_grade2" pattern="[0-9]{2}" title="Please input 2 Numbers only">
-    <br>
-          
-    <label for="">Remarks :</label>
-    <select name="remedial_class_mark2" id="" > 
-      <option value="">-Remarks-</option>
-      <option value="Passed">Passed</option>
-      <option value="Failed">Failed</option>
-    </select> 
-    <br>
-    <input type="submit" name="next" value="Next"> 
-
-    </form>
-    
+</form>
 </body>
 
 </html>

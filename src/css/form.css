@@ -1,0 +1,133 @@
+label{
+    font-size:1.5rem;
+}
+
+.form-label{
+    margin:0 0.5rem;
+}
+
+.school{
+    width:20rem;
+}
+
+.as_grade{
+    width:2rem;
+    border:1px solid black;
+}.as-grade{
+    width:30rem;
+}
+.school_year{
+    width:5rem;
+}
+
+.section{
+    width:4rem;
+}
+
+
+.phase-row{
+    display:grid;
+    grid-template-columns: repeat(2, 40rem);
+    margin:0 auto; 
+
+}
+
+
+
+
+.quarters p{
+    
+    padding:0 1rem;
+    margin:0 10px;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    display:inline-block;
+    padding:0 10px;
+
+}
+
+
+.quarters{
+    display:grid;
+    grid-template-areas:"q-1 q-2 q-3 q-4" ;
+    grid-template-columns:"30px 20px 20px 20px";
+    width:100%;
+    border:1px solid black;
+
+}
+
+.school{
+    width:15rem;
+}
+
+.school_id{
+    width:10rem;
+}
+
+.district{
+    width:6rem;
+}
+
+.division{
+    width:6rem;
+}
+
+.region{
+    width:6rem;
+}
+
+.as_grade{
+    width:2rem;
+}
+
+
+
+
+.q-1{
+    grid-area: q-1;
+}
+
+.q-2{
+    grid-area: q-2
+
+}
+
+.q-3{
+    grid-area:q-3;
+
+}
+
+.q-4{
+    grid-area:q-4;
+
+}
+
+.learners {
+    margin-top:10px;
+
+}
+
+.learning-areas1{
+    width:7rem;
+}
+
+.final_rating1{
+    width:7rem;
+}
+
+.learning_areas2{
+    width:7rem;
+}
+
+.final_rating2{
+    width:7rem;
+}
+
+td input[type="tel"]{
+    width:2rem;
+}
+
+.school_year{
+    width:4rem;
+}
