@@ -13,12 +13,12 @@ session_start();
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="src/css/bootstrap.css">
-    <link rel="stylesheet" href="src/css/custom-style.css">
+    <link rel="stylesheet" href="src/css/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="src/css/login.css">
     <title>Login</title>
 </head>
 <body>
-<div class="container-fluid px-0 py-2 text-center text-white bg-main">
+<div class="container-fluid px-0 py-2 text-center text-white bg-success">
     <p class="display-6 m-0">PLACIDO DEL MUNDO</p>
     <p class="lead m-0">ELEMENTARY SCHOOL</p>
     <p class="address">1116 Quirino Hwy, Novaliches, Quezon City, 1116 Metro Manila</p>

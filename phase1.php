@@ -26,14 +26,13 @@ $run_query_lrn = mysqli_query($conn,$query_lrn);
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../pdmes/src/css/form.css">
-    <link rel="stylesheet" href="../pdmes/src/css/bootstrap.css">
     <title>Document</title>
 </head>
 
 
 <body>
 
+<a href="index.php">Back</a>
 
 <!---scholastic record  phase 1--->
 <h3>Scholastic records</h3>
@@ -300,6 +299,11 @@ $run_query_lrn = mysqli_query($conn,$query_lrn);
   </div>
 
 </form>
+    <br>
+    <input type="submit" name="next" value="Next"> 
+
+    </form>
+    
 </body>
 
 </html>

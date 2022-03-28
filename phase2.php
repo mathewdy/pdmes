@@ -26,8 +26,6 @@ $run_query_lrn = mysqli_query($conn,$query_lrn);
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../pdmes/src/css/form.css">
-    <link rel="stylesheet" href="../pdmes/src/css/bootstrap.css">
     <title>Document</title>
 </head>
 
@@ -286,6 +284,14 @@ $run_query_lrn = mysqli_query($conn,$query_lrn);
     <input type="tel" name="recomputed_final_grade2" pattern="[0-9]{2}" title="Please input 2 Numbers only">
     </td>
     <td>
+
+    <br>
+
+    <label for="">Recomputed Final Grade : </label>
+    <input type="text" name="recomputed_final_grade2" pattern="[0-9]{2}" title="Please input 2 Numbers only">
+    <br>
+          
+    <label for="">Remarks :</label>
     <select name="remedial_remarks2" id="" > 
       <option value="">-Remarks-</option>
       <option value="Passed">Passed</option>
@@ -300,6 +306,10 @@ $run_query_lrn = mysqli_query($conn,$query_lrn);
   </div>
 
 </form>
+
+    <br>
+    <input type="submit" name="next" value="Next">
+    </form>
     
 </body>
 

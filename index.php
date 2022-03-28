@@ -16,9 +16,9 @@ $num_per_age = 05;
 $start_from = ($page-1)*05;
 
 ?>
-<?php
-include 'includes/header.php';
-?>
+<?php include 'includes/header.php'; ?>
+<link rel="stylesheet" href="src/css/index.css">
+<?php include 'includes/topnav.php';?>
 <div class="table-container container">
     <div class="table-top container-fluid p-0 d-flex flex-row justify-content-between">
         <a class="btn btn-success" href="addrecord.php"><i class="fa-solid fa-user-plus"></i>  ADD RECORD </a> <br>
