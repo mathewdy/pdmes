@@ -1,5 +1,4 @@
 $(document).ready(function(){
-    var maxChar = 2;
     var invalidInputs = ["-","+","e",]; 
     $('#grade').keydown( function(e){
         if ($(this).val().length >= maxChar) { 
@@ -9,12 +8,10 @@ $(document).ready(function(){
             e.preventDefault();
         }
     });
-
+    var maxChar = 2;
     $('#grade').keyup( function(e){
         if ($(this).val().length >= maxChar) { 
             $(this).val($(this).val().substr(0, maxChar));
         }
     });
-
-
 });
