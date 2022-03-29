@@ -32,7 +32,7 @@ $run_query_lrn = mysqli_query($conn,$query_lrn);
 
 <body>
 
-<a href="index.php">Back</a>
+
 
 <!---scholastic record  phase 1--->
 <h3>Scholastic records</h3>

@@ -7,14 +7,14 @@ if(empty($_SESSION['username'])){
 }
 
 error_reporting(E_ERROR & E_WARNING);
-$lrn = $_SESSION['lrn'] ;
-
+$lrn = $_SESSION['lrn'];
 if(empty($_SESSION['lrn'])){
   echo "<script>window,location.href='addrecord.php' </script>";
 }
+
+
 $query_lrn = "SELECT * FROM learners_personal_infos WHERE lrn = '$lrn' ";
 $run_query_lrn = mysqli_query($conn,$query_lrn);
-
 
 
 
@@ -284,14 +284,6 @@ $run_query_lrn = mysqli_query($conn,$query_lrn);
     <input type="tel" name="recomputed_final_grade2" pattern="[0-9]{2}" title="Please input 2 Numbers only">
     </td>
     <td>
-
-    <br>
-
-    <label for="">Recomputed Final Grade : </label>
-    <input type="text" name="recomputed_final_grade2" pattern="[0-9]{2}" title="Please input 2 Numbers only">
-    <br>
-          
-    <label for="">Remarks :</label>
     <select name="remedial_remarks2" id="" > 
       <option value="">-Remarks-</option>
       <option value="Passed">Passed</option>
@@ -306,9 +298,9 @@ $run_query_lrn = mysqli_query($conn,$query_lrn);
   </div>
 
 </form>
-
     <br>
-    <input type="submit" name="next" value="Next">
+    <input type="submit" name="next" value="Next"> 
+
     </form>
     
 </body>
