@@ -5,176 +5,112 @@ date_default_timezone_set('Asia/Manila');
 session_start();
 
 if(empty($_SESSION['username'])){
-  echo "<script>window.location.href='login.php' </script>";
+echo "<script>window.location.href='login.php' </script>";
 }
 ?>
 
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../pdmes/bootstrap-5.1.1-dist/css/bootstrap.css">
-    <link rel="stylesheet" href="styles.css">
-    <title>PDMES</title>
-</head>
-<?php
-include('../pdmes/includes/header.php')
-?>
-<body class="mt-">
-<div class="container  my-5 py-5">
-<form action="addrecord.php"  class="" method="POST">
-  <div class="container ">
-  <h3 class="text-center "> Learner's Presonal Information </h3>
-
-  <div class="container justify-content-between">
-      <div class="row justify-content-md-center ">
-        <div class="col-md-3">
-          <label for="" class="form-label"> Last Name : </label>
-          <input list="text" name="last_name" class="form-control"  required> 
-        </div>
-
-        <div class="col-md-3">
-          <label for="" class="form-label">First Name : </label>
-          <input type="text" name="first_name" class="form-control" required>
-        </div>
-
-        <div class="col-md-3">
-          <label for="" class="form-label">Middle Name : </label>
-          <input type="text" name="middle_name" class="form-control" required>
-        </div>
-
-        <div class="col-md-3">
-          <label for="" class="form-label">Suffix Name : </label>
-          <input type="text" name="suffix_name" class="form-control">
-        </div>
-      </div>
-
-      <div class="row justify-content-center">
-        <div class="col-md-4">
-          <label for="" class="form-label"> LRN : </label>
-          <input type="text" name="lrn" class="form-control" required>
-        </div>
-
-        <div class="col-md-4">
-          <label for="" class="form-label"> Birthdate : </label>
-          <input type="date" name="birthday" class="form-control" required>
-        </div>
-        
-        <div class="col-md-4 flex-rgow">
-          <label for="" class="form-label">Sex :</label>
-          <select  class="form-select form-select-md mb-3" name="sex" id="" required> 
-          <option value="">-Gender-</option>
-          <option value="Male">Male</option>
-          <option value="Female">Female</option>
-        </select> 
-    </div>  
-  </div>
-  
-
-
-
-  <div class="container  mt-5 ">
-    <h3  class="text-center "> Eligibity for Elementary School Enrollment </h3>
-    <p class="text-center">Credential Presented for Grade1</p>
-    <p class="text-center"> - -Please check below --</p> 
-
-    <div class="container">
-      <div class="row align-items-center my-4">
-        <div class="col-md-4">
-          <label>Kinder Porgress Report:</label>
-          <input type="checkbox" name="credential[]" value="Kinder progress report">
-        </div>
-
-        <div class="col-md-4">
-          <label>ECCD Checklist:</label>
-          <input type="checkbox" name="credential[]" value="ECCD Checklist" >
-        </div>
-
-        <div class="col-md-4">
-          <label>Kindergarden Certificate of Completion:</label>
-          <input type="checkbox" name="credential[]" value="Kindergarden Certificate of Completion" >
-        </div>
-      </div>
-
-      <div class="row justify-content-center my-5 ">
-        <div class="col-md-3">
-          <label class="form-label">Name of School:</label>
-          <input list="text" class="form-control"  name="name_of_school" >
-        </div>
-
-        <div class="col-md-3">
-          <label class="form-label" for="">School Id : </label>
-          <input list="text" class="form-control" name="school_id" >
-        </div>
-
-        <div class="col-md-3">
-          <label class="form-label" for="">Address of School :</label>
-          <input list="text" class="form-control" name="address_school">
-        </div>
-
-        <div class="col-md-3">
-          <label class="form-label" for="">Others :</label>
-          <input list="text" class="form-control" name="others">
-        </div>
-      </div>
-    </div>
-
-
-    
-  </div>
-      <div class="row  justify-content-center">
-        <div class="col-md-4">
-         
-      </div>
-        <div class="col-md-4">
-          
-        </div>
-      </div>
-  </div>
-</div>
-
-    <div class="col-5-lg mt-4 text-center ">
-      <input type="submit" name="next" class="btn btn-lg btn-success " value="Next">
-    </div>
-   </div>
-</div>
-</form>
-</div>
-
-
-<?php
-include('../pdmes/includes/footer.php')
-?>
-  <script>
-    // Example starter JavaScript for disabling form submissions if there are invalid fields
-(function () {
-  'use strict'
-
-  // Fetch all the forms we want to apply custom Bootstrap validation styles to
-  var forms = document.querySelectorAll('.needs-validation')
-
-  // Loop over them and prevent submission
-  Array.prototype.slice.call(forms)
-    .forEach(function (form) {
-      form.addEventListener('submit', function (event) {
-        if (!form.checkValidity()) {
-          event.preventDefault()
-          event.stopPropagation()
-        }
-
-        form.classList.add('was-validated')
-      }, false)
-    })
-})()
-  </script>
-  
-
+<?php include('includes/header.php'); ?>
+<link rel="stylesheet" href="src/css/addrecord.css">
+<?php include('includes/topnav.php'); ?>
+<div class="container-lg p-0">
+    <form id="register_form" novalidate action="stepper.php"  method="post">
+      <fieldset>
+          <div class="container-fluid p-5">
+              <h2 class="text-center pt-5">Learner's Personal Information</h2>
+              <hr class="featurette-divider mb-5">
+              <div class="personal-info row gy-lg-3">
+                  <div class="form-group col-6">
+                      <label for="" class="form-label"> Last Name </label>
+                      <input list="text" name="last_name" class="form-control"  required> 
+                  </div>
+                  <div class="form-group col-6">
+                      <label for="" class="form-label">First Name </label>
+                      <input type="text" name="first_name" class="form-control" required>
+                  </div>
+                  <div class="form-group col-6">
+                      <label for="" class="form-label">Middle Name </label>
+                      <input type="text" name="middle_name" class="form-control" required>
+                  </div>
+                  <div class="form-group col-6">
+                      <label for="" class="form-label">Name Extn. </label>
+                      <input type="text" name="suffix_name" class="form-control" placeholder="ex. Jr., II, III">   
+                  </div>
+                  <div class="form-group col-5">
+                      <label for="" class="form-label"> Learner's Reference Number (LRN) </label>
+                      <input type="number" name="lrn" class="form-control" id="input" required>
+                  </div>
+                  <div class="form-group col-4">
+                      <label for="" class="form-label"> Birthdate : </label>
+                      <input type="date" name="birthday" class="form-control" required> 
+                  </div>
+                  <div class="form-group col-3 inline-block">
+                      <label class="form-label" style="margin:0 0 5px 0;">Gender</label>
+                      <select class="form-select form-select-md" style="padding: 8px 10px;" name="sex" id="form-select" required> 
+                          <option selected></option>
+                          <option value="Male">Male</option>
+                          <option value="Female">Female</option>
+                      </select> 
+                  </div>
+              </div>
+              <hr class="featurette-divider" style="margin:1em 0 5em 0;">
+          </div>
+          <input type="button" class="next-form text-end btn btn-success" value="Next" />
+        </fieldset>	
+        <fieldset>
+          <div class="container-fluid mb-5">
+              <h2 class="text-center pt-5">Eligibity for Elementary School Enrollment</h2>
+              <hr class="featurette-divider">
+              <div class="eligibility row gy-lg-1">
+              <span class="credentials-container">
+                <p class="creds lead my-0 py-0 text-center">Credential Presented For Grade 1</p>
+              </span>
+              <div class="form-group col-12 d-flex flex-row row justify-content-between pt-4 pb-1">
+                  <span class="form-check form-check-inline col-md-12 col-lg-4">
+                      <label class="form-check-label">Kinder Progress Report </label>
+                      <input type="checkbox" class="form-check-input" name="credential[]" value="Kinder progress report">
+                  </span>
+                  <span class="form-check form-check-inline col-md-12 col-lg-4">
+                      <label class="form-check-label">ECCD Checklist </label>
+                      <input type="checkbox" class="form-check-input" name="credential[]" value="ECCD Checklist" >
+                  </span>
+                  <span class="form-check form-check-inline col-md-12 col-lg-4">
+                      <label class="form-check-label">Kindergarden Certificate of Completion </label>
+                      <input type="checkbox" class="form-check-input" name="credential[]" value="Kindergarten Certificate of Completion" >
+                  </span>
+              </div>
+                <hr class="featurette-divider">
+                <div class="form-group col-md-12 pt-2">
+                    <label class="form-label">Name of School</label>
+                    <input list="text" class="form-control"  name="name_of_school" >
+                </div>
+                <div class="form-group col-md-12">
+                    <label class="form-label" for="">School Id </label>
+                    <input list="text" class="form-control" name="school_id" >
+                </div>
+                <div class="form-group col-md-12">
+                    <label class="form-label" for="">Address of School</label>
+                    <input list="text" class="form-control" name="address_school">
+                </div>
+                <div class="form-group col-md-12 mb-5">
+                    <label class="form-label" for="">Others </label>
+                    <input list="text" class="form-control" name="others">
+                </div>
+            </div>
+            <hr class="featurette-divider">
+          </div>
+                <input type="button" name="previous" style="float:left;" class="previous-form btn btn-default" value="Previous" />
+                <input type="submit" name="next" class="submit btn btn-success" value="Submit" />
+        </fieldset>
+        <div class="alert alert-danger d-none text-center"></div>
+    </form>
+</div>	
+<script type="text/javascript" src="src/js/stepper.js"></script>
 
 <?php 
+include 'includes/footer.php';
+?>
 
+<?php
 if(isset($_POST['next'])){
 
 
@@ -214,7 +150,7 @@ if(isset($_POST['next'])){
       echo "Added learners_personal_infos" . '<br>';
       
 
-      $insert_eligibility_for_elem = "INSERT INTO eligibility_for_elementary_school_enrollment (lrn,credential_presented,name_of_school,efese_school_id,address_of_school,others ,date_time_created,date_time_updated,remarks) VALUES ('$lrn','$new_credential', '$name_of_school' , '$school_id', '$address_school','$others', '$dateCreated', '$dateUpdated', '$remarks')";
+      $insert_eligibility_for_elem = "INSERT INTO eligibility_for_elementary_school_enrollment (lrn,credential_presented,name_of_school,school_id,address_of_school,others ,date_time_created,date_time_updated,remarks) VALUES ('$lrn','$new_credential', '$name_of_school' , '$school_id', '$address_school','$others', '$dateCreated', '$dateUpdated', '$remarks')";
 
       $run_insert_eligibility_for_elem = mysqli_query($conn,$insert_eligibility_for_elem);
 
@@ -233,14 +169,6 @@ if(isset($_POST['next'])){
     }
   }
  
-}
+} 
 ob_end_flush();
 ?>
-</body>
-</html>
-
-
-
-
-
-

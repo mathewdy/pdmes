@@ -1,0 +1,39 @@
+#register_form fieldset:not(:first-of-type) {
+    display: none;
+    }
+    form{
+    background: #f8f9fa;
+    height: 110vh;
+    }
+    fieldset{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+        padding: 1.5em 3em;
+    }
+    .credentials-container{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .creds{
+      border-bottom:1px solid black;
+      width: auto;
+    }
+    .next-form, .submit, .previous-form{
+      padding: 5px 100px;
+    }
+    h2{
+        font-family: var(--poppins);
+    }
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+    
+    input[type=number] {
+        -moz-appearance:textfield;
+    }

@@ -1,0 +1,205 @@
+body{
+    background:#ddd;
+}
+.form-top{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.form-top span{
+    text-align: center;
+    margin: 0 2em;
+}
+
+h6{
+    border: 1px solid black;
+}
+#editform fieldset:not(:first-of-type) {
+    display: none;
+}
+.line-1{
+    display: flex; 
+    flex-direction: row; 
+    justify-content: space-between; 
+}
+.line-1 label{
+    padding:0 2px 0 0;
+}
+.line-1 input[type=text]{
+    width: 100%;
+    padding: 0 12px;
+}
+.line-1 input[type=text]:focus{
+    outline: none;
+}
+.line-2{
+    display: flex; 
+    flex-direction: row; 
+    justify-content: space-between; 
+}
+.line-2 label{
+    padding:0 2px 0 0;
+}
+.line-2 input[type=text]{
+    width: 100%;
+}
+.line-2 input[type=date]{
+    border: none;
+    width: 20%;
+    border-bottom: 1px solid black;
+}
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+    border: none;
+    border-bottom: 1px solid black;
+    margin: 2px 0 3px 0;
+}
+.line-2 input[type=text]:focus{
+    outline: none;
+}
+.credentials-row{
+    border: 1px solid black;
+    padding: 0 5px;
+}
+.cred-info{
+    display: flex; 
+    flex-direction: row; 
+    justify-content: space-between; 
+}
+.cred-info input[type=text]{
+    border: none;
+    padding: 0 4px;
+}
+.cred-info input[type=text]:focus{
+    outline:none;
+}
+.last-cred{
+    display: flex; 
+    flex-direction: row; 
+    justify-content: space-evenly; 
+}
+.last-cred input[type=text]{
+    width: 100%;
+}
+.last-cred input[type=text]:focus{
+    outline: none;
+}
+.last-cred label{
+    font-size: 10pt;
+}
+.wrapper{
+    display: flex; 
+    flex-direction: row;
+    justify-content: center; 
+    align-items: center;
+}
+.other-cred input[type=date]{
+    border: none;
+    border-bottom: 1px solid black;
+    width:12%; 
+}
+.PEPT{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 11pt;
+}
+.wrapper label{
+    font-size: 10pt;
+}
+.wrapper input[type=text]{
+    width: 100%;
+}
+.wrapper input[type=text]:focus{
+    outline: none;
+}
+th, td{
+    border: 1px solid black;
+}
+th{
+    border:1px solid black;
+}
+label{
+    font-size:11pt;
+    font-weight:600;
+}
+input[type=text]{
+    border:none;
+    border-bottom:1px solid black;
+} 
+.subj{
+    padding:8px 0 0 5px;
+}
+.grade-header{
+    border:2px solid black;
+}
+.first-row{
+    display: flex; 
+    flex-direction: row; 
+    justify-content: space-between; 
+    align-items:center; 
+    padding: 0 5px;
+}
+.first-row input[type=text]{
+    width: 100%;
+    padding: 0 5px;
+}
+.second-row{
+    display: flex; 
+    flex-direction: row; 
+    justify-content: space-between; 
+    align-items:end; 
+    padding: 0 5px;
+}
+.second-row input[type=text]{
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    padding: 0 4px;
+}
+.third-row{
+    display: flex; 
+    flex-direction: row; 
+    justify-content: space-between; 
+    align-items:center; 
+    padding: 0 5px;
+}
+.third-row input[type=text]{
+    width: 100%;
+    padding: 0 4px;
+}
+.fourth-row{
+    padding: 0 5px;
+}
+.grade-header label{
+    font-size: 11pt;
+}
+.grade-header input[type=text]{
+    border:none;
+    border-bottom: 1px solid black;
+}
+.grade-header input[type=text]:focus{
+    outline: none;
+}
+.remedial-table{
+    border: 2px solid black;
+    margin: .2em 0 0 0;
+    width: 100%;
+}
+.certification-box{
+    border: 2px solid black;
+    font-size: 8pt;
+}
+.cert-card{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: end;
+    
+}
+.cert-card label{
+    font-size: 11pt;
+}
+
